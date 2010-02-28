@@ -135,10 +135,12 @@ public class Log
         {
             MidiDevice.Info inf = dev.getDeviceInfo();
             logger.info( "----------------------------------");
-            logger.info( "[Name]"        + inf.getName() );
-            logger.info( "[Version]"     + inf.getVersion() );
-            logger.info( "[Vendor]"      + inf.getVendor() );
-            logger.info( "[Description]" + inf.getDescription() );
+            logger.info( "[Name]"              + inf.getName() );
+            logger.info( "[Version]"           + inf.getVersion() );
+            logger.info( "[Vendor]"            + inf.getVendor() );
+            logger.info( "[Description]"       + inf.getDescription() );
+            logger.info( "[Max Receivers]"     + dev.getMaxReceivers() );
+            logger.info( "[Max Transmittersa]" + dev.getMaxTransmitters() );
         }
     }
 
