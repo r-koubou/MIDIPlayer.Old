@@ -3,9 +3,11 @@ package org.rz.midiplayer.context;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Vector;
 import java.util.logging.Level;
 import javax.sound.midi.MidiDevice;
 import javax.xml.bind.JAXBElement;
@@ -159,6 +161,9 @@ public class Context implements Loggable, MidiEventListener
         logger.info( "dispose midiEventListeners" );
         midiEventListeners.clear();
 
+        logger.info( "close all midi devices" );
+        MIDIDeviceManager.closeAllDevice();
+
         logger.info( "******************* DISPOSE CONTEXT - END *******************" );
     }
 
@@ -168,18 +173,18 @@ public class Context implements Loggable, MidiEventListener
      */
     synchronized public void loadDeviceFile() throws JAXBException, SAXException
     {
-        device.load( config.getDevicefile().getFile() );
-        logger.info( "loaded device file: "+ config.getDevicefile().getFile() );
+        loadDeviceFile( config.getDevicefile().getFile() );
     }
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
      *
      */
-    synchronized public void setDeviceFileName( String name )
+    synchronized public void loadDeviceFile( String fileName ) throws JAXBException, SAXException
     {
-        config.getDevicefile().setFile( name );
-        logger.info( "set device file: "+ name );
+        device.load( fileName );
+        config.getDevicefile().setFile( fileName );
+        logger.info( "loaded device file: "+ fileName );
     }
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -188,7 +193,7 @@ public class Context implements Loggable, MidiEventListener
      */
     synchronized public void setMidiOut( String devName )
     {
-        MidiDevice d = MIDIDeviceManager.search( devName );
+        MidiDevice d = MIDIDeviceManager.searchMidiOutDevice( devName );
         if( d != null )
         {
             player.setMidiOutDevice( d );
@@ -216,9 +221,31 @@ public class Context implements Loggable, MidiEventListener
      */
     synchronized public boolean play( File f )
     {
-        boolean ret = player.play( f );
+        boolean ret;
+        MidiDevice midiOut = MIDIDeviceManager.searchMidiOutDevice( config.getMidiout().getName() );
+        MidiDevice midiIn  = MIDIDeviceManager.searchMidiInDevice( config.getMidiin().getName() );
+        player.setMidiOutDevice( midiOut );
+        player.setMidiInDevice( midiIn );
+
+        ret = player.play( f );
         config.getLastdirectory().setDir( f.getParent() );
+
         return ret;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     * MIDI IN デバイスからの MIDI 信号を MIDI OUT へ送出するリアルタイム演奏を開始する。
+     */
+    synchronized public boolean startRealTimeInput()
+    {
+        MidiDevice midiOut = MIDIDeviceManager.searchMidiOutDevice( config.getMidiout().getName() );
+        MidiDevice midiIn  = MIDIDeviceManager.searchMidiInDevice( config.getMidiin().getName() );
+
+        player.setMidiOutDevice( midiOut );
+        player.setMidiInDevice( midiIn );
+
+        return player.startRealTimeInput();
     }
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -255,6 +282,31 @@ public class Context implements Loggable, MidiEventListener
     public Device getDevice()
     {
         return device;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    synchronized  public Vector<File> getDeviceInfoList()
+    {
+        Vector<File> ret = new Vector<File>( 32 );
+        File dir = new File(  AppConstants.DEVICE_DEF_DIR );
+
+        File[] files = dir.listFiles( new FilenameFilter() {
+            @Override
+            public boolean accept( File dir, String name )
+            {
+                return name.endsWith( ".xml" );
+            }
+        });
+
+        for( File f : files )
+        {
+            ret.addElement( f );
+        }
+
+        return ret;
     }
 
     ////////////////////////////////////////////////////////////////////////////////

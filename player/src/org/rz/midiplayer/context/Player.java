@@ -29,6 +29,11 @@ public class Player implements Loggable
     protected MidiDevice midiOutDevice;
 
     /**
+     * 鍵盤などのからの演奏時に使用する MIDI IN デバイス
+     */
+    protected MidiDevice midiInDevice;
+
+    /**
      * 再生時間を格納する。
      */
     protected long playTimeInMicroSeconds;
@@ -175,9 +180,20 @@ public class Player implements Loggable
                 midiOutDevice.open();
             }
 
+            if( midiInDevice != null && ! midiInDevice.isOpen() )
+            {
+                midiInDevice.open();
+            }
+
             sequencer.open();
             sequencer.getTransmitter().setReceiver( midiOutDevice.getReceiver() );
             sequencer.getTransmitter().setReceiver( receiverForListener );
+
+            if( midiInDevice != null )
+            {
+                midiInDevice.getTransmitter().setReceiver( midiOutDevice.getReceiver() );
+                midiInDevice.getTransmitter().setReceiver( receiverForListener );
+            }
 
             sequencer.setSequence( MidiSystem.getSequence( f ) );
             playTimeInMicroSeconds = sequencer.getMicrosecondLength();
@@ -194,6 +210,10 @@ public class Player implements Loggable
         catch( MidiUnavailableException ex )
         {
             logger.log( Level.SEVERE, "cannot open the Sequencer.", ex );
+            if( midiOutDevice != null )
+            {
+                logger.warning( "MIDI OUT : " + midiOutDevice.getDeviceInfo().getName() );
+            }
         }
         catch( InvalidMidiDataException im )
         {
@@ -210,11 +230,74 @@ public class Player implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
+     * MIDI IN デバイスからの MIDI 信号を MIDI OUT へ送出するリアルタイム演奏を開始する。
+     */
+    synchronized public boolean startRealTimeInput()
+    {
+        stop();
+
+        try
+        {
+            if( sequencer == null )
+            {
+                logger.warning( "sequencer is null." );
+                return false;
+            }
+
+            if( midiOutDevice == null )
+            {
+                logger.warning( "midiOutDevice is null." );
+                return false;
+            }
+
+            if( midiInDevice == null )
+            {
+                logger.warning( "midiInDevice is null." );
+                return false;
+            }
+
+            if( ! midiOutDevice.isOpen() )
+            {
+                midiOutDevice.open();
+            }
+
+            if( ! midiInDevice.isOpen() )
+            {
+                midiInDevice.open();
+            }
+
+            midiInDevice.getTransmitter().setReceiver( midiOutDevice.getReceiver() );
+            midiInDevice.getTransmitter().setReceiver( receiverForListener );
+
+            playTimeInMicroSeconds = 0;
+
+            return true;
+
+        }
+        catch( MidiUnavailableException ex )
+        {
+            logger.log( Level.SEVERE, "cannot open the Sequencer.", ex );
+            if( midiOutDevice != null )
+            {
+                logger.warning( "MIDI OUT : " + midiOutDevice.getDeviceInfo().getName() );
+            }
+            if( midiInDevice != null )
+            {
+                logger.warning( "MIDI IN : " + midiInDevice.getDeviceInfo().getName() );
+            }
+        }
+
+        return false;
+
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
      * 再生を終了する。
      */
     synchronized  public void stop()
     {
-        MIDIDeviceManager.stop( sequencer );
+        MIDIDeviceManager.close( midiInDevice );
         MIDIDeviceManager.close( midiOutDevice );
         MIDIDeviceManager.close( sequencer );
     }
@@ -236,6 +319,28 @@ public class Player implements Loggable
     {
         stop();
         midiOutDevice = dev;
+        if( dev != null )
+        {
+            logger.info( "set midi out device : " + dev.getDeviceInfo().getName() );
+            logger.info( "Max Receivers : " + dev.getMaxReceivers() );
+            logger.info( "Max Transmitters : " + dev.getMaxTransmitters() );
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    synchronized public void setMidiInDevice( MidiDevice dev )
+    {
+        stop();
+        midiInDevice = dev;
+        if( dev != null )
+        {
+            logger.info( "set midi in device : " + dev.getDeviceInfo().getName() );
+            logger.info( "Max Receivers : " + dev.getMaxReceivers() );
+            logger.info( "Max Transmitters : " + dev.getMaxTransmitters() );
+        }
     }
 
     ////////////////////////////////////////////////////////////////////////////////
