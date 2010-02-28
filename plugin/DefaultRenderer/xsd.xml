@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name = "XSDConvert" basedir = ".">
+
+    <property name = "xsdDir"            value = "." />
+    <property name = "packageBase"       value = "org.rz.midiplayerplugin.renderer" />
+
+    <target name = "convert-appconfig">
+        <exec executable="xjc" > <arg line = "-no-header -d src -p ${packageBase}.config ${xsdDir}/config.xsd" />  </exec>
+    </target>
+
+</project>
