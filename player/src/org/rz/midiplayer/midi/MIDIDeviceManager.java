@@ -91,12 +91,12 @@ public class MIDIDeviceManager implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     * 指定した MIDI デバイスを取得する。
+     * 指定した MIDI OUT デバイスを取得する。
      * @see #existDevice(java.lang.String)
      */
-    static public MidiDevice search( String deviceName )
+    static public MidiDevice searchMidiOutDevice( String deviceName )
     {
-        Vector<MidiDevice> list = getDeviceList();
+        Vector<MidiDevice> list = getMidiOutDeviceList();
         for( MidiDevice i : list )
         {
             if( i.getDeviceInfo().getName().equals( deviceName ) )
@@ -109,12 +109,48 @@ public class MIDIDeviceManager implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     * 指定した MIDI デバイスが取得可能か判定する。
+     * 指定した MIDI OUT デバイスを取得する。
+     * @see #existDevice(java.lang.String)
+     */
+    static public MidiDevice searchMidiInDevice( String deviceName )
+    {
+        Vector<MidiDevice> list = getMidiInDeviceList();
+        for( MidiDevice i : list )
+        {
+            if( i.getDeviceInfo().getName().equals( deviceName ) )
+            {
+                return i;
+            }
+        }
+        return null;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     * 指定した MIDI OUT デバイスが取得可能か判定する。
      * @see  #search(java.lang.String)
      */
-    static public boolean existDevice( String deviceName )
+    static public boolean existMidiOutDevice( String deviceName )
     {
-        Vector<MidiDevice> list = getDeviceList();
+        Vector<MidiDevice> list = getMidiOutDeviceList();
+        for( MidiDevice i : list )
+        {
+            if( i.getDeviceInfo().getName().equals( deviceName ) )
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     * 指定した MIDI IN デバイスが取得可能か判定する。
+     * @see  #search(java.lang.String)
+     */
+    static public boolean existMidiInDevice( String deviceName )
+    {
+        Vector<MidiDevice> list = getMidiInDeviceList();
         for( MidiDevice i : list )
         {
             if( i.getDeviceInfo().getName().equals( deviceName ) )
