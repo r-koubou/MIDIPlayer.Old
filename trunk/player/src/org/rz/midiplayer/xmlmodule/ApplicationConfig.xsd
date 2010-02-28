@@ -7,6 +7,7 @@
         <xsd:sequence>
             <xsd:element ref="devicefile"/>
             <xsd:element ref="midiout"/>
+            <xsd:element ref="midiin"/>
             <xsd:element ref="lastdirectory"/>
             <xsd:element ref="plugin"/>
         </xsd:sequence>
@@ -38,7 +39,12 @@
     <xsd:complexType name="Devicefile">
         <xsd:attribute name="file" type="xsd:string" default="GM.xml"/>
     </xsd:complexType>
+    <xsd:element name="midiin" type="MidiIn"></xsd:element>
+    <xsd:complexType name="MidiIn">
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
 </xsd:schema>
+
 
 
 
