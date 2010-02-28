@@ -6,10 +6,17 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="rendererButtonGroup">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="midiOutButtonGroup">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="midiInButtonGroup">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="deviceInfoButtonGroup">
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="menuBar">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="fileMenu">
           <Properties>
+            <Property name="mnemonic" type="int" value="70"/>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="fileMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
             </Property>
@@ -34,6 +41,7 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+Q"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="88"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="exitMenuItem" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
                 </Property>
@@ -60,6 +68,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="toolMenu">
           <Properties>
+            <Property name="mnemonic" type="int" value="84"/>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="toolMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
             </Property>
@@ -70,6 +79,7 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="SPACE"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="80"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="playMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
                 </Property>
@@ -83,23 +93,62 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="ESCAPE"/>
                 </Property>
+                <Property name="mnemonic" type="int" value="83"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="stopMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
                 </Property>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onStopMenuItemAction"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="realTimeMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+SPACE"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="82"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="realTimeMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onRealTimeMenuItemAction"/>
               </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="optionMenu">
           <Properties>
+            <Property name="mnemonic" type="int" value="79"/>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="optionMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
             </Property>
           </Properties>
           <SubComponents>
+            <Menu class="javax.swing.JMenu" name="midiOutMenu">
+              <Properties>
+                <Property name="mnemonic" type="int" value="79"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="midioutMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="setupMidiOutMenu();"/>
+              </AuxValues>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="midiInMenu">
+              <Properties>
+                <Property name="mnemonic" type="int" value="73"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="midiInMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="setupMidiInMenu();"/>
+              </AuxValues>
+            </Menu>
             <Menu class="javax.swing.JMenu" name="rendererMenu">
               <Properties>
                 <Property name="mnemonic" type="int" value="82"/>
@@ -108,7 +157,21 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="// Renderer Selector&#xd;&#xa;{&#xd;&#xa;    String current = context.getConfig().getPlugin().getRenderer().getName();&#xd;&#xa;&#xd;&#xa;    for( PluginInfo i : context.getRendererPluginManager().getPluginInfoList() )&#xd;&#xa;    {&#xd;&#xa;        JRadioButtonMenuItem item = new JRadioButtonMenuItem();&#xd;&#xa;        System.out.println( i == null );&#xd;&#xa;        item.setSelected( i.getName().equals( current ) );&#xd;&#xa;        item.setAction( new AbstractAction(){&#xd;&#xa;            @Override&#xd;&#xa;            public void actionPerformed( ActionEvent e )&#xd;&#xa;            {&#xd;&#xa;                JMenuItem it = (JMenuItem)e.getSource();&#xd;&#xa;                context.getConfig().getPlugin().getRenderer().setName( it.getText() );&#xd;&#xa;                startRendering();&#xd;&#xa;            }&#xd;&#xa;        });&#xd;&#xa;        item.setText( i.getName() );&#xd;&#xa;        item.setToolTipText( i.getDescription() + &quot; - ver &quot; + i.getVersion() );&#xd;&#xa;        rendererMenu.add( item );&#xd;&#xa;        rendererButtonGroup.add( item );&#xd;&#xa;    }&#xd;&#xa;}&#xd;&#xa;"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="// setup the renderer selector&#xd;&#xa;setupRendererMenu();"/>
+              </AuxValues>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="deviceInfoMenu">
+              <Properties>
+                <Property name="mnemonic" type="int" value="68"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="deviceInfoMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="deviceInfoMenu.desc" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="setupDeviceInfoMenu();"/>
               </AuxValues>
             </Menu>
             <Menu class="javax.swing.JMenu" name="lafMenu">

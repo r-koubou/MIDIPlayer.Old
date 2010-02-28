@@ -12,7 +12,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.util.ResourceBundle;
+import java.util.Vector;
 import java.util.logging.Level;
+import javax.sound.midi.MidiDevice;
 import javax.swing.AbstractAction;
 import javax.swing.ButtonGroup;
 import javax.swing.JFileChooser;
@@ -29,6 +31,7 @@ import javax.swing.filechooser.FileFilter;
 import org.rz.midiplayer.context.Context;
 import org.rz.midiplayer.logging.Log;
 import org.rz.midiplayer.logging.Loggable;
+import org.rz.midiplayer.midi.MIDIDeviceManager;
 import org.rz.midiplayer.plugin.PluginManager;
 import org.rz.midiplayer.plugin.info.PluginInfo;
 import org.rz.midiplayer.plugin.renderer.RendererPlugin;
@@ -42,22 +45,29 @@ import org.rz.midiplayer.xmlmodule.appconfig.ApplicationConfig;
 public class MainWindow extends javax.swing.JFrame implements Loggable
 {
     private final ResourceBundle resourceBundle = ResourceBundle.getBundle( "org.rz.midiplayer.ui.resources.MainWindow" );
-    private Context context;
+    private final Context context;
     private RendererPlugin renderer;
     private File selectedMidiFile;
 
     //==========================================================================
     // Netbeans によって自動生成されるフィールドここから
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private ButtonGroup deviceInfoButtonGroup;
+    private JMenu deviceInfoMenu;
     private JMenuItem exitMenuItem;
     private JMenu fileMenu;
     private ButtonGroup lafButtonGroup;
     private JMenu lafMenu;
     private JMenuBar menuBar;
+    private ButtonGroup midiInButtonGroup;
+    private JMenu midiInMenu;
+    private ButtonGroup midiOutButtonGroup;
+    private JMenu midiOutMenu;
     private JMenuItem openLogWindpwMenuItem;
     private JMenuItem openMenuItem;
     private JMenu optionMenu;
     private JMenuItem playMenuItem;
+    private JMenuItem realTimeMenuItem;
     private ButtonGroup rendererButtonGroup;
     private JMenu rendererMenu;
     private JMenuItem stopMenuItem;
@@ -77,7 +87,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
 
         try
         {
-            ToolTipManager.sharedInstance().setInitialDelay( 500 );
+            ToolTipManager.sharedInstance().setInitialDelay( 250 );
         }
         catch( Throwable e ) {}
     }
@@ -92,6 +102,9 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
 
         lafButtonGroup = new ButtonGroup();
         rendererButtonGroup = new ButtonGroup();
+        midiOutButtonGroup = new ButtonGroup();
+        midiInButtonGroup = new ButtonGroup();
+        deviceInfoButtonGroup = new ButtonGroup();
         menuBar = new JMenuBar();
         fileMenu = new JMenu();
         openMenuItem = new JMenuItem();
@@ -100,8 +113,12 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         toolMenu = new JMenu();
         playMenuItem = new JMenuItem();
         stopMenuItem = new JMenuItem();
+        realTimeMenuItem = new JMenuItem();
         optionMenu = new JMenu();
+        midiOutMenu = new JMenu();
+        midiInMenu = new JMenu();
         rendererMenu = new JMenu();
+        deviceInfoMenu = new JMenu();
         lafMenu = new JMenu();
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -118,6 +135,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
             }
         });
 
+        fileMenu.setMnemonic('F');
         fileMenu.setText(resourceBundle.getString( "fileMenu.label" )); // NOI18N
 
         openMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
@@ -131,6 +149,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         fileMenu.add(openMenuItem);
 
         exitMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_MASK));
+        exitMenuItem.setMnemonic('X');
         exitMenuItem.setText(resourceBundle.getString( "exitMenuItem" )); // NOI18N
         exitMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -151,9 +170,11 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
 
         menuBar.add(fileMenu);
 
+        toolMenu.setMnemonic('T');
         toolMenu.setText(resourceBundle.getString( "toolMenu.label" )); // NOI18N
 
         playMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0));
+        playMenuItem.setMnemonic('P');
         playMenuItem.setText(resourceBundle.getString( "playMenuItem.label" )); // NOI18N
         playMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -163,7 +184,9 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         toolMenu.add(playMenuItem);
 
         stopMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0));
+        stopMenuItem.setMnemonic('S');
         stopMenuItem.setText(resourceBundle.getString( "stopMenuItem.label" )); // NOI18N
+        stopMenuItem.setEnabled(false);
         stopMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onStopMenuItemAction(evt);
@@ -171,37 +194,42 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         });
         toolMenu.add(stopMenuItem);
 
+        realTimeMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, InputEvent.CTRL_MASK));
+        realTimeMenuItem.setMnemonic('R');
+        realTimeMenuItem.setText(resourceBundle.getString( "realTimeMenu.label" )); // NOI18N
+        realTimeMenuItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                onRealTimeMenuItemAction(evt);
+            }
+        });
+        toolMenu.add(realTimeMenuItem);
+
         menuBar.add(toolMenu);
 
+        optionMenu.setMnemonic('O');
         optionMenu.setText(resourceBundle.getString( "optionMenu.label" )); // NOI18N
+
+        midiOutMenu.setMnemonic('O');
+        midiOutMenu.setText(resourceBundle.getString( "midioutMenu.label" )); // NOI18N
+        setupMidiOutMenu();
+        optionMenu.add(midiOutMenu);
+
+        midiInMenu.setMnemonic('I');
+        midiInMenu.setText(resourceBundle.getString( "midiInMenu.label" )); // NOI18N
+        setupMidiInMenu();
+        optionMenu.add(midiInMenu);
 
         rendererMenu.setMnemonic('R');
         rendererMenu.setText(resourceBundle.getString( "rendererMenuItem.label" )); // NOI18N
-        // Renderer Selector
-        {
-            String current = context.getConfig().getPlugin().getRenderer().getName();
-
-            for( PluginInfo i : context.getRendererPluginManager().getPluginInfoList() )
-            {
-                JRadioButtonMenuItem item = new JRadioButtonMenuItem();
-                System.out.println( i == null );
-                item.setSelected( i.getName().equals( current ) );
-                item.setAction( new AbstractAction(){
-                    @Override
-                    public void actionPerformed( ActionEvent e)
-                    {
-                        JMenuItem it = (JMenuItem)e.getSource();
-                        context.getConfig().getPlugin().getRenderer().setName( it.getText() );
-                        startRendering();
-                    }
-                });
-                item.setText( i.getName() );
-                item.setToolTipText( i.getDescription() + " - ver " + i.getVersion() );
-                rendererMenu.add( item );
-                rendererButtonGroup.add( item );
-            }
-        }
+        // setup the renderer selector
+        setupRendererMenu();
         optionMenu.add(rendererMenu);
+
+        deviceInfoMenu.setMnemonic('D');
+        deviceInfoMenu.setText(resourceBundle.getString( "deviceInfoMenu.label" )); // NOI18N
+        deviceInfoMenu.setToolTipText(resourceBundle.getString( "deviceInfoMenu.desc" )); // NOI18N
+        setupDeviceInfoMenu();
+        optionMenu.add(deviceInfoMenu);
 
         lafMenu.setMnemonic('L');
         lafMenu.setText(resourceBundle.getString( "optionMenu.laf.label" )); // NOI18N
@@ -232,6 +260,130 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
     /**
      * 
      */
+    private void setupRendererMenu()
+    {
+        String current = context.getConfig().getPlugin().getRenderer().getName();
+
+        for( PluginInfo i : context.getRendererPluginManager().getPluginInfoList() )
+        {
+            JRadioButtonMenuItem item = new JRadioButtonMenuItem();
+
+            item.setSelected( i.getName().equals( current ) );
+            item.setAction( new AbstractAction(){
+                @Override
+                public void actionPerformed( ActionEvent e )
+                {
+                    JMenuItem it = (JMenuItem)e.getSource();
+                    context.getConfig().getPlugin().getRenderer().setName( it.getText() );
+                    startRendering();
+                }
+            });
+            item.setText( i.getName() );
+            item.setToolTipText( i.getDescription() + " - Author: " + i.getAuthor() + " (ver " + i.getVersion() + ")" );
+            rendererMenu.add( item );
+            rendererButtonGroup.add( item );
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    private void setupMidiOutMenu()
+    {
+        Vector<MidiDevice> devs = MIDIDeviceManager.getMidiOutDeviceList();
+        String current = context.getConfig().getMidiout().getName();
+
+        for( MidiDevice i : devs )
+        {
+            String name = i.getDeviceInfo().getName();
+            JRadioButtonMenuItem item = new JRadioButtonMenuItem();
+
+            item.setSelected( name.equals( current ) );
+            item.setAction( new AbstractAction(){
+                @Override
+                public void actionPerformed( ActionEvent e )
+                {
+                    JMenuItem it = (JMenuItem)e.getSource();
+                    context.getConfig().getMidiout().setName( it.getText() );
+                }
+            });
+            item.setText( name );
+            midiOutMenu.add( item );
+            midiOutButtonGroup.add( item );
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    private void setupMidiInMenu()
+    {
+        Vector<MidiDevice> devs = MIDIDeviceManager.getMidiInDeviceList();
+        String current = context.getConfig().getMidiin().getName();
+
+        for( MidiDevice i : devs )
+        {
+            String name = i.getDeviceInfo().getName();
+            JRadioButtonMenuItem item = new JRadioButtonMenuItem();
+
+            item.setSelected( name.equals( current ) );
+            item.setAction( new AbstractAction(){
+                @Override
+                public void actionPerformed( ActionEvent e )
+                {
+                    JMenuItem it = (JMenuItem)e.getSource();
+                    context.getConfig().getMidiin().setName( it.getText() );
+                }
+            });
+            item.setText( name );
+            midiInMenu.add( item );
+            midiInButtonGroup.add( item );
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    private void setupDeviceInfoMenu()
+    {
+        String current          = context.getConfig().getDevicefile().getFile();
+        Vector<File> deviceDefs = context.getDeviceInfoList();
+
+        for( File i : deviceDefs )
+        {
+            String name = i.getName();
+            JRadioButtonMenuItem item = new JRadioButtonMenuItem();
+
+            item.setSelected( name.equals( current ) );
+            item.setAction( new AbstractAction(){
+                @Override
+                public void actionPerformed( ActionEvent e )
+                {
+                    JMenuItem it = (JMenuItem)e.getSource();
+
+                    try
+                    {
+                        context.loadDeviceFile( it.getText() );
+                    }
+                    catch( Throwable ex )
+                    {
+                        logger.log( Level.SEVERE, "cannot reload device info file : " + it.getText(), ex );
+                    }
+                }
+            });
+            item.setText( name );
+            deviceInfoMenu.add( item );
+            deviceInfoButtonGroup.add( item );
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     * 
+     */
     private void onWindowClosed(WindowEvent evt)//GEN-FIRST:event_onWindowClosed
     {//GEN-HEADEREND:event_onWindowClosed
         context.saveAppConfig();
@@ -251,7 +403,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
             renderer.onMidiPlayingBefore( selectedMidiFile );
             if( context.play( selectedMidiFile ) )
             {
-                setMenuItemsEnabled( false );
+                updateMenuItemEnabled( true );
             }
         }
     }//GEN-LAST:event_onPlayMenuItemAction
@@ -317,7 +469,11 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
     private void onStopMenuItemAction(ActionEvent evt)//GEN-FIRST:event_onStopMenuItemAction
     {//GEN-HEADEREND:event_onStopMenuItemAction
         context.stop();
-        setMenuItemsEnabled( true );
+        if( renderer != null )
+        {
+            renderer.onMidiStoped();
+        }
+        updateMenuItemEnabled( false );
     }//GEN-LAST:event_onStopMenuItemAction
 
     private void onOpenLogWindpwMenuItemAction(ActionEvent evt)//GEN-FIRST:event_onOpenLogWindpwMenuItemAction
@@ -337,14 +493,29 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         System.exit( 0 );
     }//GEN-LAST:event_onExitMenuItemAction
 
+    private void onRealTimeMenuItemAction(ActionEvent evt)//GEN-FIRST:event_onRealTimeMenuItemAction
+    {//GEN-HEADEREND:event_onRealTimeMenuItemAction
+        if( context.startRealTimeInput() )
+        {
+            updateMenuItemEnabled( true );
+        }
+    }//GEN-LAST:event_onRealTimeMenuItemAction
+
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     * 
+     *
      */
-    synchronized private void setMenuItemsEnabled( boolean b )
+    synchronized private void updateMenuItemEnabled( boolean play )
     {
-        rendererMenu.setEnabled( b );
-        lafMenu.setEnabled( b );
+        playMenuItem.setEnabled( !play );
+        stopMenuItem.setEnabled( play );
+        realTimeMenuItem.setEnabled( !play );
+
+        midiOutMenu.setEnabled( !play );
+        midiInMenu.setEnabled( !play );
+        rendererMenu.setEnabled( !play );
+        lafMenu.setEnabled( !play );
+        deviceInfoMenu.setEnabled( !play );
     }
 
     ////////////////////////////////////////////////////////////////////////////////
