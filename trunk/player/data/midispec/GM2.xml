@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding = "UTF-8" ?>
+<spec name = "GM2">
+
+    <reset sysexec = "F07E7F0903F7" />
+
+    <melopart>
+        <melopartpc ch = "-1" msb = "-1" lsb = "-1" />
+    </melopart>
+
+    <drumpart maxassign = "-1" default = "9" >
+        <!--
+            [ maxassign = "-1" ]
+            GM2 は ch10, ch11 に割り当てが可能だが、メーカーや音源ごとに実装が
+            まちまちっぽいので maxassign は無制限扱いにしておく
+            （SC8850だとどのチャンネルにもプログラムチェンジで一応アサインが出来る。
+             現状、値を "2" にすると誤認識するので… GS系とその他でこの辺の仕様が違いすぎてプログラムの整理が中々難しい）
+        -->
+
+        <drumpartpc ch = "9"  msb = "120" />
+        <drumpartpc ch = "10" msb = "120" />
+    </drumpart>
+
+</spec>
