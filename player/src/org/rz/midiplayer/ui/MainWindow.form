@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="lafButtonGroup">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="rendererButtonGroup">
+    </Component>
+    <Menu class="javax.swing.JMenuBar" name="menuBar">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="fileMenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="fileMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+            </Property>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="openMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+O"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="79"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="openMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onOpenMenuAction"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="exitMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+Q"/>
+                </Property>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="exitMenuItem" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onExitMenuItemAction"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="openLogWindpwMenuItem">
+              <Properties>
+                <Property name="mnemonic" type="int" value="76"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="openLogWindowItem" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onOpenLogWindpwMenuItemAction"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="openLogWindpwMenuItem.setEnabled( Log.loggingEnabled );"/>
+              </AuxValues>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="toolMenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="toolMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+            </Property>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="playMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="SPACE"/>
+                </Property>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="playMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onPlayMenuItemAction"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="stopMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="ESCAPE"/>
+                </Property>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="stopMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onStopMenuItemAction"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="optionMenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+              <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="optionMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+            </Property>
+          </Properties>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="rendererMenu">
+              <Properties>
+                <Property name="mnemonic" type="int" value="82"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="rendererMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="// Renderer Selector&#xd;&#xa;{&#xd;&#xa;    String current = context.getConfig().getPlugin().getRenderer().getName();&#xd;&#xa;&#xd;&#xa;    for( PluginInfo i : context.getRendererPluginManager().getPluginInfoList() )&#xd;&#xa;    {&#xd;&#xa;        JRadioButtonMenuItem item = new JRadioButtonMenuItem();&#xd;&#xa;        System.out.println( i == null );&#xd;&#xa;        item.setSelected( i.getName().equals( current ) );&#xd;&#xa;        item.setAction( new AbstractAction(){&#xd;&#xa;            @Override&#xd;&#xa;            public void actionPerformed( ActionEvent e )&#xd;&#xa;            {&#xd;&#xa;                JMenuItem it = (JMenuItem)e.getSource();&#xd;&#xa;                context.getConfig().getPlugin().getRenderer().setName( it.getText() );&#xd;&#xa;                startRendering();&#xd;&#xa;            }&#xd;&#xa;        });&#xd;&#xa;        item.setText( i.getName() );&#xd;&#xa;        item.setToolTipText( i.getDescription() + &quot; - ver &quot; + i.getVersion() );&#xd;&#xa;        rendererMenu.add( item );&#xd;&#xa;        rendererButtonGroup.add( item );&#xd;&#xa;    }&#xd;&#xa;}&#xd;&#xa;"/>
+              </AuxValues>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="lafMenu">
+              <Properties>
+                <Property name="mnemonic" type="int" value="76"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="optionMenu.laf.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="// L&amp;F Selector&#xd;&#xa;{&#xd;&#xa;    String current = UIManager.getLookAndFeel().getName();&#xd;&#xa;&#xd;&#xa;    for( UIManager.LookAndFeelInfo i : UIManager.getInstalledLookAndFeels() )&#xd;&#xa;    {&#xd;&#xa;        JRadioButtonMenuItem item = new JRadioButtonMenuItem();&#xd;&#xa;        item.setSelected( i.getName().equals( current ) );&#xd;&#xa;        item.setAction( new LafChangeAction( i, this ) );&#xd;&#xa;        item.setText( i.getName() );&#xd;&#xa;        lafMenu.add( item );&#xd;&#xa;        lafButtonGroup.add( item );&#xd;&#xa;    }&#xd;&#xa;}&#xd;&#xa;"/>
+              </AuxValues>
+            </Menu>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="menuBar"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosed" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="onWindowClosed"/>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="onWindowClosing"/>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="onWindowOpened"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,44,0,0,1,-112"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+</Form>
