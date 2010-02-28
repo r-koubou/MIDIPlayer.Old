@@ -39,4 +39,15 @@ public class PathUtil
         return p;
         
     }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    static public String package2ClasspathString( Class<?> clazz )
+    {
+        String packageName = clazz.getPackage().getName();
+        return  "/" + packageName.replaceAll( "\\.", "/" );
+    }
+
 }
