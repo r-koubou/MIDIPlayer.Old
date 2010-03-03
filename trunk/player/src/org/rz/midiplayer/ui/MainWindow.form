@@ -31,6 +31,9 @@
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="openMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="openMenuItem.tooltip" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onOpenMenuAction"/>
@@ -43,7 +46,10 @@
                 </Property>
                 <Property name="mnemonic" type="int" value="88"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="exitMenuItem" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="exitMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="exitMenuItem.tooltip" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
                 </Property>
               </Properties>
               <Events>
@@ -83,6 +89,9 @@
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="playMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="playMenuItem.tooltip" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="onPlayMenuItemAction"/>
@@ -96,6 +105,9 @@
                 <Property name="mnemonic" type="int" value="83"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="stopMenuItem.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="stopMenuItem.tooltip" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
                 </Property>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
@@ -111,6 +123,9 @@
                 <Property name="mnemonic" type="int" value="82"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="realTimeMenu.label" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/rz/midiplayer/ui/resources/MainWindow.properties" key="realTimeMenuItem.tooltip" replaceFormat="resourceBundle.getString( &quot;{key}&quot; )"/>
                 </Property>
               </Properties>
               <Events>
