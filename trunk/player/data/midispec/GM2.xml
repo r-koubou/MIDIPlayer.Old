@@ -3,11 +3,11 @@
 
     <reset sysexec = "F07E7F0903F7" />
 
-    <melopart>
+    <melopart defaultpc = "0" defaultmsb = "121" defaultlsb = "0">
         <melopartpc ch = "-1" msb = "-1" lsb = "-1" />
     </melopart>
 
-    <drumpart maxassign = "-1" default = "9" >
+    <drumpart maxassign = "-1" default = "9" defaultpc = "0" defaultmsb = "120" defaultlsb = "0" >
         <!--
             [ maxassign = "-1" ]
             GM2 は ch10, ch11 に割り当てが可能だが、メーカーや音源ごとに実装が

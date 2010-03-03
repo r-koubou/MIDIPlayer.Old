@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding = "UTF-8" ?>
-<spec name = "GS">
+<spec name = "GS(Roland SD series)">
     <reset sysexec = "F04110421240007F0041F7" />
 
-    <melopart defaultpc = "0" defaultmsb = "0" defaultlsb = "0">
+    <melopart defaultpc = "0" defaultmsb = "0" defaultlsb = "1">
         <!-- MELO -->
         <melopartsysexec channel =  "0" sysexec = "F041104212401115001AF7" />
         <melopartsysexec channel =  "1" sysexec = "F0411042124012150019F7" />
@@ -22,7 +22,7 @@
         <melopartsysexec channel = "15" sysexec = "F041104212401F15000CF7" />
 
     </melopart>
-    <drumpart maxassign = "2" default = "9" defaultpc = "0" defaultmsb = "0" defaultlsb = "0" >
+    <drumpart maxassign = "2" default = "9" defaultpc = "1" defaultmsb = "0" defaultlsb = "0" >
         <!-- MAP1 -->
         <drumpartsysexec channel =  "0" target = "0" sysexec = "F0411042124011150119F7" />
         <drumpartsysexec channel =  "1" target = "0" sysexec = "F0411042124012150118F7" />
