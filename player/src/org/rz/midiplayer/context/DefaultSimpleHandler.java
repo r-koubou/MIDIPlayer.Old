@@ -100,6 +100,14 @@ public class DefaultSimpleHandler implements Loggable, SimpleHandler, MidiEventL
         Spec spec = context.getMidiSpecTable().get( currentMidiSpec );
         InstrumentList instList = context.getDevice().getInstrumentList();
 
+        int defaultMeloPC  = spec.getMelopart().getDefaultpc();
+        int defaultMeloMSB = spec.getMelopart().getDefaultmsb();
+        int defaultMeloLSB = spec.getMelopart().getDefaultlsb();
+
+        int defaultDrumPC  = spec.getDrumpart().getDefaultpc();
+        int defaultDrumMSB = spec.getDrumpart().getDefaultmsb();
+        int defaultDrumLSB = spec.getDrumpart().getDefaultlsb();
+
         if( spec != null )
         {
             defaultDrumCH = spec.getDrumpart().getDefault();
@@ -109,11 +117,23 @@ public class DefaultSimpleHandler implements Loggable, SimpleHandler, MidiEventL
         {
             if( i == defaultDrumCH )
             {
-                ret[ i ] = instList.search( currentMidiSpec, InstType.DRUM, 0, 0, 0 );
+                ret[ i ] = instList.search(
+                        currentMidiSpec,
+                        InstType.DRUM,
+                        defaultDrumPC,
+                        defaultDrumMSB,
+                        defaultDrumLSB
+                );
             }
             else
             {
-                ret[ i ] = instList.search( currentMidiSpec, InstType.MELO, 0, 0, 0 );
+                ret[ i ] = instList.search(
+                        currentMidiSpec,
+                        InstType.MELO,
+                        defaultMeloPC,
+                        defaultMeloMSB,
+                        defaultMeloLSB
+                );
             }
         }
 
