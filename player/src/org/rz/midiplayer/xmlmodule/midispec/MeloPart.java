@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -21,6 +22,9 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element ref="{}melopartsysexec" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element ref="{}melopartpc" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/choice>
+ *       &lt;attribute name="defaultpc" type="{http://www.w3.org/2001/XMLSchema}int" default="0" />
+ *       &lt;attribute name="defaultmsb" type="{http://www.w3.org/2001/XMLSchema}int" default="0" />
+ *       &lt;attribute name="defaultlsb" type="{http://www.w3.org/2001/XMLSchema}int" default="0" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -37,6 +41,12 @@ public class MeloPart {
 
     protected List<MeloPartSysExec> melopartsysexec;
     protected List<MeloPartPc> melopartpc;
+    @XmlAttribute
+    protected Integer defaultpc;
+    @XmlAttribute
+    protected Integer defaultmsb;
+    @XmlAttribute
+    protected Integer defaultlsb;
 
     /**
      * Gets the value of the melopartsysexec property.
@@ -94,6 +104,90 @@ public class MeloPart {
             melopartpc = new ArrayList<MeloPartPc>();
         }
         return this.melopartpc;
+    }
+
+    /**
+     * Gets the value of the defaultpc property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public int getDefaultpc() {
+        if (defaultpc == null) {
+            return  0;
+        } else {
+            return defaultpc;
+        }
+    }
+
+    /**
+     * Sets the value of the defaultpc property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setDefaultpc(Integer value) {
+        this.defaultpc = value;
+    }
+
+    /**
+     * Gets the value of the defaultmsb property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public int getDefaultmsb() {
+        if (defaultmsb == null) {
+            return  0;
+        } else {
+            return defaultmsb;
+        }
+    }
+
+    /**
+     * Sets the value of the defaultmsb property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setDefaultmsb(Integer value) {
+        this.defaultmsb = value;
+    }
+
+    /**
+     * Gets the value of the defaultlsb property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public int getDefaultlsb() {
+        if (defaultlsb == null) {
+            return  0;
+        } else {
+            return defaultlsb;
+        }
+    }
+
+    /**
+     * Sets the value of the defaultlsb property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setDefaultlsb(Integer value) {
+        this.defaultlsb = value;
     }
 
 }
