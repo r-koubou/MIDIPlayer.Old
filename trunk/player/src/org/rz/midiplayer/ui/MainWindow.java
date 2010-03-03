@@ -44,10 +44,12 @@ import org.rz.midiplayer.xmlmodule.appconfig.ApplicationConfig;
  */
 public class MainWindow extends javax.swing.JFrame implements Loggable
 {
-    private final ResourceBundle resourceBundle = ResourceBundle.getBundle( "org.rz.midiplayer.ui.resources.MainWindow" );
+    private final ResourceBundle resourceBundle = ResourceBundle.getBundle(  "org.rz.midiplayer.ui.resources.MainWindow" );
     private final Context context;
     private RendererPlugin renderer;
     private File selectedMidiFile;
+
+    private final Vector<JRadioButtonMenuItem> midiOutMenuItemList = new Vector<JRadioButtonMenuItem>( 32 );
 
     //==========================================================================
     // Netbeans によって自動生成されるフィールドここから
@@ -84,12 +86,6 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
     {
         context = context_;
         initComponents();
-
-        try
-        {
-            ToolTipManager.sharedInstance().setInitialDelay( 250 );
-        }
-        catch( Throwable e ) {}
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -141,6 +137,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         openMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
         openMenuItem.setMnemonic('O');
         openMenuItem.setText(resourceBundle.getString( "openMenuItem.label" )); // NOI18N
+        openMenuItem.setToolTipText(resourceBundle.getString( "openMenuItem.tooltip" )); // NOI18N
         openMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onOpenMenuAction(evt);
@@ -150,7 +147,8 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
 
         exitMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_MASK));
         exitMenuItem.setMnemonic('X');
-        exitMenuItem.setText(resourceBundle.getString( "exitMenuItem" )); // NOI18N
+        exitMenuItem.setText(resourceBundle.getString( "exitMenuItem.label" )); // NOI18N
+        exitMenuItem.setToolTipText(resourceBundle.getString( "exitMenuItem.tooltip" )); // NOI18N
         exitMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onExitMenuItemAction(evt);
@@ -176,6 +174,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         playMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0));
         playMenuItem.setMnemonic('P');
         playMenuItem.setText(resourceBundle.getString( "playMenuItem.label" )); // NOI18N
+        playMenuItem.setToolTipText(resourceBundle.getString( "playMenuItem.tooltip" )); // NOI18N
         playMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onPlayMenuItemAction(evt);
@@ -186,6 +185,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         stopMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0));
         stopMenuItem.setMnemonic('S');
         stopMenuItem.setText(resourceBundle.getString( "stopMenuItem.label" )); // NOI18N
+        stopMenuItem.setToolTipText(resourceBundle.getString( "stopMenuItem.tooltip" )); // NOI18N
         stopMenuItem.setEnabled(false);
         stopMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -197,6 +197,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         realTimeMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, InputEvent.CTRL_MASK));
         realTimeMenuItem.setMnemonic('R');
         realTimeMenuItem.setText(resourceBundle.getString( "realTimeMenu.label" )); // NOI18N
+        realTimeMenuItem.setToolTipText(resourceBundle.getString( "realTimeMenuItem.tooltip" )); // NOI18N
         realTimeMenuItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 onRealTimeMenuItemAction(evt);
@@ -294,6 +295,8 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
         Vector<MidiDevice> devs = MIDIDeviceManager.getMidiOutDeviceList();
         String current = context.getConfig().getMidiout().getName();
 
+        midiOutMenuItemList.removeAllElements();
+
         for( MidiDevice i : devs )
         {
             String name = i.getDeviceInfo().getName();
@@ -311,6 +314,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
             item.setText( name );
             midiOutMenu.add( item );
             midiOutButtonGroup.add( item );
+            midiOutMenuItemList.addElement( item );
         }
     }
 
@@ -386,9 +390,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
      */
     private void onWindowClosed(WindowEvent evt)//GEN-FIRST:event_onWindowClosed
     {//GEN-HEADEREND:event_onWindowClosed
-        context.saveAppConfig();
-        context.dispose();
-        System.exit( 0 );
+        terminateApp();
     }//GEN-LAST:event_onWindowClosed
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -415,6 +417,11 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
     private void onWindowOpened(WindowEvent evt)//GEN-FIRST:event_onWindowOpened
     {//GEN-HEADEREND:event_onWindowOpened
         startRendering();
+        if( isMidiOutNotSelected() )
+        {
+            CautionDialog d = new CautionDialog( this, true );
+            d.setVisible( true );
+        }
     }//GEN-LAST:event_onWindowOpened
 
     private void onWindowClosing(WindowEvent evt)//GEN-FIRST:event_onWindowClosing
@@ -484,13 +491,7 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
 
     private void onExitMenuItemAction(ActionEvent evt)//GEN-FIRST:event_onExitMenuItemAction
     {//GEN-HEADEREND:event_onExitMenuItemAction
-        synchronized( this )
-        {
-            stopRendering();
-            context.dispose();
-        }
         dispose();
-        System.exit( 0 );
     }//GEN-LAST:event_onExitMenuItemAction
 
     private void onRealTimeMenuItemAction(ActionEvent evt)//GEN-FIRST:event_onRealTimeMenuItemAction
@@ -577,6 +578,33 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
             logger.info( "Stopped current renderer..." );
 
         }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     * 
+     */
+    private void terminateApp()
+    {
+        context.saveAppConfig();
+        context.dispose();
+        System.exit( 0 );
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     * 
+     */
+    synchronized private boolean isMidiOutNotSelected()
+    {
+        for( JRadioButtonMenuItem i : midiOutMenuItemList )
+        {
+            if( i.isSelected() )
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     ////////////////////////////////////////////////////////////////////////////////
