@@ -140,7 +140,7 @@ public class Log
             logger.info( "[Vendor]"            + inf.getVendor() );
             logger.info( "[Description]"       + inf.getDescription() );
             logger.info( "[Max Receivers]"     + dev.getMaxReceivers() );
-            logger.info( "[Max Transmittersa]" + dev.getMaxTransmitters() );
+            logger.info( "[Max Transmitters]"  + dev.getMaxTransmitters() );
         }
     }
 
