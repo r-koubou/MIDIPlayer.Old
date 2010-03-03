@@ -240,22 +240,31 @@ public class DefaultSimpleHandler implements Loggable, SimpleHandler, MidiEventL
         // リセット系のエクスクルーシブメッセージ判定
         {
             ArrayList<Spec> sp = context.getMidiSpecArray();
+            List<org.rz.midiplayer.xmlmodule.deviceinfo.InstrumentList> instList  = context.getDevice().getDeviceInfo().getInstruments();
 
             for( Spec s : sp )
             {
                 if( Arrays.equals( s.getReset().getSysexec(), data ) )
                 {
-                    setCurrentMidiSpec( s.getName() );
-                    reset();
-
-                    Instrument[] defaultInst = getDefaultInstrumentList();
-                    for( int i = 0; i < 16; i++ )
+                    for( org.rz.midiplayer.xmlmodule.deviceinfo.InstrumentList inst : instList )
                     {
-                        programChange( i, defaultInst[ i ] );
-                    }
+                        if( ! inst.getMode().equals( s.getName() ) )
+                        {
+                            continue;
+                        }
 
-                    logger.info( "********** RESET EXCLUSIVE MESSAGE : " + s.getName() );
-                    return true;
+                        setCurrentMidiSpec( s.getName() );
+                        reset();
+
+                        Instrument[] defaultInst = getDefaultInstrumentList();
+                        for( int i = 0; i < 16; i++ )
+                        {
+                            programChange( i, defaultInst[ i ] );
+                        }
+
+                        logger.info( "********** RESET EXCLUSIVE MESSAGE : " + s.getName() );
+                        return true;
+                    }
                 }
             }
         }
