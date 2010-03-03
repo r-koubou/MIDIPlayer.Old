@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding = "UTF-8" ?>
+
+<deviceinfo name = "YAMAHA MU90/80/50/15/S-YXG50" defaultMode = "XG" author = "rz" version = "1.00" description = "YAMAHA MU90/80/50/15/S-YXG50 用の定義ファイル">
+
+<!--
+    前バージョンにて 楓音 凛 様 よりご提供頂いた YAMAHA MU90/80/50/15/S-YXG50 用データからのコンバート
+
+    [音色名について]
+    XG BasicMAP　　＝　XG音源標準音色
+    XG BasicMAP +　＝　MU80以降追加された音色
+    XG BasicMAP ++ ＝　MU90で追加された音色
+
+
+
+-->
+
+    <import file = "GM.xml" />
+    <import file = "GM2.xml" />
+
+    <!-- 
+        【音色リスト】
+        mode : この音色リストを参照するトリガーとなる各規格のリセット系のエクスクルーシブメッセージ
+                  例えば、GM、GS, XG 、SD などです。
+    -->
+    <instruments mode = "XG" >
+        <!-- melo -->
+        <map type = "melo">
+            <instrument pc = "0" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;GrandPno" />
+            <instrument pc = "0" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;GrndPnoK" />
+            <instrument pc = "0" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;MelloGrP" />
+            <instrument pc = "0" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;PianoStr" />
+            <instrument pc = "0" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;Dream" />
+            <instrument pc = "1" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;BritePno" />
+            <instrument pc = "1" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;BritPnoK" />
+            <instrument pc = "2" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;El.Grand" />
+            <instrument pc = "2" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;El.GrPnoK" />
+            <instrument pc = "2" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Det.CP80" />
+            <instrument pc = "2" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;LayerCP1" />
+            <instrument pc = "2" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;LayerCP2" />
+            <instrument pc = "3" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;HnkyTonk" />
+            <instrument pc = "3" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;HnkyTnkK" />
+            <instrument pc = "4" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;E.Piano1" />
+            <instrument pc = "4" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;El.Pno1K" />
+            <instrument pc = "4" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;MelloEP1" />
+            <instrument pc = "4" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Chor.EP1" />
+            <instrument pc = "4" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;HardEl.P" />
+            <instrument pc = "4" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;VX El.P1" />
+            <instrument pc = "4" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;60sEl.P1" />
+            <instrument pc = "4" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;PhunkyDX" />
+            <instrument pc = "5" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;E.piano2" />
+            <instrument pc = "5" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;El.Pno2K" />
+            <instrument pc = "5" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Chor.EP2" />
+            <instrument pc = "5" msb = "0" lsb = "33" name = "XG BasicMap&lt;&gt;DX Hard" />
+            <instrument pc = "5" msb = "0" lsb = "34" name = "XG BasicMap&lt;&gt;DX Legend" />
+            <instrument pc = "5" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;DX Phase" />
+            <instrument pc = "5" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;DX+Analg" />
+            <instrument pc = "5" msb = "0" lsb = "42" name = "XG BasicMap&lt;&gt;DX Koto EP" />
+            <instrument pc = "5" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;VX El.P2" />
+            <instrument pc = "5" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;Turnpik 2" />
+            <instrument pc = "6" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Harpsi." />
+            <instrument pc = "6" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;Harpsi.K" />
+            <instrument pc = "6" msb = "0" lsb = "25" name = "XG BasicMap&lt;&gt;Harpsi.2" />
+            <instrument pc = "6" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;HarpsiDt" />
+            <instrument pc = "6" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;Harpsi.3" />
+            <instrument pc = "7" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Clavi" />
+            <instrument pc = "7" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;Clavi K" />
+            <instrument pc = "7" msb = "0" lsb = "27" name = "XG BasicMap&lt;&gt;Clavi Wah" />
+            <instrument pc = "7" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Pulse Clv" />
+            <instrument pc = "7" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Pierce Cl" />
+            <instrument pc = "8" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Celesta" />
+            <instrument pc = "9" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Glocken" />
+            <instrument pc = "10" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;MusicBox" />
+            <instrument pc = "10" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Orgel" />
+            <instrument pc = "11" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Vibes" />
+            <instrument pc = "11" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;Vibes K" />
+            <instrument pc = "11" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;Hard Vibe" />
+            <instrument pc = "12" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Marinba" />
+            <instrument pc = "12" msb = "0" lsb = "1" name = "XG BasicMap&lt;&gt;MarinbaK" />
+            <instrument pc = "12" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;SineMrmb" />
+            <instrument pc = "12" msb = "0" lsb = "96" name = "XG BasicMap ++&lt;&gt;Balafon" />
+            <instrument pc = "12" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;Balimba" />
+            <instrument pc = "12" msb = "0" lsb = "98" name = "XG BasicMap&lt;&gt;Log Drum" />
+            <instrument pc = "13" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Xylophon" />
+            <instrument pc = "14" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;TubulBel" />
+            <instrument pc = "14" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;ChrchBel" />
+            <instrument pc = "14" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;Carillon" />
+            <instrument pc = "15" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Dulcimer" />
+            <instrument pc = "15" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;Dulcimr 2" />
+            <instrument pc = "15" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Cimbalon" />
+            <instrument pc = "15" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;Santur" />
+            <instrument pc = "16" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Draw Orgn" />
+            <instrument pc = "16" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;DetDrw Or" />
+            <instrument pc = "16" msb = "0" lsb = "33" name = "XG BasicMap&lt;&gt;60sDr Or1" />
+            <instrument pc = "16" msb = "0" lsb = "34" name = "XG BasicMap&lt;&gt;60sDr or2" />
+            <instrument pc = "16" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;70sDr Or1" />
+            <instrument pc = "16" msb = "0" lsb = "36" name = "XG BasicMap&lt;&gt;Draw Org2" />
+            <instrument pc = "16" msb = "0" lsb = "37" name = "XG BasicMap&lt;&gt;60sDr Or3" />
+            <instrument pc = "16" msb = "0" lsb = "38" name = "XG BasicMap&lt;&gt;Even Bar" />
+            <instrument pc = "16" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;16+2" 2/3" /&gt;
+            instrument pc = "16" msb = "0" lsb = "64" name = "XG BasicMap&lt;>Organ Ba" /&gt;
+            <instrument pc = "16" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;70sDr Or2" />
+            <instrument pc = "16" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Cheez Org" />
+            <instrument pc = "16" msb = "0" lsb = "67" name = "XG BasicMap&lt;&gt;Draw Org3" />
+            <instrument pc = "16" msb = "0" lsb = "68" name = "XG BasicMap ++&lt;&gt;Stdium Or" />
+            <instrument pc = "16" msb = "0" lsb = "69" name = "XG BasicMap ++&lt;&gt;Stdium O2" />
+            <instrument pc = "16" msb = "0" lsb = "70" name = "XG BasicMap ++&lt;&gt;Gospel Or" />
+            <instrument pc = "16" msb = "0" lsb = "71" name = "XG BasicMap ++&lt;&gt;ClkGspl O" />
+            <instrument pc = "16" msb = "0" lsb = "72" name = "XG BasicMap ++&lt;&gt;Chapel Or" />
+            <instrument pc = "16" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;Dawn" />
+            <instrument pc = "16" msb = "0" lsb = "78" name = "XG BasicMap&lt;&gt;70sDr Or3" />
+            <instrument pc = "17" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Perc Orgn" />
+            <instrument pc = "17" msb = "0" lsb = "24" name = "XG BasicMap&lt;&gt;70sPc Or1" />
+            <instrument pc = "17" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;DetPrc Or" />
+            <instrument pc = "17" msb = "0" lsb = "33" name = "XG BasicMap&lt;&gt;Lite Org" />
+            <instrument pc = "17" msb = "0" lsb = "37" name = "XG BasicMap&lt;&gt;Perc Org2" />
+            <instrument pc = "17" msb = "0" lsb = "64" name = "XG BasicMap ++&lt;&gt;Jaz Organ" />
+            <instrument pc = "17" msb = "0" lsb = "65" name = "XG BasicMap ++&lt;&gt;WarmJz Or" />
+            <instrument pc = "17" msb = "0" lsb = "66" name = "XG BasicMap ++&lt;&gt;Clik Orgn" />
+            <instrument pc = "17" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;LoFi Orgn" />
+            <instrument pc = "18" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Rock Orgn" />
+            <instrument pc = "18" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Rotary Or" />
+            <instrument pc = "18" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;SloRotar" />
+            <instrument pc = "18" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;FstRotar" />
+            <instrument pc = "19" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Chrch Org" />
+            <instrument pc = "19" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Chur Org3" />
+            <instrument pc = "19" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;Chur Org2" />
+            <instrument pc = "19" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;NotreDam" />
+            <instrument pc = "19" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Org Flute" />
+            <instrument pc = "19" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Trm OrgF1" />
+            <instrument pc = "20" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Reed Orgn" />
+            <instrument pc = "20" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;Puff Org" />
+            <instrument pc = "21" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Acordion" />
+            <instrument pc = "21" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Accord It" />
+            <instrument pc = "22" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Harmnica" />
+            <instrument pc = "22" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Harmo.2" />
+            <instrument pc = "23" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;TangoAcd" />
+            <instrument pc = "23" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;TangoAcd2" />
+            <instrument pc = "24" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;NylonGtr" />
+            <instrument pc = "24" msb = "0" lsb = "16" name = "XG BasicMap&lt;&gt;NylonGt2" />
+            <instrument pc = "24" msb = "0" lsb = "25" name = "XG BasicMap&lt;&gt;NylonGt3" />
+            <instrument pc = "24" msb = "0" lsb = "43" name = "XG BasicMap&lt;&gt;VelGtHrm" />
+            <instrument pc = "24" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Ukulele" />
+            <instrument pc = "25" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SteelGtr" />
+            <instrument pc = "25" msb = "0" lsb = "16" name = "XG BasicMap&lt;&gt;SteelGt2" />
+            <instrument pc = "25" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;12StrGtr" />
+            <instrument pc = "25" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;Nyln &amp; Stl" />
+            <instrument pc = "25" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;Stl &amp; Body" />
+            <instrument pc = "25" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Mandolin" />
+            <instrument pc = "26" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Jazz Gtr" />
+            <instrument pc = "26" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;MelloGtr" />
+            <instrument pc = "26" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Jazz Amp" />
+            <instrument pc = "26" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;PdlSteel" />
+            <instrument pc = "27" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;CleanGtr" />
+            <instrument pc = "27" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;ChorusGt" />
+            <instrument pc = "27" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;CleanGt2" />
+            <instrument pc = "27" msb = "0" lsb = "65" name = "XG BasicMap ++&lt;&gt;MidT.Gtr" />
+            <instrument pc = "27" msb = "0" lsb = "66" name = "XG BasicMap ++&lt;&gt;MidT.GtSt" />
+            <instrument pc = "27" msb = "0" lsb = "67" name = "XG BasicMap ++&lt;&gt;NasalGtr" />
+            <instrument pc = "27" msb = "0" lsb = "68" name = "XG BasicMap ++&lt;&gt;NaslGtSt" />
+            <instrument pc = "27" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;FM ChoGtS" />
+            <instrument pc = "28" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Mute Gtr" />
+            <instrument pc = "28" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;FunkGtr1" />
+            <instrument pc = "28" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;MuteStlG" />
+            <instrument pc = "28" msb = "0" lsb = "43" name = "XG BasicMap&lt;&gt;FunkGtr2" />
+            <instrument pc = "28" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;Jazz Man" />
+            <instrument pc = "28" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;Mu.DstGt" />
+            <instrument pc = "29" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Overdriv" />
+            <instrument pc = "29" msb = "0" lsb = "43" name = "XG BasicMap -&lt;&gt;Gt.Pinch" />
+            <instrument pc = "30" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Dist.Gtr" />
+            <instrument pc = "30" msb = "0" lsb = "12" name = "XG BasicMap +&lt;&gt;DstRthmG" />
+            <instrument pc = "30" msb = "0" lsb = "24" name = "XG BasicMap +&lt;&gt;DistGtr2" />
+            <instrument pc = "30" msb = "0" lsb = "35" name = "XG BasicMap +&lt;&gt;DistGtr3" />
+            <instrument pc = "30" msb = "0" lsb = "36" name = "XG BasicMap +&lt;&gt;PowerGt2" />
+            <instrument pc = "30" msb = "0" lsb = "37" name = "XG BasicMap +&lt;&gt;PowerGt1" />
+            <instrument pc = "30" msb = "0" lsb = "38" name = "XG BasicMap +&lt;&gt;Dst.5ths" />
+            <instrument pc = "30" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;FeedbkGt" />
+            <instrument pc = "30" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;FeedbkGt2" />
+            <instrument pc = "30" msb = "0" lsb = "43" name = "XG BasicMap +&lt;&gt;RckRthm2" />
+            <instrument pc = "30" msb = "0" lsb = "45" name = "XG BasicMap +&lt;&gt;RckRthm1" />
+            <instrument pc = "31" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;GtrHarmo" />
+            <instrument pc = "31" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;AcoHarmo" />
+            <instrument pc = "31" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;GtFeedbk" />
+            <instrument pc = "31" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;GtrHrmo2" />
+            <instrument pc = "32" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Aco.Bass" />
+            <instrument pc = "32" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;JazzRthm" />
+            <instrument pc = "32" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;VXUprght" />
+            <instrument pc = "33" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;FngrBass" />
+            <instrument pc = "33" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;FingrDrk" />
+            <instrument pc = "33" msb = "0" lsb = "27" name = "XG BasicMap&lt;&gt;FlangeBa" />
+            <instrument pc = "33" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;Ba &amp; DstEG" />
+            <instrument pc = "33" msb = "0" lsb = "43" name = "XG BasicMap&lt;&gt;FngrSlap" />
+            <instrument pc = "33" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;FngBass2" />
+            <instrument pc = "33" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;Jazzy Ba" />
+            <instrument pc = "33" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Mod.Bass" />
+            <instrument pc = "33" msb = "0" lsb = "69" name = "XG NativeMap&lt;&gt;JazzyBa2" />
+            <instrument pc = "33" msb = "0" lsb = "70" name = "XG NativeMap&lt;&gt;FngBass3" />
+            <instrument pc = "34" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;PickBass" />
+            <instrument pc = "34" msb = "0" lsb = "6" name = "XG NativeMap&lt;&gt;PickBa 2" />
+            <instrument pc = "34" msb = "0" lsb = "28" name = "XG BasicMap&lt;&gt;MutePkBa" />
+            <instrument pc = "34" msb = "0" lsb = "67" name = "XG NativeMap&lt;&gt;PickBa 4" />
+            <instrument pc = "35" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Fretless" />
+            <instrument pc = "35" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Fretles2" />
+            <instrument pc = "35" msb = "0" lsb = "33" name = "XG BasicMap&lt;&gt;Fretles3" />
+            <instrument pc = "35" msb = "0" lsb = "34" name = "XG BasicMap&lt;&gt;Fretles4" />
+            <instrument pc = "35" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;SynFretl" />
+            <instrument pc = "35" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;SmthFrtl" />
+            <instrument pc = "36" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SlapBas1" />
+            <instrument pc = "36" msb = "0" lsb = "21" name = "XG BasicMap&lt;&gt;CsmicSlp" />
+            <instrument pc = "36" msb = "0" lsb = "27" name = "XG BasicMap&lt;&gt;ResoSlap" />
+            <instrument pc = "36" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;PunchThm" />
+            <instrument pc = "36" msb = "0" lsb = "64" name = "XG BasicMap ++&lt;&gt;Slapper" />
+            <instrument pc = "36" msb = "0" lsb = "65" name = "XG BasicMap ++&lt;&gt;Thum &amp; Slp" />
+            <instrument pc = "37" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SlapBas2" />
+            <instrument pc = "37" msb = "0" lsb = "43" name = "XG BasicMap&lt;&gt;VeloSlap" />
+            <instrument pc = "38" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SynBass1" />
+            <instrument pc = "38" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;SynBa1Dk" />
+            <instrument pc = "38" msb = "0" lsb = "20" name = "XG BasicMap&lt;&gt;FastResB" />
+            <instrument pc = "38" msb = "0" lsb = "24" name = "XG BasicMap&lt;&gt;AcidBass" />
+            <instrument pc = "38" msb = "0" lsb = "27" name = "XG BasicMap ++&lt;&gt;ResoBass" />
+            <instrument pc = "38" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;Clv Bass" />
+            <instrument pc = "38" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;TechnoBa" />
+            <instrument pc = "38" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Orbiter" />
+            <instrument pc = "38" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Sqr.Bass" />
+            <instrument pc = "38" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;RubberBa" />
+            <instrument pc = "38" msb = "0" lsb = "67" name = "XG BasicMap ++&lt;&gt;Fish" />
+            <instrument pc = "38" msb = "0" lsb = "68" name = "XG BasicMap ++&lt;&gt;HardReso" />
+            <instrument pc = "38" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;TalkPuls" />
+            <instrument pc = "38" msb = "0" lsb = "89" name = "XG BasicMap&lt;&gt;FstFltBa" />
+            <instrument pc = "38" msb = "0" lsb = "90" name = "XG BasicMap&lt;&gt;Rubber30" />
+            <instrument pc = "38" msb = "0" lsb = "91" name = "XG BasicMap&lt;&gt;FstResB2" />
+            <instrument pc = "38" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Hammer" />
+            <instrument pc = "39" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SynBass2" />
+            <instrument pc = "39" msb = "0" lsb = "6" name = "XG BasicMap&lt;&gt;MelloSBa" />
+            <instrument pc = "39" msb = "0" lsb = "12" name = "XG BasicMap&lt;&gt;Seq Bass" />
+            <instrument pc = "39" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;ClkSynBa" />
+            <instrument pc = "39" msb = "0" lsb = "19" name = "XG BasicMap&lt;&gt;SynBa3Dk" />
+            <instrument pc = "39" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;SmthSynB" />
+            <instrument pc = "39" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;ModulrBa" />
+            <instrument pc = "39" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;DX Bass" />
+            <instrument pc = "39" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;X WireBa" />
+            <instrument pc = "39" msb = "0" lsb = "65" name = "XG BasicMap ++&lt;&gt;AtkPulse" />
+            <instrument pc = "39" msb = "0" lsb = "66" name = "XG BasicMap ++&lt;&gt;CS Light" />
+            <instrument pc = "39" msb = "0" lsb = "67" name = "XG BasicMap ++&lt;&gt;MeltBass" />
+            <instrument pc = "39" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;PwrdPuls" />
+            <instrument pc = "40" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Violin" />
+            <instrument pc = "40" msb = "0" lsb = "8" name = "XG BasicMap&lt;&gt;Slow Vln" />
+            <instrument pc = "41" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Viola" />
+            <instrument pc = "42" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Cello" />
+            <instrument pc = "43" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Contrabs" />
+            <instrument pc = "44" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Trem.Str" />
+            <instrument pc = "44" msb = "0" lsb = "8" name = "XG BasicMap&lt;&gt;SlwTrStr" />
+            <instrument pc = "44" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;Susp.Str" />
+            <instrument pc = "45" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;PizzStr" />
+            <instrument pc = "46" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Harp" />
+            <instrument pc = "46" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;YangChin" />
+            <instrument pc = "46" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;El.Harp" />
+            <instrument pc = "47" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Timpani" />
+            <instrument pc = "48" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Strngs 1" />
+            <instrument pc = "48" msb = "0" lsb = "3" name = "XG BasicMap&lt;&gt;S.Strngs" />
+            <instrument pc = "48" msb = "0" lsb = "8" name = "XG BasicMap&lt;&gt;Slow Str" />
+            <instrument pc = "48" msb = "0" lsb = "24" name = "XG BasicMap&lt;&gt;Arco Str" />
+            <instrument pc = "48" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;60sStrng" />
+            <instrument pc = "48" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;Orchestr" />
+            <instrument pc = "48" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;Orchstr2" />
+            <instrument pc = "48" msb = "0" lsb = "42" name = "XG BasicMap&lt;&gt;TremOrch" />
+            <instrument pc = "48" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;Velo.Str" />
+            <instrument pc = "48" msb = "0" lsb = "70" name = "XG BasicMap&lt;&gt;Hall Str" />
+            <instrument pc = "48" msb = "0" lsb = "71" name = "XG BasicMap&lt;&gt;Str/FHrn" />
+            <instrument pc = "49" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Strngs2" />
+            <instrument pc = "49" msb = "0" lsb = "3" name = "XG BasicMap&lt;&gt;S.SlwStr" />
+            <instrument pc = "49" msb = "0" lsb = "8" name = "XG BasicMap&lt;&gt;LegatoSt" />
+            <instrument pc = "49" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;Warm Str" />
+            <instrument pc = "49" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;Kingdom" />
+            <instrument pc = "49" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;70s Str" />
+            <instrument pc = "49" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Strings3" />
+            <instrument pc = "50" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Syn Str1" />
+            <instrument pc = "50" msb = "0" lsb = "27" name = "XG BasicMap&lt;&gt;Reso Str" />
+            <instrument pc = "50" msb = "0" lsb = "35" name = "XG BasicMap +&lt;&gt;Syn Str3" />
+            <instrument pc = "50" msb = "0" lsb = "40" name = "XG BasicMap ++&lt;&gt;GrandPad" />
+            <instrument pc = "50" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Syn Str4" />
+            <instrument pc = "50" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Syn Str5" />
+            <instrument pc = "50" msb = "0" lsb = "71" name = "XG BasicMap&lt;&gt;OldSynSt" />
+            <instrument pc = "51" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Syn Str2" />
+            <instrument pc = "51" msb = "0" lsb = "72" name = "XG BasicMap&lt;&gt;SunRise" />
+            <instrument pc = "52" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;ChoirAah" />
+            <instrument pc = "52" msb = "0" lsb = "3" name = "XG BasicMap&lt;&gt;S.Choir" />
+            <instrument pc = "52" msb = "0" lsb = "16" name = "XG BasicMap&lt;&gt;Ch.Aahs2" />
+            <instrument pc = "52" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;MelChoir" />
+            <instrument pc = "52" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;ChoirStr" />
+            <instrument pc = "52" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;StrngAah" />
+            <instrument pc = "52" msb = "0" lsb = "65" name = "XG BasicMap +&lt;&gt;Male Aah" />
+            <instrument pc = "53" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;VoiceOoh" />
+            <instrument pc = "53" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;VoiceDoo" />
+            <instrument pc = "53" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;VoiceHmn" />
+            <instrument pc = "54" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SynVoice" />
+            <instrument pc = "54" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;SyVoice2" />
+            <instrument pc = "54" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;Choral" />
+            <instrument pc = "54" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;AnaVoice" />
+            <instrument pc = "55" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Orch.Hit" />
+            <instrument pc = "55" msb = "0" lsb = "12" name = "XG BasicMap ++&lt;&gt;LoFi Hit" />
+            <instrument pc = "55" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;OrchHit2" />
+            <instrument pc = "55" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;ImPact" />
+            <instrument pc = "55" msb = "0" lsb = "65" name = "XG BasicMap +&lt;&gt;BrssStab" />
+            <instrument pc = "55" msb = "0" lsb = "66" name = "XG BasicMap +&lt;&gt;DoublHit" />
+            <instrument pc = "55" msb = "0" lsb = "67" name = "XG BasicMap +&lt;&gt;BrStab80" />
+            <instrument pc = "55" msb = "0" lsb = "68" name = "XG BasicMap ++&lt;&gt;Bass Hit" />
+            <instrument pc = "55" msb = "0" lsb = "69" name = "XG BasicMap ++&lt;&gt;BassHit+" />
+            <instrument pc = "55" msb = "0" lsb = "70" name = "XG BasicMap ++&lt;&gt;6th Hit" />
+            <instrument pc = "55" msb = "0" lsb = "71" name = "XG BasicMap ++&lt;&gt;6thHit +" />
+            <instrument pc = "55" msb = "0" lsb = "72" name = "XG BasicMap ++&lt;&gt;Euro Hit" />
+            <instrument pc = "55" msb = "0" lsb = "73" name = "XG BasicMap ++&lt;&gt;EuroHit+" />
+            <instrument pc = "55" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;Blowout" />
+            <instrument pc = "56" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Trumpet" />
+            <instrument pc = "56" msb = "0" lsb = "16" name = "XG BasicMap&lt;&gt;Trumpet2" />
+            <instrument pc = "56" msb = "0" lsb = "17" name = "XG BasicMap&lt;&gt;BriteTrp" />
+            <instrument pc = "56" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;Warm Trp" />
+            <instrument pc = "56" msb = "0" lsb = "64" name = "XG BasicMap ++&lt;&gt;Dark Trp" />
+            <instrument pc = "56" msb = "0" lsb = "65" name = "XG BasicMap ++&lt;&gt;DrkTpSft" />
+            <instrument pc = "56" msb = "0" lsb = "69" name = "XG NativeMap&lt;&gt;4th TP" />
+            <instrument pc = "56" msb = "0" lsb = "70" name = "XG NativeMap&lt;&gt;Synth Tp" />
+            <instrument pc = "56" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;FluglHrn" />
+            <instrument pc = "57" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Trombone" />
+            <instrument pc = "57" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;Trmbone2" />
+            <instrument pc = "57" msb = "0" lsb = "64" name = "XG BasicMap ++&lt;&gt;BrghtTrb" />
+            <instrument pc = "57" msb = "0" lsb = "65" name = "XG BasicMap ++&lt;&gt;MellowTb" />
+            <instrument pc = "58" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Tuba" />
+            <instrument pc = "58" msb = "0" lsb = "16" name = "XG BasicMap&lt;&gt;Tuba 2" />
+            <instrument pc = "59" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Mute Trp" />
+            <instrument pc = "59" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;MuteTrp2" />
+            <instrument pc = "60" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Fr.Horn" />
+            <instrument pc = "60" msb = "0" lsb = "6" name = "XG BasicMap&lt;&gt;FrHrSolo" />
+            <instrument pc = "60" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;FrHorn 2" />
+            <instrument pc = "60" msb = "0" lsb = "37" name = "XG BasicMap&lt;&gt;HornOrch" />
+            <instrument pc = "60" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;HornOrc2" />
+            <instrument pc = "61" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;BrssSect" />
+            <instrument pc = "61" msb = "0" lsb = "3" name = "XG BasicMap ++&lt;&gt;StBrsSec" />
+            <instrument pc = "61" msb = "0" lsb = "14" name = "XG BasicMap +&lt;&gt;SfrzndBr" />
+            <instrument pc = "61" msb = "0" lsb = "18" name = "XG BasicMap ++&lt;&gt;MildBrss" />
+            <instrument pc = "61" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;Tp &amp; TbSec" />
+            <instrument pc = "61" msb = "0" lsb = "36" name = "XG BasicMap ++&lt;&gt;Tp &amp; TbSc2" />
+            <instrument pc = "61" msb = "0" lsb = "39" name = "XG BasicMap +&lt;&gt;BrssFall" />
+            <instrument pc = "61" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;BrssSec2" />
+            <instrument pc = "61" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;Hi Brass" />
+            <instrument pc = "61" msb = "0" lsb = "42" name = "XG BasicMap&lt;&gt;MelloBrs" />
+            <instrument pc = "61" msb = "0" lsb = "73" name = "XG BasicMap&lt;&gt;BrssSec3" />
+            <instrument pc = "61" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;SfrzdBr2" />
+            <instrument pc = "61" msb = "0" lsb = "75" name = "XG BasicMap&lt;&gt;OctBrass" />
+            <instrument pc = "62" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SynBrss1" />
+            <instrument pc = "62" msb = "0" lsb = "12" name = "XG BasicMap&lt;&gt;Quack Br" />
+            <instrument pc = "62" msb = "0" lsb = "20" name = "XG BasicMap&lt;&gt;RezSynBr" />
+            <instrument pc = "62" msb = "0" lsb = "24" name = "XG BasicMap&lt;&gt;PolyBrss" />
+            <instrument pc = "62" msb = "0" lsb = "27" name = "XG BasicMap&lt;&gt;SynBrss3" />
+            <instrument pc = "62" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;JumpBrss" />
+            <instrument pc = "62" msb = "0" lsb = "40" name = "XG BasicMap ++&lt;&gt;SyBrsSub" />
+            <instrument pc = "62" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;AnVelBr1" />
+            <instrument pc = "62" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;AnaBrss1" />
+            <instrument pc = "63" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SynBrss2" />
+            <instrument pc = "63" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;Soft Brs" />
+            <instrument pc = "63" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;SynBrss4" />
+            <instrument pc = "63" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;ChoirBrs 2" />
+            <instrument pc = "63" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;AnVelBr2" />
+            <instrument pc = "63" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;AnaBrss2" />
+            <instrument pc = "64" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SprnoSax" />
+            <instrument pc = "65" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Alto Sax" />
+            <instrument pc = "65" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;Sax Sect" />
+            <instrument pc = "65" msb = "0" lsb = "43" name = "XG BasicMap&lt;&gt;HyprAlt" />
+            <instrument pc = "66" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;TenorSax" />
+            <instrument pc = "66" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;BrthTnSx" />
+            <instrument pc = "66" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;SoftTenr" />
+            <instrument pc = "66" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;TnrSax 2" />
+            <instrument pc = "67" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Bari.Sax" />
+            <instrument pc = "68" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Oboe" />
+            <instrument pc = "68" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Oboe Exp" />
+            <instrument pc = "69" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Eng.Horn" />
+            <instrument pc = "70" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Bassoon" />
+            <instrument pc = "71" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Clarinet" />
+            <instrument pc = "71" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;BassClar" />
+            <instrument pc = "72" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Piccolo" />
+            <instrument pc = "73" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Flute" />
+            <instrument pc = "74" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Recorder" />
+            <instrument pc = "75" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;PanFlute" />
+            <instrument pc = "75" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;PanFlute2" />
+            <instrument pc = "75" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;Kawala" />
+            <instrument pc = "76" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Bottle" />
+            <instrument pc = "77" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Shakhachi" />
+            <instrument pc = "78" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Whistle" />
+            <instrument pc = "79" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Ocarina" />
+            <instrument pc = "80" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SquareLd" />
+            <instrument pc = "80" msb = "0" lsb = "6" name = "XG BasicMap&lt;&gt;SquarLd2" />
+            <instrument pc = "80" msb = "0" lsb = "8" name = "XG BasicMap&lt;&gt;LMSquare" />
+            <instrument pc = "80" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;Hollow" />
+            <instrument pc = "80" msb = "0" lsb = "19" name = "XG BasicMap&lt;&gt;Shroud" />
+            <instrument pc = "80" msb = "0" lsb = "35" name = "XG BasicMap ++&lt;&gt;2 Osc" />
+            <instrument pc = "80" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Mellow" />
+            <instrument pc = "80" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;SoloSine" />
+            <instrument pc = "80" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;SineLead" />
+            <instrument pc = "80" msb = "0" lsb = "67" name = "XG BasicMap ++&lt;&gt;Pulse Ld" />
+            <instrument pc = "80" msb = "0" lsb = "68" name = "XG BasicMap ++&lt;&gt;SyncLead" />
+            <instrument pc = "80" msb = "0" lsb = "78" name = "XG BasicMap&lt;&gt;Sine Ld2" />
+            <instrument pc = "80" msb = "0" lsb = "79" name = "XG BasicMap&lt;&gt;SquarLd3" />
+            <instrument pc = "80" msb = "0" lsb = "80" name = "XG BasicMap&lt;&gt;SquarLd4" />
+            <instrument pc = "81" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Saw Ld" />
+            <instrument pc = "81" msb = "0" lsb = "6" name = "XG BasicMap&lt;&gt;Saw Ld 2" />
+            <instrument pc = "81" msb = "0" lsb = "8" name = "XG BasicMap&lt;&gt;ThickSaw" />
+            <instrument pc = "81" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;Dyna Saw" />
+            <instrument pc = "81" msb = "0" lsb = "19" name = "XG BasicMap&lt;&gt;Digi Saw" />
+            <instrument pc = "81" msb = "0" lsb = "20" name = "XG BasicMap&lt;&gt;Big Lead" />
+            <instrument pc = "81" msb = "0" lsb = "24" name = "XG BasicMap&lt;&gt;HeavySyn" />
+            <instrument pc = "81" msb = "0" lsb = "25" name = "XG BasicMap&lt;&gt;WaspySyn" />
+            <instrument pc = "81" msb = "0" lsb = "26" name = "XG BasicMap ++&lt;&gt;Mondo" />
+            <instrument pc = "81" msb = "0" lsb = "27" name = "XG BasicMap ++&lt;&gt;RezzySaw" />
+            <instrument pc = "81" msb = "0" lsb = "32" name = "XG BasicMap ++&lt;&gt;DoublSaw" />
+            <instrument pc = "81" msb = "0" lsb = "35" name = "XG BasicMap ++&lt;&gt;Toy Lead" />
+            <instrument pc = "81" msb = "0" lsb = "36" name = "XG BasicMap ++&lt;&gt;Dim Saw" />
+            <instrument pc = "81" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;PulseSaw" />
+            <instrument pc = "81" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;Dr.Lead" />
+            <instrument pc = "81" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;VeloLead" />
+            <instrument pc = "81" msb = "0" lsb = "64" name = "XG BasicMap ++&lt;&gt;Digger" />
+            <instrument pc = "81" msb = "0" lsb = "80" name = "XG BasicMap&lt;&gt;FatSawLd" />
+            <instrument pc = "81" msb = "0" lsb = "81" name = "XG BasicMap&lt;&gt;DuckLead" />
+            <instrument pc = "81" msb = "0" lsb = "82" name = "XG BasicMap&lt;&gt;BoostSaw" />
+            <instrument pc = "81" msb = "0" lsb = "83" name = "XG BasicMap&lt;&gt;Mr.Saw" />
+            <instrument pc = "81" msb = "0" lsb = "84" name = "XG BasicMap&lt;&gt;ThinSwLd" />
+            <instrument pc = "81" msb = "0" lsb = "85" name = "XG BasicMap&lt;&gt;MouthSaw" />
+            <instrument pc = "81" msb = "0" lsb = "86" name = "XG BasicMap&lt;&gt;Dr.Lead2" />
+            <instrument pc = "81" msb = "0" lsb = "87" name = "XG BasicMap&lt;&gt;Saw Unis" />
+            <instrument pc = "81" msb = "0" lsb = "88" name = "XG BasicMap&lt;&gt;OctSawLd" />
+            <instrument pc = "81" msb = "0" lsb = "89" name = "XG BasicMap&lt;&gt;Seq Saw1" />
+            <instrument pc = "81" msb = "0" lsb = "90" name = "XG BasicMap&lt;&gt;Seq Saw2" />
+            <instrument pc = "81" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Seq Ana." />
+            <instrument pc = "82" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;CaliopLd" />
+            <instrument pc = "82" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;Vent Syn" />
+            <instrument pc = "82" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;PureLead" />
+            <instrument pc = "83" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Chiff Ld" />
+            <instrument pc = "83" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Rubby" />
+            <instrument pc = "83" msb = "0" lsb = "65" name = "XG BasicMap ++&lt;&gt;HardSync" />
+            <instrument pc = "84" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;CharanLd" />
+            <instrument pc = "84" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;DistLead" />
+            <instrument pc = "84" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;WireLead" />
+            <instrument pc = "84" msb = "0" lsb = "66" name = "XG BasicMap ++&lt;&gt;SynPluck" />
+            <instrument pc = "85" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Voice Ld" />
+            <instrument pc = "85" msb = "0" lsb = "24" name = "XG BasicMap&lt;&gt;SynthAah" />
+            <instrument pc = "85" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Vox Lead" />
+            <instrument pc = "85" msb = "0" lsb = "65" name = "XG BasicMap ++&lt;&gt;Br.Lead" />
+            <instrument pc = "86" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Fifth Ld" />
+            <instrument pc = "86" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;Big Five" />
+            <instrument pc = "87" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Bass &amp; Ld" />
+            <instrument pc = "87" msb = "0" lsb = "16" name = "XG BasicMap&lt;&gt;Big &amp; Low" />
+            <instrument pc = "87" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Fat &amp; Prky" />
+            <instrument pc = "87" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Soft Wrl" />
+            <instrument pc = "87" msb = "0" lsb = "70" name = "XG BasicMap&lt;&gt;Ba Lead" />
+            <instrument pc = "88" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;NewAgePd" />
+            <instrument pc = "88" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Fantasy" />
+            <instrument pc = "88" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Bell Pad" />
+            <instrument pc = "89" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Warm Pad" />
+            <instrument pc = "89" msb = "0" lsb = "16" name = "XG BasicMap&lt;&gt;ThickPad" />
+            <instrument pc = "89" msb = "0" lsb = "17" name = "XG BasicMap&lt;&gt;Soft Pad" />
+            <instrument pc = "89" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;Sine Pad" />
+            <instrument pc = "89" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Horn Pad" />
+            <instrument pc = "89" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;RotarStr" />
+            <instrument pc = "90" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;PolySyPd" />
+            <instrument pc = "90" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;PolyPd80" />
+            <instrument pc = "90" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;ClickPad" />
+            <instrument pc = "90" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Ana.Pad" />
+            <instrument pc = "90" msb = "0" lsb = "67" name = "XG BasicMap&lt;&gt;SquarPad" />
+            <instrument pc = "90" msb = "0" lsb = "68" name = "XG BasicMap ++&lt;&gt;Snow Pad" />
+            <instrument pc = "90" msb = "0" lsb = "72" name = "XG BasicMap&lt;&gt;PolySPd2" />
+            <instrument pc = "90" msb = "0" lsb = "73" name = "XG BasicMap&lt;&gt;PolyPdKg" />
+            <instrument pc = "91" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;ChoirPad" />
+            <instrument pc = "91" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Heaven" />
+            <instrument pc = "91" msb = "0" lsb = "65" name = "XG BasicMap +&lt;&gt;Lite Pad" />
+            <instrument pc = "91" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Itopia" />
+            <instrument pc = "91" msb = "0" lsb = "67" name = "XG BasicMap&lt;&gt;CC Pad" />
+            <instrument pc = "91" msb = "0" lsb = "68" name = "XG BasicMap ++&lt;&gt;CosmicPd" />
+            <instrument pc = "92" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;BowedPad" />
+            <instrument pc = "92" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Glacier" />
+            <instrument pc = "92" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;GlassPad" />
+            <instrument pc = "92" msb = "0" lsb = "67" name = "XG BasicMap&lt;&gt;SquarPd8" />
+            <instrument pc = "93" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;MetalPad" />
+            <instrument pc = "93" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Tine Pad" />
+            <instrument pc = "93" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Pan Pad" />
+            <instrument pc = "94" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Halo Pad" />
+            <instrument pc = "94" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;ChorusPd" />
+            <instrument pc = "95" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SweepPad" />
+            <instrument pc = "95" msb = "0" lsb = "20" name = "XG BasicMap&lt;&gt;Shwimmer" />
+            <instrument pc = "95" msb = "0" lsb = "27" name = "XG BasicMap&lt;&gt;Converge" />
+            <instrument pc = "95" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;PolarPad" />
+            <instrument pc = "95" msb = "0" lsb = "65" name = "XG BasicMap +&lt;&gt;Sweepy" />
+            <instrument pc = "95" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Celstial" />
+            <instrument pc = "96" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Rain" />
+            <instrument pc = "96" msb = "0" lsb = "45" name = "XG BasicMap&lt;&gt;ClaviPad" />
+            <instrument pc = "96" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;HrmoRain" />
+            <instrument pc = "96" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;AfrcnWnd" />
+            <instrument pc = "96" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Carib" />
+            <instrument pc = "97" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;SundTrk" />
+            <instrument pc = "97" msb = "0" lsb = "27" name = "XG BasicMap&lt;&gt;Prologe" />
+            <instrument pc = "97" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Ancestrl" />
+            <instrument pc = "97" msb = "0" lsb = "65" name = "XG BasicMap +&lt;&gt;Rave" />
+            <instrument pc = "97" msb = "0" lsb = "66" name = "XG BasicMap ++&lt;&gt;Fairy" />
+            <instrument pc = "98" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Crystal" />
+            <instrument pc = "98" msb = "0" lsb = "12" name = "XG BasicMap&lt;&gt;SynDrCmp" />
+            <instrument pc = "98" msb = "0" lsb = "14" name = "XG BasicMap&lt;&gt;Popcorn" />
+            <instrument pc = "98" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;TinyBell" />
+            <instrument pc = "98" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;RndGlock" />
+            <instrument pc = "98" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;GlockChi" />
+            <instrument pc = "98" msb = "0" lsb = "41" name = "XG BasicMap&lt;&gt;ClearBel" />
+            <instrument pc = "98" msb = "0" lsb = "42" name = "XG BasicMap&lt;&gt;ChorBell" />
+            <instrument pc = "98" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;SynMalet" />
+            <instrument pc = "98" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;SftCryst" />
+            <instrument pc = "98" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;LoudGlok" />
+            <instrument pc = "98" msb = "0" lsb = "67" name = "XG BasicMap&lt;&gt;ChrstBel" />
+            <instrument pc = "98" msb = "0" lsb = "68" name = "XG BasicMap&lt;&gt;VibeBell" />
+            <instrument pc = "98" msb = "0" lsb = "69" name = "XG BasicMap&lt;&gt;DigiBell" />
+            <instrument pc = "98" msb = "0" lsb = "70" name = "XG BasicMap&lt;&gt;AirBells" />
+            <instrument pc = "98" msb = "0" lsb = "71" name = "XG BasicMap&lt;&gt;BellHarp" />
+            <instrument pc = "98" msb = "0" lsb = "72" name = "XG BasicMap&lt;&gt;Gamelmba" />
+            <instrument pc = "98" msb = "0" lsb = "74" name = "XG BasicMap&lt;&gt;AnaBell" />
+            <instrument pc = "99" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Atmosphr" />
+            <instrument pc = "99" msb = "0" lsb = "18" name = "XG BasicMap&lt;&gt;WarmAtms" />
+            <instrument pc = "99" msb = "0" lsb = "19" name = "XG BasicMap&lt;&gt;HollwRls" />
+            <instrument pc = "99" msb = "0" lsb = "40" name = "XG BasicMap&lt;&gt;Nylon EP" />
+            <instrument pc = "99" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;NylnHarp" />
+            <instrument pc = "99" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Harp Vox" />
+            <instrument pc = "99" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;AtmosPad" />
+            <instrument pc = "99" msb = "0" lsb = "67" name = "XG BasicMap&lt;&gt;Planet" />
+            <instrument pc = "99" msb = "0" lsb = "71" name = "XG BasicMap&lt;&gt;Cloud Pd" />
+            <instrument pc = "99" msb = "0" lsb = "72" name = "XG BasicMap&lt;&gt;PulseKey" />
+            <instrument pc = "99" msb = "0" lsb = "73" name = "XG BasicMap&lt;&gt;NoisePno" />
+            <instrument pc = "100" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Bright" />
+            <instrument pc = "100" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;FantaBel" />
+            <instrument pc = "100" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;ShinStar" />
+            <instrument pc = "100" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;BritStab" />
+            <instrument pc = "100" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Smokey" />
+            <instrument pc = "101" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Goblins" />
+            <instrument pc = "101" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;GobSynth" />
+            <instrument pc = "101" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Creeper" />
+            <instrument pc = "101" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Ring Pad" />
+            <instrument pc = "101" msb = "0" lsb = "67" name = "XG BasicMap&lt;&gt;Ritual" />
+            <instrument pc = "101" msb = "0" lsb = "68" name = "XG BasicMap&lt;&gt;ToHeaven" />
+            <instrument pc = "101" msb = "0" lsb = "69" name = "XG BasicMap +&lt;&gt;MilkyWay" />
+            <instrument pc = "101" msb = "0" lsb = "70" name = "XG BasicMap&lt;&gt;Night" />
+            <instrument pc = "101" msb = "0" lsb = "71" name = "XG BasicMap&lt;&gt;Glisten" />
+            <instrument pc = "101" msb = "0" lsb = "72" name = "XG BasicMap +&lt;&gt;Puffy" />
+            <instrument pc = "101" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;BelChoir" />
+            <instrument pc = "101" msb = "0" lsb = "97" name = "XG BasicMap ++&lt;&gt;Dharma" />
+            <instrument pc = "102" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Echose" />
+            <instrument pc = "102" msb = "0" lsb = "8" name = "XG BasicMap&lt;&gt;Echose 2" />
+            <instrument pc = "102" msb = "0" lsb = "14" name = "XG BasicMap&lt;&gt;Echo Pan" />
+            <instrument pc = "102" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;EchoBell" />
+            <instrument pc = "102" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Big Pan" />
+            <instrument pc = "102" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;SynPiano" />
+            <instrument pc = "102" msb = "0" lsb = "67" name = "XG BasicMap&lt;&gt;Creation" />
+            <instrument pc = "102" msb = "0" lsb = "68" name = "XG BasicMap&lt;&gt;StarDust" />
+            <instrument pc = "102" msb = "0" lsb = "69" name = "XG BasicMap&lt;&gt;Reso &amp; Pan" />
+            <instrument pc = "102" msb = "0" lsb = "70" name = "XG BasicMap&lt;&gt;Ana Echo" />
+            <instrument pc = "103" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Sci-Fi" />
+            <instrument pc = "103" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Starz" />
+            <instrument pc = "103" msb = "0" lsb = "65" name = "XG BasicMap +&lt;&gt;Odin" />
+            <instrument pc = "104" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Sitar" />
+            <instrument pc = "104" msb = "0" lsb = "32" name = "XG BasicMap&lt;&gt;DetSitar" />
+            <instrument pc = "104" msb = "0" lsb = "35" name = "XG BasicMap&lt;&gt;Sitar 2" />
+            <instrument pc = "104" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Tambra" />
+            <instrument pc = "104" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;Tamboura" />
+            <instrument pc = "105" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Banjo" />
+            <instrument pc = "105" msb = "0" lsb = "28" name = "XG BasicMap&lt;&gt;MuteBnjo" />
+            <instrument pc = "105" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Rabab" />
+            <instrument pc = "105" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;Gopichnt" />
+            <instrument pc = "105" msb = "0" lsb = "98" name = "XG BasicMap&lt;&gt;Oud" />
+            <instrument pc = "106" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Shamisen" />
+            <instrument pc = "106" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;Tsugaru" />
+            <instrument pc = "107" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Koto" />
+            <instrument pc = "107" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Taisho-k" />
+            <instrument pc = "107" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;Kanoon" />
+            <instrument pc = "108" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Kalimba" />
+            <instrument pc = "108" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;BigKalim" />
+            <instrument pc = "109" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Bagpipe" />
+            <instrument pc = "110" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Fiddle" />
+            <instrument pc = "111" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Shanai" />
+            <instrument pc = "111" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Shanai 2" />
+            <instrument pc = "111" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Pungi" />
+            <instrument pc = "111" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;Hichriki" />
+            <instrument pc = "112" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;TnklBell" />
+            <instrument pc = "112" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Bonang" />
+            <instrument pc = "112" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;Altair" />
+            <instrument pc = "112" msb = "0" lsb = "98" name = "XG BasicMap&lt;&gt;Gamelan" />
+            <instrument pc = "112" msb = "0" lsb = "99" name = "XG BasicMap&lt;&gt;S.Gamlan" />
+            <instrument pc = "112" msb = "0" lsb = "100" name = "XG BasicMap&lt;&gt;Rama Cym" />
+            <instrument pc = "112" msb = "0" lsb = "101" name = "XG BasicMap&lt;&gt;AsianBel" />
+            <instrument pc = "113" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Agogo" />
+            <instrument pc = "113" msb = "0" lsb = "96" name = "XG BasicMap ++&lt;&gt;Atrigane" />
+            <instrument pc = "114" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;DteelDrm" />
+            <instrument pc = "114" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;Tablas" />
+            <instrument pc = "114" msb = "0" lsb = "97" name = "XG BasicMap&lt;&gt;GlasPerc" />
+            <instrument pc = "114" msb = "0" lsb = "98" name = "XG BasicMap&lt;&gt;ThaiBell" />
+            <instrument pc = "115" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Woodbloc" />
+            <instrument pc = "115" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Castanet" />
+            <instrument pc = "116" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;TaikoDrm" />
+            <instrument pc = "116" msb = "0" lsb = "96" name = "XG BasicMap&lt;&gt;Gr.Cassa" />
+            <instrument pc = "117" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;MelodTom" />
+            <instrument pc = "117" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Mel Tom2" />
+            <instrument pc = "117" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Real Tom" />
+            <instrument pc = "117" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Rock Tom" />
+            <instrument pc = "118" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Syn Drum" />
+            <instrument pc = "118" msb = "0" lsb = "64" name = "XG BasicMap&lt;&gt;Ana Tom" />
+            <instrument pc = "118" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;ElecPerc" />
+            <instrument pc = "118" msb = "0" lsb = "66" name = "XG BasicMap&lt;&gt;Syn Perc" />
+            <instrument pc = "119" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;RevCymbl" />
+            <instrument pc = "119" msb = "0" lsb = "64" name = "XG BasicMap +&lt;&gt;Rev Cym2" />
+            <instrument pc = "119" msb = "0" lsb = "65" name = "XG BasicMap&lt;&gt;Rev Cym3" />
+            <instrument pc = "119" msb = "0" lsb = "96" name = "XG BasicMap +&lt;&gt;RevSnar1" />
+            <instrument pc = "119" msb = "0" lsb = "97" name = "XG BasicMap +&lt;&gt;RevSnar2" />
+            <instrument pc = "119" msb = "0" lsb = "98" name = "XG BasicMap +&lt;&gt;RevKick1" />
+            <instrument pc = "119" msb = "0" lsb = "99" name = "XG BasicMap +&lt;&gt;RevConBD" />
+            <instrument pc = "119" msb = "0" lsb = "100" name = "XG BasicMap +&lt;&gt;Rev Tom1" />
+            <instrument pc = "119" msb = "0" lsb = "101" name = "XG BasicMap +&lt;&gt;Rev Tom2" />
+            <instrument pc = "120" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;FretNoiz" />
+            <instrument pc = "121" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;BrthNoiz" />
+            <instrument pc = "122" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Seashore" />
+            <instrument pc = "123" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Tweet" />
+            <instrument pc = "124" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Telphone" />
+            <instrument pc = "125" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Helicptr" />
+            <instrument pc = "126" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Applause" />
+            <instrument pc = "127" msb = "0" lsb = "0" name = "XG BasicMap&lt;&gt;Gunshot" />
+
+
+
+            <instrument pc = "0" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;CuttngNz" />
+            <instrument pc = "1" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;CttngNz2" />
+            <instrument pc = "2" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;DstCutNz" />
+            <instrument pc = "3" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Str Slap" />
+            <instrument pc = "4" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;B.Slide" />
+            <instrument pc = "5" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;P.Scrape" />
+            <instrument pc = "16" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Fl.KClik" />
+            <instrument pc = "32" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Shower" />
+            <instrument pc = "33" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Thunder" />
+            <instrument pc = "34" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Wind" />
+            <instrument pc = "35" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Stream" />
+            <instrument pc = "36" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Bubble" />
+            <instrument pc = "37" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;Feed" />
+
+            <instrument pc = "48" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Dog" />
+            <instrument pc = "49" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Horse" />
+            <instrument pc = "50" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Tweet 2" />
+            <instrument pc = "51" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;Kitty" />
+            <instrument pc = "52" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;Growl" />
+            <instrument pc = "53" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;Haunted" />
+            <instrument pc = "54" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Ghost" />
+            <instrument pc = "55" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;Maou" />
+            <instrument pc = "64" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;PhonCall" />
+            <instrument pc = "65" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;DoorSqek" />
+            <instrument pc = "66" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;DoorSqek" />
+            <instrument pc = "67" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;ScratchC" />
+            <instrument pc = "68" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;ScratchS" />
+            <instrument pc = "69" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;WindChim" />
+            <instrument pc = "70" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Telphon2" />
+            <instrument pc = "80" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;CarEIgnt" />
+            <instrument pc = "81" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;CarTSqel" />
+            <instrument pc = "82" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Car Pass" />
+            <instrument pc = "83" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;CarCrash" />
+            <instrument pc = "84" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Siren" />
+            <instrument pc = "85" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Train" />
+            <instrument pc = "86" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;JetPlane" />
+            <instrument pc = "87" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Starship" />
+            <instrument pc = "88" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Burst" />
+            <instrument pc = "89" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Coaster" />
+            <instrument pc = "90" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Submarin" />
+            <instrument pc = "96" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Laugh" />
+            <instrument pc = "97" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Scream" />
+            <instrument pc = "98" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Punch" />
+            <instrument pc = "99" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Heart" />
+            <instrument pc = "100" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Footstep" />
+            <instrument pc = "101" msb = "64" lsb = "0" name = "XG BasicSFX +&lt;&gt;Applaus2" />
+            <instrument pc = "112" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;MchinGun" />
+            <instrument pc = "113" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;LaserGun" />
+            <instrument pc = "114" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Xplosion" />
+            <instrument pc = "115" msb = "64" lsb = "0" name = "XG BasicSFX&lt;&gt;Firework" />
+        </map>
+
+        <!-- drum -->
+        <map type = "drum">
+            <instrument pc = "0" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;Standard Kit" />
+            <instrument pc = "1" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;Standard Kit2" />
+            <instrument pc = "2" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;Dry Kit" />
+            <instrument pc = "3" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;BriteKit" />
+            <instrument pc = "4" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "5" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "6" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "7" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "8" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;Room Kit" />
+            <instrument pc = "9" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;DarkRKit" />
+            <instrument pc = "10" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "11" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "12" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "13" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "14" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "15" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "16" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;Rock Kit" />
+            <instrument pc = "17" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;RockKit2" />
+            <instrument pc = "18" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "19" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "20" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "21" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "22" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "23" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "24" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;ElctrKit" />
+            <instrument pc = "25" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;AnalgKit" />
+            <instrument pc = "26" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;AnagKit2" />
+            <instrument pc = "27" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;DanceKit" />
+            <instrument pc = "28" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;HipHpKit" />
+            <instrument pc = "29" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;JunglKit" />
+            <instrument pc = "30" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "31" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "32" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;Jazz Kit" />
+            <instrument pc = "33" msb = "127" lsb = "0" name = "XG BasicDrum ++&lt;&gt;JazzKit2" />
+            <instrument pc = "34" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;BrushKit" />
+            <instrument pc = "35" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "36" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "37" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "38" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "39" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "40" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "41" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "42" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "43" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "44" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "45" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "46" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "47" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "48" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;Symphony Kit" />
+            <instrument pc = "49" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "50" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "51" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "52" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "53" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "54" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "55" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "56" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "57" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "58" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "59" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "60" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "61" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "62" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "63" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "64" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "65" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "66" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "67" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "68" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "69" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "70" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "71" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "72" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "73" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "74" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "75" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "76" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "77" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "78" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "79" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "80" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "81" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "82" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "83" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "84" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "85" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "86" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "87" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "88" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "89" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "90" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "91" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "92" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "93" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "94" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "95" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "96" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "97" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "98" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "99" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "100" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "101" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "102" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "103" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "104" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "105" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "106" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "107" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "108" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "109" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "110" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "111" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "112" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "113" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "114" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "115" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "116" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "117" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "118" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "119" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "120" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "121" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "122" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "123" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "124" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "125" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "126" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+            <instrument pc = "127" msb = "127" lsb = "0" name = "XG BasicDrum&lt;&gt;----" />
+
+            <instrument pc = "0" msb = "126" lsb = "0" name = "XG BasicDrum&lt;&gt;SFX Kit1" />
+            <instrument pc = "1" msb = "126" lsb = "0" name = "XG BasicDrum&lt;&gt;SFX Kit2" />
+        </map>
+
+    </instruments>
+
+</deviceinfo>
