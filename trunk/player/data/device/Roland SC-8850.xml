@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding = "UTF-8" ?>
 
-<deviceinfo name = "Roland SC-8850" defaultMode = "GS" author = "rz" version = "1.00" description = "Roland SC-8850 の定義ファイル">
+<deviceinfo name = "Roland SC-8850" defaultMode = "GS" author = "rz" version = "1.00" description = "Roland SC-8850 用の定義ファイル">
 
     <import file = "GM.xml" />
     <import file = "GM2.xml" />
