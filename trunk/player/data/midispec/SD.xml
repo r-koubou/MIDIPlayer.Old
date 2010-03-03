@@ -2,12 +2,12 @@
 <spec name = "SD">
     <reset sysexec = "F04110004812000000000000F7" />
     
-    <melopart>
+    <melopart defaultpc = "0" defaultmsb = "96" defaultlsb = "0">
         <melopartpc ch = "-1" msb = "-1" lsb = "-1" />
     </melopart>
 
     
-    <drumpart maxassign = "-1" default = "9" >
+    <drumpart maxassign = "-1" default = "9" defaultpc = "0" defaultmsb = "104" defaultlsb = "0" >
         <drumpartpc msb = "104" />
         <drumpartpc msb = "105" />
         <drumpartpc msb = "106" />
