@@ -112,6 +112,9 @@
 
         <xsd:attribute  name = "maxassign" type = "xsd:int" default = "-1" />
         <xsd:attribute  name = "default"   type = "_4bitInt" default = "10" />
+        <xsd:attribute name="defaultpc" type="xsd:int" default="0"/>
+        <xsd:attribute name="defaultmsb" type="xsd:int" default="0"/>
+        <xsd:attribute name="defaultlsb" type="xsd:int" default="0"/>
 
     </xsd:complexType>
 
@@ -149,7 +152,9 @@
             <xsd:element ref = "melopartsysexec" minOccurs = "0" maxOccurs = "unbounded" />
             <xsd:element ref = "melopartpc"      minOccurs = "0" maxOccurs = "unbounded" />
         </xsd:choice>
-
+        <xsd:attribute name="defaultpc" type="xsd:int" default="0"/>
+        <xsd:attribute name="defaultmsb" type="xsd:int" default="0"/>
+        <xsd:attribute name="defaultlsb" type="xsd:int" default="0"/>
     </xsd:complexType>
 
 <!--################################################################################-->
@@ -177,4 +182,5 @@
     </xsd:complexType>
 
 </xsd:schema>
+
 
