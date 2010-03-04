@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=Shift_JIS" http-equiv="content-type">
+  <title>README</title>
+
+  
+  
+  <link rel="stylesheet" href="html/readme/README.css" type="text/css">
+
+</head><body>
+<div class="contents">
+<h1>MIDIPlayer - version 0.1<br>
+</h1>
+<h2>目次</h2>
+<ul>
+  <li><a href="#%8AT%97v">概要</a></li>
+  <li><a href="#%8E%C0%8Ds%82%C9%95K%97v%82%C8%8A%C2%8B%AB">実行に必要な環境</a></li>
+  <li><a href="#%8BN%93%AE%95%FB%96%40">起動方法</a><br>
+  </li>
+
+  <li><a href="#%8F%89%89%F1%8BN%93%AE%8E%9E%82%CC%90%DD%92%E8">初回起動時の設定</a></li>
+  <li><a href="#%83%8C%83%93%83_%83%89%81%5B%82%CC%91I%91%F0">レンダラーの選択</a></li>
+  <li><a href="#MIDI_%83t%83%40%83C%83%8B%82%CC%8D%C4%90%B6">MIDI ファイルの再生</a></li>
+  <li><a href="#%83%8A%83A%83%8B%83%5E%83C%83%80%89%89%91t">リアルタイム演奏</a><br>
+  </li>
+  <li><a href="#%83A%83%93%83C%83%93%83X%83g%81%5B%83%8B">アンインストール</a></li>
+  <li><a href="#%83%89%83C%83Z%83%93%83X">ライセンス</a></li>
+  <li><a href="#%90%A7%8C%C0%8E%96%8D%80">制限事項</a><br>
+  </li>
+  <li><a href="#%8E%D3%8E%AB">謝辞</a><br>
+  </li>
+
+  <li><a href="#%97%9A%97%F0">履歴</a><br>
+  </li>
+</ul>
+<br>
+<h2><a name="概要"></a>概要</h2>作者自身が MIDI 系の動画を<a href="http://www.nicovideo.jp/">ニコニコ動画</a>に投稿していて、ふと<br>
+TMIDI Player と MAMPlayer を足して２で割ったソフトがあればなぁと思い作りはじめました。<br>
+（現状、観賞用というよりかは、自身で作成したMIDIデータの再生画面キャプチャ用を想定しています）<br>
+<br>
+ニコニコ動画で使用可能な動画サイズである 512x384 での表示を行い、リサイズ無しでキャプチャすることを視野に入れています。<br>
+<br>
+特徴としてはこんな感じです。<br>
+<ul>
+  <li>MAMPlayer ではエクスクルーシブデータなどが送信されない制限事項がありますが（MAMPlayer のマニュアルの制限事項に記載されています）本ソフトはフィルタは掛けていません</li>
+  <li>画面レンダリングをプレーヤー本体からプラグインとして分離しているので追加がで可能です</li>
+  <li>MIDI キーボードなどのMIDI IN デバイスの設定を行うことで、MIDI ファイルのデータ再生中の入力や、リアルタイム入力を行うことが可能です<br>
+  </li>
+</ul>
+<br>
+
+<h2><a name="実行に必要な環境"></a>実行に必要な環境</h2>
+このソフトは Java を使用しているため、別途ランタイムのインストールが必要です。<br>
+あらかじめご了承くださいませ。バージョンは 6 以上が必要です。<br>
+<br>
+Java ランタイムは下記 URL からインストールできます。<br>
+<a href="http://www.java.com/" target="_blank">http://www.java.com/</a><br>
+<br>
+<h2><a name="起動方法"></a>起動方法</h2>
+<br>
+
+<h2><a name="初回起動時の設定"></a>初回起動時の設定</h2>
+<h3>MIDI OUT デバイスの選択</h3>MIDI データの再生に使用するデバイスを設定してください。<br>
+<br>
+初回起動時に下図のダイアログを表示します。<br>
+※図の一覧は例であり、デバイス一覧内容はお使いのPC環境によって異なります。<br>
+<img style="width: 568px; height: 525px;" alt="MIDI OUT デバイス選択ダイアログ" src="html/readme/midiout.png"><br>
+<br>
+<h3>MIDI IN デバイスの選択</h3>
+もし、キーボードなどの MIDI IN 機器を接続されている場合、選択をすることで、<a href="#MIDI_%83t%83%40%83C%83%8B%82%CC%8D%C4%90%B6">MIDI ファイル再生時</a>や、<a href="#%83%8A%83A%83%8B%83%5E%83C%83%80%89%89%91t">リアルタイム演奏時</a>に入力を受け付けるようにしています。<br>
+※図の一覧は例であり、デバイス一覧内容はお使いのPC環境によって異なります。<br>
+<img style="width: 528px; height: 444px;" alt="MIDI IN デバイスの選択" src="html/readme/midiin.png"><br>
+
+<h3>音源定義ファイルの選択</h3>お使いの音源機種名の項目をお選びください。<br>
+これは、再生時に楽器名を表示する場合に照され、画面に反映をする際に使用したりする等のための物です。<br>
+お使いの機種が無い場合は 対応GM規格の物をお選びください。<br>
+※この定義ファイルは外部化されていますので、プログラム修正無しに後から追加・修正が可能です。<br>
+※ファイルが置き場所は <span style="font-weight: bold;">data/device/*.xml</span> です。<br>
+<br>
+<img style="width: 523px; height: 439px;" alt="音色定義ファイル" src="html/readme/device.png"><br>
+<br>
+<h2><a name="レンダラーの選択"></a>レンダラーの選択</h2>
+MIDI データ再生時に画面に表示を行う種類を選択します。<br>
+レンダラーはプラグイン形式となっているので、後から追加を行うことを可能なようにしています。<br>
+デフォルトでは２つのプラグインを同梱しています。<br>
+<br>
+<img style="width: 523px; height: 439px;" alt="レンダラーの選択" src="html/readme/renderer.png"><br>
+<br>
+<h2><a name="MIDI_ファイルの再生"></a>MIDI ファイルの再生</h2>
+<h3>ファイルの選択</h3>
+「<span style="font-weight: bold;">ファイル</span>」メニューから「<span style="font-weight: bold;">開く</span>」を選択（または <span style="font-weight: bold;">Ctrl+O</span>）、再生したい MIDI ファイルを選んでください。<br>
+<img style="width: 528px; height: 444px;" alt="ファイルオープン" src="html/readme/open.png"><br>
+<br>
+<h3>再生</h3>
+「<span style="font-weight: bold;">ツール</span>」メニューから「<span style="font-weight: bold;">再生</span>」を選択（またはスペースキーを押す）してください。<br>
+<img style="width: 528px; height: 444px;" alt="再生" src="html/readme/play.png"><br>
+<br>
+<h3>停止<br>
+</h3>
+
+「<span style="font-weight: bold;">ツール</span>」メニューから「<span style="font-weight: bold;">停止</span>」を選択（またはESCキーを押す）してください。<br>
+
+<img style="width: 528px; height: 444px;" alt="再生" src="html/readme/play.png"><br>
+<h2><a name="リアルタイム演奏"></a>リアルタイム演奏</h2>
+
+
+「<span style="font-weight: bold;">ツール</span>」メニューから「<span style="font-weight: bold;">リアルタイム演奏開始</span>」を選択（またはCtrl+スペースキーを押す）してください。<br>
+これは、<span style="font-weight: bold;">MIDI IN デバイスを設定している場合</span>に有効です。<br>
+<span style="font-weight: bold;">演奏を終了する場合は「停止」</span>を選んでください。<br>
+<br>
+これは、 MIDI IN デバイスから受信した MIDI 信号を MIDI OUT デバイスに送出します。<br>
+例えば、MIDI キーボードを使用して鍵盤を弾いた際に、それが画面へ反映されます。<br>
+<br>
+<img style="width: 528px; height: 444px;" alt="再生" src="html/readme/play.png">
+<h2><a name="アンインストール"></a>アンインストール</h2>
+レジストリ（Windows）などは使用していませんので、このアプリのディレクトリ（フォルダ）そのものを消していただければそれで完了です。<br>
+<br>
+<h2><a name="ライセンス"></a>ライセンス</h2>
+本ソフトは 修正 BSD ライセンス にて公開しています。<br>
+詳細は license/LICENSE.txt をお読みください。<br>
+<br>
+<h2><a name="制限事項"></a>制限事項</h2>
+<ul>
+  <li>MIDIフォーマット1 の MIDI ファイルの再生には対応していません。<br>
+複数ポートの同時使用はできません<br>
+    <br>
+  </li>
+  <li>ピアノロールのレンダリングなど演奏中の画面表示について<br>
+ソフトウエェア音源などレイテンシーが発生する音源では表示と実際の発音が合わない可能性があります。<br>
+    <br>
+  </li>
+</ul>
+<h2><a name="謝辞"></a>謝辞</h2>
+<ul>
+  <li>楓音 凛 様<br>
+このソフトのブラッシュアップを行う前の段階のバージョンにて音色定義ファイルを作成して頂きました。<br>
+本バージョンにて定義したフォーマットにコンバートし、組み込ませていただいています。<br>
+    <ul>
+      <li>Roland SD-20/80/90/SC-8820/D70</li>
+      <li>Roland SC-88, SC-55</li>
+      <li>YAMAHA MU2000,1000,500,128,100</li>
+      <li>YAMAHA MU90,80,50,15,S-YXG50<br>
+      </li>
+    </ul>
+    <br>
+    <br>
+  </li>
+  <li>TMIDI Player<br>
+再生画面の参考にさせて頂いています。<br>
+    <br>
+  </li>
+  <li>MAM Player<br>
+再生画面の参考にさせて頂いています。<br>
+    <br>
+  </li>
+  <li>ニコニコ動画で MIDI 関連の動画を投稿してきた先人の方々<br>
+ニコニコ動画上で MIDI 関連の投稿を見つけた（2007年の12月頃）のがきっかけで、自身も投稿，およびこのソフトの作成をするようになりました。<br>
+  </li>
+</ul>
+
+<h2><a name="履歴"></a>履歴</h2>
+<ul>
+  <li>2010/03/05<br>
+初版/暫定版<br>
+  </li>
+</ul>
+
+</div>
+
+</body></html>
