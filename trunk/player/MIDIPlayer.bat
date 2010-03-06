@@ -1,24 +1,19 @@
 @echo off
 
+setlocal
+
+set PATH=shared\jni;%PATH%
+set CLASSPATH=MIDIPlayer.jar;shared\jar\*;%CLASSPATH%
+set ARG=-classpath %CLASSPATH% org.rz.midiplayer.Main
+
 if exist jre\ (
     rem ----------------------------------------------------------------------
     rem ìØç´ JRE
     rem ----------------------------------------------------------------------
-    start jre\bin\javaw -jar MIDIPlayer.jar
-) else if exist %windir%\SysWoW64\javaw.exe (
-    rem ----------------------------------------------------------------------
-    rem 64bitä¬ã´ÇÃ JRE (32bitî≈)
-    rem ----------------------------------------------------------------------
-    start %windir%\SysWoW64\javaw.exe -jar MIDIPlayer.jar
-) else if exist %windir%\System32\javaw.exe (
-    rem ----------------------------------------------------------------------
-    rem x86 Windows ÇÃ JRE
-    rem x64 Windows ÇÃ JRE (64bitî≈)
-    rem ----------------------------------------------------------------------
-    start %windir%\System32\javaw.exe -jar MIDIPlayer.jar
+    start jre\bin\javaw %ARG%
 ) else (
     rem PATH Ç™í Ç¡ÇƒÇ¢ÇÍÇŒÇªÇÍÇ
-    start javaw -jar MIDIPlayer.jar
+    start javaw %ARG%
 )
 
 if not "%ERRORLEVEL%" == "0" (
@@ -29,3 +24,5 @@ if not "%ERRORLEVEL%" == "0" (
     echo ---------------------------------------------------------------------
     pause
 )
+
+endlocal
