@@ -28,20 +28,28 @@
     <property name = "deploy.prefix-bin" value = "${deploy.prefix}-${tstamp}_${build.number}" />
 
     <!-- 配布物作成用の一時ディレクトリ（バイナリ配布ルート） -->
-    <property name = "deploy.workdir.bin-root" value = "${deploy.workdir}/${deploy.app-prefix}/data/plugin/${deploy.prefix}" />
-    
-    <!-- 同梱ファイル設定 -->
-    <property name = "deploy.includes-bin" value = "*.jar, plugin.xml" />
+    <property name = "deploy.workdir.bin-root" value = "${deploy.workdir}/${deploy.app-prefix}/data/plugin/renderer/${deploy.prefix}" />
+    <property name = "deploy.workdir.doc-root" value = "${deploy.workdir}/${deploy.app-prefix}/docs/plugin/${deploy.prefix}" />
 
+    
     <target name = "deploy-bin.init">
         <copy file = "${dist.jar}" todir = "${deploy.workdir.bin-root}" preservelastmodified = "true" />
     </target>
 
     <target name="deploy-bin" depends = "deploy-bin.init" >
+
         <mkdir dir="${deploy.workdir.bin-root}" />
+        <mkdir dir="${deploy.workdir.doc-root}" />
+
         <copy todir="${deploy.workdir.bin-root}" preservelastmodified = "true" >
             <fileset dir      = "${basedir}"
                      includes = "${deploy.includes-bin}"
+            />
+        </copy>
+
+        <copy todir="${deploy.workdir.doc-root}" preservelastmodified = "true" >
+            <fileset dir      = "${basedir}/docs"
+                     includes = "**/*"
             />
         </copy>
 
@@ -99,7 +107,7 @@
 
     <target name="howto-deploy">
         <echo>deploy-bin : エンドユーザー向け配布物構築</echo>
-        <echo>deploy-src : ソース�ード一式配布物構築</echo>
+        <echo>deploy-src : ソースコード一式配布物構築</echo>
         <echo>deploy-all : 上記のターゲット実行</echo>
     </target>
 
