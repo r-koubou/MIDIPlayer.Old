@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="plugin"></xsd:element>
+    <xsd:simpleType name="pluginString">
+        <xsd:restriction base="xsd:string">
+            <xsd:whiteSpace value="collapse"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="name" type="pluginString"></xsd:element>
+    <xsd:element name="jarfile" type="pluginString"></xsd:element>
+    <xsd:element name="class" type="pluginString"></xsd:element>
+    <xsd:element name="author" type="pluginString"></xsd:element>
+    <xsd:element name="version" type="pluginString"></xsd:element>
+    <xsd:element name="description" type="pluginString"></xsd:element>
+    <xsd:complexType name="PluginInfo">
+        <xsd:sequence>
+            <xsd:element ref="name"/>
+            <xsd:element ref="jarfile"/>
+            <xsd:element ref="class"/>
+            <xsd:element ref="author"/>
+            <xsd:element ref="version"/>
+            <xsd:element ref="description" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+
+
+
