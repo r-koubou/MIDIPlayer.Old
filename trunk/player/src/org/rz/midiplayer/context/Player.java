@@ -297,6 +297,7 @@ public class Player implements Loggable
      */
     synchronized  public void stop()
     {
+        MIDIDeviceManager.stop( sequencer );
         MIDIDeviceManager.close( midiInDevice );
         MIDIDeviceManager.close( midiOutDevice );
         MIDIDeviceManager.close( sequencer );
