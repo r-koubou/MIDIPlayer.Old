@@ -32,7 +32,7 @@
     <property name = "deploy.prefix-bin" value = "${deploy.prefix}-${midiplayer.version}_b${build.number}-${tstamp}" />
 
     <!-- 配布物作成用の一時ディレクトリ（バイナリ配布ルート） -->
-    <property name = "deploy.workdir.bin-root" value = "${deploy.workdir}/${deploy.prefix}" />
+    <property name = "deploy.workdir.bin-root" value = "${deploy.workdir}/${deploy.prefix-bin}" />
     
     <target name = "deploy-bin.init">
         <copy file = "${dist.jar}" todir = "${deploy.workdir.bin-root}" preservelastmodified = "true" />
