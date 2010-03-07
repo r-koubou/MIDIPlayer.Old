@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding = "UTF-8" ?>
+<spec name = "GS">
+    <reset sysexec = "F04110421240007F0041F7" />
+
+    <melopart defaultpc = "0" defaultmsb = "0" defaultlsb = "0">
+        <!-- MELO -->
+        <melopartsysexec channel =  "0" sysexec = "F041104212401115001AF7" />
+        <melopartsysexec channel =  "1" sysexec = "F0411042124012150019F7" />
+        <melopartsysexec channel =  "2" sysexec = "F0411042124013150018F7" />
+        <melopartsysexec channel =  "3" sysexec = "F0411042124014150017F7" />
+        <melopartsysexec channel =  "4" sysexec = "F0411042124015150016F7" />
+        <melopartsysexec channel =  "5" sysexec = "F0411042124016150015F7" />
+        <melopartsysexec channel =  "6" sysexec = "F0411042124017150014F7" />
+        <melopartsysexec channel =  "7" sysexec = "F0411042124018150013F7" />
+        <melopartsysexec channel =  "8" sysexec = "F0411042124019150012F7" />
+        <melopartsysexec channel =  "9" sysexec = "F041104212401015001BF7" />
+        <melopartsysexec channel = "10" sysexec = "F041104212401A150011F7" />
+        <melopartsysexec channel = "11" sysexec = "F041104212401B150010F7" />
+        <melopartsysexec channel = "12" sysexec = "F041104212401C15000FF7" />
+        <melopartsysexec channel = "13" sysexec = "F041104212401D15000EF7" />
+        <melopartsysexec channel = "14" sysexec = "F041104212401E15000DF7" />
+        <melopartsysexec channel = "15" sysexec = "F041104212401F15000CF7" />
+
+    </melopart>
+    <drumpart maxassign = "2" default = "9" defaultpc = "0" defaultmsb = "0" defaultlsb = "0" >
+        <!-- MAP1 -->
+        <drumpartsysexec channel =  "0" target = "0" sysexec = "F0411042124011150119F7" />
+        <drumpartsysexec channel =  "1" target = "0" sysexec = "F0411042124012150118F7" />
+        <drumpartsysexec channel =  "2" target = "0" sysexec = "F0411042124013150117F7" />
+        <drumpartsysexec channel =  "3" target = "0" sysexec = "F0411042124014150116F7" />
+        <drumpartsysexec channel =  "4" target = "0" sysexec = "F0411042124015150115F7" />
+        <drumpartsysexec channel =  "5" target = "0" sysexec = "F0411042124016150114F7" />
+        <drumpartsysexec channel =  "6" target = "0" sysexec = "F0411042124017150113F7" />
+        <drumpartsysexec channel =  "7" target = "0" sysexec = "F0411042124018150112F7" />
+        <drumpartsysexec channel =  "8" target = "0" sysexec = "F0411042124019150111F7" />
+        <drumpartsysexec channel =  "9" target = "0" sysexec = "F041104212401015011AF7" />
+        <drumpartsysexec channel = "10" target = "0" sysexec = "F041104212401A150110F7" />
+        <drumpartsysexec channel = "11" target = "0" sysexec = "F041104212401B15010FF7" />
+        <drumpartsysexec channel = "12" target = "0" sysexec = "F041104212401C15010EF7" />
+        <drumpartsysexec channel = "13" target = "0" sysexec = "F041104212401D15010DF7" />
+        <drumpartsysexec channel = "14" target = "0" sysexec = "F041104212401E15010CF7" />
+        <drumpartsysexec channel = "15" target = "0" sysexec = "F041104212401F15010BF7" />
+
+        <!-- MAP2-->
+        <drumpartsysexec channel =  "0" target = "1" sysexec = "F0411042124011150218F7" />
+        <drumpartsysexec channel =  "1" target = "1" sysexec = "F0411042124012150217F7" />
+        <drumpartsysexec channel =  "2" target = "1" sysexec = "F0411042124013150216F7" />
+        <drumpartsysexec channel =  "3" target = "1" sysexec = "F0411042124014150215F7" />
+        <drumpartsysexec channel =  "4" target = "1" sysexec = "F0411042124015150214F7" />
+        <drumpartsysexec channel =  "5" target = "1" sysexec = "F0411042124016150213F7" />
+        <drumpartsysexec channel =  "6" target = "1" sysexec = "F0411042124017150212F7" />
+        <drumpartsysexec channel =  "7" target = "1" sysexec = "F0411042124018150211F7" />
+        <drumpartsysexec channel =  "8" target = "1" sysexec = "F0411042124019150210F7" />
+        <drumpartsysexec channel =  "9" target = "1" sysexec = "F0411042124010150219F7" />
+        <drumpartsysexec channel = "10" target = "1" sysexec = "F041104212401A15020FF7" />
+        <drumpartsysexec channel = "11" target = "1" sysexec = "F041104212401B15020EF7" />
+        <drumpartsysexec channel = "12" target = "1" sysexec = "F041104212401C15020DF7" />
+        <drumpartsysexec channel = "13" target = "1" sysexec = "F041104212401D15020CF7" />
+        <drumpartsysexec channel = "14" target = "1" sysexec = "F041104212401E15020BF7" />
+        <drumpartsysexec channel = "15" target = "1" sysexec = "F041104212401F15020AF7" />
+
+    </drumpart>
+</spec>
