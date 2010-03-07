@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding = "UTF-8" ?>
 
-<deviceinfo name = "GM2" defaultMode = "GM2" author = "rz" version = "1.00" description = "汎用 GM2 音源の定義ファイル">
+<deviceinfo name = "GM" defaultMode = "GM" author = "rz" version = "1.00" description = "汎用 GM 音源の定義ファイル">
 
     <!-- 
         【音色リスト】
