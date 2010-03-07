@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="config" type="ApplicationConfig"></xsd:element>
+    <xsd:complexType name="ApplicationConfig">
+        <xsd:sequence>
+            <xsd:element ref="devicefile"/>
+            <xsd:element ref="midiout"/>
+            <xsd:element ref="midiin"/>
+            <xsd:element ref="lastdirectory"/>
+            <xsd:element ref="plugin"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="midiout" type="Midiout"></xsd:element>
+    <xsd:element name="devicefile" type="Devicefile"></xsd:element>
+    <xsd:element name="lastdirectory" type="Lastdirectory"></xsd:element>
+    <xsd:simpleType name="configString">
+        <xsd:restriction base="xsd:string">
+            <xsd:whiteSpace value="collapse"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="plugin" type="Plugin"></xsd:element>
+    <xsd:complexType name="Plugin">
+        <xsd:sequence>
+            <xsd:element ref="renderer"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="renderer" type="Renderer"></xsd:element>
+    <xsd:complexType name="Renderer">
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="Midiout">
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="Lastdirectory">
+        <xsd:attribute name="dir" type="xsd:string" default="."/>
+    </xsd:complexType>
+    <xsd:complexType name="Devicefile">
+        <xsd:attribute name="file" type="xsd:string" default="GM.xml"/>
+    </xsd:complexType>
+    <xsd:element name="midiin" type="MidiIn"></xsd:element>
+    <xsd:complexType name="MidiIn">
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
+</xsd:schema>
+
+
+
+
+
+
+
+
+

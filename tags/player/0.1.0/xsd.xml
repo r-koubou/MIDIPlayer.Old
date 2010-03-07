@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name = "XSDConvert" basedir = ".">
+
+    <property name = "xsdDir"            value = "src/org/rz/midiplayer/xmlmodule" />
+    <property name = "packageBase"       value = "org.rz.midiplayer.xmlmodule" />
+    <property name = "pluginPackageBase" value = "org.rz.midiplayer.plugin" />
+
+    <target name = "convert-appconfig">
+        <exec executable="xjc" > <arg line = "-no-header -d src -p ${packageBase}.appconfig ${xsdDir}/ApplicationConfig.xsd" />  </exec>
+    </target>
+
+    <target name = "convert-deviceinfo">
+        <exec executable="xjc" > <arg line = "-no-header -d src -p ${packageBase}.deviceinfo ${xsdDir}/DeviceInfo.xsd" />  </exec>
+    </target>
+
+    <target name = "convert-midispec">
+        <exec executable="xjc" > <arg line = "-no-header -d src -p ${packageBase}.midispec ${xsdDir}/MIDISpecification.xsd" />  </exec>
+    </target>
+
+    <target name = "convert-plugin">
+        <exec executable="xjc" > <arg line = "-no-header -d src -p ${pluginPackageBase}.info ${xsdDir}/PluginInfo.xsd" />  </exec>
+    </target>
+
+    <target name = "all" depends = "convert-appconfig,convert-deviceinfo,convert-midispec,convert-plugin" />
+
+</project>
