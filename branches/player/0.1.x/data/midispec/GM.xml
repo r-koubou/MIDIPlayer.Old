@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding = "UTF-8" standalone="yes" ?>
+<spec name = "GM" >
+
+    <reset sysexec = "F07E7F0901F7" />
+
+    <melopart>
+        <melopartpc ch = "-1" msb = "-1" lsb = "-1" />
+    </melopart>
+
+    <drumpart maxassign = "1" default = "9" >
+        <drumpartpc ch = "9" msb = "-1" lsb = "-1" />
+    </drumpart>
+
+</spec>
