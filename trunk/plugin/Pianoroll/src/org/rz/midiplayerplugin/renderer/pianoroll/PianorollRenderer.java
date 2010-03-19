@@ -9,7 +9,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import org.rz.midiplayer.context.Context;
-import org.rz.midiplayer.context.DefaultSimpleHandler;
+import org.rz.midiplayer.context.DefaultMidiEventHandler;
+import org.rz.midiplayer.context.MidiChannelEventAdaptor;
 import org.rz.midiplayer.plugin.renderer.SimpleRenderer;
 import org.rz.midiplayer.util.PathUtil;
 import org.rz.midiplayer.xmlmodule.JAXBUtil;
@@ -23,7 +24,7 @@ public class PianorollRenderer extends SimpleRenderer
 {
     private Context context;
     private final Dimension screenSize = new Dimension( 512, 384 );
-    private DefaultSimpleHandler midiEventHandler;
+    private DefaultMidiEventHandler midiEventHandler;
 
     private final NoteObjectPool noteObjects = new NoteObjectPool( 2048 );
     private final ArrayList<NoteObject> noteList = new ArrayList<NoteObject>( 2048 );
@@ -61,7 +62,8 @@ public class PianorollRenderer extends SimpleRenderer
     {
         int i;
         context = ctx;
-        midiEventHandler = new DefaultSimpleHandler( ctx ){
+        midiEventHandler = new DefaultMidiEventHandler( ctx );
+        midiEventHandler.addMidiChannelEventListener( new MidiChannelEventAdaptor(){
 
             @Override
             public void noteOff( int ch, int note )
@@ -74,8 +76,10 @@ public class PianorollRenderer extends SimpleRenderer
             {
                 PianorollRenderer.this.noteOn( ch, note, vel );
             }
-        };
-        ctx.addMidiEventListener( midiEventHandler );
+
+        });
+
+        ctx.addMidiEventHandler( midiEventHandler );
 
         try
         {
@@ -188,7 +192,7 @@ public class PianorollRenderer extends SimpleRenderer
     @Override
     public void onDispose( Context ctx )
     {
-        ctx.removeMidiEventListener( midiEventHandler );
+        ctx.removeMidiEventHandler( midiEventHandler );
         super.onDispose( ctx );
     }
 
