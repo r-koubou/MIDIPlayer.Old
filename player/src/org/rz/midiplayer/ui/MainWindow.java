@@ -538,6 +538,8 @@ public class MainWindow extends javax.swing.JFrame implements Loggable
             setResizable( renderer.isEnabledResizeWindow() );
             getContentPane().add( screen, BorderLayout.CENTER );
 
+            screen.requestFocus();
+
             pack();
 
             renderer.startRendering();

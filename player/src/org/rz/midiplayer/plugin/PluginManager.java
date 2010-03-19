@@ -20,7 +20,7 @@ import org.rz.midiplayer.xmlmodule.XSDConstants;
 import org.xml.sax.SAXException;
 
 /**
- *
+ * プラグインクラスのロード、インスタンス生成を行うマネージャー。
  * @author rz
  */
 public class PluginManager<PLUGIN_BASE extends Plugin> implements Loggable
@@ -107,7 +107,7 @@ public class PluginManager<PLUGIN_BASE extends Plugin> implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     *
+     * plugin.xml を元にプラグイン情報を取得する。
      */
     protected PluginInfo loadPluginInfo( File xmlPath ) throws JAXBException, SAXException
     {
@@ -136,7 +136,7 @@ public class PluginManager<PLUGIN_BASE extends Plugin> implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     *
+     * plugin.xml に記述されているプラグインクラスのインスタンスを生成する。
      */
     @SuppressWarnings( "unchecked" )
     public PLUGIN_BASE newInstance( Context ctx, PluginInfo inf ) throws ClassNotFoundException, InstantiationException, IllegalAccessException
@@ -166,7 +166,7 @@ public class PluginManager<PLUGIN_BASE extends Plugin> implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     *
+     * plugin.xml に記述されているプラグインクラスをクラスローダーを使用しロードを行う。
      */
     private Class<?> loadClass( String dir, PluginInfo inf ) throws IOException, ClassNotFoundException
     {
@@ -215,7 +215,7 @@ public class PluginManager<PLUGIN_BASE extends Plugin> implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     * 
+     * 使用可能プラグインが存在しないかどうかを判定する。
      */
     public boolean isEmpty()
     {
@@ -224,7 +224,8 @@ public class PluginManager<PLUGIN_BASE extends Plugin> implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     * 
+     * 指定されたプラグインが存在するかどうかを判定する。
+     * @param  name plugin.xml 記載のプラグイン名。
      */
     public boolean existPlugin( String name )
     {
@@ -241,7 +242,9 @@ public class PluginManager<PLUGIN_BASE extends Plugin> implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     *
+     * 指定されたプラグインを情報を取得する。
+     * @param  name plugin.xml 記載のプラグイン名。
+     * @return 存在する場合は非 null のインスタンス、存在しない場合は null を返す。
      */
     public PluginInfo getPluginInfo( String name )
     {
@@ -259,7 +262,8 @@ public class PluginManager<PLUGIN_BASE extends Plugin> implements Loggable
 
     ////////////////////////////////////////////////////////////////////////////////
     /**
-     *
+     * 現在使用可能なプラグイン情報を格納した配列を返す。
+     * 使用可能プラグインが無い場合は要素数 0 の配列を返す。
      */
     synchronized public PluginInfo[] getPluginInfoList()
     {
