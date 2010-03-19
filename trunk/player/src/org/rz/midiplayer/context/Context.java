@@ -41,7 +41,7 @@ public class Context implements Loggable, MidiEventListener
     private Player player;
 
     /** MIDI イベントの通知先 */
-    private final ArrayList<MidiEventListener> midiEventListeners = new ArrayList<MidiEventListener>();
+    private final ArrayList<MidiEventHandler> midiEventHandlers = new ArrayList<MidiEventHandler>();
 
     /** MIDI 規格毎の定義ファイル格納(ハッシュ) */
     private final Hashtable <String, Spec> midiSpecTable = new Hashtable<String, Spec>();
@@ -159,7 +159,7 @@ public class Context implements Loggable, MidiEventListener
         player.dispose();
 
         logger.info( "dispose midiEventListeners" );
-        midiEventListeners.clear();
+        midiEventHandlers.clear();
 
         logger.info( "close all midi devices" );
         MIDIDeviceManager.closeAllDevice();
@@ -386,14 +386,14 @@ public class Context implements Loggable, MidiEventListener
     /**
      * 
      */
-    public void addMidiEventListener( MidiEventListener e )
+    public void addMidiEventHandler( MidiEventHandler e )
     {
-        synchronized( midiEventListeners )
+        synchronized( midiEventHandlers )
         {
-            if( e != null && ! midiEventListeners.contains( e ) )
+            if( e != null && ! midiEventHandlers.contains( e ) )
             {
-                midiEventListeners.add( e );
-                logger.info( "added MIDIEventListener : " + midiEventListeners.size() );
+                midiEventHandlers.add( e );
+                logger.info( "added MIDIEventListener : " + midiEventHandlers.size() );
             }
         }
     }
@@ -402,14 +402,14 @@ public class Context implements Loggable, MidiEventListener
     /**
      *
      */
-    public void removeMidiEventListener( MidiEventListener e )
+    public void removeMidiEventHandler( MidiEventHandler e )
     {
-        synchronized( midiEventListeners )
+        synchronized( midiEventHandlers )
         {
-            if( e != null && midiEventListeners.contains( e ) )
+            if( e != null && midiEventHandlers.contains( e ) )
             {
-                midiEventListeners.remove( e );
-                logger.info( "removed MIDIEventListener : " + midiEventListeners.size() );
+                midiEventHandlers.remove( e );
+                logger.info( "removed MIDIEventListener : " + midiEventHandlers.size() );
             }
         }
     }
@@ -423,9 +423,9 @@ public class Context implements Loggable, MidiEventListener
     {
         boolean ret = false;
 
-        synchronized( midiEventListeners )
+        synchronized( midiEventHandlers )
         {
-            for( MidiEventListener e : midiEventListeners )
+            for( MidiEventHandler e : midiEventHandlers )
             {
                 boolean b = e.handleMidiEvent( ch, status, data, length );
                 if( b && !ret )
@@ -446,9 +446,9 @@ public class Context implements Loggable, MidiEventListener
     {
         boolean ret = false;
 
-        synchronized( midiEventListeners )
+        synchronized( midiEventHandlers )
         {
-            for( MidiEventListener e : midiEventListeners )
+            for( MidiEventHandler e : midiEventHandlers )
             {
                 boolean b = e.handleSysExEvent( data, length );
                 if( b && !ret )
@@ -469,9 +469,9 @@ public class Context implements Loggable, MidiEventListener
     {
         boolean ret = false;
 
-        synchronized( midiEventListeners )
+        synchronized( midiEventHandlers )
         {
-            for( MidiEventListener e : midiEventListeners )
+            for( MidiEventHandler e : midiEventHandlers )
             {
                 boolean b = e.handleMetaEvent( type, data, length );
                 if( b && !ret )

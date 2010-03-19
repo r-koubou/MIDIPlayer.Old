@@ -101,7 +101,6 @@ abstract public class SimpleRenderer implements RendererPlugin
             {
                 update();
                 render();
-                flush();
             }
             catch( Throwable e )
             {
@@ -157,15 +156,6 @@ abstract public class SimpleRenderer implements RendererPlugin
                 g.dispose();
             }
         }
-    }
-
-    ////////////////////////////////////////////////////////////////////////////////
-    /**
-     *
-     */
-    @Override
-    public void flush()
-    {
     }
 
     ////////////////////////////////////////////////////////////////////////////////
