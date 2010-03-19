@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+    <name>3D ピアノロール</name>
+    <jarfile>3DPianoroll.jar</jarfile>
+    <class>org.rz.midiplayerplugin.renderer.pianoroll3d.PianorollRenderer</class>
+    <author>rz</author>
+    <version>0.0.1</version>
+    <description>3D Test.</description>
+
+</plugin>
