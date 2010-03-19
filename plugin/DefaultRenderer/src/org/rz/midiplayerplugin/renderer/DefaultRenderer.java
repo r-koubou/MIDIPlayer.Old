@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import javax.imageio.ImageIO;
 import org.rz.midiplayer.context.Context;
+import org.rz.midiplayer.context.DefaultMidiEventHandler;
+import org.rz.midiplayer.context.MidiChannelEventAdaptor;
 import org.rz.midiplayer.plugin.renderer.SimpleRenderer;
 import org.rz.midiplayer.util.PathUtil;
 import org.rz.midiplayer.xmlmodule.JAXBUtil;
@@ -24,14 +26,13 @@ import org.rz.midiplayerplugin.renderer.config.Config;
  *
  * @author rz
  */
-public class DefaultRenderer extends SimpleRenderer implements NoteEventListener
+public class DefaultRenderer extends SimpleRenderer
 {
     private Context context;
 
-    private final MidiChannel[] midiChannels     = new MidiChannel[ 16 ];
     private final TrackRenderer[] trackRenderers = new TrackRenderer[ 16 ];
     private final Dimension screenSize           = new Dimension( 512, 384 );
-    private MidiEventHandler midiEventHandler;
+    private DefaultMidiEventHandler midiEventHandler;
 
     private final NoteObjectPool noteObjects          = new NoteObjectPool( 2048 );
     private final ArrayList<NoteObject> noteList      = new ArrayList<NoteObject>( 2048 );
@@ -74,14 +75,23 @@ public class DefaultRenderer extends SimpleRenderer implements NoteEventListener
         int i;
         context = ctx;
 
-        for( i = 0; i < 16; i++ )
-        {
-            midiChannels[ i ] = new MidiChannel();
-        }
+        midiEventHandler = new DefaultMidiEventHandler( ctx );
+        midiEventHandler.addMidiChannelEventListener( new MidiChannelEventAdaptor() {
 
-        midiEventHandler = new MidiEventHandler( ctx, midiChannels, this );
+            @Override
+            public void noteOff( int ch, int note )
+            {
+                DefaultRenderer.this.noteOff( ch, note );
+            }
 
-        ctx.addMidiEventListener( midiEventHandler );
+            @Override
+            public void noteOn( int ch, int note, int vel )
+            {
+                DefaultRenderer.this.noteOn( ch, note, vel );
+            }
+
+        });
+        ctx.addMidiEventHandler( midiEventHandler );
 
         try
         {
@@ -129,7 +139,7 @@ public class DefaultRenderer extends SimpleRenderer implements NoteEventListener
 
         for( int i = 0; i < 16; i++ )
         {
-            trackRenderers[ i ] = new TrackRenderer( context, i, midiChannels[ i ], canvas, trackImageBase, fontImage, pianoRollColors[ i ] );
+            trackRenderers[ i ] = new TrackRenderer( context, i, midiEventHandler.getMidiChannel( i ), canvas, trackImageBase, fontImage, pianoRollColors[ i ] );
         }
     }
 
@@ -188,9 +198,10 @@ public class DefaultRenderer extends SimpleRenderer implements NoteEventListener
     /**
      *
      */
-    @Override
-    public void noteOn( int ch, int noteNo, int vel )
+    private void noteOn( int ch, int noteNo, int vel )
     {
+        trackRenderers[ ch ].level = Math.max( trackRenderers[ ch ].level, vel );
+
         synchronized( noteList )
         {
             NoteObject n = noteObjects.create();
@@ -206,8 +217,7 @@ public class DefaultRenderer extends SimpleRenderer implements NoteEventListener
     /**
      *
      */
-    @Override
-    public void noteOff( int ch, int noteNo )
+    private void noteOff( int ch, int noteNo )
     {
         synchronized( noteList )
         {
@@ -231,7 +241,9 @@ public class DefaultRenderer extends SimpleRenderer implements NoteEventListener
     @Override
     public void onDispose( Context ctx )
     {
-        ctx.removeMidiEventListener( midiEventHandler );
+        midiEventHandler.removeAllMidiChannelEventListeners();
+        ctx.removeMidiEventHandler( midiEventHandler );
+
         disposeResources();
         super.onDispose( ctx );
     }
@@ -247,6 +259,11 @@ public class DefaultRenderer extends SimpleRenderer implements NoteEventListener
         {
             int i;
             int s;
+
+            for( TrackRenderer tr :  trackRenderers )
+            {
+                tr.level = Math.max( tr.level - 2, 0 );
+            }
 
             for( i = 0; i < noteList.size(); )
             {

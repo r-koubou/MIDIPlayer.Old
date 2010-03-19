@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import org.rz.midiplayer.context.Context;
+import org.rz.midiplayer.context.MidiChannel;
 import org.rz.midiplayer.xmlmodule.deviceinfo.Instrument;
 
 /**
@@ -24,6 +25,8 @@ class TrackRenderer
     private MidiChannel midiChannel;
 
     private final Color pianoRollColor;
+
+    int level;
 
     ////////////////////////////////////////////////////////////////////////////
     /**
@@ -69,10 +72,10 @@ class TrackRenderer
      {
          ofsG.drawImage( track, 0, 0, null );
 
-        int[] cc = midiChannel.cc;
-        int lv   = midiChannel.level;
+        int lv  = level;
 
-        Instrument patch = midiChannel.instrument;
+        MidiChannel ch   = midiChannel;
+        Instrument patch = ch.instrument;
 
         Graphics2D tg = ofsG;
 
@@ -82,17 +85,18 @@ class TrackRenderer
         renderChColor( tg, channel );
         renderPatch( tg, patch );
 
-        renderLv( tg, 122,  lv, 127 );
-        renderLv( tg, 143,  cc[7], 127 );
-        renderLvH( tg, 164, cc[10], 127 );
-        renderLv( tg, 185, cc[11], 127 );
-        renderLvH( tg, 206, midiChannel.pitchBend, 16383 );
-        renderLv( tg, 227, cc[91], 127 );
-        renderLv( tg, 248, cc[93], 127 );
-        renderLv( tg, 269, cc[94], 127 );
+        renderLv( tg, 122,  level, 127 );
+        renderLv( tg, 143,  ch.getCcValue( 7 ), 127 );
+        renderLvH( tg, 164, ch.getCcValue( 10 ), 127 );
+        renderLv( tg, 185, ch.getCcValue( 11 ), 127 );
+        renderLvH( tg, 206, ch.getPitchBend(), 16383 );
+        renderLv( tg, 227, ch.getCcValue( 91), 127 );
+        renderLv( tg, 248, ch.getCcValue( 93 ), 127 );
+        renderLv( tg, 269, ch.getCcValue( 94 ), 127 );
 
         g.drawImage( offscreen, x, y, null );
-        midiChannel.level = Math.max( midiChannel.level - 2, 0 );
+
+        //midiChannel.level = Math.max( midiChannel.level - 2, 0 );
     }
 
     static private final Color[] LV_COLOR =
