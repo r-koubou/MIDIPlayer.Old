@@ -14,6 +14,9 @@ public class NoteObject
 
     static final float SPEED = 1f;
 
+    public final int vboIndex;
+    public final int objIndex;
+
     protected float x, y, z, z2;
 
     volatile boolean visible;
@@ -55,6 +58,12 @@ public class NoteObject
             1, -1, -1
         }
     };
+
+    static final int VBO_VERTEX_NUM = 72;
+    static final int VBO_NORMAL_NUM = 18;
+
+    final float[] vboVertices = new float[ VBO_VERTEX_NUM ];
+    final float[] vboNormals  = new float[ VBO_NORMAL_NUM ];
 
     private final float[][] normals =
     {
@@ -103,9 +112,10 @@ public class NoteObject
         1.0f,
     };
 
-    public NoteObject()
+    public NoteObject( int objIndex_, int vboIndex_ )
     {
-        super();
+        objIndex = objIndex_;
+        vboIndex = vboIndex_;
         reset();
     }
 
@@ -155,7 +165,7 @@ public class NoteObject
         noteOn  = false;
     }
 
-    public void update()
+    public void update( GL gl )
     {
         if( visible )
         {
