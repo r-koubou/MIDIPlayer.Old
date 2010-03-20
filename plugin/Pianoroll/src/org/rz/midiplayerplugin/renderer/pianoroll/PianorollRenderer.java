@@ -6,7 +6,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.io.File;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.logging.Level;
 import org.rz.midiplayer.context.Context;
 import org.rz.midiplayer.context.DefaultMidiEventHandler;
@@ -22,12 +22,14 @@ import org.rz.midiplayerplugin.renderer.pianoroll.config.Config;
  */
 public class PianorollRenderer extends SimpleRenderer
 {
+    static final int NOTE_OBJ_NUM = 1024;
+
     private Context context;
     private final Dimension screenSize = new Dimension( 512, 384 );
     private DefaultMidiEventHandler midiEventHandler;
 
-    private final NoteObjectPool noteObjects = new NoteObjectPool( 2048 );
-    private final ArrayList<NoteObject> noteList = new ArrayList<NoteObject>( 2048 );
+    private final LinkedList<NoteObject> masterObjList = new LinkedList<NoteObject>();
+    private final LinkedList<NoteObject> activeObjList = new LinkedList<NoteObject>();
 
     static public final Color[] DEFAULT_COLORS =
     {
@@ -110,6 +112,13 @@ public class PianorollRenderer extends SimpleRenderer
         {
             logger.log( Level.WARNING, "Failed to loading a config file", e );
         }
+
+        activeObjList.clear();
+        masterObjList.clear();
+        for( i = 0; i < NOTE_OBJ_NUM; i++ )
+        {
+            masterObjList.addLast( new NoteObject() );
+        }
     }
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -140,9 +149,9 @@ public class PianorollRenderer extends SimpleRenderer
     @Override
     public void onMidiStoped()
     {
-        synchronized( noteList )
+        synchronized( activeObjList )
         {
-            for( NoteObject o : noteList )
+            for( NoteObject o : activeObjList )
             {
                 o.noteOff();
             }
@@ -155,14 +164,28 @@ public class PianorollRenderer extends SimpleRenderer
      */
     private void noteOn( int ch, int noteNo, int vel )
     {
-        synchronized( noteList )
+        synchronized( masterObjList )
         {
-            NoteObject n = noteObjects.create();
-            n.noteOn( 512-40, 382 - ( 3 * noteNo ) );
-            n.noteNo = noteNo;
-            n.channel = ch;
-            n.setColor( pianoRollColors[ ch ] );
-            noteList.add( n );
+            synchronized( activeObjList )
+            {
+                NoteObject no;
+                if( ! masterObjList.isEmpty() )
+                {
+                    no = masterObjList.removeFirst();
+                }
+                else
+                {
+                    no = activeObjList.removeFirst();
+                }
+
+                no.reset();
+                no.noteOn( 512-40, 382 - ( 3 * noteNo ) );
+                no.noteNo = noteNo;
+                no.channel = ch;
+                no.setColor( pianoRollColors[ ch ] );
+                activeObjList.addLast( no );
+
+            }
         }
     }
 
@@ -172,17 +195,16 @@ public class PianorollRenderer extends SimpleRenderer
      */
     synchronized private void noteOff( int ch, int noteNo )
     {
-        int s = noteList.size();
-        int i;
-        for( i = 0; i < s; i++ )
+        synchronized( activeObjList )
         {
-            NoteObject n = noteList.get( i );
-            if( n.channel == ch && n.noteNo == noteNo )
+            for( NoteObject no : activeObjList )
             {
-                n.noteOff();
+                if( no.channel == ch && no.noteNo == noteNo )
+                {
+                    no.noteOff();
+                }
             }
         }
-
     }
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -203,21 +225,24 @@ public class PianorollRenderer extends SimpleRenderer
     @Override
     public void update()
     {
-        synchronized( noteList )
+        synchronized( masterObjList )
         {
-            int i;
-            int s;
-
-            for( i = 0; i < noteList.size(); )
+            synchronized( activeObjList )
             {
-                NoteObject n = noteList.get( i );
-                if(n.rect.isEmpty() )
+                int i;
+
+                for( i = 0; i < activeObjList.size(); )
                 {
-                    noteList.remove( i );
-                    continue;
+                    NoteObject n = activeObjList.get( i );
+                    if( ! n.visible )
+                    {
+                        activeObjList.remove( i );
+                        masterObjList.addLast( n );
+                        continue;
+                    }
+                    n.update();
+                    i++;
                 }
-                n.update();
-                i++;
             }
         }
     }
@@ -232,14 +257,13 @@ public class PianorollRenderer extends SimpleRenderer
         g.setColor( Color.black );
         g.fillRect( 0, 0, screenSize.width, screenSize.height );
 
-        synchronized( noteList )
+        synchronized( activeObjList )
         {
-            for( NoteObject n : noteList )
+            for( NoteObject n : activeObjList )
             {
                 n.render( (Graphics2D)g );
             }
         }
-
     }
 
     ////////////////////////////////////////////////////////////////////////////////
