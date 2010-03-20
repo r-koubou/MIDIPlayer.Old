@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.logging.Level;
 import javax.imageio.ImageIO;
 import org.rz.midiplayer.context.Context;
@@ -28,14 +28,17 @@ import org.rz.midiplayerplugin.renderer.config.Config;
  */
 public class DefaultRenderer extends SimpleRenderer
 {
+    static final int NOTE_OBJ_NUM = 1024;
+
     private Context context;
 
     private final TrackRenderer[] trackRenderers = new TrackRenderer[ 16 ];
     private final Dimension screenSize           = new Dimension( 512, 384 );
     private DefaultMidiEventHandler midiEventHandler;
 
-    private final NoteObjectPool noteObjects          = new NoteObjectPool( 2048 );
-    private final ArrayList<NoteObject> noteList      = new ArrayList<NoteObject>( 2048 );
+    private final LinkedList<NoteObject> masterObjList = new LinkedList<NoteObject>();
+    private final LinkedList<NoteObject> activeObjList = new LinkedList<NoteObject>();
+
 
     private BufferedImage trackImageBase;
     private BufferedImage fontImage;
@@ -123,6 +126,13 @@ public class DefaultRenderer extends SimpleRenderer
             logger.log( Level.WARNING, "Failed to loading a config file", e );
         }
 
+        activeObjList.clear();
+        masterObjList.clear();
+        for( i = 0; i < NOTE_OBJ_NUM; i++ )
+        {
+            masterObjList.addLast( new NoteObject() );
+        }
+
     }
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -185,9 +195,9 @@ public class DefaultRenderer extends SimpleRenderer
     @Override
     public void onMidiStoped()
     {
-        synchronized( noteList )
+        synchronized( activeObjList )
         {
-            for( NoteObject o : noteList )
+            for( NoteObject o : activeObjList )
             {
                 o.noteOff();
             }
@@ -202,14 +212,28 @@ public class DefaultRenderer extends SimpleRenderer
     {
         trackRenderers[ ch ].level = Math.max( trackRenderers[ ch ].level, vel );
 
-        synchronized( noteList )
+        synchronized( masterObjList )
         {
-            NoteObject n = noteObjects.create();
-            n.noteOn( 237-40, 382 - ( 3 * noteNo ) );
-            n.noteNo = noteNo;
-            n.channel = ch;
-            n.setColor( pianoRollColors[ ch ] );
-            noteList.add( n );
+            synchronized( activeObjList )
+            {
+                NoteObject no;
+                if( ! masterObjList.isEmpty() )
+                {
+                    no = masterObjList.removeFirst();
+                }
+                else
+                {
+                    no = activeObjList.removeFirst();
+                }
+
+                no.reset();
+                no.noteOn( 237-40, 382 - ( 3 * noteNo ) );
+                no.noteNo = noteNo;
+                no.channel = ch;
+                no.setColor( pianoRollColors[ ch ] );
+                activeObjList.addLast( no );
+
+            }
         }
     }
 
@@ -219,16 +243,13 @@ public class DefaultRenderer extends SimpleRenderer
      */
     private void noteOff( int ch, int noteNo )
     {
-        synchronized( noteList )
+        synchronized( activeObjList )
         {
-            int s = noteList.size();
-            int i;
-            for( i = 0; i < s; i++ )
+            for( NoteObject no : activeObjList )
             {
-                NoteObject n = noteList.get( i );
-                if( n.channel == ch && n.noteNo == noteNo )
+                if( no.channel == ch && no.noteNo == noteNo )
                 {
-                    n.noteOff();
+                    no.noteOff();
                 }
             }
         }
@@ -255,26 +276,33 @@ public class DefaultRenderer extends SimpleRenderer
     @Override
     public void update()
     {
-        synchronized( this )
+        synchronized( masterObjList )
         {
-            int i;
-            int s;
+            synchronized( activeObjList )
+            {
+                int i;
+                int s;
 
+                for( i = 0; i < activeObjList.size(); )
+                {
+                    NoteObject n = activeObjList.get( i );
+                    if( ! n.visible )
+                    {
+                        activeObjList.remove( i );
+                        masterObjList.addLast( n );
+                        continue;
+                    }
+                    n.update();
+                    i++;
+                }
+            }
+        }
+
+        synchronized( trackRenderers )
+        {
             for( TrackRenderer tr :  trackRenderers )
             {
                 tr.level = Math.max( tr.level - 2, 0 );
-            }
-
-            for( i = 0; i < noteList.size(); )
-            {
-                NoteObject n = noteList.get( i );
-                if(n.rect.isEmpty() )
-                {
-                    noteList.remove( i );
-                    continue;
-                }
-                n.update();
-                i++;
             }
         }
     }
@@ -294,13 +322,13 @@ public class DefaultRenderer extends SimpleRenderer
         drawTracks( g );
         drawInfo( g );
 
-        synchronized( noteList )
+        synchronized( activeObjList )
         {
             int i = 0;
             g.translate( 290, 0 );
             g.setClip( 0, 0, 222, 384 );
 
-            for( NoteObject n : noteList )
+            for( NoteObject n : activeObjList )
             {
                 n.render( (Graphics2D)g );
             }

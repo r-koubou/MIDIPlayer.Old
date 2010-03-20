@@ -166,13 +166,11 @@ class TrackRenderer
 
         g.setClip( 20, 2, 96, 20 );
 
-        String[] name = p.getName().split( "<>");
+        DefaultRenderer.drawText( g, font, p.getMapName(), dx, dy );
+        dy += 10;
 
-        for( int i = 0; i < name.length; i++ )
-        {
-            DefaultRenderer.drawText( g, font, name[ i ], dx, dy );
-            dy += 10;
-        }
+        DefaultRenderer.drawText( g, font, p.getName(), dx, dy );
+        dy += 10;
 
         g.setClip( null );
 
