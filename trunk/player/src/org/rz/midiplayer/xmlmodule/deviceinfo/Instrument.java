@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;attribute name="pc" type="{}_7bitInt" />
  *       &lt;attribute name="msb" type="{}_7bitInt" />
  *       &lt;attribute name="lsb" type="{}_7bitInt" />
+ *       &lt;attribute name="mapName" type="{http://www.w3.org/2001/XMLSchema}string" default="" />
  *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}string" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,6 +38,8 @@ public class Instrument {
     protected Integer msb;
     @XmlAttribute
     protected Integer lsb;
+    @XmlAttribute
+    protected String mapName;
     @XmlAttribute
     protected String name;
 
@@ -110,6 +113,34 @@ public class Instrument {
      */
     public void setLsb(Integer value) {
         this.lsb = value;
+    }
+
+    /**
+     * Gets the value of the mapName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getMapName() {
+        if (mapName == null) {
+            return "";
+        } else {
+            return mapName;
+        }
+    }
+
+    /**
+     * Sets the value of the mapName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setMapName(String value) {
+        this.mapName = value;
     }
 
     /**

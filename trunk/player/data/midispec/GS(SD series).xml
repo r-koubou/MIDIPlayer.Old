@@ -22,7 +22,7 @@
         <melopartsysexec channel = "15" sysexec = "F041104212401F15000CF7" />
 
     </melopart>
-    <drumpart maxassign = "2" default = "9" defaultpc = "1" defaultmsb = "0" defaultlsb = "0" >
+    <drumpart default = "9" defaultpc = "1" defaultmsb = "0" defaultlsb = "0" >
         <!-- MAP1 -->
         <drumpartsysexec channel =  "0" target = "0" sysexec = "F0411042124011150119F7" />
         <drumpartsysexec channel =  "1" target = "0" sysexec = "F0411042124012150118F7" />

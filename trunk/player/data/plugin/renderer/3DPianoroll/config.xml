@@ -18,8 +18,8 @@
         <color color="#FF1493" midich="14"/>
         <color color="#00BFFF" midich="15"/>
     </pianoroll>
-    <renderer viewPosition="false" viewGrid="false">
-        <camera lastUsed="0">
+    <renderer viewPosition="true" viewGrid="false">
+        <camera lastUsed="7">
             <position rz="0.0" ry="0.0" rx="13.5" tz="-105.0" ty="-1.5" tx="0.0"/>
             <position rz="-90.0" ry="-90.0" rx="0.0" tz="-259.0" ty="0.5" tx="-171.5"/>
             <position rz="0.0" ry="720.0" rx="90.0" tz="-413.0" ty="-151.5" tx="-1.5"/>

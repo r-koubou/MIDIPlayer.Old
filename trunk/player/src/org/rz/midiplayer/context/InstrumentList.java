@@ -38,6 +38,7 @@ public class InstrumentList implements Loggable
         nullInstrument.setMsb( 0 );
         nullInstrument.setPc( 0 );
         nullInstrument.setName( "--------" );
+        nullInstrument.setMapName( "--------" );
     }
 
     ////////////////////////////////////////////////////////////////////////////
