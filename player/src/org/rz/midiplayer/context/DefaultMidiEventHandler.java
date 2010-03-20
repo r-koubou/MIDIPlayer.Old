@@ -43,7 +43,6 @@ public class DefaultMidiEventHandler implements Loggable, MidiEventHandler
 
         setCurrentMidiSpec( ctx.getDevice().getDeviceInfo().getDefaultMode() );
 
-        reset();
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -64,6 +63,7 @@ public class DefaultMidiEventHandler implements Loggable, MidiEventHandler
         if( s != null )
         {
             currentMidiSpec = s;
+            reset();
         }
         else
         {
@@ -79,10 +79,12 @@ public class DefaultMidiEventHandler implements Loggable, MidiEventHandler
     {
         int value;
         Spec spec = context.getMidiSpecTable().get( currentMidiSpec );
+        Instrument[] inst = getDefaultInstrumentList();
 
-        for( MidiChannel c : midiChannels )
+        for( int i = 0; i < 16; i++ )
         {
-            c.reset();
+            midiChannels[ i ].reset();
+            midiChannels[ i ].setInstrument( inst[ i ] );
         }
 
         value = spec.getDrumpart().getDefault();

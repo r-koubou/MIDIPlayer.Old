@@ -7,7 +7,7 @@
     </melopart>
 
     
-    <drumpart maxassign = "-1" default = "9" defaultpc = "0" defaultmsb = "104" defaultlsb = "0" >
+    <drumpart default = "9" defaultpc = "0" defaultmsb = "104" defaultlsb = "0" >
         <drumpartpc msb = "104" />
         <drumpartpc msb = "105" />
         <drumpartpc msb = "106" />

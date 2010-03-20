@@ -33,6 +33,7 @@
         <xsd:attribute name="pc" type="_7bitInt"/>
         <xsd:attribute name="msb" type="_7bitInt"/>
         <xsd:attribute name="lsb" type="_7bitInt"/>
+        <xsd:attribute name="mapName" type="xsd:string" default=""/>
         <xsd:attribute name="name" type="xsd:string"/>
     </xsd:complexType>
     <xsd:simpleType name="_7bitInt">
@@ -58,6 +59,9 @@
         <xsd:attribute name="file" type="xsd:string"/>
     </xsd:complexType>
 </xsd:schema>
+
+
+
 
 
 

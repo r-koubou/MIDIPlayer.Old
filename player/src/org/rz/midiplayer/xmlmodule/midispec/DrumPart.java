@@ -22,7 +22,6 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element ref="{}drumpartsysexec" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element ref="{}drumpartpc" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/choice>
- *       &lt;attribute name="maxassign" type="{http://www.w3.org/2001/XMLSchema}int" default="-1" />
  *       &lt;attribute name="default" type="{}_4bitInt" default="10" />
  *       &lt;attribute name="defaultpc" type="{http://www.w3.org/2001/XMLSchema}int" default="0" />
  *       &lt;attribute name="defaultmsb" type="{http://www.w3.org/2001/XMLSchema}int" default="0" />
@@ -43,8 +42,6 @@ public class DrumPart {
 
     protected List<DrumPartSysExec> drumpartsysexec;
     protected List<DrumPartPc> drumpartpc;
-    @XmlAttribute
-    protected Integer maxassign;
     @XmlAttribute(name = "default")
     protected Integer _default;
     @XmlAttribute
@@ -110,34 +107,6 @@ public class DrumPart {
             drumpartpc = new ArrayList<DrumPartPc>();
         }
         return this.drumpartpc;
-    }
-
-    /**
-     * Gets the value of the maxassign property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public int getMaxassign() {
-        if (maxassign == null) {
-            return -1;
-        } else {
-            return maxassign;
-        }
-    }
-
-    /**
-     * Sets the value of the maxassign property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setMaxassign(Integer value) {
-        this.maxassign = value;
     }
 
     /**

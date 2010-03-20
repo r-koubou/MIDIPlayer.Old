@@ -109,8 +109,6 @@
             <xsd:element ref = "drumpartsysexec" minOccurs = "0" maxOccurs = "unbounded" />
             <xsd:element ref = "drumpartpc"      minOccurs = "0" maxOccurs = "unbounded" />
         </xsd:choice>
-
-        <xsd:attribute  name = "maxassign" type = "xsd:int" default = "-1" />
         <xsd:attribute  name = "default"   type = "_4bitInt" default = "10" />
         <xsd:attribute name="defaultpc" type="xsd:int" default="0"/>
         <xsd:attribute name="defaultmsb" type="xsd:int" default="0"/>
@@ -182,5 +180,6 @@
     </xsd:complexType>
 
 </xsd:schema>
+
 
 

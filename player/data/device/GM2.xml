@@ -31,274 +31,274 @@
 
         -->
         <map type = "melo" >
-            <instrument pc = "0" msb = "121" lsb = "0" name = "GM2&lt;&gt;Ac Grand Piano" />
-            <instrument pc = "0" msb = "121" lsb = "1" name = "GM2&lt;&gt;A.Grnd Piano w" />
-            <instrument pc = "0" msb = "121" lsb = "2" name = "GM2&lt;&gt;A Grnd Piano (d)" />
-            <instrument pc = "1" msb = "121" lsb = "0" name = "GM2&lt;&gt;B.AcPiano" />
-            <instrument pc = "1" msb = "121" lsb = "1" name = "GM2&lt;&gt;B.AcPiano (wide)" />
-            <instrument pc = "2" msb = "121" lsb = "0" name = "GM2&lt;&gt;E Grand Piano" />
-            <instrument pc = "2" msb = "121" lsb = "1" name = "GM2&lt;&gt;E Grnd Piano (w)" />
-            <instrument pc = "3" msb = "121" lsb = "0" name = "GM2&lt;&gt;Honky-tonk Piano" />
-            <instrument pc = "3" msb = "121" lsb = "1" name = "GM2&lt;&gt;Honky-tonk(wide)" />
-            <instrument pc = "4" msb = "121" lsb = "0" name = "GM2&lt;&gt;Electric Piano1" />
-            <instrument pc = "4" msb = "121" lsb = "1" name = "GM2&lt;&gt;Detuned EPiano 1" />
-            <instrument pc = "4" msb = "121" lsb = "2" name = "GM2&lt;&gt;E Piano 1(v mix)" />
-            <instrument pc = "4" msb = "121" lsb = "3" name = "GM2&lt;&gt;60's E Piano" />
-            <instrument pc = "5" msb = "121" lsb = "0" name = "GM2&lt;&gt;Electric Piano 2" />
-            <instrument pc = "5" msb = "121" lsb = "1" name = "GM2&lt;&gt;Detuned EPiano 2" />
-            <instrument pc = "5" msb = "121" lsb = "2" name = "GM2&lt;&gt;E Piano 2(v mix)" />
-            <instrument pc = "5" msb = "121" lsb = "3" name = "GM2&lt;&gt;EP Legend" />
-            <instrument pc = "5" msb = "121" lsb = "4" name = "GM2&lt;&gt;EP Phase" />
-            <instrument pc = "6" msb = "121" lsb = "0" name = "GM2&lt;&gt;Harpsichord" />
-            <instrument pc = "6" msb = "121" lsb = "1" name = "GM2&lt;&gt;Harpsichord o" />
-            <instrument pc = "6" msb = "121" lsb = "2" name = "GM2&lt;&gt;Harpsichord (w)" />
-            <instrument pc = "6" msb = "121" lsb = "3" name = "GM2&lt;&gt;Harpsichord(ko)" />
-            <instrument pc = "7" msb = "121" lsb = "0" name = "GM2&lt;&gt;Clavi" />
-            <instrument pc = "7" msb = "121" lsb = "1" name = "GM2&lt;&gt;Pulse Clavi" />
-            <instrument pc = "8" msb = "121" lsb = "0" name = "GM2&lt;&gt;Celesta" />
-            <instrument pc = "9" msb = "121" lsb = "0" name = "GM2&lt;&gt;Glockenspiel" />
-            <instrument pc = "10" msb = "121" lsb = "0" name = "GM2&lt;&gt;Music Box" />
-            <instrument pc = "11" msb = "121" lsb = "0" name = "GM2&lt;&gt;Vibraphone" />
-            <instrument pc = "11" msb = "121" lsb = "1" name = "GM2&lt;&gt;Vibraphone (w)" />
-            <instrument pc = "12" msb = "121" lsb = "0" name = "GM2&lt;&gt;Marimba" />
-            <instrument pc = "12" msb = "121" lsb = "1" name = "GM2&lt;&gt;Marimba (wide)" />
-            <instrument pc = "13" msb = "121" lsb = "0" name = "GM2&lt;&gt;Xylophone" />
-            <instrument pc = "14" msb = "121" lsb = "0" name = "GM2&lt;&gt;Tubular Bells" />
-            <instrument pc = "14" msb = "121" lsb = "1" name = "GM2&lt;&gt;Church Bell" />
-            <instrument pc = "14" msb = "121" lsb = "2" name = "GM2&lt;&gt;Carillon" />
-            <instrument pc = "15" msb = "121" lsb = "0" name = "GM2&lt;&gt;Dulcimer" />
-            <instrument pc = "16" msb = "121" lsb = "0" name = "GM2&lt;&gt;Drawbar Organ" />
-            <instrument pc = "16" msb = "121" lsb = "1" name = "GM2&lt;&gt;Detuned Db Organ" />
-            <instrument pc = "16" msb = "121" lsb = "2" name = "GM2&lt;&gt;Italian 60's Org" />
-            <instrument pc = "16" msb = "121" lsb = "3" name = "GM2&lt;&gt;Drawbar Organ 2" />
-            <instrument pc = "17" msb = "121" lsb = "0" name = "GM2&lt;&gt;Percussive Organ" />
-            <instrument pc = "17" msb = "121" lsb = "1" name = "GM2&lt;&gt;Detuned Perc Org" />
-            <instrument pc = "17" msb = "121" lsb = "2" name = "GM2&lt;&gt;Perc Organ 2" />
-            <instrument pc = "18" msb = "121" lsb = "0" name = "GM2&lt;&gt;Rock Organ" />
-            <instrument pc = "19" msb = "121" lsb = "0" name = "GM2&lt;&gt;Church Organ" />
-            <instrument pc = "19" msb = "121" lsb = "1" name = "GM2&lt;&gt;Church Organ o" />
-            <instrument pc = "19" msb = "121" lsb = "2" name = "GM2&lt;&gt;Detuned Chr Org" />
-            <instrument pc = "20" msb = "121" lsb = "0" name = "GM2&lt;&gt;Reed Organ" />
-            <instrument pc = "20" msb = "121" lsb = "1" name = "GM2&lt;&gt;Puff Organ" />
-            <instrument pc = "21" msb = "121" lsb = "0" name = "GM2&lt;&gt;Accordion" />
-            <instrument pc = "21" msb = "121" lsb = "1" name = "GM2&lt;&gt;Accordion 2" />
-            <instrument pc = "22" msb = "121" lsb = "0" name = "GM2&lt;&gt;Harmonica" />
-            <instrument pc = "23" msb = "121" lsb = "0" name = "GM2&lt;&gt;Tango Accordion" />
-            <instrument pc = "24" msb = "121" lsb = "0" name = "GM2&lt;&gt;Ac Gtr (nylon)" />
-            <instrument pc = "24" msb = "121" lsb = "1" name = "GM2&lt;&gt;Ukulele" />
-            <instrument pc = "24" msb = "121" lsb = "2" name = "GM2&gt;Ac Gtr(n+koff)" />
-            <instrument pc = "24" msb = "121" lsb = "3" name = "GM2&lt;&gt;A Gtr (nylon 2)" />
-            <instrument pc = "25" msb = "121" lsb = "0" name = "GM2&lt;&gt;Ac Gtr (steel)" />
-            <instrument pc = "25" msb = "121" lsb = "1" name = "GM2&lt;&gt;12-Str Guitar" />
-            <instrument pc = "25" msb = "121" lsb = "2" name = "GM2&lt;&gt;Mandolin" />
-            <instrument pc = "25" msb = "121" lsb = "3" name = "GM2&lt;&gt;Stl Gtr Body Snd" />
-            <instrument pc = "26" msb = "121" lsb = "0" name = "GM2&lt;&gt;E Gtr (jazz)" />
-            <instrument pc = "26" msb = "121" lsb = "1" name = "GM2&lt;&gt;E Gtr(pedal stl)" />
-            <instrument pc = "27" msb = "121" lsb = "0" name = "GM2&lt;&gt;E Gtr (clean)" />
-            <instrument pc = "27" msb = "121" lsb = "1" name = "GM2&lt;&gt;E Gtr(detuned c)" />
-            <instrument pc = "27" msb = "121" lsb = "2" name = "GM2&lt;&gt;Mid Tone Guitar" />
-            <instrument pc = "28" msb = "121" lsb = "0" name = "GM2&lt;&gt;E Gtr (muted)" />
-            <instrument pc = "28" msb = "121" lsb = "1" name = "GM2&lt;&gt;E Gtr(funky cut)" />
-            <instrument pc = "28" msb = "121" lsb = "2" name = "GM2&lt;&gt;E Gtr(mt vel-sw)" />
-            <instrument pc = "28" msb = "121" lsb = "3" name = "GM2&lt;&gt;Jazz Man" />
-            <instrument pc = "29" msb = "121" lsb = "0" name = "GM2&lt;&gt;Overdriven Gtr" />
-            <instrument pc = "29" msb = "121" lsb = "1" name = "GM2&lt;&gt;Guitar Pinch" />
-            <instrument pc = "30" msb = "121" lsb = "0" name = "GM2&lt;&gt;Distortion Gtr" />
-            <instrument pc = "30" msb = "121" lsb = "1" name = "GM2&lt;&gt;Feedback Gt" />
-            <instrument pc = "30" msb = "121" lsb = "2" name = "GM2&lt;&gt;Dist Rhythm Gtr" />
-            <instrument pc = "31" msb = "121" lsb = "0" name = "GM2&lt;&gt;Guitar Harmonics" />
-            <instrument pc = "31" msb = "121" lsb = "1" name = "GM2&lt;&gt;Guitar Feedback" />
-            <instrument pc = "32" msb = "121" lsb = "0" name = "GM2&lt;&gt;Acoustic Bass" />
-            <instrument pc = "33" msb = "121" lsb = "0" name = "GM2&lt;&gt;E Bass (finger)" />
-            <instrument pc = "33" msb = "121" lsb = "1" name = "GM2&lt;&gt;Finger Slap Bass" />
-            <instrument pc = "34" msb = "121" lsb = "0" name = "GM2&lt;&gt;Electric Bass" />
-            <instrument pc = "35" msb = "121" lsb = "0" name = "GM2&lt;&gt;Fretless Bass" />
-            <instrument pc = "36" msb = "121" lsb = "0" name = "GM2&lt;&gt;Slap Bass 1" />
-            <instrument pc = "37" msb = "121" lsb = "0" name = "GM2&lt;&gt;Slap Bass 2" />
-            <instrument pc = "38" msb = "121" lsb = "0" name = "GM2&lt;&gt;Synth Bass 1" />
-            <instrument pc = "38" msb = "121" lsb = "1" name = "GM2&lt;&gt;Synth Bass (w)" />
-            <instrument pc = "38" msb = "121" lsb = "2" name = "GM2&lt;&gt;Synth Bass 3" />
-            <instrument pc = "38" msb = "121" lsb = "3" name = "GM2&lt;&gt;Clavi Bass" />
-            <instrument pc = "38" msb = "121" lsb = "4" name = "GM2&lt;&gt;Hammer" />
-            <instrument pc = "39" msb = "121" lsb = "0" name = "GM2&lt;&gt;Synth Bass 2" />
-            <instrument pc = "39" msb = "121" lsb = "1" name = "GM2&lt;&gt;Synth Bass 4" />
-            <instrument pc = "39" msb = "121" lsb = "2" name = "GM2&lt;&gt;Synth Bass (rub)" />
-            <instrument pc = "39" msb = "121" lsb = "3" name = "GM2&lt;&gt;Attack Pulse" />
-            <instrument pc = "40" msb = "121" lsb = "0" name = "GM2&lt;&gt;Violin" />
-            <instrument pc = "40" msb = "121" lsb = "1" name = "GM2&lt;&gt;Violin (slow)" />
-            <instrument pc = "41" msb = "121" lsb = "0" name = "GM2&lt;&gt;Viola" />
-            <instrument pc = "42" msb = "121" lsb = "0" name = "GM2&lt;&gt;Cello" />
-            <instrument pc = "43" msb = "121" lsb = "0" name = "GM2&lt;&gt;Contrabass" />
-            <instrument pc = "44" msb = "121" lsb = "0" name = "GM2&lt;&gt;Tremolo Strings" />
-            <instrument pc = "45" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pizzicato Str" />
-            <instrument pc = "46" msb = "121" lsb = "0" name = "GM2&lt;&gt;Orchestral Harp" />
-            <instrument pc = "46" msb = "121" lsb = "1" name = "GM2&lt;&gt;Yang Chin" />
-            <instrument pc = "47" msb = "121" lsb = "0" name = "GM2&lt;&gt;Timpani" />
-            <instrument pc = "48" msb = "121" lsb = "0" name = "GM2&lt;&gt;Strings 1" />
-            <instrument pc = "48" msb = "121" lsb = "1" name = "GM2&lt;&gt;Strings &amp; Brass" />
-            <instrument pc = "48" msb = "121" lsb = "2" name = "GM2&lt;&gt;60s Strings" />
-            <instrument pc = "49" msb = "121" lsb = "0" name = "GM2&lt;&gt;Strings 2" />
-            <instrument pc = "50" msb = "121" lsb = "0" name = "GM2&lt;&gt;SynthStrings 1" />
-            <instrument pc = "50" msb = "121" lsb = "1" name = "GM2&lt;&gt;SynthStrings 3" />
-            <instrument pc = "51" msb = "121" lsb = "0" name = "GM2&lt;&gt;SynthStrings 2" />
-            <instrument pc = "52" msb = "121" lsb = "0" name = "GM2&lt;&gt;Choir Aahs" />
-            <instrument pc = "52" msb = "121" lsb = "1" name = "GM2&lt;&gt;Choir Aahs 2" />
-            <instrument pc = "53" msb = "121" lsb = "0" name = "GM2&lt;&gt;Voice Oohs" />
-            <instrument pc = "53" msb = "121" lsb = "1" name = "GM2&lt;&gt;Humming" />
-            <instrument pc = "54" msb = "121" lsb = "0" name = "GM2&lt;&gt;Synth Voice" />
-            <instrument pc = "54" msb = "121" lsb = "1" name = "GM2&lt;&gt;Analog Voice" />
-            <instrument pc = "55" msb = "121" lsb = "0" name = "GM2&lt;&gt;Orchestra Hit" />
-            <instrument pc = "55" msb = "121" lsb = "1" name = "GM2&lt;&gt;Bass Hit Plus" />
-            <instrument pc = "55" msb = "121" lsb = "2" name = "GM2&lt;&gt;6th Hit" />
-            <instrument pc = "55" msb = "121" lsb = "3" name = "GM2&lt;&gt;Euro Hit" />
-            <instrument pc = "56" msb = "121" lsb = "0" name = "GM2&lt;&gt;Trumpet" />
-            <instrument pc = "56" msb = "121" lsb = "1" name = "GM2&lt;&gt;Dark Trumpet Sft" />
-            <instrument pc = "57" msb = "121" lsb = "0" name = "GM2&lt;&gt;Trombone" />
-            <instrument pc = "57" msb = "121" lsb = "1" name = "GM2&lt;&gt;Trombone 2" />
-            <instrument pc = "57" msb = "121" lsb = "2" name = "GM2&lt;&gt;Bright Trombone" />
-            <instrument pc = "58" msb = "121" lsb = "0" name = "GM2&lt;&gt;Tuba" />
-            <instrument pc = "59" msb = "121" lsb = "0" name = "GM2&lt;&gt;Muted Trumpet" />
-            <instrument pc = "59" msb = "121" lsb = "1" name = "GM2&lt;&gt;Muted Trumpet 2" />
-            <instrument pc = "60" msb = "121" lsb = "0" name = "GM2&lt;&gt;French Horn" />
-            <instrument pc = "60" msb = "121" lsb = "1" name = "GM2&lt;&gt;Fr Horn 2 (warm)" />
-            <instrument pc = "61" msb = "121" lsb = "0" name = "GM2&lt;&gt;Brass Section" />
-            <instrument pc = "61" msb = "121" lsb = "1" name = "GM2&lt;&gt;Brass Sect 2 o" />
-            <instrument pc = "62" msb = "121" lsb = "0" name = "GM2&lt;&gt;Synth Brass 1" />
-            <instrument pc = "62" msb = "121" lsb = "1" name = "GM2&lt;&gt;Synth Brass 3" />
-            <instrument pc = "62" msb = "121" lsb = "2" name = "GM2&lt;&gt;A Synth Brass 1" />
-            <instrument pc = "62" msb = "121" lsb = "3" name = "GM2&lt;&gt;Jump Brass" />
-            <instrument pc = "63" msb = "121" lsb = "0" name = "GM2&lt;&gt;Synth Brass 2" />
-            <instrument pc = "63" msb = "121" lsb = "1" name = "GM2&lt;&gt;Synth Brass 4" />
-            <instrument pc = "63" msb = "121" lsb = "2" name = "GM2&lt;&gt;A Synth Brass 2" />
-            <instrument pc = "64" msb = "121" lsb = "0" name = "GM2&lt;&gt;Soprano Sax" />
-            <instrument pc = "65" msb = "121" lsb = "0" name = "GM2&lt;&gt;Alto Sax" />
-            <instrument pc = "66" msb = "121" lsb = "0" name = "GM2&lt;&gt;Tenor Sax" />
-            <instrument pc = "67" msb = "121" lsb = "0" name = "GM2&lt;&gt;Baritone Sax" />
-            <instrument pc = "68" msb = "121" lsb = "0" name = "GM2&lt;&gt;Oboe" />
-            <instrument pc = "69" msb = "121" lsb = "0" name = "GM2&lt;&gt;English Horn" />
-            <instrument pc = "70" msb = "121" lsb = "0" name = "GM2&lt;&gt;Bassoon" />
-            <instrument pc = "71" msb = "121" lsb = "0" name = "GM2&lt;&gt;Clarinet" />
-            <instrument pc = "72" msb = "121" lsb = "0" name = "GM2&lt;&gt;Piccolo" />
-            <instrument pc = "73" msb = "121" lsb = "0" name = "GM2&lt;&gt;Flute" />
-            <instrument pc = "74" msb = "121" lsb = "0" name = "GM2&lt;&gt;Recorder" />
-            <instrument pc = "75" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pan Flute" />
-            <instrument pc = "76" msb = "121" lsb = "0" name = "GM2&lt;&gt;Blown Bottle" />
-            <instrument pc = "77" msb = "121" lsb = "0" name = "GM2&lt;&gt;Shakuhachi" />
-            <instrument pc = "78" msb = "121" lsb = "0" name = "GM2&lt;&gt;Whistle" />
-            <instrument pc = "79" msb = "121" lsb = "0" name = "GM2&lt;&gt;Ocarina" />
-            <instrument pc = "80" msb = "121" lsb = "0" name = "GM2&lt;&gt;Lead 1" />
-            <instrument pc = "80" msb = "121" lsb = "1" name = "GM2&lt;&gt;Lead 1a" />
-            <instrument pc = "80" msb = "121" lsb = "2" name = "GM2&lt;&gt;Lead 1b" />
-            <instrument pc = "81" msb = "121" lsb = "0" name = "GM2&lt;&gt;Lead 2" />
-            <instrument pc = "81" msb = "121" lsb = "1" name = "GM2&lt;&gt;Lead 2a" />
-            <instrument pc = "81" msb = "121" lsb = "2" name = "GM2&lt;&gt;Lead 2b" />
-            <instrument pc = "81" msb = "121" lsb = "3" name = "GM2&lt;&gt;Lead 2" />
-            <instrument pc = "81" msb = "121" lsb = "4" name = "GM2&lt;&gt;Lead 2d" />
-            <instrument pc = "82" msb = "121" lsb = "0" name = "GM2&lt;&gt;Lead 3" />
-            <instrument pc = "83" msb = "121" lsb = "0" name = "GM2&lt;&gt;Lead 4" />
-            <instrument pc = "84" msb = "121" lsb = "0" name = "GM2&lt;&gt;Lead 5" />
-            <instrument pc = "84" msb = "121" lsb = "1" name = "GM2&lt;&gt;Lead 5" />
-            <instrument pc = "85" msb = "121" lsb = "0" name = "GM2&lt;&gt;Lead 6" />
-            <instrument pc = "86" msb = "121" lsb = "0" name = "GM2&lt;&gt;Lead 7" />
-            <instrument pc = "87" msb = "121" lsb = "0" name = "GM2&lt;&gt;Lead 8" />
-            <instrument pc = "87" msb = "121" lsb = "1" name = "GM2&lt;&gt;Lead 8a" />
-            <instrument pc = "88" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pad 1" />
-            <instrument pc = "89" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pad 2" />
-            <instrument pc = "89" msb = "121" lsb = "1" name = "GM2&lt;&gt;Pad 2a" />
-            <instrument pc = "90" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pad 3" />
-            <instrument pc = "91" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pad 4" />
-            <instrument pc = "91" msb = "121" lsb = "1" name = "GM2&lt;&gt;Pad 4a" />
-            <instrument pc = "92" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pad 5" />
-            <instrument pc = "93" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pad 6" />
-            <instrument pc = "94" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pad 7" />
-            <instrument pc = "95" msb = "121" lsb = "0" name = "GM2&lt;&gt;Pad 8" />
-            <instrument pc = "96" msb = "121" lsb = "0" name = "GM2&lt;&gt;FX 1" />
-            <instrument pc = "97" msb = "121" lsb = "0" name = "GM2&lt;&gt;FX 2" />
-            <instrument pc = "98" msb = "121" lsb = "0" name = "GM2&lt;&gt;FX 3" />
-            <instrument pc = "98" msb = "121" lsb = "1" name = "GM2&lt;&gt;FX 3a" />
-            <instrument pc = "99" msb = "121" lsb = "0" name = "GM2&lt;&gt;FX 4" />
-            <instrument pc = "100" msb = "121" lsb = "0" name = "GM2&lt;&gt;FX 5" />
-            <instrument pc = "101" msb = "121" lsb = "0" name = "GM2&lt;&gt;FX 6" />
-            <instrument pc = "102" msb = "121" lsb = "0" name = "GM2&lt;&gt;FX 7" />
-            <instrument pc = "102" msb = "121" lsb = "1" name = "GM2&lt;&gt;FX 7a" />
-            <instrument pc = "102" msb = "121" lsb = "2" name = "GM2&lt;&gt;FX 7b" />
-            <instrument pc = "103" msb = "121" lsb = "0" name = "GM2&lt;&gt;FX 8" />
-            <instrument pc = "104" msb = "121" lsb = "0" name = "GM2&lt;&gt;Sitar" />
-            <instrument pc = "104" msb = "121" lsb = "1" name = "GM2&lt;&gt;Sitar 2" />
-            <instrument pc = "105" msb = "121" lsb = "0" name = "GM2&lt;&gt;Banjo" />
-            <instrument pc = "106" msb = "121" lsb = "0" name = "GM2&lt;&gt;Shamisen" />
-            <instrument pc = "107" msb = "121" lsb = "0" name = "GM2&lt;&gt;Koto" />
-            <instrument pc = "107" msb = "121" lsb = "1" name = "GM2&lt;&gt;Taisho Koto" />
-            <instrument pc = "108" msb = "121" lsb = "0" name = "GM2&lt;&gt;Kalimba" />
-            <instrument pc = "109" msb = "121" lsb = "0" name = "GM2&lt;&gt;Bag pipe" />
-            <instrument pc = "110" msb = "121" lsb = "0" name = "GM2&lt;&gt;Fiddle" />
-            <instrument pc = "111" msb = "121" lsb = "0" name = "GM2&lt;&gt;Shanai" />
-            <instrument pc = "112" msb = "121" lsb = "0" name = "GM2&lt;&gt;Tinkle Bell" />
-            <instrument pc = "113" msb = "121" lsb = "0" name = "GM2&lt;&gt;Agogo" />
-            <instrument pc = "114" msb = "121" lsb = "0" name = "GM2&lt;&gt;Steel Drums" />
-            <instrument pc = "115" msb = "121" lsb = "0" name = "GM2&lt;&gt;Woodblock" />
-            <instrument pc = "115" msb = "121" lsb = "1" name = "GM2&lt;&gt;Castanets" />
-            <instrument pc = "116" msb = "121" lsb = "0" name = "GM2&lt;&gt;Taiko Drum" />
-            <instrument pc = "116" msb = "121" lsb = "1" name = "GM2&lt;&gt;Concert Bass Dr" />
-            <instrument pc = "117" msb = "121" lsb = "0" name = "GM2&lt;&gt;Melodic Tom" />
-            <instrument pc = "117" msb = "121" lsb = "1" name = "GM2&lt;&gt;Melo Tom 2 (pow)" />
-            <instrument pc = "118" msb = "121" lsb = "0" name = "GM2&lt;&gt;Synth Drum" />
-            <instrument pc = "118" msb = "121" lsb = "1" name = "GM2&lt;&gt;Rhythm Box Tom" />
-            <instrument pc = "118" msb = "121" lsb = "2" name = "GM2&lt;&gt;Electric Drum" />
-            <instrument pc = "119" msb = "121" lsb = "0" name = "GM2&lt;&gt;Reverse Cymbal" />
-            <instrument pc = "120" msb = "121" lsb = "0" name = "GM2&lt;&gt;Gtr Fret Noise" />
-            <instrument pc = "120" msb = "121" lsb = "1" name = "GM2&lt;&gt;Gtr Cut Noise" />
-            <instrument pc = "120" msb = "121" lsb = "2" name = "GM2&lt;&gt;A Bass Str Slap" />
-            <instrument pc = "121" msb = "121" lsb = "0" name = "GM2&lt;&gt;Breath Noise" />
-            <instrument pc = "121" msb = "121" lsb = "1" name = "GM2&lt;&gt;Flute Key Click" />
-            <instrument pc = "122" msb = "121" lsb = "0" name = "GM2&lt;&gt;Seashore" />
-            <instrument pc = "122" msb = "121" lsb = "1" name = "GM2&lt;&gt;Rain" />
-            <instrument pc = "122" msb = "121" lsb = "2" name = "GM2&lt;&gt;Thunder" />
-            <instrument pc = "122" msb = "121" lsb = "3" name = "GM2&lt;&gt;Wind" />
-            <instrument pc = "122" msb = "121" lsb = "4" name = "GM2&lt;&gt;Stream" />
-            <instrument pc = "122" msb = "121" lsb = "5" name = "GM2&lt;&gt;Bubble" />
-            <instrument pc = "123" msb = "121" lsb = "0" name = "GM2&lt;&gt;Bird Tweet" />
-            <instrument pc = "123" msb = "121" lsb = "1" name = "GM2&lt;&gt;Dog" />
-            <instrument pc = "123" msb = "121" lsb = "2" name = "GM2&lt;&gt;Horse Gallop" />
-            <instrument pc = "123" msb = "121" lsb = "3" name = "GM2&lt;&gt;Bird Tweet2" />
-            <instrument pc = "124" msb = "121" lsb = "0" name = "GM2&lt;&gt;Telephone Ring" />
-            <instrument pc = "124" msb = "121" lsb = "1" name = "GM2&lt;&gt;Telephone Ring 2" />
-            <instrument pc = "124" msb = "121" lsb = "2" name = "GM2&lt;&gt;Door Creaking" />
-            <instrument pc = "124" msb = "121" lsb = "3" name = "GM2&lt;&gt;Door" />
-            <instrument pc = "124" msb = "121" lsb = "4" name = "GM2&lt;&gt;Scratch" />
-            <instrument pc = "124" msb = "121" lsb = "5" name = "GM2&lt;&gt;Wind Chime" />
-            <instrument pc = "125" msb = "121" lsb = "0" name = "GM2&lt;&gt;Helicopter" />
-            <instrument pc = "125" msb = "121" lsb = "1" name = "GM2&lt;&gt;Car Engine" />
-            <instrument pc = "125" msb = "121" lsb = "2" name = "GM2&lt;&gt;Car Stop" />
-            <instrument pc = "125" msb = "121" lsb = "3" name = "GM2&lt;&gt;Car Pass" />
-            <instrument pc = "125" msb = "121" lsb = "4" name = "GM2&lt;&gt;Car Crash" />
-            <instrument pc = "125" msb = "121" lsb = "5" name = "GM2&lt;&gt;Siren" />
-            <instrument pc = "125" msb = "121" lsb = "6" name = "GM2&lt;&gt;Train" />
-            <instrument pc = "125" msb = "121" lsb = "7" name = "GM2&lt;&gt;Jetplane" />
-            <instrument pc = "125" msb = "121" lsb = "8" name = "GM2&lt;&gt;Starship" />
-            <instrument pc = "125" msb = "121" lsb = "9" name = "GM2&lt;&gt;Burst Noise" />
-            <instrument pc = "126" msb = "121" lsb = "0" name = "GM2&lt;&gt;Applause" />
-            <instrument pc = "126" msb = "121" lsb = "1" name = "GM2&lt;&gt;Laughing" />
-            <instrument pc = "126" msb = "121" lsb = "2" name = "GM2&lt;&gt;Screaming" />
-            <instrument pc = "126" msb = "121" lsb = "3" name = "GM2&lt;&gt;Punch" />
-            <instrument pc = "126" msb = "121" lsb = "4" name = "GM2&lt;&gt;Heart Beat" />
-            <instrument pc = "126" msb = "121" lsb = "5" name = "GM2&lt;&gt;Footsteps" />
-            <instrument pc = "127" msb = "121" lsb = "0" name = "GM2&lt;&gt;Gunshot" />
-            <instrument pc = "127" msb = "121" lsb = "1" name = "GM2&lt;&gt;Machine Gun" />
-            <instrument pc = "127" msb = "121" lsb = "2" name = "GM2&lt;&gt;Lasergun" />
-            <instrument pc = "127" msb = "121" lsb = "3" name = "GM2&lt;&gt;Explosion" />
+            <instrument pc = "0" msb = "121" lsb = "0" mapName = "GM2" name = "Ac Grand Piano" />
+            <instrument pc = "0" msb = "121" lsb = "1" mapName = "GM2" name = "A.Grnd Piano w" />
+            <instrument pc = "0" msb = "121" lsb = "2" mapName = "GM2" name = "A Grnd Piano (d)" />
+            <instrument pc = "1" msb = "121" lsb = "0" mapName = "GM2" name = "B.AcPiano" />
+            <instrument pc = "1" msb = "121" lsb = "1" mapName = "GM2" name = "B.AcPiano (wide)" />
+            <instrument pc = "2" msb = "121" lsb = "0" mapName = "GM2" name = "E Grand Piano" />
+            <instrument pc = "2" msb = "121" lsb = "1" mapName = "GM2" name = "E Grnd Piano (w)" />
+            <instrument pc = "3" msb = "121" lsb = "0" mapName = "GM2" name = "Honky-tonk Piano" />
+            <instrument pc = "3" msb = "121" lsb = "1" mapName = "GM2" name = "Honky-tonk(wide)" />
+            <instrument pc = "4" msb = "121" lsb = "0" mapName = "GM2" name = "Electric Piano1" />
+            <instrument pc = "4" msb = "121" lsb = "1" mapName = "GM2" name = "Detuned EPiano 1" />
+            <instrument pc = "4" msb = "121" lsb = "2" mapName = "GM2" name = "E Piano 1(v mix)" />
+            <instrument pc = "4" msb = "121" lsb = "3" mapName = "GM2" name = "60's E Piano" />
+            <instrument pc = "5" msb = "121" lsb = "0" mapName = "GM2" name = "Electric Piano 2" />
+            <instrument pc = "5" msb = "121" lsb = "1" mapName = "GM2" name = "Detuned EPiano 2" />
+            <instrument pc = "5" msb = "121" lsb = "2" mapName = "GM2" name = "E Piano 2(v mix)" />
+            <instrument pc = "5" msb = "121" lsb = "3" mapName = "GM2" name = "EP Legend" />
+            <instrument pc = "5" msb = "121" lsb = "4" mapName = "GM2" name = "EP Phase" />
+            <instrument pc = "6" msb = "121" lsb = "0" mapName = "GM2" name = "Harpsichord" />
+            <instrument pc = "6" msb = "121" lsb = "1" mapName = "GM2" name = "Harpsichord o" />
+            <instrument pc = "6" msb = "121" lsb = "2" mapName = "GM2" name = "Harpsichord (w)" />
+            <instrument pc = "6" msb = "121" lsb = "3" mapName = "GM2" name = "Harpsichord(ko)" />
+            <instrument pc = "7" msb = "121" lsb = "0" mapName = "GM2" name = "Clavi" />
+            <instrument pc = "7" msb = "121" lsb = "1" mapName = "GM2" name = "Pulse Clavi" />
+            <instrument pc = "8" msb = "121" lsb = "0" mapName = "GM2" name = "Celesta" />
+            <instrument pc = "9" msb = "121" lsb = "0" mapName = "GM2" name = "Glockenspiel" />
+            <instrument pc = "10" msb = "121" lsb = "0" mapName = "GM2" name = "Music Box" />
+            <instrument pc = "11" msb = "121" lsb = "0" mapName = "GM2" name = "Vibraphone" />
+            <instrument pc = "11" msb = "121" lsb = "1" mapName = "GM2" name = "Vibraphone (w)" />
+            <instrument pc = "12" msb = "121" lsb = "0" mapName = "GM2" name = "Marimba" />
+            <instrument pc = "12" msb = "121" lsb = "1" mapName = "GM2" name = "Marimba (wide)" />
+            <instrument pc = "13" msb = "121" lsb = "0" mapName = "GM2" name = "Xylophone" />
+            <instrument pc = "14" msb = "121" lsb = "0" mapName = "GM2" name = "Tubular Bells" />
+            <instrument pc = "14" msb = "121" lsb = "1" mapName = "GM2" name = "Church Bell" />
+            <instrument pc = "14" msb = "121" lsb = "2" mapName = "GM2" name = "Carillon" />
+            <instrument pc = "15" msb = "121" lsb = "0" mapName = "GM2" name = "Dulcimer" />
+            <instrument pc = "16" msb = "121" lsb = "0" mapName = "GM2" name = "Drawbar Organ" />
+            <instrument pc = "16" msb = "121" lsb = "1" mapName = "GM2" name = "Detuned Db Organ" />
+            <instrument pc = "16" msb = "121" lsb = "2" mapName = "GM2" name = "Italian 60's Org" />
+            <instrument pc = "16" msb = "121" lsb = "3" mapName = "GM2" name = "Drawbar Organ 2" />
+            <instrument pc = "17" msb = "121" lsb = "0" mapName = "GM2" name = "Percussive Organ" />
+            <instrument pc = "17" msb = "121" lsb = "1" mapName = "GM2" name = "Detuned Perc Org" />
+            <instrument pc = "17" msb = "121" lsb = "2" mapName = "GM2" name = "Perc Organ 2" />
+            <instrument pc = "18" msb = "121" lsb = "0" mapName = "GM2" name = "Rock Organ" />
+            <instrument pc = "19" msb = "121" lsb = "0" mapName = "GM2" name = "Church Organ" />
+            <instrument pc = "19" msb = "121" lsb = "1" mapName = "GM2" name = "Church Organ o" />
+            <instrument pc = "19" msb = "121" lsb = "2" mapName = "GM2" name = "Detuned Chr Org" />
+            <instrument pc = "20" msb = "121" lsb = "0" mapName = "GM2" name = "Reed Organ" />
+            <instrument pc = "20" msb = "121" lsb = "1" mapName = "GM2" name = "Puff Organ" />
+            <instrument pc = "21" msb = "121" lsb = "0" mapName = "GM2" name = "Accordion" />
+            <instrument pc = "21" msb = "121" lsb = "1" mapName = "GM2" name = "Accordion 2" />
+            <instrument pc = "22" msb = "121" lsb = "0" mapName = "GM2" name = "Harmonica" />
+            <instrument pc = "23" msb = "121" lsb = "0" mapName = "GM2" name = "Tango Accordion" />
+            <instrument pc = "24" msb = "121" lsb = "0" mapName = "GM2" name = "Ac Gtr (nylon)" />
+            <instrument pc = "24" msb = "121" lsb = "1" mapName = "GM2" name = "Ukulele" />
+            <instrument pc = "24" msb = "121" lsb = "2" mapName = "GM2" name = "Ac Gtr(n+koff)" />
+            <instrument pc = "24" msb = "121" lsb = "3" mapName = "GM2" name = "A Gtr (nylon 2)" />
+            <instrument pc = "25" msb = "121" lsb = "0" mapName = "GM2" name = "Ac Gtr (steel)" />
+            <instrument pc = "25" msb = "121" lsb = "1" mapName = "GM2" name = "12-Str Guitar" />
+            <instrument pc = "25" msb = "121" lsb = "2" mapName = "GM2" name = "Mandolin" />
+            <instrument pc = "25" msb = "121" lsb = "3" mapName = "GM2" name = "Stl Gtr Body Snd" />
+            <instrument pc = "26" msb = "121" lsb = "0" mapName = "GM2" name = "E Gtr (jazz)" />
+            <instrument pc = "26" msb = "121" lsb = "1" mapName = "GM2" name = "E Gtr(pedal stl)" />
+            <instrument pc = "27" msb = "121" lsb = "0" mapName = "GM2" name = "E Gtr (clean)" />
+            <instrument pc = "27" msb = "121" lsb = "1" mapName = "GM2" name = "E Gtr(detuned c)" />
+            <instrument pc = "27" msb = "121" lsb = "2" mapName = "GM2" name = "Mid Tone Guitar" />
+            <instrument pc = "28" msb = "121" lsb = "0" mapName = "GM2" name = "E Gtr (muted)" />
+            <instrument pc = "28" msb = "121" lsb = "1" mapName = "GM2" name = "E Gtr(funky cut)" />
+            <instrument pc = "28" msb = "121" lsb = "2" mapName = "GM2" name = "E Gtr(mt vel-sw)" />
+            <instrument pc = "28" msb = "121" lsb = "3" mapName = "GM2" name = "Jazz Man" />
+            <instrument pc = "29" msb = "121" lsb = "0" mapName = "GM2" name = "Overdriven Gtr" />
+            <instrument pc = "29" msb = "121" lsb = "1" mapName = "GM2" name = "Guitar Pinch" />
+            <instrument pc = "30" msb = "121" lsb = "0" mapName = "GM2" name = "Distortion Gtr" />
+            <instrument pc = "30" msb = "121" lsb = "1" mapName = "GM2" name = "Feedback Gt" />
+            <instrument pc = "30" msb = "121" lsb = "2" mapName = "GM2" name = "Dist Rhythm Gtr" />
+            <instrument pc = "31" msb = "121" lsb = "0" mapName = "GM2" name = "Guitar Harmonics" />
+            <instrument pc = "31" msb = "121" lsb = "1" mapName = "GM2" name = "Guitar Feedback" />
+            <instrument pc = "32" msb = "121" lsb = "0" mapName = "GM2" name = "Acoustic Bass" />
+            <instrument pc = "33" msb = "121" lsb = "0" mapName = "GM2" name = "E Bass (finger)" />
+            <instrument pc = "33" msb = "121" lsb = "1" mapName = "GM2" name = "Finger Slap Bass" />
+            <instrument pc = "34" msb = "121" lsb = "0" mapName = "GM2" name = "Electric Bass" />
+            <instrument pc = "35" msb = "121" lsb = "0" mapName = "GM2" name = "Fretless Bass" />
+            <instrument pc = "36" msb = "121" lsb = "0" mapName = "GM2" name = "Slap Bass 1" />
+            <instrument pc = "37" msb = "121" lsb = "0" mapName = "GM2" name = "Slap Bass 2" />
+            <instrument pc = "38" msb = "121" lsb = "0" mapName = "GM2" name = "Synth Bass 1" />
+            <instrument pc = "38" msb = "121" lsb = "1" mapName = "GM2" name = "Synth Bass (w)" />
+            <instrument pc = "38" msb = "121" lsb = "2" mapName = "GM2" name = "Synth Bass 3" />
+            <instrument pc = "38" msb = "121" lsb = "3" mapName = "GM2" name = "Clavi Bass" />
+            <instrument pc = "38" msb = "121" lsb = "4" mapName = "GM2" name = "Hammer" />
+            <instrument pc = "39" msb = "121" lsb = "0" mapName = "GM2" name = "Synth Bass 2" />
+            <instrument pc = "39" msb = "121" lsb = "1" mapName = "GM2" name = "Synth Bass 4" />
+            <instrument pc = "39" msb = "121" lsb = "2" mapName = "GM2" name = "Synth Bass (rub)" />
+            <instrument pc = "39" msb = "121" lsb = "3" mapName = "GM2" name = "Attack Pulse" />
+            <instrument pc = "40" msb = "121" lsb = "0" mapName = "GM2" name = "Violin" />
+            <instrument pc = "40" msb = "121" lsb = "1" mapName = "GM2" name = "Violin (slow)" />
+            <instrument pc = "41" msb = "121" lsb = "0" mapName = "GM2" name = "Viola" />
+            <instrument pc = "42" msb = "121" lsb = "0" mapName = "GM2" name = "Cello" />
+            <instrument pc = "43" msb = "121" lsb = "0" mapName = "GM2" name = "Contrabass" />
+            <instrument pc = "44" msb = "121" lsb = "0" mapName = "GM2" name = "Tremolo Strings" />
+            <instrument pc = "45" msb = "121" lsb = "0" mapName = "GM2" name = "Pizzicato Str" />
+            <instrument pc = "46" msb = "121" lsb = "0" mapName = "GM2" name = "Orchestral Harp" />
+            <instrument pc = "46" msb = "121" lsb = "1" mapName = "GM2" name = "Yang Chin" />
+            <instrument pc = "47" msb = "121" lsb = "0" mapName = "GM2" name = "Timpani" />
+            <instrument pc = "48" msb = "121" lsb = "0" mapName = "GM2" name = "Strings 1" />
+            <instrument pc = "48" msb = "121" lsb = "1" mapName = "GM2" name = "Strings &amp; Brass" />
+            <instrument pc = "48" msb = "121" lsb = "2" mapName = "GM2" name = "60s Strings" />
+            <instrument pc = "49" msb = "121" lsb = "0" mapName = "GM2" name = "Strings 2" />
+            <instrument pc = "50" msb = "121" lsb = "0" mapName = "GM2" name = "SynthStrings 1" />
+            <instrument pc = "50" msb = "121" lsb = "1" mapName = "GM2" name = "SynthStrings 3" />
+            <instrument pc = "51" msb = "121" lsb = "0" mapName = "GM2" name = "SynthStrings 2" />
+            <instrument pc = "52" msb = "121" lsb = "0" mapName = "GM2" name = "Choir Aahs" />
+            <instrument pc = "52" msb = "121" lsb = "1" mapName = "GM2" name = "Choir Aahs 2" />
+            <instrument pc = "53" msb = "121" lsb = "0" mapName = "GM2" name = "Voice Oohs" />
+            <instrument pc = "53" msb = "121" lsb = "1" mapName = "GM2" name = "Humming" />
+            <instrument pc = "54" msb = "121" lsb = "0" mapName = "GM2" name = "Synth Voice" />
+            <instrument pc = "54" msb = "121" lsb = "1" mapName = "GM2" name = "Analog Voice" />
+            <instrument pc = "55" msb = "121" lsb = "0" mapName = "GM2" name = "Orchestra Hit" />
+            <instrument pc = "55" msb = "121" lsb = "1" mapName = "GM2" name = "Bass Hit Plus" />
+            <instrument pc = "55" msb = "121" lsb = "2" mapName = "GM2" name = "6th Hit" />
+            <instrument pc = "55" msb = "121" lsb = "3" mapName = "GM2" name = "Euro Hit" />
+            <instrument pc = "56" msb = "121" lsb = "0" mapName = "GM2" name = "Trumpet" />
+            <instrument pc = "56" msb = "121" lsb = "1" mapName = "GM2" name = "Dark Trumpet Sft" />
+            <instrument pc = "57" msb = "121" lsb = "0" mapName = "GM2" name = "Trombone" />
+            <instrument pc = "57" msb = "121" lsb = "1" mapName = "GM2" name = "Trombone 2" />
+            <instrument pc = "57" msb = "121" lsb = "2" mapName = "GM2" name = "Bright Trombone" />
+            <instrument pc = "58" msb = "121" lsb = "0" mapName = "GM2" name = "Tuba" />
+            <instrument pc = "59" msb = "121" lsb = "0" mapName = "GM2" name = "Muted Trumpet" />
+            <instrument pc = "59" msb = "121" lsb = "1" mapName = "GM2" name = "Muted Trumpet 2" />
+            <instrument pc = "60" msb = "121" lsb = "0" mapName = "GM2" name = "French Horn" />
+            <instrument pc = "60" msb = "121" lsb = "1" mapName = "GM2" name = "Fr Horn 2 (warm)" />
+            <instrument pc = "61" msb = "121" lsb = "0" mapName = "GM2" name = "Brass Section" />
+            <instrument pc = "61" msb = "121" lsb = "1" mapName = "GM2" name = "Brass Sect 2 o" />
+            <instrument pc = "62" msb = "121" lsb = "0" mapName = "GM2" name = "Synth Brass 1" />
+            <instrument pc = "62" msb = "121" lsb = "1" mapName = "GM2" name = "Synth Brass 3" />
+            <instrument pc = "62" msb = "121" lsb = "2" mapName = "GM2" name = "A Synth Brass 1" />
+            <instrument pc = "62" msb = "121" lsb = "3" mapName = "GM2" name = "Jump Brass" />
+            <instrument pc = "63" msb = "121" lsb = "0" mapName = "GM2" name = "Synth Brass 2" />
+            <instrument pc = "63" msb = "121" lsb = "1" mapName = "GM2" name = "Synth Brass 4" />
+            <instrument pc = "63" msb = "121" lsb = "2" mapName = "GM2" name = "A Synth Brass 2" />
+            <instrument pc = "64" msb = "121" lsb = "0" mapName = "GM2" name = "Soprano Sax" />
+            <instrument pc = "65" msb = "121" lsb = "0" mapName = "GM2" name = "Alto Sax" />
+            <instrument pc = "66" msb = "121" lsb = "0" mapName = "GM2" name = "Tenor Sax" />
+            <instrument pc = "67" msb = "121" lsb = "0" mapName = "GM2" name = "Baritone Sax" />
+            <instrument pc = "68" msb = "121" lsb = "0" mapName = "GM2" name = "Oboe" />
+            <instrument pc = "69" msb = "121" lsb = "0" mapName = "GM2" name = "English Horn" />
+            <instrument pc = "70" msb = "121" lsb = "0" mapName = "GM2" name = "Bassoon" />
+            <instrument pc = "71" msb = "121" lsb = "0" mapName = "GM2" name = "Clarinet" />
+            <instrument pc = "72" msb = "121" lsb = "0" mapName = "GM2" name = "Piccolo" />
+            <instrument pc = "73" msb = "121" lsb = "0" mapName = "GM2" name = "Flute" />
+            <instrument pc = "74" msb = "121" lsb = "0" mapName = "GM2" name = "Recorder" />
+            <instrument pc = "75" msb = "121" lsb = "0" mapName = "GM2" name = "Pan Flute" />
+            <instrument pc = "76" msb = "121" lsb = "0" mapName = "GM2" name = "Blown Bottle" />
+            <instrument pc = "77" msb = "121" lsb = "0" mapName = "GM2" name = "Shakuhachi" />
+            <instrument pc = "78" msb = "121" lsb = "0" mapName = "GM2" name = "Whistle" />
+            <instrument pc = "79" msb = "121" lsb = "0" mapName = "GM2" name = "Ocarina" />
+            <instrument pc = "80" msb = "121" lsb = "0" mapName = "GM2" name = "Lead 1" />
+            <instrument pc = "80" msb = "121" lsb = "1" mapName = "GM2" name = "Lead 1a" />
+            <instrument pc = "80" msb = "121" lsb = "2" mapName = "GM2" name = "Lead 1b" />
+            <instrument pc = "81" msb = "121" lsb = "0" mapName = "GM2" name = "Lead 2" />
+            <instrument pc = "81" msb = "121" lsb = "1" mapName = "GM2" name = "Lead 2a" />
+            <instrument pc = "81" msb = "121" lsb = "2" mapName = "GM2" name = "Lead 2b" />
+            <instrument pc = "81" msb = "121" lsb = "3" mapName = "GM2" name = "Lead 2" />
+            <instrument pc = "81" msb = "121" lsb = "4" mapName = "GM2" name = "Lead 2d" />
+            <instrument pc = "82" msb = "121" lsb = "0" mapName = "GM2" name = "Lead 3" />
+            <instrument pc = "83" msb = "121" lsb = "0" mapName = "GM2" name = "Lead 4" />
+            <instrument pc = "84" msb = "121" lsb = "0" mapName = "GM2" name = "Lead 5" />
+            <instrument pc = "84" msb = "121" lsb = "1" mapName = "GM2" name = "Lead 5" />
+            <instrument pc = "85" msb = "121" lsb = "0" mapName = "GM2" name = "Lead 6" />
+            <instrument pc = "86" msb = "121" lsb = "0" mapName = "GM2" name = "Lead 7" />
+            <instrument pc = "87" msb = "121" lsb = "0" mapName = "GM2" name = "Lead 8" />
+            <instrument pc = "87" msb = "121" lsb = "1" mapName = "GM2" name = "Lead 8a" />
+            <instrument pc = "88" msb = "121" lsb = "0" mapName = "GM2" name = "Pad 1" />
+            <instrument pc = "89" msb = "121" lsb = "0" mapName = "GM2" name = "Pad 2" />
+            <instrument pc = "89" msb = "121" lsb = "1" mapName = "GM2" name = "Pad 2a" />
+            <instrument pc = "90" msb = "121" lsb = "0" mapName = "GM2" name = "Pad 3" />
+            <instrument pc = "91" msb = "121" lsb = "0" mapName = "GM2" name = "Pad 4" />
+            <instrument pc = "91" msb = "121" lsb = "1" mapName = "GM2" name = "Pad 4a" />
+            <instrument pc = "92" msb = "121" lsb = "0" mapName = "GM2" name = "Pad 5" />
+            <instrument pc = "93" msb = "121" lsb = "0" mapName = "GM2" name = "Pad 6" />
+            <instrument pc = "94" msb = "121" lsb = "0" mapName = "GM2" name = "Pad 7" />
+            <instrument pc = "95" msb = "121" lsb = "0" mapName = "GM2" name = "Pad 8" />
+            <instrument pc = "96" msb = "121" lsb = "0" mapName = "GM2" name = "FX 1" />
+            <instrument pc = "97" msb = "121" lsb = "0" mapName = "GM2" name = "FX 2" />
+            <instrument pc = "98" msb = "121" lsb = "0" mapName = "GM2" name = "FX 3" />
+            <instrument pc = "98" msb = "121" lsb = "1" mapName = "GM2" name = "FX 3a" />
+            <instrument pc = "99" msb = "121" lsb = "0" mapName = "GM2" name = "FX 4" />
+            <instrument pc = "100" msb = "121" lsb = "0" mapName = "GM2" name = "FX 5" />
+            <instrument pc = "101" msb = "121" lsb = "0" mapName = "GM2" name = "FX 6" />
+            <instrument pc = "102" msb = "121" lsb = "0" mapName = "GM2" name = "FX 7" />
+            <instrument pc = "102" msb = "121" lsb = "1" mapName = "GM2" name = "FX 7a" />
+            <instrument pc = "102" msb = "121" lsb = "2" mapName = "GM2" name = "FX 7b" />
+            <instrument pc = "103" msb = "121" lsb = "0" mapName = "GM2" name = "FX 8" />
+            <instrument pc = "104" msb = "121" lsb = "0" mapName = "GM2" name = "Sitar" />
+            <instrument pc = "104" msb = "121" lsb = "1" mapName = "GM2" name = "Sitar 2" />
+            <instrument pc = "105" msb = "121" lsb = "0" mapName = "GM2" name = "Banjo" />
+            <instrument pc = "106" msb = "121" lsb = "0" mapName = "GM2" name = "Shamisen" />
+            <instrument pc = "107" msb = "121" lsb = "0" mapName = "GM2" name = "Koto" />
+            <instrument pc = "107" msb = "121" lsb = "1" mapName = "GM2" name = "Taisho Koto" />
+            <instrument pc = "108" msb = "121" lsb = "0" mapName = "GM2" name = "Kalimba" />
+            <instrument pc = "109" msb = "121" lsb = "0" mapName = "GM2" name = "Bag pipe" />
+            <instrument pc = "110" msb = "121" lsb = "0" mapName = "GM2" name = "Fiddle" />
+            <instrument pc = "111" msb = "121" lsb = "0" mapName = "GM2" name = "Shanai" />
+            <instrument pc = "112" msb = "121" lsb = "0" mapName = "GM2" name = "Tinkle Bell" />
+            <instrument pc = "113" msb = "121" lsb = "0" mapName = "GM2" name = "Agogo" />
+            <instrument pc = "114" msb = "121" lsb = "0" mapName = "GM2" name = "Steel Drums" />
+            <instrument pc = "115" msb = "121" lsb = "0" mapName = "GM2" name = "Woodblock" />
+            <instrument pc = "115" msb = "121" lsb = "1" mapName = "GM2" name = "Castanets" />
+            <instrument pc = "116" msb = "121" lsb = "0" mapName = "GM2" name = "Taiko Drum" />
+            <instrument pc = "116" msb = "121" lsb = "1" mapName = "GM2" name = "Concert Bass Dr" />
+            <instrument pc = "117" msb = "121" lsb = "0" mapName = "GM2" name = "Melodic Tom" />
+            <instrument pc = "117" msb = "121" lsb = "1" mapName = "GM2" name = "Melo Tom 2 (pow)" />
+            <instrument pc = "118" msb = "121" lsb = "0" mapName = "GM2" name = "Synth Drum" />
+            <instrument pc = "118" msb = "121" lsb = "1" mapName = "GM2" name = "Rhythm Box Tom" />
+            <instrument pc = "118" msb = "121" lsb = "2" mapName = "GM2" name = "Electric Drum" />
+            <instrument pc = "119" msb = "121" lsb = "0" mapName = "GM2" name = "Reverse Cymbal" />
+            <instrument pc = "120" msb = "121" lsb = "0" mapName = "GM2" name = "Gtr Fret Noise" />
+            <instrument pc = "120" msb = "121" lsb = "1" mapName = "GM2" name = "Gtr Cut Noise" />
+            <instrument pc = "120" msb = "121" lsb = "2" mapName = "GM2" name = "A Bass Str Slap" />
+            <instrument pc = "121" msb = "121" lsb = "0" mapName = "GM2" name = "Breath Noise" />
+            <instrument pc = "121" msb = "121" lsb = "1" mapName = "GM2" name = "Flute Key Click" />
+            <instrument pc = "122" msb = "121" lsb = "0" mapName = "GM2" name = "Seashore" />
+            <instrument pc = "122" msb = "121" lsb = "1" mapName = "GM2" name = "Rain" />
+            <instrument pc = "122" msb = "121" lsb = "2" mapName = "GM2" name = "Thunder" />
+            <instrument pc = "122" msb = "121" lsb = "3" mapName = "GM2" name = "Wind" />
+            <instrument pc = "122" msb = "121" lsb = "4" mapName = "GM2" name = "Stream" />
+            <instrument pc = "122" msb = "121" lsb = "5" mapName = "GM2" name = "Bubble" />
+            <instrument pc = "123" msb = "121" lsb = "0" mapName = "GM2" name = "Bird Tweet" />
+            <instrument pc = "123" msb = "121" lsb = "1" mapName = "GM2" name = "Dog" />
+            <instrument pc = "123" msb = "121" lsb = "2" mapName = "GM2" name = "Horse Gallop" />
+            <instrument pc = "123" msb = "121" lsb = "3" mapName = "GM2" name = "Bird Tweet2" />
+            <instrument pc = "124" msb = "121" lsb = "0" mapName = "GM2" name = "Telephone Ring" />
+            <instrument pc = "124" msb = "121" lsb = "1" mapName = "GM2" name = "Telephone Ring 2" />
+            <instrument pc = "124" msb = "121" lsb = "2" mapName = "GM2" name = "Door Creaking" />
+            <instrument pc = "124" msb = "121" lsb = "3" mapName = "GM2" name = "Door" />
+            <instrument pc = "124" msb = "121" lsb = "4" mapName = "GM2" name = "Scratch" />
+            <instrument pc = "124" msb = "121" lsb = "5" mapName = "GM2" name = "Wind Chime" />
+            <instrument pc = "125" msb = "121" lsb = "0" mapName = "GM2" name = "Helicopter" />
+            <instrument pc = "125" msb = "121" lsb = "1" mapName = "GM2" name = "Car Engine" />
+            <instrument pc = "125" msb = "121" lsb = "2" mapName = "GM2" name = "Car Stop" />
+            <instrument pc = "125" msb = "121" lsb = "3" mapName = "GM2" name = "Car Pass" />
+            <instrument pc = "125" msb = "121" lsb = "4" mapName = "GM2" name = "Car Crash" />
+            <instrument pc = "125" msb = "121" lsb = "5" mapName = "GM2" name = "Siren" />
+            <instrument pc = "125" msb = "121" lsb = "6" mapName = "GM2" name = "Train" />
+            <instrument pc = "125" msb = "121" lsb = "7" mapName = "GM2" name = "Jetplane" />
+            <instrument pc = "125" msb = "121" lsb = "8" mapName = "GM2" name = "Starship" />
+            <instrument pc = "125" msb = "121" lsb = "9" mapName = "GM2" name = "Burst Noise" />
+            <instrument pc = "126" msb = "121" lsb = "0" mapName = "GM2" name = "Applause" />
+            <instrument pc = "126" msb = "121" lsb = "1" mapName = "GM2" name = "Laughing" />
+            <instrument pc = "126" msb = "121" lsb = "2" mapName = "GM2" name = "Screaming" />
+            <instrument pc = "126" msb = "121" lsb = "3" mapName = "GM2" name = "Punch" />
+            <instrument pc = "126" msb = "121" lsb = "4" mapName = "GM2" name = "Heart Beat" />
+            <instrument pc = "126" msb = "121" lsb = "5" mapName = "GM2" name = "Footsteps" />
+            <instrument pc = "127" msb = "121" lsb = "0" mapName = "GM2" name = "Gunshot" />
+            <instrument pc = "127" msb = "121" lsb = "1" mapName = "GM2" name = "Machine Gun" />
+            <instrument pc = "127" msb = "121" lsb = "2" mapName = "GM2" name = "Lasergun" />
+            <instrument pc = "127" msb = "121" lsb = "3" mapName = "GM2" name = "Explosion" />
         </map>
 
         <map type = "drum" >
-            <instrument pc = "0" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;STANDARD Set" />
-            <instrument pc = "9" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;ROOM Set" />
-            <instrument pc = "17" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;POWER Set" />
-            <instrument pc = "25" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;ELECTRONIC Set" />
-            <instrument pc = "26" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;ANALOG Set" />
-            <instrument pc = "33" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;JAZZ Set" />
-            <instrument pc = "41" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;BRUSH Set" />
-            <instrument pc = "49" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;ORCHESTRA Set" />
-            <instrument pc = "57" msb = "120" lsb = "0" name = "GM2[Drums]&lt;&gt;SFX Set" />
+            <instrument pc = "0" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "STANDARD Set" />
+            <instrument pc = "9" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "ROOM Set" />
+            <instrument pc = "17" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "POWER Set" />
+            <instrument pc = "25" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "ELECTRONIC Set" />
+            <instrument pc = "26" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "ANALOG Set" />
+            <instrument pc = "33" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "JAZZ Set" />
+            <instrument pc = "41" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "BRUSH Set" />
+            <instrument pc = "49" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "ORCHESTRA Set" />
+            <instrument pc = "57" msb = "120" lsb = "0" mapName = "GM2[Drums]" name = "SFX Set" />
         </map>
 
     </instruments>
