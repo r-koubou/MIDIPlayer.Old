@@ -6,6 +6,7 @@
 
 
 
+
   
   <meta content="text/html; charset=Shift_JIS" http-equiv="content-type"><title>README</title>
   
@@ -14,7 +15,7 @@
   
   <link rel="stylesheet" href="html/readme/README.css" type="text/css"></head><body>
 <div class="contents">
-<h1>MIDIPlayer - version 0.1.x</h1>
+<h1>MIDIPlayer - version 0.2.x</h1>
 <h3>Author</h3>
 <div style="margin-left: 40px;">rz<br>
 </div>
@@ -91,10 +92,37 @@ Java ランタイムは下記 URL からインストールできます。<br>
 
 <h2><a name="起動方法"></a>起動方法</h2>
 <h3>Windows</h3>
-同梱のバッチファイル <span style="font-weight: bold;">MIDIPlayer.bat</span> を実行（エクスプローラ上でダブルクリック）してください。<br>
+<h4>32bit 版 Windows</h4>
+下記の環境が該当します。<br>
+<ul>
+  <li>32bit Windows&nbsp;</li>
+  <li>64 bit (x64) Windows にて 32bit 版の Java ランタイムをインストールしている場合<br>
+  </li>
+</ul>
+同梱のバッチファイル <span style="font-weight: bold;">MIDIPlayer-win32.bat</span> を実行（エクスプローラ上でダブルクリック）してください。<br>
+<br>
+<h4>64bit 版 Windows</h4>
+
+下記の環境が該当します。<br>
+<ul>
+<li>64 bit (x64) Windows にて 64bit 版の Java ランタイムをインストールしている場合<br>
+  </li>
+</ul>
+
+同梱のバッチファイル <span style="font-weight: bold;">MIDIPlayer-win64.bat</span> を実行（エクスプローラ上でダブルクリック）してください。<br>
 <br>
 <h3>Mac OS X / Linux</h3>
-同梱のシェルスクリプト <span style="font-weight: bold;">MIDIPlayer.sh</span> を実行してください。
+同梱のシェルスクリプト <span style="font-weight: bold;">MIDIPlayer-macosx.sh</span> を実行してください。<br>
+<br>
+<h3>Linux</h3>
+お使いの環境に合わせ、下記のどちらかのシェルスクリプトを実行してください。<br>
+<ul>
+  <li>MIDIPlayer-linux-amd64.sh</li>
+  <li>MIDIPlayer-linux-i586.sh<br>
+  </li>
+</ul>
+<br>
+
 
 <h2><a name="初回起動時の設定"></a>初回起動時の設定</h2>
 <h3>MIDI OUT デバイスの選択</h3>MIDI データの再生に使用するデバイスを設定してください。<br>
@@ -165,6 +193,8 @@ MIDI データ再生時に画面に表示を行う種類を選択します。<br>
 本ソフトは 修正 BSD ライセンス にて公開しています。<br>
 詳細は license/LICENSE.txt をお読みください。<br>
 <br>
+（その他、このソフトが使用している外部ライブラリのライセンスについては license ディレクトリ以下にあります）<br>
+<br>
 <h2><a name="制限事項"></a>制限事項</h2>
 <ul>
   <li>MIDIフォーマット1 の MIDI ファイルの再生には対応していません。<br>
@@ -206,9 +236,21 @@ MIDI データ再生時に画面に表示を行う種類を選択します。<br>
 
 <h2><a name="履歴"></a>履歴</h2>
 <ul>
+  <li>2010/03/21</li>
+  <ul>
+    <li>プレーヤー本体側の不具合、GS系の<a href="http://sourceforge.jp/ticket/browse.php?group_id=4965&amp;tid=21079" target="_blank">ドラムパート設定の不具合</a>を修正。</li>
+    <li>OpenGL ライブラリの同梱</li>
+    <li>3D ピアノロールプラグインの同梱を開始</li>
+    <li>起動用バッチファイルの修正、プラットフォーム・アーキテクチャ毎に振り分けを行った</li>
+    <li>音源定義ファイルの仕様変更</li>
+    <li>MIDI規格毎の設定ファイルの仕様変更<br>
+      <br>
+    </li>
+  </ul>
   <li>2010/03/05<br>
 初版/暫定版<br>
   </li>
+
 </ul>
 
 </div>
