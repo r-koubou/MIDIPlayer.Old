@@ -96,7 +96,8 @@
             <instrument pc = "16" msb = "0" lsb = "36" mapName = "XG BasicMap" name = "Draw Org2" />
             <instrument pc = "16" msb = "0" lsb = "37" mapName = "XG BasicMap" name = "60sDr Or3" />
             <instrument pc = "16" msb = "0" lsb = "38" mapName = "XG BasicMap" name = "Even Bar" />
-            <instrument pc = "16" msb = "0" lsb = "40" mapName = "XG BasicMap" name = "16+2" 2/3" /&gt; instrument pc = "16" msb = "0" lsb = "64" name = "XG BasicMap&lt;>Organ Ba" /&gt;
+            <instrument pc = "16" msb = "0" lsb = "40" mapName = "XG BasicMap" name = '16+2" 2/3' />
+            <instrument pc = "16" msb = "0" lsb = "64" mapName = "XG BasicMap" name ="Organ Ba" />
             <instrument pc = "16" msb = "0" lsb = "65" mapName = "XG BasicMap" name = "70sDr Or2" />
             <instrument pc = "16" msb = "0" lsb = "66" mapName = "XG BasicMap" name = "Cheez Org" />
             <instrument pc = "16" msb = "0" lsb = "67" mapName = "XG BasicMap" name = "Draw Org3" />
