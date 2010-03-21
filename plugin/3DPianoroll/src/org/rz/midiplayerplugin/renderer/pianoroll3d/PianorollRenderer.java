@@ -23,6 +23,7 @@ import java.util.logging.Level;
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLCanvas;
+import javax.media.opengl.GLCapabilities;
 import javax.media.opengl.GLEventListener;
 import javax.swing.SwingUtilities;
 import javax.xml.bind.JAXBElement;
@@ -43,7 +44,7 @@ import org.rz.midiplayerplugin.renderer.pianoroll3d.config.Renderer;
  */
 public class PianorollRenderer implements RendererPlugin, GLEventListener
 {
-
+    static final boolean ENABLED_MULTITHREAD = true;
     static final int NOTE_OBJ_NUM = 1024;
 
     private Context context;
@@ -53,6 +54,8 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
 
     private final LinkedList<NoteObject> masterObjList = new LinkedList<NoteObject>();
     private final LinkedList<NoteObject> activeObjList = new LinkedList<NoteObject>();
+
+    private final Process process = new Process( masterObjList, activeObjList );
 
     static public final Color[] DEFAULT_COLORS =
     {
@@ -80,9 +83,13 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
     private final float[] gridColor  = { 0.1f, 0.1f, 0.1f, 1.0f };
     private final float[] gridNormal = { 0.0f, 1.0f, 0.0f };
 
-    private final GLCanvas canvas   = new GLCanvas();
+    static private final float[] matAmbient   = { 0.2f, 0.2f, 0.2f };
+    static private final float[] matSpecular  = { 1.0f, 1.0f, 1.0f };
+    static private final float[] matShininess = { 16.0f };
+
+    private GLCanvas canvas;
     private final GLUT glut         = new GLUT();
-    private final FPSAnimator animator = new FPSAnimator( canvas, 60, false );
+    private FPSAnimator animator;
 
     private final Color TEXT_COLOR = new Color( 0xff, 0xff, 0xff, 0x80 );
     private final TextRenderer text = new TextRenderer( new Font( Font.MONOSPACED, Font.PLAIN, 12 ) );
@@ -104,10 +111,6 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
 
     private JAXBElement<Config> configRootElement;
 
-    private int[] vboIds = new int[ 2 ];
-    static final int VBO_VERTEX_NUM = NoteObject.VBO_VERTEX_NUM * NOTE_OBJ_NUM;
-    private FloatBuffer vboVertex = FloatBuffer.allocate( VBO_VERTEX_NUM );
-
     ////////////////////////////////////////////////////////////////////////////////
     /**
      *
@@ -119,6 +122,12 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
         context = ctx;
         this.pluginDir = pluginDir;
 
+
+        GLCapabilities caps = new GLCapabilities();
+        caps.setDoubleBuffered( true );
+        caps.setHardwareAccelerated( true );
+
+        canvas = new GLCanvas( caps );
         canvas.setPreferredSize( new Dimension( 512, 384 ) );
         canvas.addGLEventListener( this );
         canvas.addMouseWheelListener( new MouseWheelListener() {
@@ -224,6 +233,9 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
 
                 i++;
             }
+
+            animator = new FPSAnimator( canvas, config.getRenderer().getFps(), true );
+
         }
         catch( Throwable e )
         {
@@ -238,6 +250,11 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
     @Override
     public void startRendering()
     {
+        if( ENABLED_MULTITHREAD )
+        {
+            process.start();
+        }
+
         animator.start();
     }
 
@@ -248,6 +265,11 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
     @Override
     public void stopRendering()
     {
+        if( ENABLED_MULTITHREAD )
+        {
+            process.stop();
+        }
+
         animator.stop();
         canvas.removeGLEventListener( this );
     }
@@ -308,13 +330,13 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
                 }
 
                 no.reset();
+                no.setColor( pianoRollColors[ ch ] );
                 no.noteOn( (float)( ( 100f / 128 ) * (64-noteNo) ),
                          //(float)( ( 100f / 128 ) * (noteNo-64) ),
                           (float)( ( 1f ) * (ch) ),
                           vel );
                 no.noteNo = noteNo;
                 no.channel = ch;
-                no.setColor( pianoRollColors[ ch ] );
 
                 activeObjList.addLast( no );
             }
@@ -376,24 +398,27 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
      */
     private void update( GL gl )
     {
-        synchronized( masterObjList )
+        if( ! ENABLED_MULTITHREAD )
         {
-            synchronized( activeObjList )
+            synchronized( masterObjList )
             {
-                int i;
-                int s;
-
-                for( i = 0; i < activeObjList.size(); )
+                synchronized( activeObjList )
                 {
-                    NoteObject n = activeObjList.get( i );
-                    if( ! n.visible )
+                    int i;
+                    int s;
+
+                    for( i = 0; i < activeObjList.size(); )
                     {
-                        activeObjList.remove( i );
-                        masterObjList.addLast( n );
-                        continue;
+                        NoteObject n = activeObjList.get( i );
+                        if( ! n.visible )
+                        {
+                            activeObjList.remove( i );
+                            masterObjList.addLast( n );
+                            continue;
+                        }
+                        n.update();
+                        i++;
                     }
-                    n.update( gl );
-                    i++;
                 }
             }
         }
@@ -428,6 +453,7 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
         gl.glLightfv( GL.GL_LIGHT0, GL.GL_POSITION, li.getLightPosition(), 0 );
         gl.glLightfv( GL.GL_LIGHT0, GL.GL_AMBIENT, li.getLightAmbient(), 0   );
         gl.glLightfv( GL.GL_LIGHT0, GL.GL_SPECULAR, li.getLightSpecular(), 0 );
+        gl.glLightfv( GL.GL_LIGHT0, GL.GL_DIFFUSE, li.getLightDiffuse(), 0 );
 
         gl.glTranslatef( cx, cy, cz );
         gl.glRotatef( rx, 1.0f, 0f,   0f );
@@ -440,7 +466,7 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
 
             float x = 100f / 64f;
 
-            gl.glLightfv( GL.GL_LIGHT0, GL.GL_DIFFUSE, gridColor, 0 );
+            gl.glMaterialfv( gl.GL_FRONT, gl.GL_DIFFUSE, gridColor, 0 );
             gl.glBegin( GL.GL_LINES );
 
             for( int i = 0; i < 64; i++ )
@@ -455,6 +481,10 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
 
         synchronized( activeObjList )
         {
+//            gl.glMaterialfv( gl.GL_FRONT, gl.GL_AMBIENT, matAmbient,     0 );
+//            gl.glMaterialfv( gl.GL_FRONT, gl.GL_SPECULAR, matSpecular,   0 );
+//            gl.glMaterialfv( gl.GL_FRONT, gl.GL_SHININESS, matShininess, 0 );
+
             for( NoteObject n : activeObjList )
             {
                 n.render( gl, glut );
@@ -502,7 +532,7 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
             masterObjList.clear();
             for( int i = 0; i < NOTE_OBJ_NUM; i++ )
             {
-                masterObjList.addLast( new NoteObject( i, vboIds[ 0 ] ) );
+                masterObjList.addLast( new NoteObject() );
             }
         }
 
@@ -658,15 +688,6 @@ public class PianorollRenderer implements RendererPlugin, GLEventListener
                 currentCamera.rz += add;
             }
             else if( vx > 0 )
-            {
-                currentCamera.rz -= add;
-            }
-
-            if( vy < 0 )
-            {
-                currentCamera.rz += add;
-            }
-            else if( vy > 0 )
             {
                 currentCamera.rz -= add;
             }

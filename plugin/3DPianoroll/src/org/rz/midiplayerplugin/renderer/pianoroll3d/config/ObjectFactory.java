@@ -39,11 +39,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Config }
+     * Create an instance of {@link Camera }
      * 
      */
-    public Config createConfig() {
-        return new Config();
+    public Camera createCamera() {
+        return new Camera();
     }
 
     /**
@@ -55,11 +55,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Camera }
+     * Create an instance of {@link Color }
      * 
      */
-    public Camera createCamera() {
-        return new Camera();
+    public Color createColor() {
+        return new Color();
     }
 
     /**
@@ -71,19 +71,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Color }
-     * 
-     */
-    public Color createColor() {
-        return new Color();
-    }
-
-    /**
      * Create an instance of {@link Position }
      * 
      */
     public Position createPosition() {
         return new Position();
+    }
+
+    /**
+     * Create an instance of {@link Config }
+     * 
+     */
+    public Config createConfig() {
+        return new Config();
     }
 
     /**

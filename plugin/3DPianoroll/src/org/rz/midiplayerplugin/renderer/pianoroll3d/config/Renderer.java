@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element ref="{}camera"/>
  *       &lt;/sequence>
+ *       &lt;attribute name="fps" type="{http://www.w3.org/2001/XMLSchema}short" default="60" />
  *       &lt;attribute name="viewGrid" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
  *       &lt;attribute name="viewPosition" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
  *     &lt;/restriction>
@@ -37,6 +38,8 @@ public class Renderer {
 
     @XmlElement(required = true)
     protected Camera camera;
+    @XmlAttribute
+    protected Short fps;
     @XmlAttribute
     protected Boolean viewGrid;
     @XmlAttribute
@@ -64,6 +67,34 @@ public class Renderer {
      */
     public void setCamera(Camera value) {
         this.camera = value;
+    }
+
+    /**
+     * Gets the value of the fps property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Short }
+     *     
+     */
+    public short getFps() {
+        if (fps == null) {
+            return ((short) 60);
+        } else {
+            return fps;
+        }
+    }
+
+    /**
+     * Sets the value of the fps property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Short }
+     *     
+     */
+    public void setFps(Short value) {
+        this.fps = value;
     }
 
     /**

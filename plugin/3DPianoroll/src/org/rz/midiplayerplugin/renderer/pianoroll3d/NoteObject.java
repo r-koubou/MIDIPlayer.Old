@@ -14,9 +14,6 @@ public class NoteObject
 
     static final float SPEED = 1f;
 
-    public final int vboIndex;
-    public final int objIndex;
-
     protected float x, y, z, z2;
 
     volatile boolean visible;
@@ -28,7 +25,7 @@ public class NoteObject
     volatile private Color activeColor    = Color.RED;
     volatile private Color deactiveColor  = activeColor.darker();
 
-    volatile float scale = 1.0f;
+    //volatile float scale = 1.0f;
 
     private float[][] defaultVertices =
     {
@@ -61,9 +58,6 @@ public class NoteObject
 
     static final int VBO_VERTEX_NUM = 72;
     static final int VBO_NORMAL_NUM = 18;
-
-    final float[] vboVertices = new float[ VBO_VERTEX_NUM ];
-    final float[] vboNormals  = new float[ VBO_NORMAL_NUM ];
 
     private final float[][] normals =
     {
@@ -104,18 +98,16 @@ public class NoteObject
         }
     };
 
-    static private final float[] VEL2SCALE_TABLE =
-    {
-        0.25f,
-        0.50f,
-        0.75f,
-        1.0f,
-    };
+//    static private final float[] VEL2SCALE_TABLE =
+//    {
+//        0.25f,
+//        0.50f,
+//        0.75f,
+//        1.0f,
+//    };
 
-    public NoteObject( int objIndex_, int vboIndex_ )
+    public NoteObject()
     {
-        objIndex = objIndex_;
-        vboIndex = vboIndex_;
         reset();
     }
 
@@ -156,16 +148,19 @@ public class NoteObject
         }
 
         //scale = (float)vel / 127;
-        scale = VEL2SCALE_TABLE[  vel >> 5 ];
+        //scale = VEL2SCALE_TABLE[  vel >> 5 ];
+
+        setColorValue( activeColor );
 
     }
 
     public void noteOff()
     {
         noteOn  = false;
+        setColorValue( deactiveColor );
     }
 
-    public void update( GL gl )
+    public void update()
     {
         if( visible )
         {
@@ -173,7 +168,7 @@ public class NoteObject
 
             delta =SPEED;
             
-            z = delta / scale;
+            z = delta;// / scale;
 
             if( noteOn )
             {
@@ -206,64 +201,50 @@ public class NoteObject
 
     synchronized public void render( GL gl, GLUT glut )
     {
-        int r = 0, g = 0, b = 0;
-
         if( ! visible )
         {
             return;
         }
 
-        {
-            Color c = noteOn ? activeColor : deactiveColor;
-            r = c.getRed();
-            g = c.getGreen();
-            b = c.getBlue();
-
-            color[ 0 ] = (float)r / 255;
-            color[ 1 ] = (float)g / 255;
-            color[ 2 ] = (float)b / 255;
-
-            gl.glLightfv( GL.GL_LIGHT0, GL.GL_DIFFUSE, color, 0 );
-        }
-
-
         gl.glPushMatrix();
         gl.glTranslatef( x, y, -250 );
-        gl.glScalef( scale, scale, scale );
+        //gl.glScalef( scale, scale, scale );
+
+        gl.glMaterialfv( gl.GL_FRONT, gl.GL_DIFFUSE, color, 0 );
 
         gl.glBegin( GL.GL_QUADS );
         gl.glNormal3fv( normals[ 0 ], 0 );
-        gl.glColor3ub( (byte)r, (byte)g, (byte)b );
+        //gl.glColor3ub( (byte)r, (byte)g, (byte)b );
         gl.glVertex3fv( vertices[0], 0 );
         gl.glVertex3fv( vertices[1], 0 );
         gl.glVertex3fv( vertices[2], 0 );
         gl.glVertex3fv( vertices[3], 0 );
         gl.glNormal3fv( normals[ 1 ], 0 );
-        gl.glColor3ub( (byte)r, (byte)g, (byte)b );
+        //gl.glColor3ub( (byte)r, (byte)g, (byte)b );
         gl.glVertex3fv( vertices[7], 0 );
         gl.glVertex3fv( vertices[6], 0 );
         gl.glVertex3fv( vertices[5], 0 );
         gl.glVertex3fv( vertices[4], 0 );
         gl.glNormal3fv( normals[ 2 ], 0 );
-        gl.glColor3ub( (byte)r, (byte)g, (byte)b );
+        //gl.glColor3ub( (byte)r, (byte)g, (byte)b );
         gl.glVertex3fv( vertices[0], 0 );
         gl.glVertex3fv( vertices[3], 0 );
         gl.glVertex3fv( vertices[7], 0 );
         gl.glVertex3fv( vertices[4], 0 );
         gl.glNormal3fv( normals[ 3 ], 0 );
-        gl.glColor3ub( (byte)r, (byte)g, (byte)b );
+        //gl.glColor3ub( (byte)r, (byte)g, (byte)b );
         gl.glVertex3fv( vertices[5], 0 );
         gl.glVertex3fv( vertices[6], 0 );
         gl.glVertex3fv( vertices[2], 0 );
         gl.glVertex3fv( vertices[1], 0 );
         gl.glNormal3fv( normals[ 4 ], 0 );
-        gl.glColor3ub( (byte)r, (byte)g, (byte)b );
+        //gl.glColor3ub( (byte)r, (byte)g, (byte)b );
         gl.glVertex3fv( vertices[4], 0 );
         gl.glVertex3fv( vertices[5], 0 );
         gl.glVertex3fv( vertices[1], 0 );
         gl.glVertex3fv( vertices[0], 0 );
         gl.glNormal3fv( normals[ 5 ], 0 );
-        gl.glColor3ub( (byte)r, (byte)g, (byte)b );
+        //gl.glColor3ub( (byte)r, (byte)g, (byte)b );
         gl.glVertex3fv( vertices[6], 0 );
         gl.glVertex3fv( vertices[7], 0 );
         gl.glVertex3fv( vertices[3], 0 );
@@ -277,7 +258,21 @@ public class NoteObject
     synchronized public void setColor( Color c )
     {
         activeColor    = c;
-        deactiveColor  = c.darker().darker();
+        deactiveColor  = c.darker();
+    }
+
+    private void setColorValue( Color c )
+    {
+        int r ,g, b;
+        {
+            r = c.getRed();
+            g = c.getGreen();
+            b = c.getBlue();
+
+            color[ 0 ] = (float)r / 255;
+            color[ 1 ] = (float)g / 255;
+            color[ 2 ] = (float)b / 255;
+        }
     }
 
 }
