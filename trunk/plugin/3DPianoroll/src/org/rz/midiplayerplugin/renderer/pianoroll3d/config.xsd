@@ -41,10 +41,12 @@
         <xsd:sequence>
             <xsd:element ref="camera"/>
         </xsd:sequence>
+        <xsd:attribute name="fps" type="xsd:short" default="60"/>
         <xsd:attribute name="viewGrid" type="xsd:boolean" default="true"/>
         <xsd:attribute name="viewPosition" type="xsd:boolean" default="false"/>
     </xsd:complexType>
 </xsd:schema>
+
 
 
 

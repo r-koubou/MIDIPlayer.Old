@@ -9,7 +9,7 @@ public class LightInfo
 {
     private final float[] lightPosition =
     {
-        0.0f, 0.7f, 1.0f, 0.0f
+        0.0f, 1.0f, 1.0f, 0.0f
     };
     private final float[] lightAmbient =
     {
@@ -18,7 +18,12 @@ public class LightInfo
     private final float[] lightSpecular =
     {
         //1.0f, 1.0f, 1.0f
-        0.6f, 0.6f, 0.6f
+        0.2f, 0.2f, 0.8f
+    };
+
+    private final float[] lightDiffuse =
+    {
+        1.0f, 1.0f, 1.0f
     };
 
     ////////////////////////////////////////////////////////////////////////////
@@ -51,6 +56,14 @@ public class LightInfo
     public float[] getLightSpecular()
     {
         return lightSpecular;
+    }
+
+    /**
+     * @return the lightDiffuse
+     */
+    public float[] getLightDiffuse()
+    {
+        return lightDiffuse;
     }
 
 }
