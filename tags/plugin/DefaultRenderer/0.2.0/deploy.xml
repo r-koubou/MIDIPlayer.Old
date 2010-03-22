@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="DefaultRenderer-Deploy" basedir="." default="howto-deploy">
+
+    <property file="nbproject/project.properties"/>
+
+    <tstamp>
+        <format property="tstamp" pattern="yyyyMMdd"/>
+    </tstamp>
+
+    <property file = "build.properties" />
+
+    <!-- ビルドナンバー -->
+    <property file = "buildnumber.properties" />
+    
+    <!-- プレーヤーのルートディレクトリ名 -->
+    <property name = "deploy.app-prefix" value = "MIDIPlayer" />
+
+    <!-- 配布物作成用の一時ディレクトリ -->
+    <property name = "deploy.workdir" value = "deploy-work" />
+
+    <!--
+    ****************************************************************
+    バイナリ配布一式
+    ****************************************************************
+    -->
+    <!-- プリフィクス -->
+    <property name = "deploy.prefix-bin" value = "${deploy.prefix}-${tstamp}_${build.number}" />
+
+    <!-- 配布物作成用の一時ディレクトリ（バイナリ配布ルート） -->
+    <property name = "deploy.workdir.bin-root" value = "${deploy.workdir}/${deploy.app-prefix}/data/plugin/renderer/${deploy.prefix}" />
+    <property name = "deploy.workdir.doc-root" value = "${deploy.workdir}/${deploy.app-prefix}/docs/plugin/${deploy.prefix}" />
+    
+    <target name = "deploy-bin.init">
+        <copy file = "${dist.jar}" todir = "${deploy.workdir.bin-root}" preservelastmodified = "true" />
+    </target>
+
+    <target name="deploy-bin" depends = "deploy-bin.init" >
+
+        <mkdir dir="${deploy.workdir.bin-root}" />
+        <mkdir dir="${deploy.workdir.doc-root}" />
+
+        <copy todir="${deploy.workdir.bin-root}" preservelastmodified = "true" >
+            <fileset dir      = "${basedir}"
+                     includes = "${deploy.includes-bin}"
+            />
+        </copy>
+
+        <copy todir="${deploy.workdir.doc-root}" preservelastmodified = "true" >
+            <fileset dir      = "${basedir}/docs"
+                     includes = "**/*"
+            />
+        </copy>
+
+        <!-- アーカイブ -->
+        <delete file = "${deploy.workdir}/${deploy.prefix-bin}.zip" failonerror="false" />
+        <zip file = "${deploy.workdir}/${deploy.prefix-bin}.zip" update = "false" >
+            <zipfileset dir = "${deploy.workdir}" excludes = "*.zip" />
+        </zip>
+
+        <!-- クリーンアップ -->
+        <delete dir = "${deploy.workdir}/${deploy.app-prefix}" />
+
+    </target>
+
+    <!--
+    ****************************************************************
+    ソースファイル配布一式
+    ****************************************************************
+    -->
+
+    <!-- プリフィクス -->
+    <property name = "deploy.prefix-src" value = "${deploy.prefix}-src-${tstamp}-${build.number}" />
+
+    <!-- 配布物作成用の一時ディレクトリ（ソース一式配布ルート） -->
+    <property name = "deploy.workdir.src-root" value = "${deploy.workdir}/${deploy.prefix}-src-${tstamp}_${build.number}" />
+
+    <!-- 除外ファイル設定 -->
+    <property name = "deploy.excludes-src" value = "${deploy.excludes-common}, ${deploy.workdir}/" />
+
+    <target name="deploy-src" >
+        <mkdir dir="${deploy.workdir.src-root}" />
+        <copy todir="${deploy.workdir.src-root}" preservelastmodified = "true" includeemptydirs = "true" >
+            <fileset dir      = "${basedir}"
+                     excludes = "${deploy.excludes-src}"
+            />
+        </copy>
+
+        <!-- アーカイブ -->
+        <delete file = "${deploy.workdir}/${deploy.prefix-src}.zip" failonerror="false" />
+        <zip file = "${deploy.workdir}/${deploy.prefix-src}.zip" >
+            <zipfileset dir      = "${deploy.workdir}" excludes = "*.zip" />
+        </zip>
+
+        <!-- クリーンアップ -->
+        <delete dir = "${deploy.workdir.src-root}" />
+
+
+    </target>
+
+
+    <target name = "deploy-all" depends = "deploy-bin, deploy-src">
+        <echo>Done...</echo>
+    </target>
+
+
+    <target name="howto-deploy">
+        <echo>deploy-bin : エンドユーザー向け配布物構築</echo>
+        <echo>deploy-src : ソースコード一式配布物構築</echo>
+        <echo>deploy-all : 上記のターゲット実行</echo>
+    </target>
+
+</project>
