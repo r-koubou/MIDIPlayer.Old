@@ -5,7 +5,7 @@
     <jarfile>Pianoroll.jar</jarfile>
     <class>org.rz.midiplayerplugin.renderer.pianoroll.PianorollRenderer</class>
     <author>rz</author>
-    <version>1.00</version>
+    <version>0.20</version>
     <description>MAMPlayer 風の画面レンダリングプラグイン</description>
 
 </plugin>

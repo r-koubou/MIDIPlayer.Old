@@ -5,7 +5,7 @@
     <jarfile>DefaultRenderer.jar</jarfile>
     <class>org.rz.midiplayerplugin.renderer.DefaultRenderer</class>
     <author>rz</author>
-    <version>1.00</version>
+    <version>0.20</version>
     <description>デフォルトの画面レンダリングプラグイン</description>
 
 </plugin>
