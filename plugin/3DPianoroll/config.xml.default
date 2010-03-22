@@ -19,9 +19,9 @@
         <color color="#00BFFF" midich="15"/>
     </pianoroll>
     <renderer viewPosition="false" viewGrid="false" fps="60">
-        <camera lastUsed="6">
+        <camera lastUsed="0">
             <position rz="0.0" ry="0.0" rx="13.5" tz="-105.0" ty="-1.5" tx="0.0"/>
-            <position rz="-90.0" ry="-90.0" rx="0.0" tz="-449.0" ty="0.5" tx="-109.0"/>
+            <position rz="-90.0" ry="-90.0" rx="0.0" tz="-259.0" ty="0.5" tx="-171.5"/>
             <position rz="0.0" ry="720.0" rx="90.0" tz="-453.0" ty="-151.5" tx="0.0"/>
             <position rz="180.0" ry="720.0" rx="90.0" tz="-453.0" ty="-151.5" tx="0.0"/>
             <position rz="-180.0" ry="-360.0" rx="182.0" tz="-408.0" ty="-6.0" tx="0.0"/>
