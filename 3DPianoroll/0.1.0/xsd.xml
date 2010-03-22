@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name = "XSDConvert" basedir = "." default = "convert-config" >
+
+    <property name = "xsdDir"            value = "src/org/rz/midiplayerplugin/renderer/pianoroll3d" />
+    <property name = "packageBase"       value = "org.rz.midiplayerplugin.renderer.pianoroll3d" />
+
+    <target name = "convert-config">
+        <exec executable="xjc" > <arg line = "-no-header -d src -p ${packageBase}.config ${xsdDir}/config.xsd" />  </exec>
+    </target>
+
+</project>
