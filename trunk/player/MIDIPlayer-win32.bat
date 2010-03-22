@@ -3,8 +3,9 @@
 setlocal
 
 set PATH=shared\jni\windows-i586;%PATH%
-set CLASSPATH=MIDIPlayer.jar;shared\jar\*;"%CLASSPATH%"
-set ARG=-classpath %CLASSPATH% org.rz.midiplayer.Main
+set CLASSPATH=MIDIPlayer.jar;shared\jar\*;%CLASSPATH%
+set VMARG=-Xms32M
+set ARG=-classpath "%CLASSPATH%" org.rz.midiplayer.Main
 
 if exist jre\ (
     rem ----------------------------------------------------------------------
