@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <pianoroll>
+        <color color="#7FFFD4" midich="0"/>
+        <color color="#B0E0E6" midich="1"/>
+        <color color="#FFDAB9" midich="2"/>
+        <color color="#FFA07A" midich="3"/>
+        <color color="#98FB98" midich="4"/>
+        <color color="#FFFF00" midich="5"/>
+        <color color="#FFD700" midich="6"/>
+        <color color="#EE82EE" midich="7"/>
+        <color color="#EF5272" midich="8"/>
+        <color color="#D2691E" midich="9"/>
+        <color color="#00FA9A" midich="10"/>
+        <color color="#7FFF00" midich="11"/>
+        <color color="#F5DEB3" midich="12"/>
+        <color color="#FFB6C1" midich="13"/>
+        <color color="#FF1493" midich="14"/>
+        <color color="#00BFFF" midich="15"/>
+    </pianoroll>
+    <renderer viewPosition="false" viewGrid="false" fps="60">
+        <camera lastUsed="6">
+            <position rz="0.0" ry="0.0" rx="13.5" tz="-105.0" ty="-1.5" tx="0.0"/>
+            <position rz="-90.0" ry="-90.0" rx="0.0" tz="-449.0" ty="0.5" tx="-109.0"/>
+            <position rz="0.0" ry="720.0" rx="90.0" tz="-453.0" ty="-151.5" tx="0.0"/>
+            <position rz="180.0" ry="720.0" rx="90.0" tz="-453.0" ty="-151.5" tx="0.0"/>
+            <position rz="-180.0" ry="-360.0" rx="182.0" tz="-408.0" ty="-6.0" tx="0.0"/>
+            <position rz="0.0" ry="-180.0" rx="13.5" tz="-399.0" ty="21.0" tx="4.5"/>
+            <position rz="-90.0" ry="-158.0" rx="0.0" tz="-435.0" ty="3.5" tx="-29.5"/>
+            <position rz="-90.0" ry="-28.5" rx="0.0" tz="-245.0" ty="4.0" tx="-10.0"/>
+        </camera>
+    </renderer>
+</config>

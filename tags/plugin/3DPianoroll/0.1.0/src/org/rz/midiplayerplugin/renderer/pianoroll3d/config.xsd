@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="config" type="Config"></xsd:element>
+    <xsd:complexType name="Config">
+        <xsd:sequence>
+            <xsd:element ref="pianoroll"/>
+            <xsd:element ref="renderer"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Pianoroll">
+        <xsd:sequence>
+            <xsd:element ref="color" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Color">
+        <xsd:attribute name="midich" type="xsd:unsignedByte" use="required"/>
+        <xsd:attribute name="color" type="xsd:string" use="required"/>
+    </xsd:complexType>
+    <xsd:element name="pianoroll" type="Pianoroll"></xsd:element>
+    <xsd:element name="color" type="Color"></xsd:element>
+    <xsd:element name="position" type="Position"></xsd:element>
+    <xsd:complexType name="Position">
+        <xsd:attribute name="tx" type="xsd:float" default="0.0"/>
+        <xsd:attribute name="ty" type="xsd:float" default="0.0"/>
+        <xsd:attribute name="tz" type="xsd:float" default="0.0"/>
+        <xsd:attribute name="rx" type="xsd:float" default="0.0"/>
+        <xsd:attribute name="ry" type="xsd:float" default="0.0"/>
+        <xsd:attribute name="rz" type="xsd:float" default="0.0"/>
+    </xsd:complexType>
+    <xsd:element name="camera" type="Camera"></xsd:element>
+    <xsd:complexType name="Camera">
+        <xsd:sequence>
+            <xsd:element ref="position" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="lastUsed" type="xsd:unsignedByte" default="0"/>
+    </xsd:complexType>
+    <xsd:element name="renderer" type="Renderer"></xsd:element>
+    <xsd:complexType name="Renderer">
+        <xsd:sequence>
+            <xsd:element ref="camera"/>
+        </xsd:sequence>
+        <xsd:attribute name="fps" type="xsd:short" default="60"/>
+        <xsd:attribute name="viewGrid" type="xsd:boolean" default="true"/>
+        <xsd:attribute name="viewPosition" type="xsd:boolean" default="false"/>
+    </xsd:complexType>
+</xsd:schema>
+
+
+
+
+
+
+
