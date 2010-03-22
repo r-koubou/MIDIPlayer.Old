@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+    <pianoroll>
+        <!-- color 内の色を変えれば実際の画面表示で反映されます・・・  -->
+        <color midich = "0"  color = "#7FFFD4" />
+        <color midich = "1"  color = "#B0E0E6" />
+        <color midich = "2"  color = "#FFDAB9" />
+        <color midich = "3"  color = "#FFA07A" />
+        <color midich = "4"  color = "#98FB98" />
+        <color midich = "5"  color = "#FFFF00" />
+        <color midich = "6"  color = "#FFD700" />
+        <color midich = "7"  color = "#EE82EE" />
+        <color midich = "8"  color = "#EF5272" />
+        <color midich = "9"  color = "#D2691E" />
+        <color midich = "10" color = "#00FA9A" />
+        <color midich = "11" color = "#7FFF00" />
+        <color midich = "12" color = "#F5DEB3" />
+        <color midich = "13" color = "#FFB6C1" />
+        <color midich = "14" color = "#FF1493" />
+        <color midich = "15" color = "#00BFFF" />
+    </pianoroll>
+
+</config>
