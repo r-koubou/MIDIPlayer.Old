@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding = "UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- element  -->
+    <xsd:element name = "spec"     type = "Spec" />
+    <xsd:element name = "reset"    type = "Reset" />
+    <xsd:element name = "drumpart" type = "DrumPart" />
+    <xsd:element name = "melopart" type = "MeloPart" />
+    <xsd:element name = "drumpartsysexec" type = "DrumPartSysExec" />
+    <xsd:element name = "drumpartpc"      type = "DrumPartPc" />
+    <xsd:element name = "melopartsysexec" type = "MeloPartSysExec" />
+    <xsd:element name = "melopartpc"      type = "MeloPartPc" />
+    
+    <!--
+    *****************************************************    
+     Attribute
+    *****************************************************    
+    -->
+    <xsd:attribute name = "id"          type = "xsd:int"/>
+    <xsd:attribute name = "name"        type = "xsd:string"/>
+    <xsd:attribute name = "author"      type = "xsd:string"/>
+    <xsd:attribute name = "version"     type = "xsd:string"/>
+    <xsd:attribute name = "description" type = "xsd:string"/>
+    <xsd:attribute name = "sysexec"     type = "xsd:hexBinary"/>
+
+    <!--
+    *****************************************************    
+     Type
+    *****************************************************    
+    -->
+    <!-- 0~127 の整数値-->
+    <xsd:simpleType name="_7bitInt">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="127"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- 0~15 の整数値-->
+    <xsd:simpleType name="_4bitInt">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="15"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- -1~127 の整数値-->
+    <xsd:simpleType name="m1To127Int">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="-1"/>
+            <xsd:maxInclusive value="127"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+    <!--############################################################################-->
+    <!-- 
+        [予定図]
+        <spec name = "GM">
+            <reset sysexec = "FFFFFFFF...." />
+            <drumpart maxassign = "2" default = "10" >
+                <drumpartsysexec channel = "0" sysexec = "FFFFFFFFF" />
+                <drumpartsysexec channel = "1" sysexec = "FFFFFFFFF" />
+                <drumpartsysexec channel = "2" sysexec = "FFFFFFFFF" />
+                <drumpartsysexec channel = "3" sysexec = "FFFFFFFFF" />
+                <drumpartsysexec channel = "4" sysexec = "FFFFFFFFF" />
+                :
+                :
+                :
+                :
+                or
+                <drumpartpc msb = "126" />
+                or
+                <drumpartcc cc  = "32" />
+            </drumpart>
+        </spec>
+    -->
+
+<!--################################################################################-->
+
+    <xsd:complexType name = "Spec">
+
+        <xsd:sequence>
+            <xsd:element ref = "reset"    minOccurs = "1" maxOccurs = "1" />
+            <xsd:element ref = "melopart" minOccurs = "1" maxOccurs = "1" />
+            <xsd:element ref = "drumpart" minOccurs = "1" maxOccurs = "1" />
+        </xsd:sequence>
+
+        <xsd:attribute  name = "name" type = "xsd:string" use = "required" />
+
+    </xsd:complexType>
+
+<!--################################################################################-->
+
+    <xsd:complexType name = "Reset">
+
+        <xsd:sequence>
+        </xsd:sequence>
+        <xsd:attribute  ref = "sysexec" use = "required" />
+
+    </xsd:complexType>
+
+
+<!--################################################################################-->
+
+    <xsd:complexType name = "DrumPart">
+
+        <xsd:choice>
+            <xsd:element ref = "drumpartsysexec" minOccurs = "0" maxOccurs = "unbounded" />
+            <xsd:element ref = "drumpartpc"      minOccurs = "0" maxOccurs = "unbounded" />
+        </xsd:choice>
+        <xsd:attribute  name = "default"   type = "_4bitInt" default = "10" />
+        <xsd:attribute name="defaultpc" type="xsd:int" default="0"/>
+        <xsd:attribute name="defaultmsb" type="xsd:int" default="0"/>
+        <xsd:attribute name="defaultlsb" type="xsd:int" default="0"/>
+
+    </xsd:complexType>
+
+<!--################################################################################-->
+
+    <xsd:complexType name = "DrumPartSysExec" >
+
+        <xsd:sequence>
+        </xsd:sequence>
+
+        <xsd:attribute  name = "channel" type = "xsd:unsignedByte" use = "required"/>
+        <xsd:attribute  name = "target"  type = "xsd:unsignedByte" use = "required"/>
+        <xsd:attribute  ref  = "sysexec"                           use = "required"/>
+
+    </xsd:complexType>
+
+<!--################################################################################-->
+
+    <xsd:complexType name = "DrumPartPc" >
+
+        <xsd:sequence>
+        </xsd:sequence>
+        <xsd:attribute  name = "ch"  type = "m1To127Int" default = "-1" />
+        <xsd:attribute  name = "msb" type = "m1To127Int" default = "-1" />
+        <xsd:attribute  name = "lsb" type = "m1To127Int" default = "-1" />
+
+    </xsd:complexType>
+
+
+<!--################################################################################-->
+
+    <xsd:complexType name = "MeloPart">
+
+        <xsd:choice>
+            <xsd:element ref = "melopartsysexec" minOccurs = "0" maxOccurs = "unbounded" />
+            <xsd:element ref = "melopartpc"      minOccurs = "0" maxOccurs = "unbounded" />
+        </xsd:choice>
+        <xsd:attribute name="defaultpc" type="xsd:int" default="0"/>
+        <xsd:attribute name="defaultmsb" type="xsd:int" default="0"/>
+        <xsd:attribute name="defaultlsb" type="xsd:int" default="0"/>
+    </xsd:complexType>
+
+<!--################################################################################-->
+
+    <xsd:complexType name = "MeloPartSysExec" >
+
+        <xsd:sequence>
+        </xsd:sequence>
+
+        <xsd:attribute  name = "channel" type = "xsd:unsignedByte" use = "required"/>
+        <xsd:attribute  ref  = "sysexec"                           use = "required"/>
+
+    </xsd:complexType>
+
+<!--################################################################################-->
+
+    <xsd:complexType name = "MeloPartPc" >
+
+        <xsd:sequence>
+        </xsd:sequence>
+        <xsd:attribute  name = "ch"  type = "m1To127Int" default = "-1" />
+        <xsd:attribute  name = "msb" type = "m1To127Int" default = "-1" />
+        <xsd:attribute  name = "lsb" type = "m1To127Int" default = "-1" />
+
+    </xsd:complexType>
+
+</xsd:schema>
+
+
+

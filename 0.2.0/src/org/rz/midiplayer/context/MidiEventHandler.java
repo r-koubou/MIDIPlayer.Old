@@ -1,0 +1,45 @@
+
+package org.rz.midiplayer.context;
+
+/**
+ *
+ * @author rz
+ */
+public interface MidiEventHandler
+{
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    boolean handleMidiEvent( int ch, int status, byte[] data, int length );
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    boolean handleSysExEvent( byte[] data, int length );
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    boolean handleMetaEvent( int type, byte[] data, int length );
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     * 
+     */
+    void addMidiChannelEventListener( MidiChannelEventListener e );
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    void removeMidiChannelEventListener( MidiChannelEventListener e );
+
+    ////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     */
+    void removeAllMidiChannelEventListeners();
+}
