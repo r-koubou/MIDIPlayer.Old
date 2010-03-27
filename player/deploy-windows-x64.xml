@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Deploy-Win64" default="deploy-bin" basedir=".">
+
+    <import file = "deploy.xml" />
+
+    <property name = "archive-name" value = "${deploy.archive-prefix-bin}.zip" />
+    <property name = "jni-dir"  value = "jni/win-x64" />
+
+    <target name = "deploy-bin.copy-platform-depends" >
+        <echo>
+            ---------------------------------------------------------
+            Copying JNI Files for Windows x64
+            ---------------------------------------------------------
+        </echo>
+        <copy file = "MIDIPlayer.bat" todir = "${deploy.workdir.bin-root}" />
+        <copy todir = "${deploy.workdir.bin-root}">
+            <fileset dir = "${jni-dir}" />
+        </copy>
+
+    </target>
+
+    <target name="deploy-bin.archive">
+        <!-- アーカイブ -->
+        <delete file = "${archive-name}" failonerror="false" />
+        <zip file = "${archive-name}" update = "false" >
+            <zipfileset dir = "${deploy.workdir}" excludes = "*.gz, *.zip" />
+        </zip>
+    </target>
+
+</project>
