@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Deploy-Win32-Includes-JRE" default="deploy-bin" basedir=".">
+
+    <import file = "deploy.xml" />
+
+    <property name = "archive-name" value = "${deploy.archive-prefix-bin}.zip" />
+    <property name = "jre-home" value = "C:/java/jre1.6.0/u18" />
+    <property name = "jni-dir"  value = "jni/win-x86" />
+
+    <target name = "deploy-bin.copy-platform-depends" >
+        <echo>
+            ---------------------------------------------------------
+            Copying JNI Files for Windows x86
+            ---------------------------------------------------------
+        </echo>
+        <copy file = "MIDIPlayer.bat" todir = "${deploy.workdir.bin-root}" />
+        <copy todir = "${deploy.workdir.bin-root}">
+            <fileset dir = "${jni-dir}" />
+        </copy>
+
+        <echo>
+            ---------------------------------------------------------
+            Copying JRE for Windows x86
+            JRE Dir : ${jre-home}
+            ---------------------------------------------------------
+        </echo>
+
+        <mkdir dir = "${deploy.workdir.bin-root}/jre" />
+        <copy todir="${deploy.workdir.bin-root}/jre" preservelastmodified = "true" >
+            <fileset dir = "${jre-home}" defaultexcludes = "false" />
+        </copy>
+
+    </target>
+
+    <target name="deploy-bin.archive">
+        <!-- アーカイブ -->
+        <delete file = "${archive-name}" failonerror="false" />
+        <zip file = "${archive-name}" update = "false" >
+            <zipfileset dir = "${deploy.workdir}" excludes = "*.gz, *.zip" />
+        </zip>
+    </target>
+
+</project>

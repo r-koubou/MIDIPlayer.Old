@@ -1,0 +1,1694 @@
+<?xml version="1.0" encoding = "UTF-8" ?>
+
+<deviceinfo name = "YAMAHA MU2000/1000/500/128/100" defaultMode = "XG" author = "rz" version = "1.00" description = "YAMAHA MU2000/1000/500/128/100 用の定義ファイル">
+
+<!--
+    前バージョンにて 楓音 凛 様 よりご提供頂いた YAMAHA MU2000/1000/500/128/100 用データからのコンバート
+
+    [音色名について]
+    XG NativeMAP -　＝　XG BasicMAP（MU90以前）と同じ音色
+    XG NativeMAP　　＝　MU100以上の全てに搭載されている音色
+    XG NativeMAP +　＝　MU128以降追加された音色
+    XG NativeMAP ++ ＝　MU500/1000/2000で追加された音色
+
+
+-->
+
+    <import file = "GM.xml" />
+    <import file = "GM2.xml" />
+
+    <!-- 
+        【音色リスト】
+        mode : この音色リストを参照するトリガーとなる各規格のリセット系のエクスクルーシブメッセージ
+                  例えば、GM、GS, XG 、SD などです。
+    -->
+    <instruments mode = "XG" >
+        <!-- melo -->
+        <map type = "melo">
+            <instrument pc = "0" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "GrandP #" />
+            <instrument pc = "0" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "GrndPnoK" />
+            <instrument pc = "0" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "MelloGrP" />
+            <instrument pc = "0" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "PianoStr" />
+            <instrument pc = "0" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "Dream" />
+            <instrument pc = "0" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "ConGrnd" />
+            <instrument pc = "0" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "ConGrndK" />
+            <instrument pc = "0" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "DblConGr" />
+            <instrument pc = "0" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "MIDIGrd 1" />
+            <instrument pc = "0" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "MIDIGrd 2" />
+            <instrument pc = "0" msb = "0" lsb = "69" mapName = "XG NativeMap ++" name = "OldestAP" />
+            <instrument pc = "0" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "GrandP #" />
+            <instrument pc = "0" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "GrandPno" />
+            <instrument pc = "1" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "BriteP #" />
+            <instrument pc = "1" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "BritPnoK" />
+            <instrument pc = "1" msb = "0" lsb = "3" mapName = "XG NativeMap" name = "StBrtPno" />
+            <instrument pc = "1" msb = "0" lsb = "20" mapName = "XG NativeMap" name = "ResoBrtP" />
+            <instrument pc = "1" msb = "0" lsb = "32" mapName = "XG NativeMap" name = "DtndBrtP" />
+            <instrument pc = "1" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "SyPadPno" />
+            <instrument pc = "1" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "BrConGrd" />
+            <instrument pc = "1" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "BrConGrK" />
+            <instrument pc = "1" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "MIDIGrd3" />
+            <instrument pc = "1" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "MIDIGrd4" />
+            <instrument pc = "1" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "OldPiano" />
+            <instrument pc = "1" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "BriteP #" />
+            <instrument pc = "1" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "BritePno" />
+            <instrument pc = "2" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "El.Grand" />
+            <instrument pc = "2" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "El.GrPnoK" />
+            <instrument pc = "2" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Det.CP80" />
+            <instrument pc = "2" msb = "0" lsb = "35" mapName = "XG NativeMap" name = "Synth CP" />
+            <instrument pc = "2" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "LayerCP1" />
+            <instrument pc = "2" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "LayerCP2" />
+            <instrument pc = "3" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "HnkyTonk" />
+            <instrument pc = "3" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "HnkyTnkK" />
+            <instrument pc = "4" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "EPiano1#" />
+            <instrument pc = "4" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "El.Pno1K" />
+            <instrument pc = "4" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "MelloEP1" />
+            <instrument pc = "4" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Chor.EP1" />
+            <instrument pc = "4" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "HardEl.P" />
+            <instrument pc = "4" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "VX El.P1" />
+            <instrument pc = "4" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "60sEl.P1" />
+            <instrument pc = "4" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Old EP" />
+            <instrument pc = "4" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Tribecca" />
+            <instrument pc = "4" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Diploid" />
+            <instrument pc = "4" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Flops" />
+            <instrument pc = "4" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Soho" />
+            <instrument pc = "4" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "FlopsDtd" />
+            <instrument pc = "4" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "Diploid2" />
+            <instrument pc = "4" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "Brooklyn" />
+            <instrument pc = "4" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "Diploid" />
+            <instrument pc = "4" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "PhunkyDX" />
+            <instrument pc = "4" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "Nasal DX" />
+            <instrument pc = "4" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "DaslDXDt" />
+            <instrument pc = "4" msb = "0" lsb = "77" mapName = "XG NativeMap" name = "Din" />
+            <instrument pc = "4" msb = "0" lsb = "78" mapName = "XG NativeMap ++" name = "4 Way EP" />
+            <instrument pc = "4" msb = "0" lsb = "79" mapName = "XG NativeMap ++" name = "Easy EP" />
+            <instrument pc = "4" msb = "0" lsb = "80" mapName = "XG NativeMap ++" name = "Sine EP" />
+            <instrument pc = "4" msb = "0" lsb = "81" mapName = "XG NativeMap ++" name = "Cheap EP" />
+            <instrument pc = "4" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "EPiano1#" />
+            <instrument pc = "4" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "E.Piano1" />
+            <instrument pc = "5" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Epiano2#" />
+            <instrument pc = "5" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "El.Pno2K" />
+            <instrument pc = "5" msb = "0" lsb = "12" mapName = "XG NativeMap" name = "ChoEP Dcy" />
+            <instrument pc = "5" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Chor.EP2" />
+            <instrument pc = "5" msb = "0" lsb = "33" mapName = "XG NativeMap -" name = "DX Hard" />
+            <instrument pc = "5" msb = "0" lsb = "34" mapName = "XG NativeMap -" name = "DX Legend" />
+            <instrument pc = "5" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "DX Phase" />
+            <instrument pc = "5" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "DX+Analg" />
+            <instrument pc = "5" msb = "0" lsb = "42" mapName = "XG NativeMap -" name = "DX Koto EP" />
+            <instrument pc = "5" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "VX El.P2" />
+            <instrument pc = "5" msb = "0" lsb = "48" mapName = "XG NativeMap" name = "ChoEP K" />
+            <instrument pc = "5" msb = "0" lsb = "52" mapName = "XG NativeMap" name = "DX Mallet" />
+            <instrument pc = "5" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Shrakawa" />
+            <instrument pc = "5" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "OldEP Tn" />
+            <instrument pc = "5" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Flips" />
+            <instrument pc = "5" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "FlipsDtd" />
+            <instrument pc = "5" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Flicks" />
+            <instrument pc = "5" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "FliksDtd" />
+            <instrument pc = "5" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "BrightDX" />
+            <instrument pc = "5" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "BrtDX Dtd" />
+            <instrument pc = "5" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "Kitayama" />
+            <instrument pc = "5" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "Turnpik 1" />
+            <instrument pc = "5" msb = "0" lsb = "74" mapName = "XG NativeMap" name = "Turnpik 2" />
+            <instrument pc = "5" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "Cerritos" />
+            <instrument pc = "5" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "Sunset" />
+            <instrument pc = "5" msb = "0" lsb = "77" mapName = "XG NativeMap" name = "Soft DX" />
+            <instrument pc = "5" msb = "0" lsb = "78" mapName = "XG NativeMap" name = "Reso DX" />
+            <instrument pc = "5" msb = "0" lsb = "79" mapName = "XG NativeMap" name = "Piercn DX" />
+            <instrument pc = "5" msb = "0" lsb = "80" mapName = "XG NativeMap" name = "Shvrng DX" />
+            <instrument pc = "5" msb = "0" lsb = "81" mapName = "XG NativeMap" name = "Shvrn DX+" />
+            <instrument pc = "5" msb = "0" lsb = "82" mapName = "XG NativeMap" name = "Rattln DX" />
+            <instrument pc = "5" msb = "0" lsb = "83" mapName = "XG NativeMap" name = "Ratln DX+" />
+            <instrument pc = "5" msb = "0" lsb = "84" mapName = "XG NativeMap" name = "Tinker DX" />
+            <instrument pc = "5" msb = "0" lsb = "85" mapName = "XG NativeMap" name = "Tinkr DX+" />
+            <instrument pc = "5" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "EPiano2#" />
+            <instrument pc = "5" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "E.Piano2" />
+            <instrument pc = "6" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Harpsi." />
+            <instrument pc = "6" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "Harpsi.K" />
+            <instrument pc = "6" msb = "0" lsb = "25" mapName = "XG NativeMap -" name = "Harpsi.2" />
+            <instrument pc = "6" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "HarpsiDt" />
+            <instrument pc = "6" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Harpsi.3" />
+            <instrument pc = "6" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "ElHarpsi" />
+            <instrument pc = "6" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "SynHrpsi" />
+            <instrument pc = "7" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Clavi #" />
+            <instrument pc = "7" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "Clavi K" />
+            <instrument pc = "7" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "Clavi Wah" />
+            <instrument pc = "7" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "CsmcV Clav" />
+            <instrument pc = "7" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Pulse Clv" />
+            <instrument pc = "7" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Pierce Cl" />
+            <instrument pc = "7" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Clr Clavi" />
+            <instrument pc = "7" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Swp Clavi" />
+            <instrument pc = "7" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Syn Clavi" />
+            <instrument pc = "7" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Spr Clavi" />
+            <instrument pc = "7" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Gtr Clavi" />
+            <instrument pc = "7" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "Hardy Plk" />
+            <instrument pc = "7" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "Hrdy Plk+" />
+            <instrument pc = "7" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "FM Clav Db" />
+            <instrument pc = "7" msb = "0" lsb = "74" mapName = "XG NativeMap ++" name = "Robot Clv" />
+            <instrument pc = "7" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Clavi #" />
+            <instrument pc = "7" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Clavi" />
+            <instrument pc = "8" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Celesta" />
+            <instrument pc = "8" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "FM Celesta" />
+            <instrument pc = "9" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Glocken" />
+            <instrument pc = "10" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "MusicBox" />
+            <instrument pc = "10" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Orgel" />
+            <instrument pc = "10" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Smal Orgl" />
+            <instrument pc = "11" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Vibes" />
+            <instrument pc = "11" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "Vibes K" />
+            <instrument pc = "11" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "Hard Vibe" />
+            <instrument pc = "12" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Marinba" />
+            <instrument pc = "12" msb = "0" lsb = "1" mapName = "XG NativeMap -" name = "MarinbaK" />
+            <instrument pc = "12" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "SineMrmb" />
+            <instrument pc = "12" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Balafon" />
+            <instrument pc = "12" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Balimba" />
+            <instrument pc = "12" msb = "0" lsb = "98" mapName = "XG NativeMap -" name = "Log Drum" />
+            <instrument pc = "13" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Xylophon" />
+            <instrument pc = "14" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "TubulBel" />
+            <instrument pc = "14" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "ChrchBel" />
+            <instrument pc = "14" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Carillon" />
+            <instrument pc = "15" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Dulcimer" />
+            <instrument pc = "15" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Dulcimr 2" />
+            <instrument pc = "15" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Cimbalon" />
+            <instrument pc = "15" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Santur" />
+            <instrument pc = "15" msb = "0" lsb = "98" mapName = "XG NativeMap +" name = "Yang Qin" />
+            <instrument pc = "16" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Draw Org#" />
+            <instrument pc = "16" msb = "0" lsb = "3" mapName = "XG NativeMap" name = "StDraw Or" />
+            <instrument pc = "16" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "DetDrw Or" />
+            <instrument pc = "16" msb = "0" lsb = "33" mapName = "XG NativeMap -" name = "60sDr Or1" />
+            <instrument pc = "16" msb = "0" lsb = "34" mapName = "XG NativeMap -" name = "60sDr or2" />
+            <instrument pc = "16" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "70sDr Or1" />
+            <instrument pc = "16" msb = "0" lsb = "36" mapName = "XG NativeMap -" name = "Draw Org2" />
+            <instrument pc = "16" msb = "0" lsb = "37" mapName = "XG NativeMap -" name = "60sDr Or3" />
+            <instrument pc = "16" msb = "0" lsb = "38" mapName = "XG NativeMap -" name = "Even Bar" />
+            <instrument pc = "16" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = '16+2" 2/3' />
+            <instrument pc = "16" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Organ Ba" />
+            <instrument pc = "16" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "70sDr Or2" />
+            <instrument pc = "16" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Cheez Org" />
+            <instrument pc = "16" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "Draw Org3" />
+            <instrument pc = "16" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "Stdium Or" />
+            <instrument pc = "16" msb = "0" lsb = "69" mapName = "XG NativeMap -" name = "Stdium O2" />
+            <instrument pc = "16" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "Gospel Or" />
+            <instrument pc = "16" msb = "0" lsb = "71" mapName = "XG NativeMap -" name = "ClkGspl O" />
+            <instrument pc = "16" msb = "0" lsb = "72" mapName = "XG NativeMap -" name = "Chapel Or" />
+            <instrument pc = "16" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "DimChors" />
+            <instrument pc = "16" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "Dawn" />
+            <instrument pc = "16" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "Mellorgn" />
+            <instrument pc = "16" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "Fuzzorgn" />
+            <instrument pc = "16" msb = "0" lsb = "77" mapName = "XG NativeMap" name = "FMO" />
+            <instrument pc = "16" msb = "0" lsb = "78" mapName = "XG NativeMap -" name = "70sDr Or3" />
+            <instrument pc = "16" msb = "0" lsb = "79" mapName = "XG NativeMap ++" name = "Mood Orgn" />
+            <instrument pc = "16" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Draw Org#" />
+            <instrument pc = "16" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "DrawOrgn" />
+            <instrument pc = "17" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Perc Org#" />
+            <instrument pc = "17" msb = "0" lsb = "24" mapName = "XG NativeMap -" name = "70sPc Or1" />
+            <instrument pc = "17" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "DetPrc Or" />
+            <instrument pc = "17" msb = "0" lsb = "33" mapName = "XG NativeMap -" name = "Lite Org" />
+            <instrument pc = "17" msb = "0" lsb = "37" mapName = "XG NativeMap -" name = "Perc Org2" />
+            <instrument pc = "17" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Jaz Organ" />
+            <instrument pc = "17" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "WarmJz Or" />
+            <instrument pc = "17" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Clik Orgn" />
+            <instrument pc = "17" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Grace" />
+            <instrument pc = "17" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "CrnGrace" />
+            <instrument pc = "17" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "DimClick" />
+            <instrument pc = "17" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Dusk" />
+            <instrument pc = "17" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "FM Click" />
+            <instrument pc = "17" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "Spoony" />
+            <instrument pc = "17" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "SprRoty" />
+            <instrument pc = "17" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "LoFi Orgn" />
+            <instrument pc = "17" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "Beep Orgn" />
+            <instrument pc = "17" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "Belief" />
+            <instrument pc = "17" msb = "0" lsb = "77" mapName = "XG NativeMap" name = "Snap Orgn" />
+            <instrument pc = "17" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Perc Org#" />
+            <instrument pc = "17" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Perc Orgn" />
+            <instrument pc = "18" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Rock Org#" />
+            <instrument pc = "18" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Rotary Or" />
+            <instrument pc = "18" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "SloRotar" />
+            <instrument pc = "18" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "FstRotar" />
+            <instrument pc = "18" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "GlaclRtr" />
+            <instrument pc = "18" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Rock Org#" />
+            <instrument pc = "18" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Rock Orgn" />
+            <instrument pc = "19" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Chrch Org" />
+            <instrument pc = "19" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Chur Org3" />
+            <instrument pc = "19" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Chur Org2" />
+            <instrument pc = "19" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "NotreDam" />
+            <instrument pc = "19" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Org Flute" />
+            <instrument pc = "19" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Trm OrgF1" />
+            <instrument pc = "20" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Reed Orgn" />
+            <instrument pc = "20" msb = "0" lsb = "32" mapName = "XG NativeMap" name = "ReedOrDt" />
+            <instrument pc = "20" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "Puff Org" />
+            <instrument pc = "20" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "SyReedDk" />
+            <instrument pc = "21" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Acordion" />
+            <instrument pc = "21" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Accord It" />
+            <instrument pc = "22" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Harmnica" />
+            <instrument pc = "22" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Harmo.2" />
+            <instrument pc = "23" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "TangoAc#" />
+            <instrument pc = "23" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "TangoAcd2" />
+            <instrument pc = "23" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "TightAcd" />
+            <instrument pc = "23" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "TghtAcdD" />
+            <instrument pc = "23" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "TangoAc#" />
+            <instrument pc = "23" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "TangoAcd" />
+            <instrument pc = "24" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "NylonGt#" />
+            <instrument pc = "24" msb = "0" lsb = "16" mapName = "XG NativeMap -" name = "NylonGt2" />
+            <instrument pc = "24" msb = "0" lsb = "25" mapName = "XG NativeMap -" name = "NylonGt3" />
+            <instrument pc = "24" msb = "0" lsb = "32" mapName = "XG NativeMap" name = "NylnGtDt" />
+            <instrument pc = "24" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Wayside" />
+            <instrument pc = "24" msb = "0" lsb = "43" mapName = "XG NativeMap -" name = "VelGtHrm" />
+            <instrument pc = "24" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "EsGuitar" />
+            <instrument pc = "24" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "EsGtrHrd" />
+            <instrument pc = "24" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "EsGtMllo" />
+            <instrument pc = "24" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "EsGtrDcy" />
+            <instrument pc = "24" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Ukulele" />
+            <instrument pc = "24" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "NylonGt#" />
+            <instrument pc = "24" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "NylonGtr" />
+            <instrument pc = "25" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "SteelGt#" />
+            <instrument pc = "25" msb = "0" lsb = "16" mapName = "XG NativeMap -" name = "SteelGt2" />
+            <instrument pc = "25" msb = "0" lsb = "32" mapName = "XG NativeMap" name = "StlGtrDt" />
+            <instrument pc = "25" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "12StrGtr" />
+            <instrument pc = "25" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "Nyln &amp; Stl" />
+            <instrument pc = "25" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "Stl &amp; Body" />
+            <instrument pc = "25" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Nashvlle" />
+            <instrument pc = "25" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "NashvllR" />
+            <instrument pc = "25" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Nashvl12" />
+            <instrument pc = "25" msb = "0" lsb = "67" mapName = "XG NativeMap ++" name = "OldSmple" />
+            <instrument pc = "25" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Mandolin" />
+            <instrument pc = "25" msb = "0" lsb = "97" mapName = "XG NativeMap" name = "MndlnEns" />
+            <instrument pc = "25" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "SteelGt#" />
+            <instrument pc = "25" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "SteelGtr" />
+            <instrument pc = "26" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "JazzGtr#" />
+            <instrument pc = "26" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "MelloGtr" />
+            <instrument pc = "26" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Jazz Amp" />
+            <instrument pc = "26" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "OrganGtr" />
+            <instrument pc = "26" msb = "0" lsb = "41" mapName = "XG NativeMap" name = "OctPlate" />
+            <instrument pc = "26" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "SuperJzM" />
+            <instrument pc = "26" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "SuperJzB" />
+            <instrument pc = "26" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "SuperJzD" />
+            <instrument pc = "26" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "SuperJzR" />
+            <instrument pc = "26" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "DX JzGtr" />
+            <instrument pc = "26" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "DXJzGt D" />
+            <instrument pc = "26" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "PlusJazz" />
+            <instrument pc = "26" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "RghcastN" />
+            <instrument pc = "26" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "RghcastM" />
+            <instrument pc = "26" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "PdlSteel" />
+            <instrument pc = "26" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "JazzGtr#" />
+            <instrument pc = "26" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Jazz Gtr" />
+            <instrument pc = "27" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "CleanGtr" />
+            <instrument pc = "27" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "ChorusGt" />
+            <instrument pc = "27" msb = "0" lsb = "33" mapName = "XG NativeMap" name = "ChoGtrLt" />
+            <instrument pc = "27" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "CleanGt2" />
+            <instrument pc = "27" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "MidT.Gtr" />
+            <instrument pc = "27" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "MidT.GtSt" />
+            <instrument pc = "27" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "NasalGtr" />
+            <instrument pc = "27" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "NaslGtSt" />
+            <instrument pc = "27" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Hammer M" />
+            <instrument pc = "27" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Hammer B" />
+            <instrument pc = "27" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "Hammer D" />
+            <instrument pc = "27" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "HammerSt" />
+            <instrument pc = "27" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "FM ChoGtr" />
+            <instrument pc = "27" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "FM ChoGtS" />
+            <instrument pc = "27" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "PeskyGtr" />
+            <instrument pc = "27" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "ClaviGtr" />
+            <instrument pc = "28" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "MuteGtr#" />
+            <instrument pc = "28" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "FunkGtr1" />
+            <instrument pc = "28" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "MuteStlG" />
+            <instrument pc = "28" msb = "0" lsb = "43" mapName = "XG NativeMap -" name = "FunkGtr2" />
+            <instrument pc = "28" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "Jazz Man" />
+            <instrument pc = "28" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Wrench" />
+            <instrument pc = "28" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "WrenchHv" />
+            <instrument pc = "28" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "WrnchDbl" />
+            <instrument pc = "28" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Tin" />
+            <instrument pc = "28" msb = "0" lsb = "68" mapName = "XG NativeMap ++" name = "GrooveMt" />
+            <instrument pc = "28" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Mu.DstGt" />
+            <instrument pc = "28" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "MuteGtr#" />
+            <instrument pc = "28" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Mute Gtr" />
+            <instrument pc = "29" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "OverDriv#" />
+            <instrument pc = "29" msb = "0" lsb = "32" mapName = "XG NativeMap" name = "OdrvGtDt" />
+            <instrument pc = "29" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Parallel" />
+            <instrument pc = "29" msb = "0" lsb = "43" mapName = "XG NativeMap -" name = "Gt.Pinch" />
+            <instrument pc = "29" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "ManhttnM" />
+            <instrument pc = "29" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "ManhttnB" />
+            <instrument pc = "29" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "ManhttnD" />
+            <instrument pc = "29" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "ManhttnP" />
+            <instrument pc = "29" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "OverDriv#" />
+            <instrument pc = "29" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Overdrive" />
+            <instrument pc = "30" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "DistGtr#" />
+            <instrument pc = "30" msb = "0" lsb = "12" mapName = "XG NativeMap -" name = "DstRthmG" />
+            <instrument pc = "30" msb = "0" lsb = "24" mapName = "XG NativeMap -" name = "DistGtr2" />
+            <instrument pc = "30" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "DistGtr3" />
+            <instrument pc = "30" msb = "0" lsb = "36" mapName = "XG NativeMap -" name = "PowerGt2" />
+            <instrument pc = "30" msb = "0" lsb = "37" mapName = "XG NativeMap -" name = "PowerGt1" />
+            <instrument pc = "30" msb = "0" lsb = "38" mapName = "XG NativeMap -" name = "Dst.5ths" />
+            <instrument pc = "30" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "FeedbkGt" />
+            <instrument pc = "30" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "FeedbkGt2" />
+            <instrument pc = "30" msb = "0" lsb = "42" mapName = "XG NativeMap" name = "TwinDist" />
+            <instrument pc = "30" msb = "0" lsb = "43" mapName = "XG NativeMap -" name = "RckRthm2" />
+            <instrument pc = "30" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "RckRthm1" />
+            <instrument pc = "30" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Bite" />
+            <instrument pc = "30" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Bite Res" />
+            <instrument pc = "30" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "BiteDtd" />
+            <instrument pc = "30" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Bite +" />
+            <instrument pc = "30" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Burnout" />
+            <instrument pc = "30" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Bombay" />
+            <instrument pc = "30" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Bombay S" />
+            <instrument pc = "30" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "Jaipur" />
+            <instrument pc = "30" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "DistGtr#" />
+            <instrument pc = "30" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Dist.Gtr" />
+            <instrument pc = "31" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "GtrHarmo" />
+            <instrument pc = "31" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "AcoHarmo" />
+            <instrument pc = "31" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "GtFeedbk" />
+            <instrument pc = "31" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "GtrHrmo2" />
+            <instrument pc = "31" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Shimla" />
+            <instrument pc = "32" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "AcoBass#" />
+            <instrument pc = "32" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "JazzRthm" />
+            <instrument pc = "32" msb = "0" lsb = "41" mapName = "XG NativeMap" name = "PckAcoBa" />
+            <instrument pc = "32" msb = "0" lsb = "43" mapName = "XG NativeMap" name = "Blink Ba" />
+            <instrument pc = "32" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "VXUprght" />
+            <instrument pc = "32" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Boston" />
+            <instrument pc = "32" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "BostnBrt" />
+            <instrument pc = "32" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Coolth" />
+            <instrument pc = "32" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Coolth B" />
+            <instrument pc = "32" msb = "0" lsb = "96" mapName = "XG NativeMap" name = "WalkSyBa" />
+            <instrument pc = "32" msb = "0" lsb = "97" mapName = "XG NativeMap" name = "Dim &amp; Cool" />
+            <instrument pc = "32" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "AcoBass#" />
+            <instrument pc = "32" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Aco.Bass" />
+            <instrument pc = "33" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "FngrBa #" />
+            <instrument pc = "33" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "FingrDrk" />
+            <instrument pc = "33" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "FlangeBa" />
+            <instrument pc = "33" msb = "0" lsb = "32" mapName = "XG NativeMap" name = "FngrBaDt" />
+            <instrument pc = "33" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "Ba &amp; DstEG" />
+            <instrument pc = "33" msb = "0" lsb = "43" mapName = "XG NativeMap -" name = "FngrSlap" />
+            <instrument pc = "33" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "FngBass2" />
+            <instrument pc = "33" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Jazzy Ba" />
+            <instrument pc = "33" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Mod.Bass" />
+            <instrument pc = "33" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Chase" />
+            <instrument pc = "33" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "ChaseRes" />
+            <instrument pc = "33" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "BlueBass" />
+            <instrument pc = "33" msb = "0" lsb = "69" mapName = "XG NativeMap -" name = "JazzyBa2" />
+            <instrument pc = "33" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "FngBass3" />
+            <instrument pc = "33" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "FngerBa #" />
+            <instrument pc = "33" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "FngrBass" />
+            <instrument pc = "34" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "PickBass" />
+            <instrument pc = "34" msb = "0" lsb = "6" mapName = "XG NativeMap -" name = "PickBa 2" />
+            <instrument pc = "34" msb = "0" lsb = "28" mapName = "XG NativeMap -" name = "MutePkBa" />
+            <instrument pc = "34" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "PkB &amp; MtGt" />
+            <instrument pc = "34" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "HardPick" />
+            <instrument pc = "34" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "DrdPikRs" />
+            <instrument pc = "34" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "PkBass" />
+            <instrument pc = "34" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "PickBa 4" />
+            <instrument pc = "35" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Frtless#" />
+            <instrument pc = "35" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Fretles2" />
+            <instrument pc = "35" msb = "0" lsb = "33" mapName = "XG NativeMap -" name = "Fretles3" />
+            <instrument pc = "35" msb = "0" lsb = "34" mapName = "XG NativeMap -" name = "Fretles4" />
+            <instrument pc = "35" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "PwrFrtls" />
+            <instrument pc = "35" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "PwrFrtlR" />
+            <instrument pc = "35" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "TalkinBa" />
+            <instrument pc = "35" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "NoizFrtl" />
+            <instrument pc = "35" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "SynFretl" />
+            <instrument pc = "35" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "SmthFrtl" />
+            <instrument pc = "35" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Frtless#" />
+            <instrument pc = "35" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Fretless" />
+            <instrument pc = "36" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "SlapBa1#" />
+            <instrument pc = "36" msb = "0" lsb = "21" mapName = "XG NativeMap" name = "CsmicSlp" />
+            <instrument pc = "36" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "ResoSlap" />
+            <instrument pc = "36" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "PunchThm" />
+            <instrument pc = "36" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Slapper" />
+            <instrument pc = "36" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Thum &amp; Slp" />
+            <instrument pc = "36" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "GltzySlp" />
+            <instrument pc = "36" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "FM Slap" />
+            <instrument pc = "36" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "FM SlpDtd" />
+            <instrument pc = "36" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "SlapBa1#" />
+            <instrument pc = "36" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "SlapBas1" />
+            <instrument pc = "37" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "SlapBa2#" />
+            <instrument pc = "37" msb = "0" lsb = "16" mapName = "XG NativeMap" name = "BrtSlpSp" />
+            <instrument pc = "37" msb = "0" lsb = "22" mapName = "XG NativeMap" name = "Wah Slap" />
+            <instrument pc = "37" msb = "0" lsb = "43" mapName = "XG NativeMap -" name = "VeloSlap" />
+            <instrument pc = "37" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "SlapBa2#" />
+            <instrument pc = "37" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "SlapBas2" />
+            <instrument pc = "38" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SynBass1" />
+            <instrument pc = "38" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "SynBa1Dk" />
+            <instrument pc = "38" msb = "0" lsb = "20" mapName = "XG NativeMap -" name = "FastResB" />
+            <instrument pc = "38" msb = "0" lsb = "21" mapName = "XG NativeMap" name = "TL66" />
+            <instrument pc = "38" msb = "0" lsb = "24" mapName = "XG NativeMap -" name = "AcidBass" />
+            <instrument pc = "38" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "ResoBass" />
+            <instrument pc = "38" msb = "0" lsb = "28" mapName = "XG NativeMap" name = "MtdPulsB" />
+            <instrument pc = "38" msb = "0" lsb = "29" mapName = "XG NativeMap" name = "SlwAttck" />
+            <instrument pc = "38" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Clv Bass" />
+            <instrument pc = "38" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "TechnoBa" />
+            <instrument pc = "38" msb = "0" lsb = "41" mapName = "XG NativeMap" name = "Kik'n'Ba" />
+            <instrument pc = "38" msb = "0" lsb = "42" mapName = "XG NativeMap" name = "NEP" />
+            <instrument pc = "38" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Orbiter" />
+            <instrument pc = "38" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Sqr.Bass" />
+            <instrument pc = "38" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "RubberBa" />
+            <instrument pc = "38" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "Fish" />
+            <instrument pc = "38" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "HardReso" />
+            <instrument pc = "38" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Wah Saw" />
+            <instrument pc = "38" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Pluto" />
+            <instrument pc = "38" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "Pluto +" />
+            <instrument pc = "38" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "Stimuli" />
+            <instrument pc = "38" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "RunPulse" />
+            <instrument pc = "38" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "TalkPuls" />
+            <instrument pc = "38" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "Node" />
+            <instrument pc = "38" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "Stainer" />
+            <instrument pc = "38" msb = "0" lsb = "77" mapName = "XG NativeMap" name = "StainAtk" />
+            <instrument pc = "38" msb = "0" lsb = "78" mapName = "XG NativeMap" name = "SweepSqr" />
+            <instrument pc = "38" msb = "0" lsb = "79" mapName = "XG NativeMap" name = "SwpSqr +" />
+            <instrument pc = "38" msb = "0" lsb = "80" mapName = "XG NativeMap" name = "Stinks" />
+            <instrument pc = "38" msb = "0" lsb = "81" mapName = "XG NativeMap" name = "StnksRes" />
+            <instrument pc = "38" msb = "0" lsb = "82" mapName = "XG NativeMap" name = "Reso Sqr" />
+            <instrument pc = "38" msb = "0" lsb = "83" mapName = "XG NativeMap" name = "Dagger" />
+            <instrument pc = "38" msb = "0" lsb = "84" mapName = "XG NativeMap" name = "Zinc" />
+            <instrument pc = "38" msb = "0" lsb = "85" mapName = "XG NativeMap" name = "SweePWM" />
+            <instrument pc = "38" msb = "0" lsb = "86" mapName = "XG NativeMap" name = "SwPWM St" />
+            <instrument pc = "38" msb = "0" lsb = "87" mapName = "XG NativeMap" name = "Slow Wah" />
+            <instrument pc = "38" msb = "0" lsb = "88" mapName = "XG NativeMap" name = "Crook" />
+            <instrument pc = "38" msb = "0" lsb = "89" mapName = "XG NativeMap -" name = "FstFltBa" />
+            <instrument pc = "38" msb = "0" lsb = "90" mapName = "XG NativeMap -" name = "Rubber30" />
+            <instrument pc = "38" msb = "0" lsb = "91" mapName = "XG NativeMap -" name = "FstResB2" />
+            <instrument pc = "38" msb = "0" lsb = "92" mapName = "XG NativeMap ++" name = "MinneaBs" />
+            <instrument pc = "38" msb = "0" lsb = "93" mapName = "XG NativeMap ++" name = "Miami Bs" />
+            <instrument pc = "38" msb = "0" lsb = "94" mapName = "XG NativeMap ++" name = "ResoTalk" />
+            <instrument pc = "38" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Hammer" />
+            <instrument pc = "39" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SynBass2" />
+            <instrument pc = "39" msb = "0" lsb = "6" mapName = "XG NativeMap -" name = "MelloSBa" />
+            <instrument pc = "39" msb = "0" lsb = "12" mapName = "XG NativeMap -" name = "Seq Bass" />
+            <instrument pc = "39" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "ClkSynBa" />
+            <instrument pc = "39" msb = "0" lsb = "19" mapName = "XG NativeMap -" name = "SynBa3Dk" />
+            <instrument pc = "39" msb = "0" lsb = "22" mapName = "XG NativeMap" name = "Zealot" />
+            <instrument pc = "39" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "SmthSynB" />
+            <instrument pc = "39" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "ModulrBa" />
+            <instrument pc = "39" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "DX Bass" />
+            <instrument pc = "39" msb = "0" lsb = "42" mapName = "XG NativeMap" name = "DXBa Brt" />
+            <instrument pc = "39" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "X WireBa" />
+            <instrument pc = "39" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "AtkPulse" />
+            <instrument pc = "39" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "CS Light" />
+            <instrument pc = "39" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "MeltBass" />
+            <instrument pc = "39" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "FrcOscBa" />
+            <instrument pc = "39" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Cubit" />
+            <instrument pc = "39" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Cubit +" />
+            <instrument pc = "39" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "Keel" />
+            <instrument pc = "39" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "KeelPwrd" />
+            <instrument pc = "39" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "PlnPulse" />
+            <instrument pc = "39" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "PwrdPuls" />
+            <instrument pc = "39" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "PwrPulsB" />
+            <instrument pc = "39" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "Pwrd Saw" />
+            <instrument pc = "39" msb = "0" lsb = "77" mapName = "XG NativeMap ++" name = "SmoothBs" />
+            <instrument pc = "39" msb = "0" lsb = "78" mapName = "XG NativeMap ++" name = "SynAttck" />
+            <instrument pc = "40" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Violin #" />
+            <instrument pc = "40" msb = "0" lsb = "8" mapName = "XG NativeMap -" name = "Slow Vln" />
+            <instrument pc = "40" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Unison" />
+            <instrument pc = "40" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Cadenza" />
+            <instrument pc = "40" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "CadenzDk" />
+            <instrument pc = "40" msb = "0" lsb = "66" mapName = "XG NativeMap +" name = "Vln Sec" />
+            <instrument pc = "40" msb = "0" lsb = "67" mapName = "XG NativeMap +" name = "Hrd Vlns" />
+            <instrument pc = "40" msb = "0" lsb = "68" mapName = "XG NativeMap +" name = "Slw Vlns" />
+            <instrument pc = "40" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Violin #" />
+            <instrument pc = "40" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Violin" />
+            <instrument pc = "41" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Viola" />
+            <instrument pc = "41" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "VlaDoubl" />
+            <instrument pc = "41" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Sonata" />
+            <instrument pc = "41" msb = "0" lsb = "65" mapName = "XG NativeMap +" name = "Vla Sec" />
+            <instrument pc = "41" msb = "0" lsb = "66" mapName = "XG NativeMap +" name = "Hrd Vlas" />
+            <instrument pc = "41" msb = "0" lsb = "67" mapName = "XG NativeMap +" name = "Slw Vlas" />
+            <instrument pc = "42" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Cello" />
+            <instrument pc = "42" msb = "0" lsb = "64" mapName = "XG NativeMap +" name = "CelloSec" />
+            <instrument pc = "42" msb = "0" lsb = "65" mapName = "XG NativeMap +" name = "Hrd Vcs" />
+            <instrument pc = "42" msb = "0" lsb = "66" mapName = "XG NativeMap +" name = "Slw Vcs" />
+            <instrument pc = "43" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Contrabs" />
+            <instrument pc = "43" msb = "0" lsb = "0" mapName = "XG NativeMap +" name = "CB Sec" />
+            <instrument pc = "43" msb = "0" lsb = "0" mapName = "XG NativeMap +" name = "Hrd CBs" />
+            <instrument pc = "43" msb = "0" lsb = "0" mapName = "XG NativeMap +" name = "Slw CBs" />
+            <instrument pc = "44" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "TremStr#" />
+            <instrument pc = "44" msb = "0" lsb = "8" mapName = "XG NativeMap -" name = "SlwTrStr" />
+            <instrument pc = "44" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "Susp.Str" />
+            <instrument pc = "44" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Fear" />
+            <instrument pc = "44" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Fear Dtd" />
+            <instrument pc = "44" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Apoclyps" />
+            <instrument pc = "44" msb = "0" lsb = "67" mapName = "XG NativeMap ++" name = "Brt Trem" />
+            <instrument pc = "44" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "TremStr#" />
+            <instrument pc = "44" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "TremStr" />
+            <instrument pc = "45" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "PizzStr" />
+            <instrument pc = "45" msb = "0" lsb = "35" mapName = "XG NativeMap" name = "Pizz Oct" />
+            <instrument pc = "45" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Sleep" />
+            <instrument pc = "45" msb = "0" lsb = "64" mapName = "XG NativeMap +" name = "Collegno" />
+            <instrument pc = "46" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Harp" />
+            <instrument pc = "46" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "YangChin" />
+            <instrument pc = "46" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "El.Harp" />
+            <instrument pc = "46" msb = "0" lsb = "96" mapName = "XG NativeMap" name = "Vln Harp" />
+            <instrument pc = "46" msb = "0" lsb = "97" mapName = "XG NativeMap" name = "VlnHrpDt" />
+            <instrument pc = "47" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Timpani" />
+            <instrument pc = "47" msb = "0" lsb = "43" mapName = "XG NativeMap" name = "Roll &amp; Hit" />
+            <instrument pc = "48" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Strngs 1#" />
+            <instrument pc = "48" msb = "0" lsb = "3" mapName = "XG NativeMap -" name = "S.Strngs" />
+            <instrument pc = "48" msb = "0" lsb = "8" mapName = "XG NativeMap -" name = "Slow Str" />
+            <instrument pc = "48" msb = "0" lsb = "14" mapName = "XG NativeMap" name = "SfzStrgs" />
+            <instrument pc = "48" msb = "0" lsb = "24" mapName = "XG NativeMap -" name = "Arco Str" />
+            <instrument pc = "48" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "60sStrng" />
+            <instrument pc = "48" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "Orchestr" />
+            <instrument pc = "48" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "Orchstr2" />
+            <instrument pc = "48" msb = "0" lsb = "42" mapName = "XG NativeMap -" name = "TremOrch" />
+            <instrument pc = "48" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "Velo.Str" />
+            <instrument pc = "48" msb = "0" lsb = "52" mapName = "XG NativeMap" name = "Lento" />
+            <instrument pc = "48" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "SprStrng" />
+            <instrument pc = "48" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "SprStrSt" />
+            <instrument pc = "48" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Triste" />
+            <instrument pc = "48" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Basso" />
+            <instrument pc = "48" msb = "0" lsb = "68" mapName = "XG NativeMap +" name = "Stacc H" />
+            <instrument pc = "48" msb = "0" lsb = "69" mapName = "XG NativeMap +" name = "Stacc L" />
+            <instrument pc = "48" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "Hall Str" />
+            <instrument pc = "48" msb = "0" lsb = "71" mapName = "XG NativeMap -" name = "Str/FHrn" />
+            <instrument pc = "48" msb = "0" lsb = "72" mapName = "XG NativeMap ++" name = "SolidStr" />
+            <instrument pc = "48" msb = "0" lsb = "73" mapName = "XG NativeMap ++" name = "SwellStr" />
+            <instrument pc = "48" msb = "0" lsb = "74" mapName = "XG NativeMap ++" name = "Str+Brss" />
+            <instrument pc = "48" msb = "0" lsb = "75" mapName = "XG NativeMap ++" name = "3oct Str" />
+            <instrument pc = "48" msb = "0" lsb = "76" mapName = "XG NativeMap ++" name = "5partStr" />
+            <instrument pc = "48" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Strngs1#" />
+            <instrument pc = "48" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Strings1" />
+            <instrument pc = "49" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Strngs2#" />
+            <instrument pc = "49" msb = "0" lsb = "3" mapName = "XG NativeMap -" name = "S.SlwStr" />
+            <instrument pc = "49" msb = "0" lsb = "8" mapName = "XG NativeMap -" name = "LegatoSt" />
+            <instrument pc = "49" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "Warm Str" />
+            <instrument pc = "49" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "Kingdom" />
+            <instrument pc = "49" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "70s Str" />
+            <instrument pc = "49" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Strings3" />
+            <instrument pc = "49" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Strings2#" />
+            <instrument pc = "49" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Strings2" />
+            <instrument pc = "50" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Syn Str1" />
+            <instrument pc = "50" msb = "0" lsb = "8" mapName = "XG NativeMap" name = "Memory" />
+            <instrument pc = "50" msb = "0" lsb = "18" mapName = "XG NativeMap" name = "Zephyr" />
+            <instrument pc = "50" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "Reso Str" />
+            <instrument pc = "50" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Syn Str3" />
+            <instrument pc = "50" msb = "0" lsb = "39" mapName = "XG NativeMap" name = "Monarchy" />
+            <instrument pc = "50" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "GrandPad" />
+            <instrument pc = "50" msb = "0" lsb = "41" mapName = "XG NativeMap" name = "SweepStr" />
+            <instrument pc = "50" msb = "0" lsb = "42" mapName = "XG NativeMap" name = "SwpStOct" />
+            <instrument pc = "50" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Syn Str4" />
+            <instrument pc = "50" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Syn Str5" />
+            <instrument pc = "50" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Solitude" />
+            <instrument pc = "50" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Fate" />
+            <instrument pc = "50" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Thulium" />
+            <instrument pc = "50" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Brook" />
+            <instrument pc = "50" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Brook St" />
+            <instrument pc = "50" msb = "0" lsb = "71" mapName = "XG NativeMap -" name = "OldSynSt" />
+            <instrument pc = "51" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Syn Str2" />
+            <instrument pc = "51" msb = "0" lsb = "21" mapName = "XG NativeMap" name = "TradeWhd" />
+            <instrument pc = "51" msb = "0" lsb = "39" mapName = "XG NativeMap" name = "WormHole" />
+            <instrument pc = "51" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Hope" />
+            <instrument pc = "51" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Virgo" />
+            <instrument pc = "51" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Platinum" />
+            <instrument pc = "51" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "OctavPWM" />
+            <instrument pc = "51" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Taurus" />
+            <instrument pc = "51" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Frost" />
+            <instrument pc = "51" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Leo" />
+            <instrument pc = "51" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "SolPlexs" />
+            <instrument pc = "51" msb = "0" lsb = "72" mapName = "XG NativeMap -" name = "SunRise" />
+            <instrument pc = "52" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "ChoirAah" />
+            <instrument pc = "52" msb = "0" lsb = "3" mapName = "XG NativeMap -" name = "S.Choir" />
+            <instrument pc = "52" msb = "0" lsb = "16" mapName = "XG NativeMap -" name = "Ch.Aahs2" />
+            <instrument pc = "52" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "MelChoir" />
+            <instrument pc = "52" msb = "0" lsb = "39" mapName = "XG NativeMap" name = "Gasp" />
+            <instrument pc = "52" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "ChoirStr" />
+            <instrument pc = "52" msb = "0" lsb = "41" mapName = "XG NativeMap" name = "Dead Sea" />
+            <instrument pc = "52" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "StrngAah" />
+            <instrument pc = "52" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Male Aah" />
+            <instrument pc = "52" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Scroll" />
+            <instrument pc = "52" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Scroll +" />
+            <instrument pc = "52" msb = "0" lsb = "68" mapName = "XG NativeMap ++" name = "Ash St" />
+            <instrument pc = "52" msb = "0" lsb = "69" mapName = "XG NativeMap ++" name = "Ash Mix" />
+            <instrument pc = "52" msb = "0" lsb = "70" mapName = "XG NativeMap ++" name = "Aah Orch" />
+            <instrument pc = "53" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "VoiceOoh" />
+            <instrument pc = "53" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "VoiceDoo" />
+            <instrument pc = "53" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Hmn" />
+            <instrument pc = "53" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "WrlChoir" />
+            <instrument pc = "53" msb = "0" lsb = "67" mapName = "XG NativeMap ++" name = "Ooh St" />
+            <instrument pc = "53" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "VoiceHmn" />
+            <instrument pc = "54" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SynVoice" />
+            <instrument pc = "54" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "SyVoice2" />
+            <instrument pc = "54" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "Choral" />
+            <instrument pc = "54" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "AnaVoice" />
+            <instrument pc = "54" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Aspirate" />
+            <instrument pc = "54" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "AsprateD" />
+            <instrument pc = "54" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Facula" />
+            <instrument pc = "55" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Orch.Hit" />
+            <instrument pc = "55" msb = "0" lsb = "12" mapName = "XG NativeMap -" name = "LoFi Hit" />
+            <instrument pc = "55" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "OrchHit2" />
+            <instrument pc = "55" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Throne" />
+            <instrument pc = "55" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "ImPact" />
+            <instrument pc = "55" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "BrssStab" />
+            <instrument pc = "55" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "DoublHit" />
+            <instrument pc = "55" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "BrStab80" />
+            <instrument pc = "55" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "Bass Hit" />
+            <instrument pc = "55" msb = "0" lsb = "69" mapName = "XG NativeMap -" name = "BassHit+" />
+            <instrument pc = "55" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "6th Hit" />
+            <instrument pc = "55" msb = "0" lsb = "71" mapName = "XG NativeMap -" name = "6thHit +" />
+            <instrument pc = "55" msb = "0" lsb = "72" mapName = "XG NativeMap -" name = "Euro Hit" />
+            <instrument pc = "55" msb = "0" lsb = "73" mapName = "XG NativeMap -" name = "EuroHit+" />
+            <instrument pc = "55" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "Blowout" />
+            <instrument pc = "55" msb = "0" lsb = "75" mapName = "XG NativeMap ++" name = "Trurtps" />
+            <instrument pc = "56" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Trumpet#" />
+            <instrument pc = "56" msb = "0" lsb = "16" mapName = "XG NativeMap -" name = "Trumpet2" />
+            <instrument pc = "56" msb = "0" lsb = "17" mapName = "XG NativeMap -" name = "BriteTrp" />
+            <instrument pc = "56" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "Warm Trp" />
+            <instrument pc = "56" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Dark Trp" />
+            <instrument pc = "56" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "DrkTpSft" />
+            <instrument pc = "56" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Soft Trp" />
+            <instrument pc = "56" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Blow" />
+            <instrument pc = "56" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Blow Dbl" />
+            <instrument pc = "56" msb = "0" lsb = "69" mapName = "XG NativeMap -" name = "4th TP" />
+            <instrument pc = "56" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "Synth Tp" />
+            <instrument pc = "56" msb = "0" lsb = "71" mapName = "XG NativeMap ++" name = "Sweet Tp" />
+            <instrument pc = "56" msb = "0" lsb = "72" mapName = "XG NativeMap ++" name = "Mllw Swt" />
+            <instrument pc = "56" msb = "0" lsb = "73" mapName = "XG NativeMap ++" name = "NormTps" />
+            <instrument pc = "56" msb = "0" lsb = "74" mapName = "XG NativeMap ++" name = "BrlltTp" />
+            <instrument pc = "56" msb = "0" lsb = "75" mapName = "XG NativeMap ++" name = "Fantare" />
+            <instrument pc = "56" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "FluglHrn" />
+            <instrument pc = "56" msb = "0" lsb = "97" mapName = "XG NativeMap" name = "Cornet" />
+            <instrument pc = "56" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Trumpet#" />
+            <instrument pc = "56" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Trumpet" />
+            <instrument pc = "57" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Trmbone#" />
+            <instrument pc = "57" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "Trmbone2" />
+            <instrument pc = "57" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "BrghtTrb" />
+            <instrument pc = "57" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "MellowTb" />
+            <instrument pc = "57" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "JJJ" />
+            <instrument pc = "57" msb = "0" lsb = "67" mapName = "XG NativeMap ++" name = "BrllntTb" />
+            <instrument pc = "57" msb = "0" lsb = "68" mapName = "XG NativeMap ++" name = "Hrd Tb" />
+            <instrument pc = "57" msb = "0" lsb = "69" mapName = "XG NativeMap ++" name = "Brt BTb" />
+            <instrument pc = "57" msb = "0" lsb = "70" mapName = "XG NativeMap ++" name = "Hrd Btb" />
+            <instrument pc = "57" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Trmbone#" />
+            <instrument pc = "57" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Trombone" />
+            <instrument pc = "58" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Tuba" />
+            <instrument pc = "58" msb = "0" lsb = "16" mapName = "XG NativeMap -" name = "Tuba 2" />
+            <instrument pc = "58" msb = "0" lsb = "64" mapName = "XG NativeMap ++" name = "Hrd Tuba" />
+            <instrument pc = "58" msb = "0" lsb = "65" mapName = "XG NativeMap ++" name = "Slw Tuba" />
+            <instrument pc = "58" msb = "0" lsb = "66" mapName = "XG NativeMap ++" name = "Euphon" />
+            <instrument pc = "59" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "MuteTrp#" />
+            <instrument pc = "59" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Backyard" />
+            <instrument pc = "59" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "MuteTrp2" />
+            <instrument pc = "59" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Bkstairs" />
+            <instrument pc = "59" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "MuteTrp#" />
+            <instrument pc = "59" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Mute Trp" />
+            <instrument pc = "60" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Fr.Horn" />
+            <instrument pc = "60" msb = "0" lsb = "6" mapName = "XG NativeMap -" name = "FrHrSolo" />
+            <instrument pc = "60" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "FrHorn 2" />
+            <instrument pc = "60" msb = "0" lsb = "37" mapName = "XG NativeMap -" name = "HornOrch" />
+            <instrument pc = "60" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Syn Horn" />
+            <instrument pc = "60" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "HornOrc2" />
+            <instrument pc = "60" msb = "0" lsb = "66" mapName = "XG NativeMap ++" name = "Brt Horn" />
+            <instrument pc = "60" msb = "0" lsb = "67" mapName = "XG NativeMap ++" name = "Hrd Horn" />
+            <instrument pc = "61" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "BrssSec#" />
+            <instrument pc = "61" msb = "0" lsb = "3" mapName = "XG NativeMap -" name = "StBrsSec" />
+            <instrument pc = "61" msb = "0" lsb = "14" mapName = "XG NativeMap -" name = "SfrzndBr" />
+            <instrument pc = "61" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "MildBrss" />
+            <instrument pc = "61" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Tp &amp; TbSec" />
+            <instrument pc = "61" msb = "0" lsb = "36" mapName = "XG NativeMap -" name = "Tp &amp; TbSc2" />
+            <instrument pc = "61" msb = "0" lsb = "39" mapName = "XG NativeMap -" name = "BrssFall" />
+            <instrument pc = "61" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "BrssSec2" />
+            <instrument pc = "61" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "Hi Brass" />
+            <instrument pc = "61" msb = "0" lsb = "42" mapName = "XG NativeMap -" name = "MelloBrs" />
+            <instrument pc = "61" msb = "0" lsb = "52" mapName = "XG NativeMap" name = "Bund" />
+            <instrument pc = "61" msb = "0" lsb = "53" mapName = "XG NativeMap" name = "FakeHorn" />
+            <instrument pc = "61" msb = "0" lsb = "54" mapName = "XG NativeMap" name = "FkHrnOct" />
+            <instrument pc = "61" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "SprBrass" />
+            <instrument pc = "61" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "SprBrCut" />
+            <instrument pc = "61" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "SprBrBlw" />
+            <instrument pc = "61" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Pwrd Sfz" />
+            <instrument pc = "61" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "PwrSfzBr" />
+            <instrument pc = "61" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Alto &amp; Trp" />
+            <instrument pc = "61" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Tnr &amp; Trp" />
+            <instrument pc = "61" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "BrssBros" />
+            <instrument pc = "61" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "VagueBro" />
+            <instrument pc = "61" msb = "0" lsb = "73" mapName = "XG NativeMap -" name = "BrssSec3" />
+            <instrument pc = "61" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "SfrzdBr2" />
+            <instrument pc = "61" msb = "0" lsb = "75" mapName = "XG NativeMap -" name = "OctBrass" />
+            <instrument pc = "61" msb = "0" lsb = "76" mapName = "XG NativeMap ++" name = "Alps" />
+            <instrument pc = "61" msb = "0" lsb = "77" mapName = "XG NativeMap ++" name = "Symphnc" />
+            <instrument pc = "61" msb = "0" lsb = "78" mapName = "XG NativeMap ++" name = "Phoenix" />
+            <instrument pc = "61" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "BrssSec#" />
+            <instrument pc = "61" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "BrssSect" />
+            <instrument pc = "62" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SynBrss1" />
+            <instrument pc = "62" msb = "0" lsb = "12" mapName = "XG NativeMap -" name = "Quack Br" />
+            <instrument pc = "62" msb = "0" lsb = "20" mapName = "XG NativeMap -" name = "RezSynBr" />
+            <instrument pc = "62" msb = "0" lsb = "24" mapName = "XG NativeMap -" name = "PolyBrss" />
+            <instrument pc = "62" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "SynBrss3" />
+            <instrument pc = "62" msb = "0" lsb = "29" mapName = "XG NativeMap" name = "AnalgSfz" />
+            <instrument pc = "62" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "JumpBrss" />
+            <instrument pc = "62" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "SyBrsSub" />
+            <instrument pc = "62" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "AnVelBr1" />
+            <instrument pc = "62" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "AnaBrss1" />
+            <instrument pc = "62" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "SynthThn" />
+            <instrument pc = "62" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "SyncBrss" />
+            <instrument pc = "62" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "SyncBrSt" />
+            <instrument pc = "62" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "AnaHorn1" />
+            <instrument pc = "62" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "AnaHorn2" />
+            <instrument pc = "62" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "AnHrnOct" />
+            <instrument pc = "62" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "SawBrPwr" />
+            <instrument pc = "63" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SynBrss2" />
+            <instrument pc = "63" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "Soft Brs" />
+            <instrument pc = "63" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "SynBrss4" />
+            <instrument pc = "63" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "ChoirBrs 2" />
+            <instrument pc = "63" msb = "0" lsb = "42" mapName = "XG NativeMap" name = "AnHrnRch" />
+            <instrument pc = "63" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "AnVelBr2" />
+            <instrument pc = "63" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "AnaBrss2" />
+            <instrument pc = "63" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Soft Cut" />
+            <instrument pc = "63" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "AnaHornS" />
+            <instrument pc = "64" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SprnoSax" />
+            <instrument pc = "64" msb = "0" lsb = "8" mapName = "XG NativeMap" name = "VgSornSx" />
+            <instrument pc = "64" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Mdtation" />
+            <instrument pc = "64" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "MdtatnRs" />
+            <instrument pc = "65" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "AltoSax#" />
+            <instrument pc = "65" msb = "0" lsb = "18" mapName = "XG NativeMap" name = "ASax Lgt" />
+            <instrument pc = "65" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "Sax Sect" />
+            <instrument pc = "65" msb = "0" lsb = "43" mapName = "XG NativeMap -" name = "HyprAlt" />
+            <instrument pc = "65" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "ASaxPwrd" />
+            <instrument pc = "65" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "FakeAlto" />
+            <instrument pc = "65" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "FakeAlt+" />
+            <instrument pc = "65" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "FakeAltD" />
+            <instrument pc = "65" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "AltoSax#" />
+            <instrument pc = "65" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "AltoSax" />
+            <instrument pc = "66" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "TenorSax" />
+            <instrument pc = "66" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "BrthTnSx" />
+            <instrument pc = "66" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "SoftTenr" />
+            <instrument pc = "66" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "TnrSax2" />
+            <instrument pc = "66" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "SprTenor" />
+            <instrument pc = "66" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "SprTnr +" />
+            <instrument pc = "66" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "SprTnrSt" />
+            <instrument pc = "66" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Tnr &amp; Alto" />
+            <instrument pc = "67" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Bari.Sax" />
+            <instrument pc = "68" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Oboe#" />
+            <instrument pc = "68" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Heinz" />
+            <instrument pc = "68" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "HeinzUni" />
+            <instrument pc = "68" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Oboe Exp" />
+            <instrument pc = "68" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Oboe #" />
+            <instrument pc = "68" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Oboe" />
+            <instrument pc = "69" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Eng.Horn" />
+            <instrument pc = "70" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Bassoon" />
+            <instrument pc = "71" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Clarinet" />
+            <instrument pc = "71" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Syn &amp; Clr" />
+            <instrument pc = "71" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "BassClar" />
+            <instrument pc = "72" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Piccolo" />
+            <instrument pc = "72" msb = "0" lsb = "96" mapName = "XG NativeMap +" name = "Bang Di" />
+            <instrument pc = "73" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "Flute #" />
+            <instrument pc = "73" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Brthy Fl" />
+            <instrument pc = "73" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Boehm" />
+            <instrument pc = "73" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Boehm Br" />
+            <instrument pc = "73" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Pastoral" />
+            <instrument pc = "73" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Shepherd" />
+            <instrument pc = "73" msb = "0" lsb = "96" mapName = "XG NativeMap +" name = "Qu Di" />
+            <instrument pc = "73" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "Flute #" />
+            <instrument pc = "73" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "Flute" />
+            <instrument pc = "74" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Recorder" />
+            <instrument pc = "74" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Piplith" />
+            <instrument pc = "74" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Home" />
+            <instrument pc = "75" msb = "0" lsb = "0" mapName = "XG NativeMap" name = "PanFlute#" />
+            <instrument pc = "75" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "PanFlute2" />
+            <instrument pc = "75" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Meadow" />
+            <instrument pc = "75" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Kawala" />
+            <instrument pc = "75" msb = "0" lsb = "126" mapName = "XG NativeMap" name = "PanFlut#" />
+            <instrument pc = "75" msb = "0" lsb = "127" mapName = "XG NativeMap -" name = "PanFlute" />
+            <instrument pc = "76" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Bottle" />
+            <instrument pc = "76" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "BottlLgt" />
+            <instrument pc = "77" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Shakhachi" />
+            <instrument pc = "78" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Whistle" />
+            <instrument pc = "78" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Reverie" />
+            <instrument pc = "79" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Ocarina" />
+            <instrument pc = "79" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Opalina" />
+            <instrument pc = "80" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SquareLd" />
+            <instrument pc = "80" msb = "0" lsb = "6" mapName = "XG NativeMap -" name = "SquarLd2" />
+            <instrument pc = "80" msb = "0" lsb = "8" mapName = "XG NativeMap -" name = "LMSquare" />
+            <instrument pc = "80" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "Hollow" />
+            <instrument pc = "80" msb = "0" lsb = "19" mapName = "XG NativeMap -" name = "Shroud" />
+            <instrument pc = "80" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "2 Osc" />
+            <instrument pc = "80" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Mellow" />
+            <instrument pc = "80" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "SoloSine" />
+            <instrument pc = "80" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "SineLead" />
+            <instrument pc = "80" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "Pulse Ld" />
+            <instrument pc = "80" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "SyncLead" />
+            <instrument pc = "80" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "ForceOsc" />
+            <instrument pc = "80" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Accent" />
+            <instrument pc = "80" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "Brick" />
+            <instrument pc = "80" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "Alum" />
+            <instrument pc = "80" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "Query" />
+            <instrument pc = "80" msb = "0" lsb = "74" mapName = "XG NativeMap" name = "FMSlwSxp" />
+            <instrument pc = "80" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "SyncLdDb" />
+            <instrument pc = "80" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "Curse" />
+            <instrument pc = "80" msb = "0" lsb = "77" mapName = "XG NativeMap" name = "OctvBeep" />
+            <instrument pc = "80" msb = "0" lsb = "78" mapName = "XG NativeMap -" name = "Sine Ld2" />
+            <instrument pc = "80" msb = "0" lsb = "79" mapName = "XG NativeMap -" name = "SquarLd3" />
+            <instrument pc = "80" msb = "0" lsb = "80" mapName = "XG NativeMap -" name = "SquarLd4" />
+            <instrument pc = "81" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Saw Ld" />
+            <instrument pc = "81" msb = "0" lsb = "6" mapName = "XG NativeMap -" name = "Saw Ld 2" />
+            <instrument pc = "81" msb = "0" lsb = "8" mapName = "XG NativeMap -" name = "ThickSaw" />
+            <instrument pc = "81" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "Dyna Saw" />
+            <instrument pc = "81" msb = "0" lsb = "19" mapName = "XG NativeMap -" name = "Digi Saw" />
+            <instrument pc = "81" msb = "0" lsb = "20" mapName = "XG NativeMap -" name = "Big Lead" />
+            <instrument pc = "81" msb = "0" lsb = "24" mapName = "XG NativeMap -" name = "HeavySyn" />
+            <instrument pc = "81" msb = "0" lsb = "25" mapName = "XG NativeMap -" name = "WaspySyn" />
+            <instrument pc = "81" msb = "0" lsb = "26" mapName = "XG NativeMap -" name = "Mondo" />
+            <instrument pc = "81" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "RezzySaw" />
+            <instrument pc = "81" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "DoublSaw" />
+            <instrument pc = "81" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Toy Lead" />
+            <instrument pc = "81" msb = "0" lsb = "36" mapName = "XG NativeMap -" name = "Dim Saw" />
+            <instrument pc = "81" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "PulseSaw" />
+            <instrument pc = "81" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "Dr.Lead" />
+            <instrument pc = "81" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "VeloLead" />
+            <instrument pc = "81" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Digger" />
+            <instrument pc = "81" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Dunce" />
+            <instrument pc = "81" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "BrassSaw" />
+            <instrument pc = "81" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "SawRiver" />
+            <instrument pc = "81" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "BrPulsDb" />
+            <instrument pc = "81" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Saw Trp" />
+            <instrument pc = "81" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Hue" />
+            <instrument pc = "81" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "StrghtSw" />
+            <instrument pc = "81" msb = "0" lsb = "72" mapName = "XG NativeMap" name = "StartPuls" />
+            <instrument pc = "81" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "PWMania" />
+            <instrument pc = "81" msb = "0" lsb = "74" mapName = "XG NativeMap" name = "Mod Saw" />
+            <instrument pc = "81" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "Toad" />
+            <instrument pc = "81" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "FatOctav" />
+            <instrument pc = "81" msb = "0" lsb = "77" mapName = "XG NativeMap" name = "Overdose" />
+            <instrument pc = "81" msb = "0" lsb = "78" mapName = "XG NativeMap" name = "PWMDecay" />
+            <instrument pc = "81" msb = "0" lsb = "79" mapName = "XG NativeMap" name = "SawDecay" />
+            <instrument pc = "81" msb = "0" lsb = "80" mapName = "XG NativeMap -" name = "FatSawLd" />
+            <instrument pc = "81" msb = "0" lsb = "81" mapName = "XG NativeMap -" name = "DuckLead" />
+            <instrument pc = "81" msb = "0" lsb = "82" mapName = "XG NativeMap -" name = "BoostSaw" />
+            <instrument pc = "81" msb = "0" lsb = "83" mapName = "XG NativeMap -" name = "Mr.Saw" />
+            <instrument pc = "81" msb = "0" lsb = "84" mapName = "XG NativeMap -" name = "ThinSwLd" />
+            <instrument pc = "81" msb = "0" lsb = "85" mapName = "XG NativeMap -" name = "MouthSaw" />
+            <instrument pc = "81" msb = "0" lsb = "86" mapName = "XG NativeMap -" name = "Dr.Lead2" />
+            <instrument pc = "81" msb = "0" lsb = "87" mapName = "XG NativeMap -" name = "Saw Unis" />
+            <instrument pc = "81" msb = "0" lsb = "88" mapName = "XG NativeMap -" name = "OctSawLd" />
+            <instrument pc = "81" msb = "0" lsb = "89" mapName = "XG NativeMap -" name = "Seq Saw1" />
+            <instrument pc = "81" msb = "0" lsb = "90" mapName = "XG NativeMap -" name = "Seq Saw2" />
+            <instrument pc = "81" msb = "0" lsb = "91" mapName = "XG NativeMap ++" name = "SimplSaw" />
+            <instrument pc = "81" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Seq Ana." />
+            <instrument pc = "82" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "CaliopLd" />
+            <instrument pc = "82" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Novice" />
+            <instrument pc = "82" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Vent Syn" />
+            <instrument pc = "82" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "PureLead" />
+            <instrument pc = "82" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "ElPrimtv" />
+            <instrument pc = "83" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Chiff Ld" />
+            <instrument pc = "83" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "SaltLead" />
+            <instrument pc = "83" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Rubby" />
+            <instrument pc = "83" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "HardSync" />
+            <instrument pc = "84" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "CharanLd" />
+            <instrument pc = "84" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "DistLead" />
+            <instrument pc = "84" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "WireLead" />
+            <instrument pc = "84" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "SynPluck" />
+            <instrument pc = "84" msb = "0" lsb = "67" mapName = "XG NativeMap ++" name = "The Sync" />
+            <instrument pc = "85" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Voice Ld" />
+            <instrument pc = "85" msb = "0" lsb = "24" mapName = "XG NativeMap -" name = "SynthAah" />
+            <instrument pc = "85" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Vox Lead" />
+            <instrument pc = "85" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Br.Lead" />
+            <instrument pc = "85" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Cypher 1" />
+            <instrument pc = "85" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Cypher 2" />
+            <instrument pc = "85" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Cypher 3" />
+            <instrument pc = "85" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "SprCyphr" />
+            <instrument pc = "86" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Fifth Ld" />
+            <instrument pc = "86" msb = "0" lsb = "8" mapName = "XG NativeMap" name = "FifthLdS" />
+            <instrument pc = "86" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Big Five" />
+            <instrument pc = "87" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Bass &amp; Ld" />
+            <instrument pc = "87" msb = "0" lsb = "16" mapName = "XG NativeMap -" name = "Big &amp; Low" />
+            <instrument pc = "87" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Fat &amp; Prky" />
+            <instrument pc = "87" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Soft Wrl" />
+            <instrument pc = "87" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Cant" />
+            <instrument pc = "87" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Mogul" />
+            <instrument pc = "87" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Distance" />
+            <instrument pc = "87" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Sync B &amp; L" />
+            <instrument pc = "87" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "Ba Lead" />
+            <instrument pc = "88" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "NewAgePd" />
+            <instrument pc = "88" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Fantasy" />
+            <instrument pc = "88" msb = "0" lsb = "65" mapName = "XG NativeMap" name = "Libra" />
+            <instrument pc = "88" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Bell Pad" />
+            <instrument pc = "89" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Warm Pad" />
+            <instrument pc = "89" msb = "0" lsb = "16" mapName = "XG NativeMap -" name = "ThickPad" />
+            <instrument pc = "89" msb = "0" lsb = "17" mapName = "XG NativeMap -" name = "Soft Pad" />
+            <instrument pc = "89" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "Sine Pad" />
+            <instrument pc = "89" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Vishnu" />
+            <instrument pc = "89" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Horn Pad" />
+            <instrument pc = "89" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "RotarStr" />
+            <instrument pc = "89" msb = "0" lsb = "66" mapName = "XG NativeMap ++" name = "LightPad" />
+            <instrument pc = "90" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "PolySyPd" />
+            <instrument pc = "90" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "PolyPd80" />
+            <instrument pc = "90" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "ClickPad" />
+            <instrument pc = "90" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Ana.Pad" />
+            <instrument pc = "90" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "SquarPad" />
+            <instrument pc = "90" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "Snow Pad" />
+            <instrument pc = "90" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Pixie" />
+            <instrument pc = "90" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "Pisces" />
+            <instrument pc = "90" msb = "0" lsb = "71" mapName = "XG NativeMap" name = "Spiral" />
+            <instrument pc = "90" msb = "0" lsb = "72" mapName = "XG NativeMap -" name = "PolySPd2" />
+            <instrument pc = "90" msb = "0" lsb = "73" mapName = "XG NativeMap -" name = "PolyPdKg" />
+            <instrument pc = "91" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "ChoirPad" />
+            <instrument pc = "91" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Heaven" />
+            <instrument pc = "91" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Lite Pad" />
+            <instrument pc = "91" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Itopia" />
+            <instrument pc = "91" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "CC Pad" />
+            <instrument pc = "91" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "CosmicPd" />
+            <instrument pc = "91" msb = "0" lsb = "69" mapName = "XG NativeMap ++" name = "Aah Pad" />
+            <instrument pc = "91" msb = "0" lsb = "70" mapName = "XG NativeMap ++" name = "Ooh Pad" />
+            <instrument pc = "91" msb = "0" lsb = "71" mapName = "XG NativeMap ++" name = "Ooh Aah" />
+            <instrument pc = "92" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "BowedPad" />
+            <instrument pc = "92" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Glacier" />
+            <instrument pc = "92" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "GlassPad" />
+            <instrument pc = "92" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "SqrTwang" />
+            <instrument pc = "92" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "SquarPd8" />
+            <instrument pc = "93" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "MetalPad" />
+            <instrument pc = "93" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Tine Pad" />
+            <instrument pc = "93" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Pan Pad" />
+            <instrument pc = "93" msb = "0" lsb = "66" mapName = "XG NativeMap" name = "Queever" />
+            <instrument pc = "94" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Halo Pad" />
+            <instrument pc = "94" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Tiu" />
+            <instrument pc = "94" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Arise" />
+            <instrument pc = "94" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "ChorusPd" />
+            <instrument pc = "95" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SweepPad" />
+            <instrument pc = "95" msb = "0" lsb = "20" mapName = "XG NativeMap -" name = "Shwimmer" />
+            <instrument pc = "95" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "Converge" />
+            <instrument pc = "95" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "PolarPad" />
+            <instrument pc = "95" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Sweepy" />
+            <instrument pc = "95" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Celstial" />
+            <instrument pc = "95" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Monsoon" />
+            <instrument pc = "95" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Io" />
+            <instrument pc = "96" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Rain" />
+            <instrument pc = "96" msb = "0" lsb = "45" mapName = "XG NativeMap -" name = "ClaviPad" />
+            <instrument pc = "96" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "HrmoRain" />
+            <instrument pc = "96" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "AfrcnWnd" />
+            <instrument pc = "96" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Carib" />
+            <instrument pc = "97" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "SundTrk" />
+            <instrument pc = "97" msb = "0" lsb = "27" mapName = "XG NativeMap -" name = "Prologe" />
+            <instrument pc = "97" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Ancestrl" />
+            <instrument pc = "97" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Rave" />
+            <instrument pc = "97" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Fairy" />
+            <instrument pc = "97" msb = "0" lsb = "67" mapName = "XG NativeMap" name = "Harmit" />
+            <instrument pc = "98" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Crystal" />
+            <instrument pc = "98" msb = "0" lsb = "12" mapName = "XG NativeMap -" name = "SynDrCmp" />
+            <instrument pc = "98" msb = "0" lsb = "14" mapName = "XG NativeMap -" name = "Popcorn" />
+            <instrument pc = "98" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "TinyBell" />
+            <instrument pc = "98" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "RndGlock" />
+            <instrument pc = "98" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "GlockChi" />
+            <instrument pc = "98" msb = "0" lsb = "41" mapName = "XG NativeMap -" name = "ClearBel" />
+            <instrument pc = "98" msb = "0" lsb = "42" mapName = "XG NativeMap -" name = "ChorBell" />
+            <instrument pc = "98" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "SynMalet" />
+            <instrument pc = "98" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "SftCryst" />
+            <instrument pc = "98" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "LoudGlok" />
+            <instrument pc = "98" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "ChrstBel" />
+            <instrument pc = "98" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "VibeBell" />
+            <instrument pc = "98" msb = "0" lsb = "69" mapName = "XG NativeMap -" name = "DigiBell" />
+            <instrument pc = "98" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "AirBells" />
+            <instrument pc = "98" msb = "0" lsb = "71" mapName = "XG NativeMap -" name = "BellHarp" />
+            <instrument pc = "98" msb = "0" lsb = "72" mapName = "XG NativeMap -" name = "Gamelmba" />
+            <instrument pc = "98" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "Bounce" />
+            <instrument pc = "98" msb = "0" lsb = "74" mapName = "XG NativeMap -" name = "AnaBell" />
+            <instrument pc = "99" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Atmosphr" />
+            <instrument pc = "99" msb = "0" lsb = "18" mapName = "XG NativeMap -" name = "WarmAtms" />
+            <instrument pc = "99" msb = "0" lsb = "19" mapName = "XG NativeMap -" name = "HollwRls" />
+            <instrument pc = "99" msb = "0" lsb = "40" mapName = "XG NativeMap -" name = "Nylon EP" />
+            <instrument pc = "99" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "NylnHarp" />
+            <instrument pc = "99" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Harp Vox" />
+            <instrument pc = "99" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "AtmosPad" />
+            <instrument pc = "99" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "Planet" />
+            <instrument pc = "99" msb = "0" lsb = "68" mapName = "XG NativeMap" name = "Lyra" />
+            <instrument pc = "99" msb = "0" lsb = "69" mapName = "XG NativeMap" name = "Akasaka" />
+            <instrument pc = "99" msb = "0" lsb = "70" mapName = "XG NativeMap" name = "DgBermda" />
+            <instrument pc = "99" msb = "0" lsb = "71" mapName = "XG NativeMap -" name = "Cloud Pd" />
+            <instrument pc = "99" msb = "0" lsb = "72" mapName = "XG NativeMap -" name = "PulseKey" />
+            <instrument pc = "99" msb = "0" lsb = "73" mapName = "XG NativeMap -" name = "NoisePno" />
+            <instrument pc = "100" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Bright" />
+            <instrument pc = "100" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "FantaBel" />
+            <instrument pc = "100" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "ShinStar" />
+            <instrument pc = "100" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "BritStab" />
+            <instrument pc = "100" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Smokey" />
+            <instrument pc = "101" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Goblins" />
+            <instrument pc = "101" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "GobSynth" />
+            <instrument pc = "101" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Creeper" />
+            <instrument pc = "101" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Ring Pad" />
+            <instrument pc = "101" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "Ritual" />
+            <instrument pc = "101" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "ToHeaven" />
+            <instrument pc = "101" msb = "0" lsb = "69" mapName = "XG NativeMap -" name = "MilkyWay" />
+            <instrument pc = "101" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "Night" />
+            <instrument pc = "101" msb = "0" lsb = "71" mapName = "XG NativeMap -" name = "Glisten" />
+            <instrument pc = "101" msb = "0" lsb = "72" mapName = "XG NativeMap -" name = "Puffy" />
+            <instrument pc = "101" msb = "0" lsb = "73" mapName = "XG NativeMap" name = "Mimicry" />
+            <instrument pc = "101" msb = "0" lsb = "74" mapName = "XG NativeMap" name = "Parasite" />
+            <instrument pc = "101" msb = "0" lsb = "75" mapName = "XG NativeMap" name = "Cicada" />
+            <instrument pc = "101" msb = "0" lsb = "76" mapName = "XG NativeMap" name = "Beacon" />
+            <instrument pc = "101" msb = "0" lsb = "77" mapName = "XG NativeMap ++" name = "GblnTalk" />
+            <instrument pc = "101" msb = "0" lsb = "78" mapName = "XG NativeMap ++" name = "Temple" />
+            <instrument pc = "101" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "BelChoir" />
+            <instrument pc = "101" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Dharma" />
+            <instrument pc = "102" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Echose" />
+            <instrument pc = "102" msb = "0" lsb = "8" mapName = "XG NativeMap -" name = "Echose 2" />
+            <instrument pc = "102" msb = "0" lsb = "14" mapName = "XG NativeMap -" name = "Echo Pan" />
+            <instrument pc = "102" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "EchoBell" />
+            <instrument pc = "102" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Big Pan" />
+            <instrument pc = "102" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "SynPiano" />
+            <instrument pc = "102" msb = "0" lsb = "67" mapName = "XG NativeMap -" name = "Creation" />
+            <instrument pc = "102" msb = "0" lsb = "68" mapName = "XG NativeMap -" name = "StarDust" />
+            <instrument pc = "102" msb = "0" lsb = "69" mapName = "XG NativeMap -" name = "Reso &amp; Pan" />
+            <instrument pc = "102" msb = "0" lsb = "70" mapName = "XG NativeMap -" name = "Ana Echo" />
+            <instrument pc = "103" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Sci-Fi" />
+            <instrument pc = "103" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Starz" />
+            <instrument pc = "103" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Odin" />
+            <instrument pc = "104" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Sitar" />
+            <instrument pc = "104" msb = "0" lsb = "32" mapName = "XG NativeMap -" name = "DetSitar" />
+            <instrument pc = "104" msb = "0" lsb = "35" mapName = "XG NativeMap -" name = "Sitar 2" />
+            <instrument pc = "104" msb = "0" lsb = "40" mapName = "XG NativeMap" name = "Bhuj" />
+            <instrument pc = "104" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Rage Syn" />
+            <instrument pc = "104" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Tambra" />
+            <instrument pc = "104" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Tamboura" />
+            <instrument pc = "105" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Banjo" />
+            <instrument pc = "105" msb = "0" lsb = "28" mapName = "XG NativeMap -" name = "MuteBnjo" />
+            <instrument pc = "105" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "El Banjo" />
+            <instrument pc = "105" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Rabab" />
+            <instrument pc = "105" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Gopichnt" />
+            <instrument pc = "105" msb = "0" lsb = "98" mapName = "XG NativeMap -" name = "Oud" />
+            <instrument pc = "105" msb = "0" lsb = "99" mapName = "XG NativeMap +" name = "Pi Pa" />
+            <instrument pc = "106" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Shamisen" />
+            <instrument pc = "106" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Tsugaru" />
+            <instrument pc = "107" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Koto" />
+            <instrument pc = "107" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "FM Koto" />
+            <instrument pc = "107" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Taisho-k" />
+            <instrument pc = "107" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Kanoon" />
+            <instrument pc = "107" msb = "0" lsb = "98" mapName = "XG NativeMap +" name = "Zheng" />
+            <instrument pc = "108" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Kalimba" />
+            <instrument pc = "108" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "BigKalim" />
+            <instrument pc = "109" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Bagpipe" />
+            <instrument pc = "109" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "Thistle" />
+            <instrument pc = "109" msb = "0" lsb = "96" mapName = "XG NativeMap +" name = "Sheng" />
+            <instrument pc = "110" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Fiddle" />
+            <instrument pc = "110" msb = "0" lsb = "96" mapName = "XG NativeMap +" name = "Er Hu" />
+            <instrument pc = "110" msb = "0" lsb = "97" mapName = "XG NativeMap +" name = "Ban Hu" />
+            <instrument pc = "110" msb = "0" lsb = "98" mapName = "XG NativeMap +" name = "Jing Hu" />
+            <instrument pc = "111" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Shanai" />
+            <instrument pc = "111" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Shanai 2" />
+            <instrument pc = "111" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Pungi" />
+            <instrument pc = "111" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Hichriki" />
+            <instrument pc = "111" msb = "0" lsb = "98" mapName = "XG NativeMap +" name = "Suo Na" />
+            <instrument pc = "112" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "TnklBell" />
+            <instrument pc = "112" msb = "0" lsb = "64" mapName = "XG NativeMap" name = "TcklBell" />
+            <instrument pc = "112" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Bonang" />
+            <instrument pc = "112" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "Altair" />
+            <instrument pc = "112" msb = "0" lsb = "98" mapName = "XG NativeMap -" name = "Gamelan" />
+            <instrument pc = "112" msb = "0" lsb = "99" mapName = "XG NativeMap -" name = "S.Gamlan" />
+            <instrument pc = "112" msb = "0" lsb = "100" mapName = "XG NativeMap -" name = "Rama Cym" />
+            <instrument pc = "112" msb = "0" lsb = "101" mapName = "XG NativeMap -" name = "AsianBel" />
+            <instrument pc = "113" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Agogo" />
+            <instrument pc = "113" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Atrigane" />
+            <instrument pc = "114" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "DteelDrm" />
+            <instrument pc = "114" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Tablas" />
+            <instrument pc = "114" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "GlasPerc" />
+            <instrument pc = "114" msb = "0" lsb = "98" mapName = "XG NativeMap -" name = "ThaiBell" />
+            <instrument pc = "115" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Woodbloc" />
+            <instrument pc = "115" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Castanet" />
+            <instrument pc = "116" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "TaikoDrm" />
+            <instrument pc = "116" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "Gr.Cassa" />
+            <instrument pc = "117" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "MelodTom" />
+            <instrument pc = "117" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Mel Tom2" />
+            <instrument pc = "117" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Real Tom" />
+            <instrument pc = "117" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Rock Tom" />
+            <instrument pc = "117" msb = "0" lsb = "67" mapName = "XG NativeMap ++" name = "Tim'sSet" />
+            <instrument pc = "118" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Syn Drum" />
+            <instrument pc = "118" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Ana Tom" />
+            <instrument pc = "118" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "ElecPerc" />
+            <instrument pc = "118" msb = "0" lsb = "66" mapName = "XG NativeMap -" name = "Syn Perc" />
+            <instrument pc = "119" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "RevCymbl" />
+            <instrument pc = "119" msb = "0" lsb = "64" mapName = "XG NativeMap -" name = "Rev Cym2" />
+            <instrument pc = "119" msb = "0" lsb = "65" mapName = "XG NativeMap -" name = "Rev Cym3" />
+            <instrument pc = "119" msb = "0" lsb = "96" mapName = "XG NativeMap -" name = "RevSnar1" />
+            <instrument pc = "119" msb = "0" lsb = "97" mapName = "XG NativeMap -" name = "RevSnar2" />
+            <instrument pc = "119" msb = "0" lsb = "98" mapName = "XG NativeMap -" name = "RevKick1" />
+            <instrument pc = "119" msb = "0" lsb = "99" mapName = "XG NativeMap -" name = "RevConBD" />
+            <instrument pc = "119" msb = "0" lsb = "100" mapName = "XG NativeMap -" name = "Rev Tom1" />
+            <instrument pc = "119" msb = "0" lsb = "101" mapName = "XG NativeMap -" name = "Rev Tom2" />
+            <instrument pc = "120" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "FretNoiz" />
+            <instrument pc = "121" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "BrthNoiz" />
+            <instrument pc = "122" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Seashore" />
+            <instrument pc = "123" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Tweet" />
+            <instrument pc = "124" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Telphone" />
+            <instrument pc = "125" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Helicptr" />
+            <instrument pc = "126" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Applause" />
+            <instrument pc = "127" msb = "0" lsb = "0" mapName = "XG NativeMap -" name = "Gunshot" />
+
+            <instrument pc = "0" msb = "48" lsb = "0" mapName = "XG NativeEXC" name = "MtdClavi" />
+            <instrument pc = "0" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Beeline" />
+            <instrument pc = "0" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "Rage" />
+            <instrument pc = "0" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "Fuss" />
+            <instrument pc = "0" msb = "48" lsb = "48" mapName = "XG NativeEXC" name = "Reflex" />
+            <instrument pc = "0" msb = "48" lsb = "56" mapName = "XG NativeEXC" name = "Insanity" />
+            <instrument pc = "0" msb = "48" lsb = "64" mapName = "XG NativeEXC" name = "DstnFire" />
+            <instrument pc = "0" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Litning" />
+            <instrument pc = "0" msb = "48" lsb = "80" mapName = "XG NativeEXC" name = "Zipzap" />
+            <instrument pc = "0" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Escape" />
+            <instrument pc = "0" msb = "48" lsb = "96" mapName = "XG NativeEXC" name = "TinKettl" />
+            <instrument pc = "0" msb = "48" lsb = "104" mapName = "XG NativeEXC" name = "Satya" />
+            <instrument pc = "0" msb = "48" lsb = "120" mapName = "XG NativeEXC" name = "Vodou" />
+            <instrument pc = "1" msb = "48" lsb = "0" mapName = "XG NativeEXC" name = "Orimba" />
+            <instrument pc = "1" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "BlineHrd" />
+            <instrument pc = "1" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "TnglCaos" />
+            <instrument pc = "1" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "VanAllen" />
+            <instrument pc = "1" msb = "48" lsb = "48" mapName = "XG NativeEXC" name = "Reflex 2" />
+            <instrument pc = "1" msb = "48" lsb = "56" mapName = "XG NativeEXC" name = "Habakkuk" />
+            <instrument pc = "1" msb = "48" lsb = "64" mapName = "XG NativeEXC" name = "BlowNoiz" />
+            <instrument pc = "1" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Oof" />
+            <instrument pc = "1" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Zigzag" />
+            <instrument pc = "1" msb = "48" lsb = "96" mapName = "XG NativeEXC" name = "K/S Anlg" />
+            <instrument pc = "1" msb = "48" lsb = "104" mapName = "XG NativeEXC" name = "Monasty" />
+            <instrument pc = "2" msb = "48" lsb = "8" mapName = "XG NativeMap" name = "Dwarf" />
+            <instrument pc = "2" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "Incontnc" />
+            <instrument pc = "2" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "Divinity" />
+            <instrument pc = "2" msb = "48" lsb = "48" mapName = "XG NativeEXC" name = "Prcesion" />
+            <instrument pc = "2" msb = "48" lsb = "64" mapName = "XG NativeEXC" name = "Fall" />
+            <instrument pc = "2" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Lust" />
+            <instrument pc = "2" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Scud" />
+            <instrument pc = "2" msb = "48" lsb = "96" mapName = "XG NativeEXC" name = "K/S Humd" />
+            <instrument pc = "2" msb = "48" lsb = "104" mapName = "XG NativeEXC" name = "Vinaya" />
+            <instrument pc = "3" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Byte" />
+            <instrument pc = "3" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "IncntClk" />
+            <instrument pc = "3" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "Paranoia" />
+            <instrument pc = "3" msb = "48" lsb = "48" mapName = "XG NativeEXC" name = "RndmWalk" />
+            <instrument pc = "3" msb = "48" lsb = "64" mapName = "XG NativeEXC" name = "Chaff" />
+            <instrument pc = "3" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Lust St" />
+            <instrument pc = "3" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Hinayana" />
+            <instrument pc = "3" msb = "48" lsb = "96" mapName = "XG NativeEXC" name = "K/S Slap" />
+            <instrument pc = "3" msb = "48" lsb = "104" mapName = "XG NativeEXC" name = "Prana" />
+            <instrument pc = "4" msb = "48" lsb = "0" mapName = "XG NativeEXC" name = "Ping" />
+            <instrument pc = "4" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "CheapOsc" />
+            <instrument pc = "4" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "Vexation" />
+            <instrument pc = "4" msb = "48" lsb = "48" mapName = "XG NativeEXC" name = "RandmRun" />
+            <instrument pc = "4" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "SoftHit+" />
+            <instrument pc = "4" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Boot" />
+            <instrument pc = "4" msb = "48" lsb = "96" mapName = "XG NativeEXC" name = "Rvr/Crsh" />
+            <instrument pc = "4" msb = "48" lsb = "104" mapName = "XG NativeEXC" name = "Delight" />
+            <instrument pc = "5" msb = "48" lsb = "0" mapName = "XG NativeEXC" name = "NastyCut" />
+            <instrument pc = "5" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "CheapOc+" />
+            <instrument pc = "5" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "CalcOrg1" />
+            <instrument pc = "5" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Cough +" />
+            <instrument pc = "5" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Anathema" />
+            <instrument pc = "5" msb = "48" lsb = "104" mapName = "XG NativeEXC" name = "Puja" />
+            <instrument pc = "6" msb = "48" lsb = "0" mapName = "XG NativeEXC" name = "NstyCtSt" />
+            <instrument pc = "6" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "NstOrSpl" />
+            <instrument pc = "6" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "CalcOrg2" />
+            <instrument pc = "6" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Ruin" />
+            <instrument pc = "6" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Germ 1" />
+            <instrument pc = "6" msb = "48" lsb = "104" mapName = "XG NativeEXC" name = "Bent Tom" />
+            <instrument pc = "7" msb = "48" lsb = "0" mapName = "XG NativeEXC" name = "Xe" />
+            <instrument pc = "7" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "SprClick" />
+            <instrument pc = "7" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "CalcOrg3" />
+            <instrument pc = "7" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Ruin St" />
+            <instrument pc = "7" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Germ 2" />
+            <instrument pc = "8" msb = "48" lsb = "0" mapName = "XG NativeEXC" name = "OrganHit" />
+            <instrument pc = "8" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "Boomout" />
+            <instrument pc = "8" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "ChoCalcO" />
+            <instrument pc = "8" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Vein +" />
+            <instrument pc = "8" msb = "48" lsb = "88" mapName = "XG NativeEXC" name = "Malfnctn" />
+            <instrument pc = "9" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "OrgnHit+" />
+            <instrument pc = "9" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "ChoirSpl" />
+            <instrument pc = "9" msb = "48" lsb = "24" mapName = "XG NativeEXC" name = "Sodium" />
+            <instrument pc = "9" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Universe" />
+            <instrument pc = "10" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Soft Hit" />
+            <instrument pc = "10" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "Veld" />
+            <instrument pc = "10" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "UnvrsSwp" />
+            <instrument pc = "11" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Vein" />
+            <instrument pc = "11" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "VaporVox" />
+            <instrument pc = "11" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Xe +" />
+            <instrument pc = "12" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Packet" />
+            <instrument pc = "12" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "VoxShoot" />
+            <instrument pc = "12" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Daze" />
+            <instrument pc = "13" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Jolly" />
+            <instrument pc = "13" msb = "48" lsb = "16" mapName = "XG NativeEXC" name = "SemiacOr" />
+            <instrument pc = "13" msb = "72" lsb = "48" mapName = "XG NativeEXC" name = "Refusal" />
+            <instrument pc = "14" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Jolly +" />
+            <instrument pc = "14" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Refusal+" />
+            <instrument pc = "15" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Envy" />
+            <instrument pc = "15" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Lie" />
+            <instrument pc = "16" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "EnvyShrt" />
+            <instrument pc = "16" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Malice" />
+            <instrument pc = "17" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Cough" />
+            <instrument pc = "17" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "Doubt" />
+            <instrument pc = "18" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Remark" />
+            <instrument pc = "18" msb = "48" lsb = "72" mapName = "XG NativeEXC" name = "DoubtDbl" />
+            <instrument pc = "19" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Potala" />
+            <instrument pc = "20" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Fury" />
+            <instrument pc = "21" msb = "48" lsb = "8" mapName = "XG NativeEXC" name = "Glocken+" />
+
+            <instrument pc = "0" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "CuttngNz" />
+            <instrument pc = "1" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "CttngNz2" />
+            <instrument pc = "2" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "DstCutNz" />
+            <instrument pc = "3" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Str Slap" />
+            <instrument pc = "4" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "B.Slide" />
+            <instrument pc = "5" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "P.Scrape" />
+            <instrument pc = "16" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Fl.KClik" />
+            <instrument pc = "32" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Shower" />
+            <instrument pc = "33" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Thunder" />
+            <instrument pc = "34" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Wind" />
+            <instrument pc = "35" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Stream" />
+            <instrument pc = "36" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Bubble" />
+            <instrument pc = "37" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Feed" />
+            <instrument pc = "38" msb = "64" lsb = "0" mapName = "XG NativeSFX" name = "Cave" />
+            <instrument pc = "48" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Dog" />
+            <instrument pc = "49" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Horse" />
+            <instrument pc = "50" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Tweet 2" />
+            <instrument pc = "51" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Kitty" />
+            <instrument pc = "52" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Growl" />
+            <instrument pc = "53" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Haunted" />
+            <instrument pc = "54" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Ghost" />
+            <instrument pc = "55" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Maou" />
+            <instrument pc = "56" msb = "64" lsb = "0" mapName = "XG NativeSFX" name = "Insects" />
+            <instrument pc = "57" msb = "64" lsb = "0" mapName = "XG NativeSFX" name = "Bacteria" />
+            <instrument pc = "64" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "PhonCall" />
+            <instrument pc = "65" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "DoorSqek" />
+            <instrument pc = "66" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "DoorSqek" />
+            <instrument pc = "67" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "ScratchC" />
+            <instrument pc = "68" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "ScratchS" />
+            <instrument pc = "69" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "WindChim" />
+            <instrument pc = "70" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Telphon2" />
+            <instrument pc = "71" msb = "64" lsb = "0" mapName = "XG NativeSFX ++" name = "AnthrScr" />
+            <instrument pc = "72" msb = "64" lsb = "0" mapName = "XG NativeSFX ++" name = "TurnTabl" />
+            <instrument pc = "80" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "CarEIgnt" />
+            <instrument pc = "81" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "CarTSqel" />
+            <instrument pc = "82" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Car Pass" />
+            <instrument pc = "83" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "CarCrash" />
+            <instrument pc = "84" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Siren" />
+            <instrument pc = "85" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Train" />
+            <instrument pc = "86" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "JetPlane" />
+            <instrument pc = "87" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Starship" />
+            <instrument pc = "88" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Burst" />
+            <instrument pc = "89" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Coaster" />
+            <instrument pc = "90" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Submarin" />
+            <instrument pc = "91" msb = "64" lsb = "0" mapName = "XG NativeSFX" name = "Cnectvty" />
+            <instrument pc = "92" msb = "64" lsb = "0" mapName = "XG NativeSFX" name = "Mystery" />
+            <instrument pc = "93" msb = "64" lsb = "0" mapName = "XG NativeSFX ++" name = "Charging" />
+            <instrument pc = "96" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Laugh" />
+            <instrument pc = "97" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Scream" />
+            <instrument pc = "98" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Punch" />
+            <instrument pc = "99" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Heart" />
+            <instrument pc = "100" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Footstep" />
+            <instrument pc = "101" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Applaus2" />
+            <instrument pc = "112" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "MchinGun" />
+            <instrument pc = "113" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "LaserGun" />
+            <instrument pc = "114" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Xplosion" />
+            <instrument pc = "115" msb = "64" lsb = "0" mapName = "XG NativeSFX -" name = "Firework" />
+            <instrument pc = "116" msb = "64" lsb = "0" mapName = "XG NativeSFX" name = "Fireball" />
+
+            <instrument pc = "0" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice001" />
+            <instrument pc = "0" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice129" />
+            <instrument pc = "1" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice002" />
+            <instrument pc = "1" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice130" />
+            <instrument pc = "2" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice003" />
+            <instrument pc = "2" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice131" />
+            <instrument pc = "3" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice004" />
+            <instrument pc = "3" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice132" />
+            <instrument pc = "4" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice005" />
+            <instrument pc = "4" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice133" />
+            <instrument pc = "5" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice006" />
+            <instrument pc = "5" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice134" />
+            <instrument pc = "6" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice007" />
+            <instrument pc = "6" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice135" />
+            <instrument pc = "7" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice008" />
+            <instrument pc = "7" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice136" />
+            <instrument pc = "8" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice009" />
+            <instrument pc = "8" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice137" />
+            <instrument pc = "9" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice010" />
+            <instrument pc = "9" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice138" />
+            <instrument pc = "10" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice011" />
+            <instrument pc = "10" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice139" />
+            <instrument pc = "11" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice012" />
+            <instrument pc = "11" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice140" />
+            <instrument pc = "12" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice013" />
+            <instrument pc = "12" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice141" />
+            <instrument pc = "13" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice014" />
+            <instrument pc = "13" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice142" />
+            <instrument pc = "14" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice015" />
+            <instrument pc = "14" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice143" />
+            <instrument pc = "15" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice016" />
+            <instrument pc = "15" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice144" />
+            <instrument pc = "16" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice017" />
+            <instrument pc = "16" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice145" />
+            <instrument pc = "17" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice018" />
+            <instrument pc = "17" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice146" />
+            <instrument pc = "18" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice019" />
+            <instrument pc = "18" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice147" />
+            <instrument pc = "19" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice020" />
+            <instrument pc = "19" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice148" />
+            <instrument pc = "20" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice021" />
+            <instrument pc = "20" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice149" />
+            <instrument pc = "21" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice022" />
+            <instrument pc = "21" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice150" />
+            <instrument pc = "22" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice023" />
+            <instrument pc = "22" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice151" />
+            <instrument pc = "23" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice024" />
+            <instrument pc = "23" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice152" />
+            <instrument pc = "24" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice025" />
+            <instrument pc = "24" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice153" />
+            <instrument pc = "25" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice026" />
+            <instrument pc = "25" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice154" />
+            <instrument pc = "26" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice027" />
+            <instrument pc = "26" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice155" />
+            <instrument pc = "27" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice028" />
+            <instrument pc = "27" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice156" />
+            <instrument pc = "28" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice029" />
+            <instrument pc = "28" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice157" />
+            <instrument pc = "29" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice030" />
+            <instrument pc = "29" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice158" />
+            <instrument pc = "30" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice031" />
+            <instrument pc = "30" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice159" />
+            <instrument pc = "31" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice032" />
+            <instrument pc = "31" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice160" />
+            <instrument pc = "32" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice033" />
+            <instrument pc = "32" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice161" />
+            <instrument pc = "33" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice034" />
+            <instrument pc = "33" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice162" />
+            <instrument pc = "34" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice035" />
+            <instrument pc = "34" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice163" />
+            <instrument pc = "35" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice036" />
+            <instrument pc = "35" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice164" />
+
+            <instrument pc = "36" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice037" />
+            <instrument pc = "36" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice165" />
+            <instrument pc = "37" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice038" />
+            <instrument pc = "37" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice166" />
+            <instrument pc = "38" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice039" />
+            <instrument pc = "38" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice167" />
+            <instrument pc = "39" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice040" />
+            <instrument pc = "39" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice168" />
+            <instrument pc = "40" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice041" />
+            <instrument pc = "40" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice169" />
+            <instrument pc = "41" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice042" />
+            <instrument pc = "41" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice170" />
+            <instrument pc = "42" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice043" />
+            <instrument pc = "42" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice171" />
+            <instrument pc = "43" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice044" />
+            <instrument pc = "43" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice172" />
+            <instrument pc = "44" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice045" />
+            <instrument pc = "44" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice173" />
+            <instrument pc = "45" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice046" />
+            <instrument pc = "45" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice174" />
+            <instrument pc = "46" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice047" />
+            <instrument pc = "46" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice175" />
+            <instrument pc = "47" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice048" />
+            <instrument pc = "47" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice176" />
+            <instrument pc = "48" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice049" />
+            <instrument pc = "48" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice177" />
+            <instrument pc = "49" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice050" />
+            <instrument pc = "49" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice178" />
+            <instrument pc = "50" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice051" />
+            <instrument pc = "50" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice179" />
+            <instrument pc = "51" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice052" />
+            <instrument pc = "51" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice180" />
+            <instrument pc = "52" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice053" />
+            <instrument pc = "52" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice181" />
+            <instrument pc = "53" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice054" />
+            <instrument pc = "53" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice182" />
+            <instrument pc = "54" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice055" />
+            <instrument pc = "54" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice183" />
+            <instrument pc = "55" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice056" />
+            <instrument pc = "55" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice184" />
+            <instrument pc = "56" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice057" />
+            <instrument pc = "56" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice185" />
+            <instrument pc = "57" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice058" />
+            <instrument pc = "57" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice186" />
+            <instrument pc = "58" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice059" />
+            <instrument pc = "58" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice187" />
+            <instrument pc = "59" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice060" />
+            <instrument pc = "59" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice188" />
+            <instrument pc = "60" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice061" />
+            <instrument pc = "60" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice189" />
+            <instrument pc = "61" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice062" />
+            <instrument pc = "61" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice190" />
+            <instrument pc = "62" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice063" />
+            <instrument pc = "62" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice191" />
+            <instrument pc = "63" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice064" />
+            <instrument pc = "63" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice192" />
+            <instrument pc = "64" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice065" />
+            <instrument pc = "64" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice193" />
+            <instrument pc = "65" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice066" />
+            <instrument pc = "65" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice194" />
+            <instrument pc = "66" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice067" />
+            <instrument pc = "66" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice195" />
+            <instrument pc = "67" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice068" />
+            <instrument pc = "67" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice196" />
+            <instrument pc = "68" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice069" />
+            <instrument pc = "68" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice197" />
+            <instrument pc = "69" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice070" />
+            <instrument pc = "69" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice198" />
+            <instrument pc = "70" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice071" />
+            <instrument pc = "70" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice199" />
+            <instrument pc = "71" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice072" />
+            <instrument pc = "71" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice200" />
+            <instrument pc = "72" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice073" />
+            <instrument pc = "72" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice201" />
+            <instrument pc = "73" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice074" />
+            <instrument pc = "73" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice202" />
+            <instrument pc = "74" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice075" />
+            <instrument pc = "74" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice203" />
+            <instrument pc = "75" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice076" />
+            <instrument pc = "75" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice204" />
+            <instrument pc = "76" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice077" />
+            <instrument pc = "76" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice205" />
+            <instrument pc = "77" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice078" />
+            <instrument pc = "77" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice206" />
+            <instrument pc = "78" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice079" />
+            <instrument pc = "78" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice207" />
+            <instrument pc = "79" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice080" />
+            <instrument pc = "79" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice208" />
+            <instrument pc = "80" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice081" />
+            <instrument pc = "80" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice209" />
+            <instrument pc = "81" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice082" />
+            <instrument pc = "81" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice210" />
+            <instrument pc = "82" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice083" />
+            <instrument pc = "82" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice211" />
+            <instrument pc = "83" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice084" />
+            <instrument pc = "83" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice212" />
+            <instrument pc = "84" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice085" />
+            <instrument pc = "84" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice213" />
+            <instrument pc = "85" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice086" />
+            <instrument pc = "85" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice214" />
+            <instrument pc = "86" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice087" />
+            <instrument pc = "86" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice215" />
+            <instrument pc = "87" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice088" />
+            <instrument pc = "87" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice216" />
+            <instrument pc = "88" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice089" />
+            <instrument pc = "88" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice217" />
+            <instrument pc = "89" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice090" />
+            <instrument pc = "89" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice218" />
+            <instrument pc = "90" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice091" />
+            <instrument pc = "90" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice219" />
+            <instrument pc = "91" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice092" />
+            <instrument pc = "91" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice220" />
+            <instrument pc = "92" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice093" />
+            <instrument pc = "92" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice221" />
+            <instrument pc = "93" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice094" />
+            <instrument pc = "93" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice222" />
+            <instrument pc = "94" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice095" />
+            <instrument pc = "94" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice223" />
+            <instrument pc = "95" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice096" />
+            <instrument pc = "95" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice224" />
+            <instrument pc = "96" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice097" />
+            <instrument pc = "96" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice225" />
+            <instrument pc = "97" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice098" />
+            <instrument pc = "97" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice226" />
+            <instrument pc = "98" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice099" />
+            <instrument pc = "98" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice227" />
+            <instrument pc = "99" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice100" />
+            <instrument pc = "99" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice228" />
+            <instrument pc = "100" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice101" />
+            <instrument pc = "100" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice229" />
+            <instrument pc = "101" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice102" />
+            <instrument pc = "101" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice230" />
+            <instrument pc = "102" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice103" />
+            <instrument pc = "102" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice231" />
+            <instrument pc = "103" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice104" />
+            <instrument pc = "103" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice232" />
+            <instrument pc = "104" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice105" />
+            <instrument pc = "104" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice233" />
+            <instrument pc = "105" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice106" />
+            <instrument pc = "105" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice234" />
+            <instrument pc = "106" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice107" />
+            <instrument pc = "106" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice235" />
+            <instrument pc = "107" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice108" />
+            <instrument pc = "107" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice236" />
+            <instrument pc = "108" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice109" />
+            <instrument pc = "108" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice237" />
+            <instrument pc = "109" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice110" />
+            <instrument pc = "109" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice238" />
+            <instrument pc = "110" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice111" />
+            <instrument pc = "110" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice239" />
+            <instrument pc = "111" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice112" />
+            <instrument pc = "111" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice240" />
+            <instrument pc = "112" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice113" />
+            <instrument pc = "112" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice241" />
+            <instrument pc = "113" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice114" />
+            <instrument pc = "113" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice242" />
+            <instrument pc = "114" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice115" />
+            <instrument pc = "114" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice243" />
+            <instrument pc = "115" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice116" />
+            <instrument pc = "115" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice244" />
+            <instrument pc = "116" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice117" />
+            <instrument pc = "116" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice245" />
+            <instrument pc = "117" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice118" />
+            <instrument pc = "117" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice246" />
+            <instrument pc = "118" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice119" />
+            <instrument pc = "118" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice247" />
+            <instrument pc = "119" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice120" />
+            <instrument pc = "119" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice248" />
+            <instrument pc = "120" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice121" />
+            <instrument pc = "120" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice249" />
+            <instrument pc = "121" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice122" />
+            <instrument pc = "121" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice250" />
+            <instrument pc = "122" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice123" />
+            <instrument pc = "122" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice251" />
+            <instrument pc = "123" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice124" />
+            <instrument pc = "123" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice252" />
+            <instrument pc = "124" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice125" />
+            <instrument pc = "124" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice253" />
+            <instrument pc = "125" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice126" />
+            <instrument pc = "125" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice254" />
+            <instrument pc = "126" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice127" />
+            <instrument pc = "126" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice255" />
+            <instrument pc = "127" msb = "16" lsb = "0" mapName = "MU2000 Sampling" name = "Voice128" />
+            <instrument pc = "127" msb = "16" lsb = "1" mapName = "MU2000 Sampling" name = "Voice256" />
+        </map>
+
+        <!-- drum -->
+        <map type = "drum">
+            <instrument pc = "0" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "StandKit" />
+            <instrument pc = "1" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "StandKit2" />
+            <instrument pc = "2" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "Dry Kit" />
+            <instrument pc = "3" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "BriteKit" />
+            <instrument pc = "4" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "Skim Kit" />
+            <instrument pc = "5" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "Slim Kit" />
+            <instrument pc = "6" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "RogueKit" />
+            <instrument pc = "7" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "Hob Kit" />
+            <instrument pc = "8" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "RoomKit" />
+            <instrument pc = "9" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "DarkRKit" />
+            <instrument pc = "10" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "11" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "12" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "13" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "14" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "15" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "16" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "Rock Kit" />
+            <instrument pc = "17" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "RockKit2" />
+            <instrument pc = "18" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "19" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "20" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "21" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "22" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "23" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "24" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "ElctrKit" />
+            <instrument pc = "25" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "AnalgKit" />
+            <instrument pc = "26" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "AnagKit2" />
+            <instrument pc = "27" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "DanceKit" />
+            <instrument pc = "28" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "HipHpKit" />
+            <instrument pc = "29" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "JunglKit" />
+            <instrument pc = "30" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "ApogeeKt" />
+            <instrument pc = "31" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "PergeeKt" />
+            <instrument pc = "32" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "Jazz Kit" />
+            <instrument pc = "33" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "JazzKit2" />
+            <instrument pc = "34" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "BrushKit" />
+            <instrument pc = "35" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "BrshKit2" />
+            <instrument pc = "36" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "37" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "38" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "39" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "40" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "41" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "42" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "43" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "44" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "45" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "46" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "47" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "48" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "SymphKit" />
+            <instrument pc = "49" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "50" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "51" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "52" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "53" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "54" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "55" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "56" msb = "127" lsb = "0" mapName = "XG NativeDrum ++" name = "Ntrl Kit" />
+            <instrument pc = "57" msb = "127" lsb = "0" mapName = "XG NativeDrum ++" name = "NtFunkKt" />
+            <instrument pc = "58" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "59" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "60" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "61" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "62" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "63" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "64" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "TrampKit" />
+            <instrument pc = "65" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "AmberKit" />
+            <instrument pc = "66" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "CoffinKt" />
+            <instrument pc = "67" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "68" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "69" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "70" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "71" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "72" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "73" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "74" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "75" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "76" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "77" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "78" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "79" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "80" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "81" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "82" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "83" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "84" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "85" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "86" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "87" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "88" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "89" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "90" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "91" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "92" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "93" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "94" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "95" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "96" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "97" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "98" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "99" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "100" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "101" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "102" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "103" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "104" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "105" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "106" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "107" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "108" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "109" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "110" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "111" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "112" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "113" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "114" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "115" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "116" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "117" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "118" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "119" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "120" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "121" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "122" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "123" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "124" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "125" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "----" />
+            <instrument pc = "126" msb = "127" lsb = "0" mapName = "XG NativeDrum" name = "StndKit#" />
+            <instrument pc = "127" msb = "127" lsb = "0" mapName = "XG NativeDrum -" name = "StandKit" />
+
+            <instrument pc = "0" msb = "126" lsb = "0" mapName = "XG NativeDrum -" name = "SFX Kit1" />
+            <instrument pc = "1" msb = "126" lsb = "0" mapName = "XG NativeDrum -" name = "SFX Kit2" />
+            <instrument pc = "16" msb = "126" lsb = "0" mapName = "XG NativeDrum" name = "Techno Kit K/S" />
+            <instrument pc = "17" msb = "126" lsb = "0" mapName = "XG NativeDrum" name = "Techno Kit Hi" />
+            <instrument pc = "18" msb = "126" lsb = "0" mapName = "XG NativeDrum" name = "Techno Kit Lo" />
+            <instrument pc = "32" msb = "126" lsb = "0" mapName = "XG NativeDrum" name = "Sakura Kit" />
+            <instrument pc = "33" msb = "126" lsb = "0" mapName = "XG NativeDrum" name = "Small Latin Kit" />
+            <instrument pc = "34" msb = "126" lsb = "0" mapName = "XG NativeDrum +" name = "China Kit" />
+
+            <instrument pc = "112" msb = "126" lsb = "0" mapName = "MU2000 SamplDrum" name = "Kit01" />
+            <instrument pc = "113" msb = "126" lsb = "0" mapName = "MU2000 SamplDrum" name = "Kit02" />
+            <instrument pc = "114" msb = "126" lsb = "0" mapName = "MU2000 SamplDrum" name = "Kit03" />
+            <instrument pc = "115" msb = "126" lsb = "0" mapName = "MU2000 SamplDrum" name = "Kit04" />
+        </map>
+
+    </instruments>
+
+</deviceinfo>

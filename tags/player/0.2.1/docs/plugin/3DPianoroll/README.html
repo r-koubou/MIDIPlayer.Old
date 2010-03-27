@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=Shift_JIS" http-equiv="content-type">
+  <title>README</title>
+
+  
+  
+  <link rel="stylesheet" href="html/README.css" type="text/css">
+
+</head><body>
+<div class="contents">
+<h1>3D ピアノロールレンダラー - version 0.1.x</h1>
+<h3>Author</h3>
+<div style="margin-left: 40px;">rz<br>
+</div>
+<h3>Web</h3>
+<div style="margin-left: 40px;"><a href="http://sourceforge.jp/projects/midiplayer/" target="_blank">http://sourceforge.jp/projects/midiplayer/</a><br>
+</div>
+<span style="font-weight: bold;"><br>
+<br>
+<img style="width: 528px; height: 444px;" alt="スクリーンショット" src="html/screenshot.png"><br>
+</span>
+<h2>目次</h2>
+<ul>
+  <li><a href="#%8AT%97v">概要</a></li>
+  <li><a href="#%93%AE%8D%EC%8A%C2%8B%AB">動作環境</a></li>
+  <li><a href="#%83s%83A%83m%83%8D%81%5B%83%8B%91S%91%CC%82%CC%95%5C%8E%A6%88%CA%92u%81A%89%F1%93%5D%82%C8%82%C7%95%5C%8E%A6%82%C9%8A%D6%82%B7%82%E9%91%80%8D%EC">ピアノロール全体の表示位置、回転など表示に関する操作</a></li>
+  <li><a href="#%82%BB%82%CC%91%BC%8D%D7%82%A9%82%A2%90%DD%92%E8%82%F0%8Ds%82%A4%8F%EA%8D%87">その他細かい設定を行う場合</a></li>
+  <li><a href="#%90%DD%92%E8%83t%83%40%83C%83%8B%82%F0%8C%EB%82%C1%82%C4%8F%C1%82%B5%82%C4%82%B5%82%DC%82%C1%82%BD%92%BC%90%DA%95%D2%8FW%82%B5%82%BD%82%E7%93%AE%82%A9%82%C8%82%AD%82%C8%82%C1%82%BD%8F%EA%8D%87">設定ファイルを誤って消してしまった/直接編集したら動かなくなった場合<br>
+    </a></li>
+  <li><a href="#%97%9A%97%F0">履歴</a></li>
+</ul>
+<h2><a name="概要"></a>概要</h2>
+
+プレーヤー同梱のレンダラーです。<br>
+3D によるピアノロールレンダリングを行います。<br>
+<br>
+マウス操作などでピアノロール表示位置の変更や、表示位置のセーブ・ロードが可能です。<br>
+<br>
+ピアノロールは各 MIDI チャンネル毎に表示位置（高さ）を変えています。<br>
+ch1(低め)→→→ch(高め)<br>
+これにより、ch間のユニゾンなど同じノートナンバー発音でも角度を変えればそれらを見ることが可能です。<br>
+
+<h2><a name="動作環境"></a>動作環境<br>
+</h2>
+現状、若干 CPU 処理能力に依存している部分があり、<br>
+デュアルコア以上のCPU を推奨します。
+シングルコアの CPU はあまり推奨しません。<br>
+（特に、MIDIアニメ・連弾系など大量のMIDIノートを出力するデータを再生する場合はよりマシンパワーを要求されます・・・）<br>
+<br>
+作者は下記環境で動作確認を行っております。<br>
+OS : Windows7 (x64)<br>
+CPU : Intel Core2 Quad Q9450 2.66Ghz<br>
+VGA : NVIDIA GeForce 8400 GS<br>
+<span style="font-weight: bold;"></span>
+<h2><a name="ピアノロール全体の表示位置、回転など表示に関する操作"></a>ピアノロール全体の表示位置、回転など表示に関する操作</h2>
+<h3>移動</h3>
+<br>
+<table style="text-align: left; width: 732px; height: 106px;" border="1" cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255); text-align: center;">方
+向(軸)<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255); text-align: center;">マ
+ウス操作での移動<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255); text-align: center;">キー
+ボード操作での移動<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">左右(X)<br>
+      </td>
+      <td style="vertical-align: top;">マウス右ボタンを押したまま左右方向にドラッグ<br>
+      </td>
+      <td style="vertical-align: top;">↑↓<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">上下(Y)<br>
+      </td>
+      <td style="vertical-align: top;">マウス右ボタンを押したまま上下方向にドラッグ</td>
+      <td style="vertical-align: top;">←→<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">前後(Z)<br>
+      </td>
+      <td style="vertical-align: top;">マウスホール回転<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h3>回転</h3>
+<br>
+<table style="text-align: left; width: 732px; height: 106px;" border="1" cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255); text-align: center;">方
+向(軸)<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255); text-align: center;">マ
+ウス操作での移動<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255); text-align: center;">キー
+ボード操作での移動<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">左右(Y)<br>
+      </td>
+      <td style="vertical-align: top;">Ctrl キー + マウス左ボタンを押したまま左右方向にドラッグ<br>
+      </td>
+      <td style="vertical-align: top;">Ctrl キー +↑↓<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">上下(X)<br>
+      </td>
+      <td style="vertical-align: top;">Shift キー + マウス左ボタンを押したまま上下方向にドラッグ</td>
+      <td style="vertical-align: top;">Shift キー +↑↓ </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">前後(Z)<br>
+      </td>
+      <td style="vertical-align: top;">Alt キー + マウス左ボタンを押したまま左右方向にドラッグ </td>
+      <td style="vertical-align: top;">Alt キー +↑↓ </td>
+    </tr>
+  </tbody>
+</table>
+<h3>位置情報のセーブ、ロード</h3>
+表示位置の情報を保存、読み込みが可能です。これは、このレンダラーを終了するか、アプリケーション本体を終了する時、ファイルに保存されます。<br>
+保存可能な数は８個です。デフォルトで各種パターンが登録されています。<br>
+<br>
+<h4>ロード</h4>
+<div style="margin-left: 40px;">キーボードの「１」～「８」<br>
+</div>
+<h4>セーブ</h4>
+<div style="margin-left: 40px;"><span style="font-weight: bold;">Shiftキー</span>
++ キーボードの「１」～「８」</div>
+<p></p>
+<br>
+<h3>位置情報のリセット</h3>
+ピアノロール位置を見失ってしまい、移動・回転が思うように行えなくなった場合はキーボードの「D」キーを押してください。<br>
+デフォルト位置に戻します。<br>
+
+<h3>位置情報などの表示</h3>
+<br>
+キーボードの「C」キーで表示切替が可能です。デフォルトでは表示は OFF です。<br>
+ピアノロール表示位置の微調整などにお使いください。<br>
+ON の時、左下にテキストが表示されます。<br>
+<br>
+<img style="width: 528px; height: 444px;" alt="表示情報" src="html/viewinfo.png"><br>
+<br>
+<table style="text-align: left; width: 565px; height: 287px;" border="1" cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td>notes<br>
+      </td>
+      <td style="vertical-align: top;">レンダリング中の MIDI ノート数。現状 1024
+個を上限にしています。<br>
+ノートイベントの勢いがそれを上回る場合、一番最後にレンダリングを開始したノートを消し、ノートのレンダリング用のポリゴンに再割り当てを行います。<br>
+      </td>
+    </tr>
+    <tr>
+      <td>tx<br>
+      </td>
+      <td style="vertical-align: top;">X位置（座標系としては、いわゆる視点座標系と呼ばれる物となります）<br>
+      </td>
+    </tr>
+    <tr>
+      <td>ty<br>
+      </td>
+      <td style="vertical-align: top;">Y位置（座標系としては、いわゆる視点座標系と呼ばれる物となります）</td>
+    </tr>
+    <tr>
+      <td>tz<br>
+      </td>
+      <td style="vertical-align: top;">Z位置（座標系としては、いわゆる視点座標系と呼ばれる物となります）</td>
+    </tr>
+    <tr>
+      <td>rx<br>
+      </td>
+      <td style="vertical-align: top;">X軸回転（単位は度です）<br>
+      </td>
+    </tr>
+    <tr>
+      <td>ry<br>
+      </td>
+      <td style="vertical-align: top;">Y軸回転（単位は度です）</td>
+    </tr>
+    <tr>
+      <td>rz<br>
+      </td>
+      <td style="vertical-align: top;">Z軸回転（単位は度です）</td>
+    </tr>
+  </tbody>
+</table><br>
+<h3>グリッド表示</h3>
+
+キーボードの「G」キーで表示切替が可能です。デフォルトでは表示は OFF です。<br>
+
+ピアノロール表示位置の微調整などにお使いください。<br>
+
+ON の時、グリッド線が表示されます。<br>
+<br>
+<img style="width: 528px; height: 444px;" alt="グリッド表示" src="html/viewgrid.png"><br>
+
+<h2><a name="その他細かい設定を行う場合"></a>その他細かい設定を行う場合</h2>
+以下の場所に設定ファイルを置いていますので、テキストエディタで編集することで変更可能です。<br>
+<br>
+<span style="font-weight: bold;">&lt;MIDIPlayerの場所&gt;</span>/data/plugin/renderer/3DPianoroll/<span style="font-weight: bold;">config.xml</span><br>
+<br>
+<span style="font-weight: bold;">※編集の際は一度アプリケーション本体を終了してください。</span><br>
+<br>
+<h3>ピアノロールの色</h3>
+&lt;color midich = "?"&nbsp; color = "#??????" /&gt;<br>
+<br>
+midich: 対象となる MIDI ch (0～15)<br>
+color: 色。 html 同様に #RRGGBB 形式が使用できます。<br>
+<br>
+<h3>レンダリング時のフレームレート</h3>
+&lt;renderer fps = "***" ....&gt;<br>
+<br>
+***の箇所を変更することで変更が可能です。<br>
+もし、重い場合はこの値を減らしてみてください。<br>
+デフォルトは 60 です。<br>
+有効範囲は 1～32767 です。<br>
+<br>
+<h2><a name="設定ファイルを誤って消してしまった直接編集したら動かなくなった場合"></a>設定ファイルを誤って消してしまった/直接編集したら動かなくなった場合</h2>
+以下のファイルを config.xml として別名コピーをしてください。<br>
+<span style="font-weight: bold;">&lt;MIDIPlayerの場所&gt;</span>/data/plugin/renderer/3DPianoroll/<span style="font-weight: bold;">config.xml.default<br>
+<br>
+</span><h2><a name="履歴"></a>履歴</h2>
+<ul>
+  <li>2010/03/21<br>
+初版/暫定版<br>
+  </li>
+</ul>
+</div>
+
+</body></html>
