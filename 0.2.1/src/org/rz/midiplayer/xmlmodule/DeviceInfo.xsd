@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <xsd:element name="deviceinfo" type="DeviceInfo"/>
+    <xsd:element name="instruments" type="InstrumentList"/>
+    <xsd:element name="map" type="InstrumentMap"/>
+    <xsd:element name="instrument" type="Instrument"/>
+    <xsd:complexType name="DeviceInfo">
+        <xsd:sequence>
+            <xsd:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="instruments" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="defaultMode" type="xsd:string" use="required"/>
+        <xsd:attribute name="author" type="xsd:string" use="required"/>
+        <xsd:attribute name="version" type="xsd:string" use="required"/>
+        <xsd:attribute name="description" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="InstrumentList">
+        <xsd:sequence>
+            <xsd:element ref="map" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="mode" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="InstrumentMap">
+        <xsd:sequence>
+            <xsd:element ref="instrument" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="type" type="instType"/>
+    </xsd:complexType>
+    <xsd:complexType name="Instrument">
+        <xsd:attribute name="pc" type="_7bitInt"/>
+        <xsd:attribute name="msb" type="_7bitInt"/>
+        <xsd:attribute name="lsb" type="_7bitInt"/>
+        <xsd:attribute name="mapName" type="xsd:string" default=""/>
+        <xsd:attribute name="name" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:simpleType name="_7bitInt">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="127"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="instType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="melo"/>
+            <xsd:enumeration value="drum"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="extendFrom">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[^;]+(;\s*[^;]+)*"/>
+            <xsd:whiteSpace value="collapse"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="import" type="ImportInfo"></xsd:element>
+    <xsd:complexType name="ImportInfo">
+        <xsd:attribute name="file" type="xsd:string"/>
+    </xsd:complexType>
+</xsd:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

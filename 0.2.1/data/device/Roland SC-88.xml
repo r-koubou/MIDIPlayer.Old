@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding = "UTF-8" ?>
+
+<deviceinfo name = "Roland SC-88" defaultMode = "GS" author = "rz" version = "1.00" description = "Roland SC-88 用の定義ファイル">
+
+<!--
+    前バージョンにて 楓音 凛 様 よりご提供頂いた SC-88 用データからのコンバート
+-->
+
+    <import file = "GM.xml" />
+
+    <!-- 
+        【音色リスト】
+        mode : この音色リストを参照するトリガーとなる各規格のリセット系のエクスクルーシブメッセージ
+                  例えば、GM、GS, XG 、SD などです。
+    -->
+    <instruments mode = "GS" >
+
+        <!-- 
+            【音色マップ】
+            type : メロディ楽器/ドラム楽器の指定
+
+                   melo メロディ楽器
+                   drum: ドラム楽器の指定
+
+                   ********************************
+                   ★ここでのドラム楽器の定義
+                   ********************************
+                   GM で言うところの ch10 のドラムパート を指します
+                   GM2 で言うところの msb 120 の ドラム楽器を指します
+                   Roland SC系 で言うところの インストパート/ドラムパート を指します
+                   Roland SDネイディブで言うところの msb 104～107 の ドラム系を指します
+                   Yamaha XG系 で言うところの msb 126, 127 の SFX, DrumKit を指します
+                   ********************************
+                   ★ここでのメロディ楽器の定義
+                   ********************************
+                   上記以外にマップされている音色
+
+        -->
+        <!-- melo -->
+        <map type = "melo" >
+            <instrument pc = "0" msb = "0" lsb = "2" mapName = "88 map" name = "Piano 1" />
+            <instrument pc = "0" msb = "8" lsb = "2" mapName = "88 map" name = "Piano 1w" />
+            <instrument pc = "0" msb = "16" lsb = "2" mapName = "88 map" name = "Piano 1d" />
+            <instrument pc = "1" msb = "0" lsb = "2" mapName = "88 map" name = "Piano 2" />
+            <instrument pc = "1" msb = "8" lsb = "2" mapName = "88 map" name = "Piano 2w" />
+            <instrument pc = "2" msb = "0" lsb = "2" mapName = "88 map" name = "Piano 3" />
+            <instrument pc = "2" msb = "1" lsb = "2" mapName = "88 map" name = "EG+Rhodes 1" />
+            <instrument pc = "2" msb = "2" lsb = "2" mapName = "88 map" name = "EG+Rhodes 2" />
+            <instrument pc = "2" msb = "8" lsb = "2" mapName = "88 map" name = "Piano 3w" />
+            <instrument pc = "3" msb = "0" lsb = "2" mapName = "88 map" name = "Honky-tonk" />
+            <instrument pc = "3" msb = "8" lsb = "2" mapName = "88 map" name = "Old Upright" />
+            <instrument pc = "4" msb = "0" lsb = "2" mapName = "88 map" name = "E.Piano 1" />
+            <instrument pc = "4" msb = "8" lsb = "2" mapName = "88 map" name = "St.Soft EP" />
+            <instrument pc = "4" msb = "16" lsb = "2" mapName = "88 map" name = "FM+SA EP" />
+            <instrument pc = "4" msb = "24" lsb = "2" mapName = "88 map" name = "60'sE.Piano" />
+            <instrument pc = "4" msb = "25" lsb = "2" mapName = "88 map" name = "Hard Rhodes" />
+            <instrument pc = "4" msb = "26" lsb = "2" mapName = "88 map" name = "MellwRhodes" />
+            <instrument pc = "5" msb = "0" lsb = "2" mapName = "88 map" name = "E.Piano 2" />
+            <instrument pc = "5" msb = "8" lsb = "2" mapName = "88 map" name = "Detuned EP2" />
+            <instrument pc = "5" msb = "16" lsb = "2" mapName = "88 map" name = "St.FM EP" />
+            <instrument pc = "5" msb = "24" lsb = "2" mapName = "88 map" name = "Hard FM EP" />
+            <instrument pc = "6" msb = "0" lsb = "2" mapName = "88 map" name = "Harpsichord" />
+            <instrument pc = "6" msb = "8" lsb = "2" mapName = "88 map" name = "Coupled Hps" />
+            <instrument pc = "6" msb = "16" lsb = "2" mapName = "88 map" name = "Harpsi.w" />
+            <instrument pc = "6" msb = "24" lsb = "2" mapName = "88 map" name = "Harpsi.o" />
+            <instrument pc = "7" msb = "0" lsb = "2" mapName = "88 map" name = "Clav." />
+            <instrument pc = "8" msb = "0" lsb = "2" mapName = "88 map" name = "Celesta" />
+            <instrument pc = "9" msb = "0" lsb = "2" mapName = "88 map" name = "Glocknspiel" />
+            <instrument pc = "10" msb = "0" lsb = "2" mapName = "88 map" name = "Music Box" />
+            <instrument pc = "11" msb = "0" lsb = "2" mapName = "88 map" name = "Vibraphone" />
+            <instrument pc = "11" msb = "1" lsb = "2" mapName = "88 map" name = "Hard Vibe" />
+            <instrument pc = "11" msb = "8" lsb = "2" mapName = "88 map" name = "Vib.w" />
+            <instrument pc = "12" msb = "0" lsb = "2" mapName = "88 map" name = "Marimba" />
+            <instrument pc = "12" msb = "8" lsb = "2" mapName = "88 map" name = "Marimba w" />
+            <instrument pc = "12" msb = "16" lsb = "2" mapName = "88 map" name = "Barafon" />
+            <instrument pc = "12" msb = "17" lsb = "2" mapName = "88 map" name = "Barafon 2" />
+            <instrument pc = "12" msb = "24" lsb = "2" mapName = "88 map" name = "Log drum" />
+            <instrument pc = "13" msb = "0" lsb = "2" mapName = "88 map" name = "Xylophone" />
+            <instrument pc = "14" msb = "0" lsb = "2" mapName = "88 map" name = "Tubularbell" />
+            <instrument pc = "14" msb = "8" lsb = "2" mapName = "88 map" name = "Church Bell" />
+            <instrument pc = "14" msb = "9" lsb = "2" mapName = "88 map" name = "Carillon" />
+            <instrument pc = "15" msb = "0" lsb = "2" mapName = "88 map" name = "Santur" />
+            <instrument pc = "15" msb = "1" lsb = "2" mapName = "88 map" name = "Santur 2" />
+            <instrument pc = "15" msb = "8" lsb = "2" mapName = "88 map" name = "Cimbalom" />
+            <instrument pc = "16" msb = "0" lsb = "2" mapName = "88 map" name = "Organ 1" />
+            <instrument pc = "16" msb = "1" lsb = "2" mapName = "88 map" name = "Organ 101" />
+            <instrument pc = "16" msb = "8" lsb = "2" mapName = "88 map" name = "DetunedOr.1" />
+            <instrument pc = "16" msb = "9" lsb = "2" mapName = "88 map" name = "Organ 109" />
+            <instrument pc = "16" msb = "16" lsb = "2" mapName = "88 map" name = "60'sOrgan 1" />
+            <instrument pc = "16" msb = "17" lsb = "2" mapName = "88 map" name = "60'sOrgan 2" />
+            <instrument pc = "16" msb = "18" lsb = "2" mapName = "88 map" name = "60'sOrgan 3" />
+            <instrument pc = "16" msb = "24" lsb = "2" mapName = "88 map" name = "CheeseOrgan" />
+            <instrument pc = "16" msb = "32" lsb = "2" mapName = "88 map" name = "Organ 4" />
+            <instrument pc = "16" msb = "33" lsb = "2" mapName = "88 map" name = "Even Bar" />
+            <instrument pc = "16" msb = "40" lsb = "2" mapName = "88 map" name = "Organ Bass" />
+            <instrument pc = "17" msb = "0" lsb = "2" mapName = "88 map" name = "Organ 2" />
+            <instrument pc = "17" msb = "1" lsb = "2" mapName = "88 map" name = "Organ 201" />
+            <instrument pc = "17" msb = "8" lsb = "2" mapName = "88 map" name = "DetunedOr.2" />
+            <instrument pc = "17" msb = "32" lsb = "2" mapName = "88 map" name = "Organ 5" />
+            <instrument pc = "18" msb = "0" lsb = "2" mapName = "88 map" name = "Organ 3" />
+            <instrument pc = "18" msb = "8" lsb = "2" mapName = "88 map" name = "Rotary Org." />
+            <instrument pc = "18" msb = "16" lsb = "2" mapName = "88 map" name = "RotaryOrg.S" />
+            <instrument pc = "18" msb = "24" lsb = "2" mapName = "88 map" name = "RotaryOrg.F" />
+            <instrument pc = "19" msb = "0" lsb = "2" mapName = "88 map" name = "ChurchOrg.1" />
+            <instrument pc = "19" msb = "8" lsb = "2" mapName = "88 map" name = "ChurchOrg.2" />
+            <instrument pc = "19" msb = "16" lsb = "2" mapName = "88 map" name = "ChurchOrg.3" />
+            <instrument pc = "19" msb = "24" lsb = "2" mapName = "88 map" name = "Organ Flute" />
+            <instrument pc = "19" msb = "32" lsb = "2" mapName = "88 map" name = "Trem.Flute" />
+            <instrument pc = "20" msb = "0" lsb = "2" mapName = "88 map" name = "Reed Organ" />
+            <instrument pc = "21" msb = "0" lsb = "2" mapName = "88 map" name = "AccordionFr" />
+            <instrument pc = "21" msb = "8" lsb = "2" mapName = "88 map" name = "AccordionIt" />
+            <instrument pc = "22" msb = "0" lsb = "2" mapName = "88 map" name = "Harmonica" />
+            <instrument pc = "22" msb = "1" lsb = "2" mapName = "88 map" name = "Harmonica 2" />
+            <instrument pc = "23" msb = "0" lsb = "2" mapName = "88 map" name = "Bandoneon" />
+            <instrument pc = "24" msb = "0" lsb = "2" mapName = "88 map" name = "Nylonstr.Gt" />
+            <instrument pc = "24" msb = "8" lsb = "2" mapName = "88 map" name = "Ukulele" />
+            <instrument pc = "24" msb = "16" lsb = "2" mapName = "88 map" name = "Nylon Gt.o" />
+            <instrument pc = "24" msb = "24" lsb = "2" mapName = "88 map" name = "VeloHarmnix" />
+            <instrument pc = "24" msb = "32" lsb = "2" mapName = "88 map" name = "Nylon Gt.2" />
+            <instrument pc = "24" msb = "40" lsb = "2" mapName = "88 map" name = "Lequint Gt." />
+            <instrument pc = "25" msb = "0" lsb = "2" mapName = "88 map" name = "Steelstr.Gt" />
+            <instrument pc = "25" msb = "8" lsb = "2" mapName = "88 map" name = "12-str.Gt" />
+            <instrument pc = "25" msb = "9" lsb = "2" mapName = "88 map" name = "Nylon+Steel" />
+            <instrument pc = "25" msb = "16" lsb = "2" mapName = "88 map" name = "Mandolin" />
+            <instrument pc = "25" msb = "32" lsb = "2" mapName = "88 map" name = "Steel Gt.2" />
+            <instrument pc = "26" msb = "0" lsb = "2" mapName = "88 map" name = "Jazz Gt." />
+            <instrument pc = "26" msb = "1" lsb = "2" mapName = "88 map" name = "Mellow Gt." />
+            <instrument pc = "26" msb = "8" lsb = "2" mapName = "88 map" name = "Pedal Steel" />
+            <instrument pc = "27" msb = "0" lsb = "2" mapName = "88 map" name = "Clean Gt." />
+            <instrument pc = "27" msb = "8" lsb = "2" mapName = "88 map" name = "Chorus Gt." />
+            <instrument pc = "28" msb = "0" lsb = "2" mapName = "88 map" name = "Muted Gt." />
+            <instrument pc = "28" msb = "1" lsb = "2" mapName = "88 map" name = "MutedDis.Gt" />
+            <instrument pc = "28" msb = "8" lsb = "2" mapName = "88 map" name = "Funk Pop" />
+            <instrument pc = "28" msb = "16" lsb = "2" mapName = "88 map" name = "Funk Gt.2" />
+            <instrument pc = "29" msb = "0" lsb = "2" mapName = "88 map" name = "OverdriveGt" />
+            <instrument pc = "30" msb = "0" lsb = "2" mapName = "88 map" name = "DistortionGt" />
+            <instrument pc = "30" msb = "1" lsb = "2" mapName = "88 map" name = "Dist. Gt2" />
+            <instrument pc = "30" msb = "2" lsb = "2" mapName = "88 map" name = "DazedGuitar" />
+            <instrument pc = "30" msb = "8" lsb = "2" mapName = "88 map" name = "FeedbackGt." />
+            <instrument pc = "30" msb = "9" lsb = "2" mapName = "88 map" name = "FeedbackGt2" />
+            <instrument pc = "30" msb = "16" lsb = "2" mapName = "88 map" name = "PowerGuitar" />
+            <instrument pc = "30" msb = "17" lsb = "2" mapName = "88 map" name = "Power Gt.2" />
+            <instrument pc = "30" msb = "18" lsb = "2" mapName = "88 map" name = "5th Dist." />
+            <instrument pc = "30" msb = "24" lsb = "2" mapName = "88 map" name = "Rock Rhythm" />
+            <instrument pc = "30" msb = "25" lsb = "2" mapName = "88 map" name = "RockRhythm2" />
+            <instrument pc = "31" msb = "0" lsb = "2" mapName = "88 map" name = "Gt.Harmonix" />
+            <instrument pc = "31" msb = "8" lsb = "2" mapName = "88 map" name = "Gt.Feedback" />
+            <instrument pc = "31" msb = "16" lsb = "2" mapName = "88 map" name = "Ac.Gt.Harm." />
+            <instrument pc = "32" msb = "0" lsb = "2" mapName = "88 map" name = "AcousticBs." />
+            <instrument pc = "33" msb = "0" lsb = "2" mapName = "88 map" name = "FingeredBs." />
+            <instrument pc = "33" msb = "1" lsb = "2" mapName = "88 map" name = "FingeredBs2" />
+            <instrument pc = "33" msb = "2" lsb = "2" mapName = "88 map" name = "Jazz Bass" />
+            <instrument pc = "34" msb = "0" lsb = "2" mapName = "88 map" name = "Picked Bass" />
+            <instrument pc = "34" msb = "8" lsb = "2" mapName = "88 map" name = "MutePickBs." />
+            <instrument pc = "35" msb = "0" lsb = "2" mapName = "88 map" name = "FretlessBs." />
+            <instrument pc = "35" msb = "1" lsb = "2" mapName = "88 map" name = "FretlessBs2" />
+            <instrument pc = "35" msb = "2" lsb = "2" mapName = "88 map" name = "FretlessBs3" />
+            <instrument pc = "35" msb = "3" lsb = "2" mapName = "88 map" name = "FretlessBs4" />
+            <instrument pc = "35" msb = "4" lsb = "2" mapName = "88 map" name = "SynFretless" />
+            <instrument pc = "35" msb = "5" lsb = "2" mapName = "88 map" name = "Mr.Smooth" />
+            <instrument pc = "36" msb = "0" lsb = "2" mapName = "88 map" name = "Slap Bass 1" />
+            <instrument pc = "36" msb = "8" lsb = "2" mapName = "88 map" name = "Reso Slap" />
+            <instrument pc = "37" msb = "0" lsb = "2" mapName = "88 map" name = "Slap Bass 2" />
+            <instrument pc = "38" msb = "0" lsb = "2" mapName = "88 map" name = "SynthBass 1" />
+            <instrument pc = "38" msb = "1" lsb = "2" mapName = "88 map" name = "Syn.Bass101" />
+            <instrument pc = "38" msb = "8" lsb = "2" mapName = "88 map" name = "Acid Bass" />
+            <instrument pc = "38" msb = "9" lsb = "2" mapName = "88 map" name = "TB303 Bass" />
+            <instrument pc = "38" msb = "10" lsb = "2" mapName = "88 map" name = "Tekno Bass" />
+            <instrument pc = "38" msb = "16" lsb = "2" mapName = "88 map" name = "Reso SHBass" />
+            <instrument pc = "39" msb = "0" lsb = "2" mapName = "88 map" name = "SynthBass 2" />
+            <instrument pc = "39" msb = "1" lsb = "2" mapName = "88 map" name = "Syn.Bass201" />
+            <instrument pc = "39" msb = "2" lsb = "2" mapName = "88 map" name = "ModularBass" />
+            <instrument pc = "39" msb = "3" lsb = "2" mapName = "88 map" name = "Seq Bass" />
+            <instrument pc = "39" msb = "8" lsb = "2" mapName = "88 map" name = "Beef FMBass" />
+            <instrument pc = "39" msb = "9" lsb = "2" mapName = "88 map" name = "X Wire Bass" />
+            <instrument pc = "39" msb = "16" lsb = "2" mapName = "88 map" name = "Rubber Bass" />
+            <instrument pc = "39" msb = "17" lsb = "2" mapName = "88 map" name = "SH101Bass 1" />
+            <instrument pc = "39" msb = "18" lsb = "2" mapName = "88 map" name = "SH101Bass 2" />
+            <instrument pc = "39" msb = "19" lsb = "2" mapName = "88 map" name = "Smooth Bass" />
+            <instrument pc = "40" msb = "0" lsb = "2" mapName = "88 map" name = "Violin" />
+            <instrument pc = "40" msb = "8" lsb = "2" mapName = "88 map" name = "Slow Violin" />
+            <instrument pc = "41" msb = "0" lsb = "2" mapName = "88 map" name = "Viola" />
+            <instrument pc = "42" msb = "0" lsb = "2" mapName = "88 map" name = "Cello" />
+            <instrument pc = "43" msb = "0" lsb = "2" mapName = "88 map" name = "Contrabass" />
+            <instrument pc = "44" msb = "0" lsb = "2" mapName = "88 map" name = "Tremolo Str" />
+            <instrument pc = "44" msb = "8" lsb = "2" mapName = "88 map" name = "SlowTremolo" />
+            <instrument pc = "44" msb = "9" lsb = "2" mapName = "88 map" name = "SuspenseStr" />
+            <instrument pc = "45" msb = "0" lsb = "2" mapName = "88 map" name = "Pizz. Str." />
+            <instrument pc = "46" msb = "0" lsb = "2" mapName = "88 map" name = "Harp" />
+            <instrument pc = "47" msb = "0" lsb = "2" mapName = "88 map" name = "Timpani" />
+            <instrument pc = "48" msb = "0" lsb = "2" mapName = "88 map" name = "Strings" />
+            <instrument pc = "48" msb = "1" lsb = "2" mapName = "88 map" name = "Strings 2" />
+            <instrument pc = "48" msb = "8" lsb = "2" mapName = "88 map" name = "Orchestra" />
+            <instrument pc = "48" msb = "9" lsb = "2" mapName = "88 map" name = "Orchestra 2" />
+            <instrument pc = "48" msb = "10" lsb = "2" mapName = "88 map" name = "TremoloOrch" />
+            <instrument pc = "48" msb = "11" lsb = "2" mapName = "88 map" name = "Choir Str." />
+            <instrument pc = "48" msb = "16" lsb = "2" mapName = "88 map" name = "St.Strings" />
+            <instrument pc = "48" msb = "24" lsb = "2" mapName = "88 map" name = "VeloStrings" />
+            <instrument pc = "49" msb = "0" lsb = "2" mapName = "88 map" name = "SlowStrings" />
+            <instrument pc = "49" msb = "1" lsb = "2" mapName = "88 map" name = "Slow Str. 2" />
+            <instrument pc = "49" msb = "8" lsb = "2" mapName = "88 map" name = "Legato Str." />
+            <instrument pc = "49" msb = "9" lsb = "2" mapName = "88 map" name = "WarmStrings" />
+            <instrument pc = "49" msb = "10" lsb = "2" mapName = "88 map" name = "St.SlowStr." />
+            <instrument pc = "50" msb = "0" lsb = "2" mapName = "88 map" name = "SynStrings1" />
+            <instrument pc = "50" msb = "1" lsb = "2" mapName = "88 map" name = "OB Strings" />
+            <instrument pc = "50" msb = "8" lsb = "2" mapName = "88 map" name = "SynStrings3" />
+            <instrument pc = "51" msb = "0" lsb = "2" mapName = "88 map" name = "SynStrings2" />
+            <instrument pc = "52" msb = "0" lsb = "2" mapName = "88 map" name = "Choir Aahs" />
+            <instrument pc = "52" msb = "8" lsb = "2" mapName = "88 map" name = "St.Choir" />
+            <instrument pc = "52" msb = "9" lsb = "2" mapName = "88 map" name = "Mello Choir" />
+            <instrument pc = "52" msb = "32" lsb = "2" mapName = "88 map" name = "ChoirAahs 2" />
+            <instrument pc = "53" msb = "0" lsb = "2" mapName = "88 map" name = "Voice Oohs" />
+            <instrument pc = "54" msb = "0" lsb = "2" mapName = "88 map" name = "SynVox" />
+            <instrument pc = "54" msb = "8" lsb = "2" mapName = "88 map" name = "Syn.Voice" />
+            <instrument pc = "55" msb = "0" lsb = "2" mapName = "88 map" name = "Orch. Hit" />
+            <instrument pc = "55" msb = "8" lsb = "2" mapName = "88 map" name = "Impact Hit" />
+            <instrument pc = "55" msb = "9" lsb = "2" mapName = "88 map" name = "Philly Hit" />
+            <instrument pc = "55" msb = "10" lsb = "2" mapName = "88 map" name = "Double Hit" />
+            <instrument pc = "55" msb = "16" lsb = "2" mapName = "88 map" name = "Lo Fi Rave" />
+            <instrument pc = "56" msb = "0" lsb = "2" mapName = "88 map" name = "Trumpet" />
+            <instrument pc = "56" msb = "1" lsb = "2" mapName = "88 map" name = "Trumpet 2" />
+            <instrument pc = "56" msb = "8" lsb = "2" mapName = "88 map" name = "Flugel Horn" />
+            <instrument pc = "56" msb = "24" lsb = "2" mapName = "88 map" name = "Bright Tp." />
+            <instrument pc = "56" msb = "25" lsb = "2" mapName = "88 map" name = "Warm Tp." />
+            <instrument pc = "57" msb = "0" lsb = "2" mapName = "88 map" name = "Trombone" />
+            <instrument pc = "57" msb = "1" lsb = "2" mapName = "88 map" name = "Trombone 2" />
+            <instrument pc = "58" msb = "0" lsb = "2" mapName = "88 map" name = "Tuba" />
+            <instrument pc = "58" msb = "1" lsb = "2" mapName = "88 map" name = "Tuba 2" />
+            <instrument pc = "59" msb = "0" lsb = "2" mapName = "88 map" name = "Muted Tp." />
+            <instrument pc = "60" msb = "0" lsb = "2" mapName = "88 map" name = "FrenchHorns" />
+            <instrument pc = "60" msb = "1" lsb = "2" mapName = "88 map" name = "Fr.Horn 2" />
+            <instrument pc = "60" msb = "8" lsb = "2" mapName = "88 map" name = "Fr.HornSolo" />
+            <instrument pc = "60" msb = "16" lsb = "2" mapName = "88 map" name = "Horn Orch" />
+            <instrument pc = "61" msb = "0" lsb = "2" mapName = "88 map" name = "Brass 1" />
+            <instrument pc = "61" msb = "8" lsb = "2" mapName = "88 map" name = "Brass 2" />
+            <instrument pc = "61" msb = "16" lsb = "2" mapName = "88 map" name = "Brass Fall" />
+            <instrument pc = "62" msb = "0" lsb = "2" mapName = "88 map" name = "SynthBrass1" />
+            <instrument pc = "62" msb = "1" lsb = "2" mapName = "88 map" name = "Poly Brass" />
+            <instrument pc = "62" msb = "8" lsb = "2" mapName = "88 map" name = "Syn.Brass 3" />
+            <instrument pc = "62" msb = "9" lsb = "2" mapName = "88 map" name = "Quack Brass" />
+            <instrument pc = "62" msb = "16" lsb = "2" mapName = "88 map" name = "OctaveBrass" />
+            <instrument pc = "63" msb = "0" lsb = "2" mapName = "88 map" name = "Syn.Brass 2" />
+            <instrument pc = "63" msb = "1" lsb = "2" mapName = "88 map" name = "Soft Brass" />
+            <instrument pc = "63" msb = "8" lsb = "2" mapName = "88 map" name = "Syn.Brass 4" />
+            <instrument pc = "63" msb = "16" lsb = "2" mapName = "88 map" name = "VeloBrass 1" />
+            <instrument pc = "63" msb = "17" lsb = "2" mapName = "88 map" name = "VeloBrass 2" />
+            <instrument pc = "64" msb = "0" lsb = "2" mapName = "88 map" name = "Soprano Sax" />
+            <instrument pc = "65" msb = "0" lsb = "2" mapName = "88 map" name = "Alto Sax" />
+            <instrument pc = "65" msb = "8" lsb = "2" mapName = "88 map" name = "Hyper Alto" />
+            <instrument pc = "66" msb = "0" lsb = "2" mapName = "88 map" name = "Tenor Sax" />
+            <instrument pc = "66" msb = "8" lsb = "2" mapName = "88 map" name = "BreathyTnr." />
+            <instrument pc = "67" msb = "0" lsb = "2" mapName = "88 map" name = "BaritoneSax" />
+            <instrument pc = "68" msb = "0" lsb = "2" mapName = "88 map" name = "Oboe" />
+            <instrument pc = "69" msb = "0" lsb = "2" mapName = "88 map" name = "EnglishHorn" />
+            <instrument pc = "70" msb = "0" lsb = "2" mapName = "88 map" name = "Bassoon" />
+            <instrument pc = "71" msb = "0" lsb = "2" mapName = "88 map" name = "Clarinet" />
+            <instrument pc = "71" msb = "8" lsb = "2" mapName = "88 map" name = "Bs Clarinet" />
+            <instrument pc = "72" msb = "0" lsb = "2" mapName = "88 map" name = "Piccolo" />
+            <instrument pc = "73" msb = "0" lsb = "2" mapName = "88 map" name = "Flute" />
+            <instrument pc = "74" msb = "0" lsb = "2" mapName = "88 map" name = "Recorder" />
+            <instrument pc = "75" msb = "0" lsb = "2" mapName = "88 map" name = "Pan Flute" />
+            <instrument pc = "75" msb = "8" lsb = "2" mapName = "88 map" name = "Kawala" />
+            <instrument pc = "76" msb = "0" lsb = "2" mapName = "88 map" name = "Bottle Blow" />
+            <instrument pc = "77" msb = "0" lsb = "2" mapName = "88 map" name = "Shakuhachi" />
+            <instrument pc = "78" msb = "0" lsb = "2" mapName = "88 map" name = "Whistle" />
+            <instrument pc = "79" msb = "0" lsb = "2" mapName = "88 map" name = "Ocarina" />
+            <instrument pc = "80" msb = "0" lsb = "2" mapName = "88 map" name = "Square Wave" />
+            <instrument pc = "80" msb = "1" lsb = "2" mapName = "88 map" name = "Square" />
+            <instrument pc = "80" msb = "2" lsb = "2" mapName = "88 map" name = "Hollow Mini" />
+            <instrument pc = "80" msb = "3" lsb = "2" mapName = "88 map" name = "Mellow FM" />
+            <instrument pc = "80" msb = "4" lsb = "2" mapName = "88 map" name = "CC Solo" />
+            <instrument pc = "80" msb = "5" lsb = "2" mapName = "88 map" name = "Shmoog" />
+            <instrument pc = "80" msb = "6" lsb = "2" mapName = "88 map" name = "LM Square" />
+            <instrument pc = "80" msb = "8" lsb = "2" mapName = "88 map" name = "Sine Wave" />
+            <instrument pc = "81" msb = "0" lsb = "2" mapName = "88 map" name = "Saw Wave" />
+            <instrument pc = "81" msb = "1" lsb = "2" mapName = "88 map" name = "Saw" />
+            <instrument pc = "81" msb = "2" lsb = "2" mapName = "88 map" name = "Pulse Saw" />
+            <instrument pc = "81" msb = "3" lsb = "2" mapName = "88 map" name = "Feline GR" />
+            <instrument pc = "81" msb = "4" lsb = "2" mapName = "88 map" name = "Big Lead" />
+            <instrument pc = "81" msb = "5" lsb = "2" mapName = "88 map" name = "Velo Lead" />
+            <instrument pc = "81" msb = "6" lsb = "2" mapName = "88 map" name = "GR-300" />
+            <instrument pc = "81" msb = "7" lsb = "2" mapName = "88 map" name = "LA Saw" />
+            <instrument pc = "81" msb = "8" lsb = "2" mapName = "88 map" name = "Doctor Solo" />
+            <instrument pc = "81" msb = "16" lsb = "2" mapName = "88 map" name = "Waspy Synth" />
+            <instrument pc = "82" msb = "0" lsb = "2" mapName = "88 map" name = "SynCalliope" />
+            <instrument pc = "82" msb = "1" lsb = "2" mapName = "88 map" name = "Vent Synth" />
+            <instrument pc = "82" msb = "2" lsb = "2" mapName = "88 map" name = "PurePanLead" />
+            <instrument pc = "83" msb = "0" lsb = "2" mapName = "88 map" name = "ChifferLead" />
+            <instrument pc = "84" msb = "0" lsb = "2" mapName = "88 map" name = "Charang" />
+            <instrument pc = "84" msb = "8" lsb = "2" mapName = "88 map" name = "Dist.Lead" />
+            <instrument pc = "85" msb = "0" lsb = "2" mapName = "88 map" name = "Solo Vox" />
+            <instrument pc = "86" msb = "0" lsb = "2" mapName = "88 map" name = "5th Saw" />
+            <instrument pc = "86" msb = "1" lsb = "2" mapName = "88 map" name = "Big Fives" />
+            <instrument pc = "87" msb = "0" lsb = "2" mapName = "88 map" name = "Bass &amp; Lead" />
+            <instrument pc = "87" msb = "1" lsb = "2" mapName = "88 map" name = "Big &amp; Raw" />
+            <instrument pc = "87" msb = "2" lsb = "2" mapName = "88 map" name = "Fat &amp; Perky" />
+            <instrument pc = "88" msb = "0" lsb = "2" mapName = "88 map" name = "Fantasia" />
+            <instrument pc = "88" msb = "1" lsb = "2" mapName = "88 map" name = "Fantasia 2" />
+            <instrument pc = "89" msb = "0" lsb = "2" mapName = "88 map" name = "Warm Pad" />
+            <instrument pc = "89" msb = "1" lsb = "2" mapName = "88 map" name = "Thick Pad" />
+            <instrument pc = "89" msb = "2" lsb = "2" mapName = "88 map" name = "Horn Pad" />
+            <instrument pc = "89" msb = "3" lsb = "2" mapName = "88 map" name = "RotaryStrng" />
+            <instrument pc = "89" msb = "4" lsb = "2" mapName = "88 map" name = "Soft Pad" />
+            <instrument pc = "90" msb = "0" lsb = "2" mapName = "88 map" name = "Polysynth" />
+            <instrument pc = "90" msb = "1" lsb = "2" mapName = "88 map" name = "80'sPolySyn" />
+            <instrument pc = "91" msb = "0" lsb = "2" mapName = "88 map" name = "Space Voice" />
+            <instrument pc = "91" msb = "1" lsb = "2" mapName = "88 map" name = "Heaven II" />
+            <instrument pc = "92" msb = "0" lsb = "2" mapName = "88 map" name = "Bowed Glass" />
+            <instrument pc = "93" msb = "0" lsb = "2" mapName = "88 map" name = "Metal Pad" />
+            <instrument pc = "93" msb = "1" lsb = "2" mapName = "88 map" name = "Tine Pad" />
+            <instrument pc = "93" msb = "2" lsb = "2" mapName = "88 map" name = "Panner Pad" />
+            <instrument pc = "94" msb = "0" lsb = "2" mapName = "88 map" name = "Halo Pad" />
+            <instrument pc = "95" msb = "0" lsb = "2" mapName = "88 map" name = "Sweep Pad" />
+            <instrument pc = "95" msb = "1" lsb = "2" mapName = "88 map" name = "Polar Pad" />
+            <instrument pc = "95" msb = "8" lsb = "2" mapName = "88 map" name = "Converge" />
+            <instrument pc = "95" msb = "9" lsb = "2" mapName = "88 map" name = "Shwimmer" />
+            <instrument pc = "95" msb = "10" lsb = "2" mapName = "88 map" name = "CelestialPd" />
+            <instrument pc = "96" msb = "0" lsb = "2" mapName = "88 map" name = "Ice Rain" />
+            <instrument pc = "96" msb = "1" lsb = "2" mapName = "88 map" name = "Harmo Rain" />
+            <instrument pc = "96" msb = "2" lsb = "2" mapName = "88 map" name = "AfricanWood" />
+            <instrument pc = "96" msb = "8" lsb = "2" mapName = "88 map" name = "Clavi Pad" />
+            <instrument pc = "97" msb = "0" lsb = "2" mapName = "88 map" name = "Soundtrack" />
+            <instrument pc = "97" msb = "1" lsb = "2" mapName = "88 map" name = "Ancestral" />
+            <instrument pc = "97" msb = "2" lsb = "2" mapName = "88 map" name = "Prologue" />
+            <instrument pc = "97" msb = "8" lsb = "2" mapName = "88 map" name = "Rave" />
+            <instrument pc = "98" msb = "0" lsb = "2" mapName = "88 map" name = "Crystal" />
+            <instrument pc = "98" msb = "1" lsb = "2" mapName = "88 map" name = "Syn Mallet" />
+            <instrument pc = "98" msb = "2" lsb = "2" mapName = "88 map" name = "SoftCrystal" />
+            <instrument pc = "98" msb = "3" lsb = "2" mapName = "88 map" name = "Round Glock" />
+            <instrument pc = "98" msb = "4" lsb = "2" mapName = "88 map" name = "Loud Glock" />
+            <instrument pc = "98" msb = "5" lsb = "2" mapName = "88 map" name = "GlocknChime" />
+            <instrument pc = "98" msb = "6" lsb = "2" mapName = "88 map" name = "Clear Bells" />
+            <instrument pc = "98" msb = "7" lsb = "2" mapName = "88 map" name = "X'mas Bell" />
+            <instrument pc = "98" msb = "8" lsb = "2" mapName = "88 map" name = "Vibra Bells" />
+            <instrument pc = "98" msb = "9" lsb = "2" mapName = "88 map" name = "Digi Bells" />
+            <instrument pc = "98" msb = "16" lsb = "2" mapName = "88 map" name = "ChoralBells" />
+            <instrument pc = "98" msb = "17" lsb = "2" mapName = "88 map" name = "Air Bells" />
+            <instrument pc = "98" msb = "18" lsb = "2" mapName = "88 map" name = "Bell Harp" />
+            <instrument pc = "98" msb = "19" lsb = "2" mapName = "88 map" name = "Gamelimba" />
+            <instrument pc = "99" msb = "0" lsb = "2" mapName = "88 map" name = "Atmosphere" />
+            <instrument pc = "99" msb = "1" lsb = "2" mapName = "88 map" name = "Warm Atmos" />
+            <instrument pc = "99" msb = "2" lsb = "2" mapName = "88 map" name = "Nylon Harp" />
+            <instrument pc = "99" msb = "3" lsb = "2" mapName = "88 map" name = "Harpvox" />
+            <instrument pc = "99" msb = "4" lsb = "2" mapName = "88 map" name = "HollowRels." />
+            <instrument pc = "99" msb = "5" lsb = "2" mapName = "88 map" name = "NylonRhodes" />
+            <instrument pc = "99" msb = "6" lsb = "2" mapName = "88 map" name = "Ambient Pad" />
+            <instrument pc = "100" msb = "0" lsb = "2" mapName = "88 map" name = "Brightness" />
+            <instrument pc = "101" msb = "0" lsb = "2" mapName = "88 map" name = "Goblin" />
+            <instrument pc = "101" msb = "1" lsb = "2" mapName = "88 map" name = "Goblinson" />
+            <instrument pc = "101" msb = "2" lsb = "2" mapName = "88 map" name = "50's Sci-Fi" />
+            <instrument pc = "102" msb = "0" lsb = "2" mapName = "88 map" name = "Echo Drops" />
+            <instrument pc = "102" msb = "1" lsb = "2" mapName = "88 map" name = "Echo Bell" />
+            <instrument pc = "102" msb = "2" lsb = "2" mapName = "88 map" name = "Echo Pan" />
+            <instrument pc = "102" msb = "3" lsb = "2" mapName = "88 map" name = "Echo Pan 2" />
+            <instrument pc = "102" msb = "4" lsb = "2" mapName = "88 map" name = "Big Panner" />
+            <instrument pc = "102" msb = "5" lsb = "2" mapName = "88 map" name = "Reso Panner" />
+            <instrument pc = "102" msb = "6" lsb = "2" mapName = "88 map" name = "Water Piano" />
+            <instrument pc = "103" msb = "0" lsb = "2" mapName = "88 map" name = "Star Theme" />
+            <instrument pc = "103" msb = "1" lsb = "2" mapName = "88 map" name = "StarTheme 2" />
+            <instrument pc = "104" msb = "0" lsb = "2" mapName = "88 map" name = "Sitar" />
+            <instrument pc = "104" msb = "1" lsb = "2" mapName = "88 map" name = "Sitar 2" />
+            <instrument pc = "104" msb = "2" lsb = "2" mapName = "88 map" name = "DetuneSitar" />
+            <instrument pc = "104" msb = "8" lsb = "2" mapName = "88 map" name = "Tambra" />
+            <instrument pc = "104" msb = "16" lsb = "2" mapName = "88 map" name = "Tamboura" />
+            <instrument pc = "105" msb = "0" lsb = "2" mapName = "88 map" name = "Banjo" />
+            <instrument pc = "105" msb = "1" lsb = "2" mapName = "88 map" name = "Muted Banjo" />
+            <instrument pc = "105" msb = "8" lsb = "2" mapName = "88 map" name = "Rabab" />
+            <instrument pc = "105" msb = "16" lsb = "2" mapName = "88 map" name = "Gopichant" />
+            <instrument pc = "105" msb = "24" lsb = "2" mapName = "88 map" name = "Oud" />
+            <instrument pc = "106" msb = "0" lsb = "2" mapName = "88 map" name = "Shamisen" />
+            <instrument pc = "106" msb = "1" lsb = "2" mapName = "88 map" name = "Tsugaru" />
+            <instrument pc = "107" msb = "0" lsb = "2" mapName = "88 map" name = "Koto" />
+            <instrument pc = "107" msb = "8" lsb = "2" mapName = "88 map" name = "Taisho Koto" />
+            <instrument pc = "107" msb = "16" lsb = "2" mapName = "88 map" name = "Kanoon" />
+            <instrument pc = "108" msb = "0" lsb = "2" mapName = "88 map" name = "Kalimba" />
+            <instrument pc = "109" msb = "0" lsb = "2" mapName = "88 map" name = "Bagpipe" />
+            <instrument pc = "110" msb = "0" lsb = "2" mapName = "88 map" name = "Fiddle" />
+            <instrument pc = "111" msb = "0" lsb = "2" mapName = "88 map" name = "Shanai" />
+            <instrument pc = "111" msb = "1" lsb = "2" mapName = "88 map" name = "Shanai 2" />
+            <instrument pc = "111" msb = "8" lsb = "2" mapName = "88 map" name = "Pungi" />
+            <instrument pc = "111" msb = "16" lsb = "2" mapName = "88 map" name = "Hichiriki" />
+            <instrument pc = "112" msb = "0" lsb = "2" mapName = "88 map" name = "Tinkle Bell" />
+            <instrument pc = "112" msb = "8" lsb = "2" mapName = "88 map" name = "Bonang" />
+            <instrument pc = "112" msb = "9" lsb = "2" mapName = "88 map" name = "Gender" />
+            <instrument pc = "112" msb = "10" lsb = "2" mapName = "88 map" name = "GamelanGong" />
+            <instrument pc = "112" msb = "11" lsb = "2" mapName = "88 map" name = "St.Gamelan" />
+            <instrument pc = "112" msb = "16" lsb = "2" mapName = "88 map" name = "RAMA Cymbal" />
+            <instrument pc = "113" msb = "0" lsb = "2" mapName = "88 map" name = "Agogo" />
+            <instrument pc = "113" msb = "8" lsb = "2" mapName = "88 map" name = "Atarigane" />
+            <instrument pc = "114" msb = "0" lsb = "2" mapName = "88 map" name = "Steel Drums" />
+            <instrument pc = "115" msb = "0" lsb = "2" mapName = "88 map" name = "Woodblock" />
+            <instrument pc = "115" msb = "8" lsb = "2" mapName = "88 map" name = "Castanets" />
+            <instrument pc = "116" msb = "0" lsb = "2" mapName = "88 map" name = "Taiko" />
+            <instrument pc = "116" msb = "8" lsb = "2" mapName = "88 map" name = "Concert BD" />
+            <instrument pc = "117" msb = "0" lsb = "2" mapName = "88 map" name = "Melo. Tom 1" />
+            <instrument pc = "117" msb = "1" lsb = "2" mapName = "88 map" name = "Real Tom" />
+            <instrument pc = "117" msb = "8" lsb = "2" mapName = "88 map" name = "Melo. Tom 2" />
+            <instrument pc = "117" msb = "9" lsb = "2" mapName = "88 map" name = "Rock Tom" />
+            <instrument pc = "118" msb = "0" lsb = "2" mapName = "88 map" name = "Synth Drum" />
+            <instrument pc = "118" msb = "8" lsb = "2" mapName = "88 map" name = "808 Tom" />
+            <instrument pc = "118" msb = "9" lsb = "2" mapName = "88 map" name = "Elec Perc" />
+            <instrument pc = "119" msb = "0" lsb = "2" mapName = "88 map" name = "Reverse Cym" />
+            <instrument pc = "119" msb = "1" lsb = "2" mapName = "88 map" name = "ReverseCym2" />
+            <instrument pc = "119" msb = "8" lsb = "2" mapName = "88 map" name = "Rev.Snare 1" />
+            <instrument pc = "119" msb = "9" lsb = "2" mapName = "88 map" name = "Rev.Snare 2" />
+            <instrument pc = "119" msb = "16" lsb = "2" mapName = "88 map" name = "Rev.Kick 1" />
+            <instrument pc = "119" msb = "17" lsb = "2" mapName = "88 map" name = "Rev.ConBD" />
+            <instrument pc = "119" msb = "24" lsb = "2" mapName = "88 map" name = "Rev.Tom 1" />
+            <instrument pc = "119" msb = "25" lsb = "2" mapName = "88 map" name = "Rev.Tom 2" />
+            <instrument pc = "120" msb = "0" lsb = "2" mapName = "88 map" name = "Gt.FretNoiz" />
+            <instrument pc = "120" msb = "1" lsb = "2" mapName = "88 map" name = "Gt.CutNoise" />
+            <instrument pc = "120" msb = "2" lsb = "2" mapName = "88 map" name = "String Slap" />
+            <instrument pc = "120" msb = "3" lsb = "2" mapName = "88 map" name = "Gt.CutNz. 2" />
+            <instrument pc = "120" msb = "4" lsb = "2" mapName = "88 map" name = "Dist.CutNz." />
+            <instrument pc = "120" msb = "5" lsb = "2" mapName = "88 map" name = "Bass Slide" />
+            <instrument pc = "120" msb = "6" lsb = "2" mapName = "88 map" name = "Pick Scrape" />
+            <instrument pc = "121" msb = "0" lsb = "2" mapName = "88 map" name = "BreathNoise" />
+            <instrument pc = "121" msb = "1" lsb = "2" mapName = "88 map" name = "Fl.KeyClick" />
+            <instrument pc = "122" msb = "0" lsb = "2" mapName = "88 map" name = "Seashore" />
+            <instrument pc = "122" msb = "1" lsb = "2" mapName = "88 map" name = "Rain" />
+            <instrument pc = "122" msb = "2" lsb = "2" mapName = "88 map" name = "Thunder" />
+            <instrument pc = "122" msb = "3" lsb = "2" mapName = "88 map" name = "Wind" />
+            <instrument pc = "122" msb = "4" lsb = "2" mapName = "88 map" name = "Stream" />
+            <instrument pc = "122" msb = "5" lsb = "2" mapName = "88 map" name = "Bubble" />
+            <instrument pc = "123" msb = "0" lsb = "2" mapName = "88 map" name = "Bird" />
+            <instrument pc = "123" msb = "1" lsb = "2" mapName = "88 map" name = "Dog" />
+            <instrument pc = "123" msb = "2" lsb = "2" mapName = "88 map" name = "HorseGallop" />
+            <instrument pc = "123" msb = "3" lsb = "2" mapName = "88 map" name = "Bird 2" />
+            <instrument pc = "123" msb = "4" lsb = "2" mapName = "88 map" name = "Kitty" />
+            <instrument pc = "123" msb = "5" lsb = "2" mapName = "88 map" name = "Growl" />
+            <instrument pc = "124" msb = "0" lsb = "2" mapName = "88 map" name = "Telephone 1" />
+            <instrument pc = "124" msb = "1" lsb = "2" mapName = "88 map" name = "Telephone 2" />
+            <instrument pc = "124" msb = "2" lsb = "2" mapName = "88 map" name = "Creaking" />
+            <instrument pc = "124" msb = "3" lsb = "2" mapName = "88 map" name = "Door" />
+            <instrument pc = "124" msb = "4" lsb = "2" mapName = "88 map" name = "Scratch" />
+            <instrument pc = "124" msb = "5" lsb = "2" mapName = "88 map" name = "Wind Chimes" />
+            <instrument pc = "124" msb = "7" lsb = "2" mapName = "88 map" name = "Scratch 2" />
+            <instrument pc = "125" msb = "0" lsb = "2" mapName = "88 map" name = "Helicopter" />
+            <instrument pc = "125" msb = "1" lsb = "2" mapName = "88 map" name = "Car-Engine" />
+            <instrument pc = "125" msb = "2" lsb = "2" mapName = "88 map" name = "Car-Stop" />
+            <instrument pc = "125" msb = "3" lsb = "2" mapName = "88 map" name = "Car-Pass" />
+            <instrument pc = "125" msb = "4" lsb = "2" mapName = "88 map" name = "Car-Crash" />
+            <instrument pc = "125" msb = "5" lsb = "2" mapName = "88 map" name = "Siren" />
+            <instrument pc = "125" msb = "6" lsb = "2" mapName = "88 map" name = "Train" />
+            <instrument pc = "125" msb = "7" lsb = "2" mapName = "88 map" name = "Jetplane" />
+            <instrument pc = "125" msb = "8" lsb = "2" mapName = "88 map" name = "Starship" />
+            <instrument pc = "125" msb = "9" lsb = "2" mapName = "88 map" name = "Burst Noise" />
+            <instrument pc = "126" msb = "0" lsb = "2" mapName = "88 map" name = "Applause" />
+            <instrument pc = "126" msb = "1" lsb = "2" mapName = "88 map" name = "Laughing" />
+            <instrument pc = "126" msb = "2" lsb = "2" mapName = "88 map" name = "Screaming" />
+            <instrument pc = "126" msb = "3" lsb = "2" mapName = "88 map" name = "Punch" />
+            <instrument pc = "126" msb = "4" lsb = "2" mapName = "88 map" name = "Heart Beat" />
+            <instrument pc = "126" msb = "5" lsb = "2" mapName = "88 map" name = "Footsteps" />
+            <instrument pc = "126" msb = "6" lsb = "2" mapName = "88 map" name = "Applause 2" />
+            <instrument pc = "127" msb = "0" lsb = "2" mapName = "88 map" name = "Gun Shot" />
+            <instrument pc = "127" msb = "1" lsb = "2" mapName = "88 map" name = "Machine Gun" />
+            <instrument pc = "127" msb = "2" lsb = "2" mapName = "88 map" name = "Lasergun" />
+            <instrument pc = "127" msb = "3" lsb = "2" mapName = "88 map" name = "Explosion" />
+            <instrument pc = "0" msb = "0" lsb = "1" mapName = "55 map" name = "Piano 1" />
+            <instrument pc = "0" msb = "8" lsb = "1" mapName = "55 map" name = "Piano 1w" />
+            <instrument pc = "0" msb = "16" lsb = "1" mapName = "55 map" name = "Piano 1d" />
+            <instrument pc = "1" msb = "0" lsb = "1" mapName = "55 map" name = "Piano 2" />
+            <instrument pc = "1" msb = "8" lsb = "1" mapName = "55 map" name = "Piano 2w" />
+            <instrument pc = "2" msb = "0" lsb = "1" mapName = "55 map" name = "Piano 3" />
+            <instrument pc = "2" msb = "8" lsb = "1" mapName = "55 map" name = "Piano 3w" />
+            <instrument pc = "3" msb = "0" lsb = "1" mapName = "55 map" name = "Honky-tonk" />
+            <instrument pc = "3" msb = "8" lsb = "1" mapName = "55 map" name = "HonkyTonk w" />
+            <instrument pc = "4" msb = "0" lsb = "1" mapName = "55 map" name = "E.Piano 1" />
+            <instrument pc = "4" msb = "8" lsb = "1" mapName = "55 map" name = "Detuned EP1" />
+            <instrument pc = "4" msb = "16" lsb = "1" mapName = "55 map" name = "E.Piano 1v" />
+            <instrument pc = "4" msb = "24" lsb = "1" mapName = "55 map" name = "60s E.Piano" />
+            <instrument pc = "5" msb = "0" lsb = "1" mapName = "55 map" name = "E.Piano 2" />
+            <instrument pc = "5" msb = "8" lsb = "1" mapName = "55 map" name = "Detuned EP2" />
+            <instrument pc = "5" msb = "16" lsb = "1" mapName = "55 map" name = "E.Piano 2v" />
+            <instrument pc = "6" msb = "0" lsb = "1" mapName = "55 map" name = "Harpsichord" />
+            <instrument pc = "6" msb = "8" lsb = "1" mapName = "55 map" name = "Coupled Hps" />
+            <instrument pc = "6" msb = "16" lsb = "1" mapName = "55 map" name = "Harpsi.w" />
+            <instrument pc = "6" msb = "24" lsb = "1" mapName = "55 map" name = "Harpsi.o" />
+            <instrument pc = "7" msb = "0" lsb = "1" mapName = "55 map" name = "Clav." />
+            <instrument pc = "8" msb = "0" lsb = "1" mapName = "55 map" name = "Celesta" />
+            <instrument pc = "9" msb = "0" lsb = "1" mapName = "55 map" name = "Glockenspl" />
+            <instrument pc = "10" msb = "0" lsb = "1" mapName = "55 map" name = "Music Box" />
+            <instrument pc = "11" msb = "0" lsb = "1" mapName = "55 map" name = "Vibraphone" />
+            <instrument pc = "11" msb = "8" lsb = "1" mapName = "55 map" name = "Vib.w" />
+            <instrument pc = "12" msb = "0" lsb = "1" mapName = "55 map" name = "Marimba" />
+            <instrument pc = "12" msb = "8" lsb = "1" mapName = "55 map" name = "Marimba w" />
+            <instrument pc = "13" msb = "0" lsb = "1" mapName = "55 map" name = "Xylophone" />
+            <instrument pc = "14" msb = "0" lsb = "1" mapName = "55 map" name = "Tubularbell" />
+            <instrument pc = "14" msb = "8" lsb = "1" mapName = "55 map" name = "Church Bell" />
+            <instrument pc = "14" msb = "9" lsb = "1" mapName = "55 map" name = "Carillon" />
+            <instrument pc = "15" msb = "0" lsb = "1" mapName = "55 map" name = "Santur" />
+            <instrument pc = "16" msb = "0" lsb = "1" mapName = "55 map" name = "Organ 1" />
+            <instrument pc = "16" msb = "8" lsb = "1" mapName = "55 map" name = "Detuned Or1" />
+            <instrument pc = "16" msb = "16" lsb = "1" mapName = "55 map" name = "60's Organ1" />
+            <instrument pc = "16" msb = "32" lsb = "1" mapName = "55 map" name = "Organ 4" />
+            <instrument pc = "17" msb = "0" lsb = "1" mapName = "55 map" name = "Organ 2" />
+            <instrument pc = "17" msb = "8" lsb = "1" mapName = "55 map" name = "Detuned Or2" />
+            <instrument pc = "17" msb = "32" lsb = "1" mapName = "55 map" name = "Organ 5" />
+            <instrument pc = "18" msb = "0" lsb = "1" mapName = "55 map" name = "Organ 3" />
+            <instrument pc = "19" msb = "0" lsb = "1" mapName = "55 map" name = "Church Org1" />
+            <instrument pc = "19" msb = "8" lsb = "1" mapName = "55 map" name = "Church Org2" />
+            <instrument pc = "19" msb = "16" lsb = "1" mapName = "55 map" name = "Church Org3" />
+            <instrument pc = "20" msb = "0" lsb = "1" mapName = "55 map" name = "Reed Organ" />
+            <instrument pc = "21" msb = "0" lsb = "1" mapName = "55 map" name = "Accordion F" />
+            <instrument pc = "21" msb = "8" lsb = "1" mapName = "55 map" name = "Accordion I" />
+            <instrument pc = "22" msb = "0" lsb = "1" mapName = "55 map" name = "Harmonica" />
+            <instrument pc = "23" msb = "0" lsb = "1" mapName = "55 map" name = "Bandoneon" />
+            <instrument pc = "24" msb = "0" lsb = "1" mapName = "55 map" name = "Nylon Gt." />
+            <instrument pc = "24" msb = "8" lsb = "1" mapName = "55 map" name = "Ukulele" />
+            <instrument pc = "24" msb = "16" lsb = "1" mapName = "55 map" name = "Nylon Gt.o" />
+            <instrument pc = "24" msb = "32" lsb = "1" mapName = "55 map" name = "Nylon Gt.2" />
+            <instrument pc = "25" msb = "0" lsb = "1" mapName = "55 map" name = "Steel Gt." />
+            <instrument pc = "25" msb = "8" lsb = "1" mapName = "55 map" name = "12-str.Gt" />
+            <instrument pc = "25" msb = "16" lsb = "1" mapName = "55 map" name = "Mandolin" />
+            <instrument pc = "26" msb = "0" lsb = "1" mapName = "55 map" name = "Jazz Gt." />
+            <instrument pc = "26" msb = "8" lsb = "1" mapName = "55 map" name = "Hawaiian Gt" />
+            <instrument pc = "27" msb = "0" lsb = "1" mapName = "55 map" name = "Clean Gt." />
+            <instrument pc = "27" msb = "8" lsb = "1" mapName = "55 map" name = "Chorus Gt." />
+            <instrument pc = "28" msb = "0" lsb = "1" mapName = "55 map" name = "Muted Gt." />
+            <instrument pc = "28" msb = "8" lsb = "1" mapName = "55 map" name = "Funk Gt." />
+            <instrument pc = "28" msb = "16" lsb = "1" mapName = "55 map" name = "Funk Gt.2" />
+            <instrument pc = "29" msb = "0" lsb = "1" mapName = "55 map" name = "OverdriveGt" />
+            <instrument pc = "30" msb = "0" lsb = "1" mapName = "55 map" name = "Dist.Gt." />
+            <instrument pc = "30" msb = "8" lsb = "1" mapName = "55 map" name = "Feedback Gt" />
+            <instrument pc = "31" msb = "0" lsb = "1" mapName = "55 map" name = "Gt.Harmonix" />
+            <instrument pc = "31" msb = "8" lsb = "1" mapName = "55 map" name = "Gt.Feedback" />
+            <instrument pc = "32" msb = "0" lsb = "1" mapName = "55 map" name = "Acoustic Bs" />
+            <instrument pc = "33" msb = "0" lsb = "1" mapName = "55 map" name = "Fingered Bs" />
+            <instrument pc = "34" msb = "0" lsb = "1" mapName = "55 map" name = "Picked Bass" />
+            <instrument pc = "35" msb = "0" lsb = "1" mapName = "55 map" name = "Fretless Bs" />
+            <instrument pc = "36" msb = "0" lsb = "1" mapName = "55 map" name = "Slap Bass 1" />
+            <instrument pc = "37" msb = "0" lsb = "1" mapName = "55 map" name = "Slap Bass 2" />
+            <instrument pc = "38" msb = "0" lsb = "1" mapName = "55 map" name = "Syn.Bass 1" />
+            <instrument pc = "38" msb = "1" lsb = "1" mapName = "55 map" name = "Syn.Bass101" />
+            <instrument pc = "38" msb = "8" lsb = "1" mapName = "55 map" name = "Syn.Bass 3" />
+            <instrument pc = "39" msb = "0" lsb = "1" mapName = "55 map" name = "Syn.Bass 2" />
+            <instrument pc = "39" msb = "8" lsb = "1" mapName = "55 map" name = "Syn.Bass 4" />
+            <instrument pc = "39" msb = "16" lsb = "1" mapName = "55 map" name = "Rubber Bass" />
+            <instrument pc = "40" msb = "0" lsb = "1" mapName = "55 map" name = "Violin" />
+            <instrument pc = "40" msb = "8" lsb = "1" mapName = "55 map" name = "Slow Violin" />
+            <instrument pc = "41" msb = "0" lsb = "1" mapName = "55 map" name = "Viola" />
+            <instrument pc = "42" msb = "0" lsb = "1" mapName = "55 map" name = "Cello" />
+            <instrument pc = "43" msb = "0" lsb = "1" mapName = "55 map" name = "Contrabass" />
+            <instrument pc = "44" msb = "0" lsb = "1" mapName = "55 map" name = "Tremolo Str" />
+            <instrument pc = "45" msb = "0" lsb = "1" mapName = "55 map" name = "Pizzicato" />
+            <instrument pc = "46" msb = "0" lsb = "1" mapName = "55 map" name = "Harp" />
+            <instrument pc = "47" msb = "0" lsb = "1" mapName = "55 map" name = "Timpani" />
+            <instrument pc = "48" msb = "0" lsb = "1" mapName = "55 map" name = "Strings" />
+            <instrument pc = "48" msb = "8" lsb = "1" mapName = "55 map" name = "Orchestra" />
+            <instrument pc = "49" msb = "0" lsb = "1" mapName = "55 map" name = "SlowStrings" />
+            <instrument pc = "50" msb = "0" lsb = "1" mapName = "55 map" name = "SynStrings1" />
+            <instrument pc = "50" msb = "8" lsb = "1" mapName = "55 map" name = "SynStrings3" />
+            <instrument pc = "51" msb = "0" lsb = "1" mapName = "55 map" name = "SynStrings2" />
+            <instrument pc = "52" msb = "0" lsb = "1" mapName = "55 map" name = "Choir Aahs" />
+            <instrument pc = "52" msb = "32" lsb = "1" mapName = "55 map" name = "Choir Aahs2" />
+            <instrument pc = "53" msb = "0" lsb = "1" mapName = "55 map" name = "Voice Oohs" />
+            <instrument pc = "54" msb = "0" lsb = "1" mapName = "55 map" name = "SynVox" />
+            <instrument pc = "55" msb = "0" lsb = "1" mapName = "55 map" name = "Orchest.Hit" />
+            <instrument pc = "56" msb = "0" lsb = "1" mapName = "55 map" name = "Trumpet" />
+            <instrument pc = "57" msb = "0" lsb = "1" mapName = "55 map" name = "Trombone" />
+            <instrument pc = "57" msb = "1" lsb = "1" mapName = "55 map" name = "Trombone 2" />
+            <instrument pc = "58" msb = "0" lsb = "1" mapName = "55 map" name = "Tuba" />
+            <instrument pc = "59" msb = "0" lsb = "1" mapName = "55 map" name = "MuteTrumpet" />
+            <instrument pc = "60" msb = "0" lsb = "1" mapName = "55 map" name = "French Horn" />
+            <instrument pc = "60" msb = "1" lsb = "1" mapName = "55 map" name = "Fr.Horn 2" />
+            <instrument pc = "61" msb = "0" lsb = "1" mapName = "55 map" name = "Brass 1" />
+            <instrument pc = "61" msb = "8" lsb = "1" mapName = "55 map" name = "Brass 2" />
+            <instrument pc = "62" msb = "0" lsb = "1" mapName = "55 map" name = "Syn.Brass 1" />
+            <instrument pc = "62" msb = "8" lsb = "1" mapName = "55 map" name = "Syn.Brass 3" />
+            <instrument pc = "62" msb = "16" lsb = "1" mapName = "55 map" name = "Analog Brs1" />
+            <instrument pc = "63" msb = "0" lsb = "1" mapName = "55 map" name = "Syn.Brass 2" />
+            <instrument pc = "63" msb = "8" lsb = "1" mapName = "55 map" name = "Syn.Brass 4" />
+            <instrument pc = "63" msb = "16" lsb = "1" mapName = "55 map" name = "Analog Brs2" />
+            <instrument pc = "64" msb = "0" lsb = "1" mapName = "55 map" name = "Soprano Sax" />
+            <instrument pc = "65" msb = "0" lsb = "1" mapName = "55 map" name = "Alto Sax" />
+            <instrument pc = "66" msb = "0" lsb = "1" mapName = "55 map" name = "Tenor Sax" />
+            <instrument pc = "67" msb = "0" lsb = "1" mapName = "55 map" name = "BaritoneSax" />
+            <instrument pc = "68" msb = "0" lsb = "1" mapName = "55 map" name = "Oboe" />
+            <instrument pc = "69" msb = "0" lsb = "1" mapName = "55 map" name = "EnglishHorn" />
+            <instrument pc = "70" msb = "0" lsb = "1" mapName = "55 map" name = "Bassoon" />
+            <instrument pc = "71" msb = "0" lsb = "1" mapName = "55 map" name = "Clarinet" />
+            <instrument pc = "72" msb = "0" lsb = "1" mapName = "55 map" name = "Piccolo" />
+            <instrument pc = "73" msb = "0" lsb = "1" mapName = "55 map" name = "Flute" />
+            <instrument pc = "74" msb = "0" lsb = "1" mapName = "55 map" name = "Recorder" />
+            <instrument pc = "75" msb = "0" lsb = "1" mapName = "55 map" name = "Pan Flute" />
+            <instrument pc = "76" msb = "0" lsb = "1" mapName = "55 map" name = "Bottle Blow" />
+            <instrument pc = "77" msb = "0" lsb = "1" mapName = "55 map" name = "Shakuhachi" />
+            <instrument pc = "78" msb = "0" lsb = "1" mapName = "55 map" name = "Whistle" />
+            <instrument pc = "79" msb = "0" lsb = "1" mapName = "55 map" name = "Ocarina" />
+            <instrument pc = "80" msb = "0" lsb = "1" mapName = "55 map" name = "Square Wave" />
+            <instrument pc = "80" msb = "1" lsb = "1" mapName = "55 map" name = "Square" />
+            <instrument pc = "80" msb = "8" lsb = "1" mapName = "55 map" name = "Sine Wave" />
+            <instrument pc = "81" msb = "0" lsb = "1" mapName = "55 map" name = "Saw Wave" />
+            <instrument pc = "81" msb = "1" lsb = "1" mapName = "55 map" name = "Saw" />
+            <instrument pc = "81" msb = "8" lsb = "1" mapName = "55 map" name = "Doctor Solo" />
+            <instrument pc = "82" msb = "0" lsb = "1" mapName = "55 map" name = "SynCalliope" />
+            <instrument pc = "83" msb = "0" lsb = "1" mapName = "55 map" name = "ChifferLead" />
+            <instrument pc = "84" msb = "0" lsb = "1" mapName = "55 map" name = "Charang" />
+            <instrument pc = "85" msb = "0" lsb = "1" mapName = "55 map" name = "Solo Vox" />
+            <instrument pc = "86" msb = "0" lsb = "1" mapName = "55 map" name = "5th Saw" />
+            <instrument pc = "87" msb = "0" lsb = "1" mapName = "55 map" name = "Bass &amp; Lead" />
+            <instrument pc = "88" msb = "0" lsb = "1" mapName = "55 map" name = "Fantasia" />
+            <instrument pc = "89" msb = "0" lsb = "1" mapName = "55 map" name = "Warm Pad" />
+            <instrument pc = "90" msb = "0" lsb = "1" mapName = "55 map" name = "Polysynth" />
+            <instrument pc = "91" msb = "0" lsb = "1" mapName = "55 map" name = "Space Voice" />
+            <instrument pc = "92" msb = "0" lsb = "1" mapName = "55 map" name = "Bowed Glass" />
+            <instrument pc = "93" msb = "0" lsb = "1" mapName = "55 map" name = "Metal Pad" />
+            <instrument pc = "94" msb = "0" lsb = "1" mapName = "55 map" name = "Halo Pad" />
+            <instrument pc = "95" msb = "0" lsb = "1" mapName = "55 map" name = "Sweep Pad" />
+            <instrument pc = "96" msb = "0" lsb = "1" mapName = "55 map" name = "Ice Rain" />
+            <instrument pc = "97" msb = "0" lsb = "1" mapName = "55 map" name = "Soundtrack" />
+            <instrument pc = "98" msb = "0" lsb = "1" mapName = "55 map" name = "Crystal" />
+            <instrument pc = "98" msb = "1" lsb = "1" mapName = "55 map" name = "Syn Mallet" />
+            <instrument pc = "99" msb = "0" lsb = "1" mapName = "55 map" name = "Atmosphere" />
+            <instrument pc = "100" msb = "0" lsb = "1" mapName = "55 map" name = "Brightness" />
+            <instrument pc = "101" msb = "0" lsb = "1" mapName = "55 map" name = "Goblin" />
+            <instrument pc = "102" msb = "0" lsb = "1" mapName = "55 map" name = "Echo Drops" />
+            <instrument pc = "102" msb = "1" lsb = "1" mapName = "55 map" name = "Echo Bell" />
+            <instrument pc = "102" msb = "2" lsb = "1" mapName = "55 map" name = "Echo Pan" />
+            <instrument pc = "103" msb = "0" lsb = "1" mapName = "55 map" name = "Star Theme" />
+            <instrument pc = "104" msb = "0" lsb = "1" mapName = "55 map" name = "Sitar" />
+            <instrument pc = "104" msb = "1" lsb = "1" mapName = "55 map" name = "Sitar 2" />
+            <instrument pc = "105" msb = "0" lsb = "1" mapName = "55 map" name = "Banjo" />
+            <instrument pc = "106" msb = "0" lsb = "1" mapName = "55 map" name = "Shamisen" />
+            <instrument pc = "107" msb = "0" lsb = "1" mapName = "55 map" name = "Koto" />
+            <instrument pc = "107" msb = "8" lsb = "1" mapName = "55 map" name = "Taisho Koto" />
+            <instrument pc = "108" msb = "0" lsb = "1" mapName = "55 map" name = "Kalimba" />
+            <instrument pc = "109" msb = "0" lsb = "1" mapName = "55 map" name = "Bagpipe" />
+            <instrument pc = "110" msb = "0" lsb = "1" mapName = "55 map" name = "Fiddle" />
+            <instrument pc = "111" msb = "0" lsb = "1" mapName = "55 map" name = "Shanai" />
+            <instrument pc = "112" msb = "0" lsb = "1" mapName = "55 map" name = "Tinkle Bell" />
+            <instrument pc = "113" msb = "0" lsb = "1" mapName = "55 map" name = "Agogo" />
+            <instrument pc = "114" msb = "0" lsb = "1" mapName = "55 map" name = "Steel Drums" />
+            <instrument pc = "115" msb = "0" lsb = "1" mapName = "55 map" name = "Woodblock" />
+            <instrument pc = "115" msb = "8" lsb = "1" mapName = "55 map" name = "Castanets" />
+            <instrument pc = "116" msb = "0" lsb = "1" mapName = "55 map" name = "Taiko" />
+            <instrument pc = "116" msb = "8" lsb = "1" mapName = "55 map" name = "Concert BD" />
+            <instrument pc = "117" msb = "0" lsb = "1" mapName = "55 map" name = "Melo. Tom 1" />
+            <instrument pc = "117" msb = "8" lsb = "1" mapName = "55 map" name = "Melo. Tom 2" />
+            <instrument pc = "118" msb = "0" lsb = "1" mapName = "55 map" name = "Synth Drum" />
+            <instrument pc = "118" msb = "8" lsb = "1" mapName = "55 map" name = "808 Tom" />
+            <instrument pc = "118" msb = "9" lsb = "1" mapName = "55 map" name = "Elec Perc" />
+            <instrument pc = "119" msb = "0" lsb = "1" mapName = "55 map" name = "Reverse Cym" />
+            <instrument pc = "120" msb = "0" lsb = "1" mapName = "55 map" name = "Gt.FretNoiz" />
+            <instrument pc = "120" msb = "1" lsb = "1" mapName = "55 map" name = "Gt.CutNoise" />
+            <instrument pc = "120" msb = "2" lsb = "1" mapName = "55 map" name = "String Slap" />
+            <instrument pc = "121" msb = "0" lsb = "1" mapName = "55 map" name = "BreathNoise" />
+            <instrument pc = "121" msb = "1" lsb = "1" mapName = "55 map" name = "Fl.KeyClick" />
+            <instrument pc = "122" msb = "0" lsb = "1" mapName = "55 map" name = "Seashore" />
+            <instrument pc = "122" msb = "1" lsb = "1" mapName = "55 map" name = "Rain" />
+            <instrument pc = "122" msb = "2" lsb = "1" mapName = "55 map" name = "Thunder" />
+            <instrument pc = "122" msb = "3" lsb = "1" mapName = "55 map" name = "Wind" />
+            <instrument pc = "122" msb = "4" lsb = "1" mapName = "55 map" name = "Stream" />
+            <instrument pc = "122" msb = "5" lsb = "1" mapName = "55 map" name = "Bubble" />
+            <instrument pc = "123" msb = "0" lsb = "1" mapName = "55 map" name = "Bird" />
+            <instrument pc = "123" msb = "1" lsb = "1" mapName = "55 map" name = "Dog" />
+            <instrument pc = "123" msb = "2" lsb = "1" mapName = "55 map" name = "HorseGallop" />
+            <instrument pc = "123" msb = "3" lsb = "1" mapName = "55 map" name = "Bird 2" />
+            <instrument pc = "124" msb = "0" lsb = "1" mapName = "55 map" name = "Telephone 1" />
+            <instrument pc = "124" msb = "1" lsb = "1" mapName = "55 map" name = "Telephone 2" />
+            <instrument pc = "124" msb = "2" lsb = "1" mapName = "55 map" name = "Creaking" />
+            <instrument pc = "124" msb = "3" lsb = "1" mapName = "55 map" name = "Door" />
+            <instrument pc = "124" msb = "4" lsb = "1" mapName = "55 map" name = "Scratch" />
+            <instrument pc = "124" msb = "5" lsb = "1" mapName = "55 map" name = "Wind Chimes" />
+            <instrument pc = "125" msb = "0" lsb = "1" mapName = "55 map" name = "Helicopter" />
+            <instrument pc = "125" msb = "1" lsb = "1" mapName = "55 map" name = "Car-Engine" />
+            <instrument pc = "125" msb = "2" lsb = "1" mapName = "55 map" name = "Car-Stop" />
+            <instrument pc = "125" msb = "3" lsb = "1" mapName = "55 map" name = "Car-Pass" />
+            <instrument pc = "125" msb = "4" lsb = "1" mapName = "55 map" name = "Car-Crash" />
+            <instrument pc = "125" msb = "5" lsb = "1" mapName = "55 map" name = "Siren" />
+            <instrument pc = "125" msb = "6" lsb = "1" mapName = "55 map" name = "Train" />
+            <instrument pc = "125" msb = "7" lsb = "1" mapName = "55 map" name = "Jetplane" />
+            <instrument pc = "125" msb = "8" lsb = "1" mapName = "55 map" name = "Starship" />
+            <instrument pc = "125" msb = "9" lsb = "1" mapName = "55 map" name = "Burst Noise" />
+            <instrument pc = "126" msb = "0" lsb = "1" mapName = "55 map" name = "Applause" />
+            <instrument pc = "126" msb = "1" lsb = "1" mapName = "55 map" name = "Laughing" />
+            <instrument pc = "126" msb = "2" lsb = "1" mapName = "55 map" name = "Screaming" />
+            <instrument pc = "126" msb = "3" lsb = "1" mapName = "55 map" name = "Punch" />
+            <instrument pc = "126" msb = "4" lsb = "1" mapName = "55 map" name = "Heart Beat" />
+            <instrument pc = "126" msb = "5" lsb = "1" mapName = "55 map" name = "Footsteps" />
+            <instrument pc = "127" msb = "0" lsb = "1" mapName = "55 map" name = "Gun Shot" />
+            <instrument pc = "127" msb = "1" lsb = "1" mapName = "55 map" name = "Machine Gun" />
+            <instrument pc = "127" msb = "2" lsb = "1" mapName = "55 map" name = "Lasergun" />
+            <instrument pc = "127" msb = "3" lsb = "1" mapName = "55 map" name = "Explosion" />
+
+            <instrument pc = "0" msb = "0" lsb = "0" mapName = "88" name = "Piano 1" />
+            <instrument pc = "0" msb = "8" lsb = "0" mapName = "88" name = "Piano 1w" />
+            <instrument pc = "0" msb = "16" lsb = "0" mapName = "88" name = "Piano 1d" />
+            <instrument pc = "1" msb = "0" lsb = "0" mapName = "88" name = "Piano 2" />
+            <instrument pc = "1" msb = "8" lsb = "0" mapName = "88" name = "Piano 2w" />
+            <instrument pc = "2" msb = "0" lsb = "0" mapName = "88" name = "Piano 3" />
+            <instrument pc = "2" msb = "1" lsb = "0" mapName = "88" name = "EG+Rhodes 1" />
+            <instrument pc = "2" msb = "2" lsb = "0" mapName = "88" name = "EG+Rhodes 2" />
+            <instrument pc = "2" msb = "8" lsb = "0" mapName = "88" name = "Piano 3w" />
+            <instrument pc = "3" msb = "0" lsb = "0" mapName = "88" name = "Honky-tonk" />
+            <instrument pc = "3" msb = "8" lsb = "0" mapName = "88" name = "Old Upright" />
+            <instrument pc = "4" msb = "0" lsb = "0" mapName = "88" name = "E.Piano 1" />
+            <instrument pc = "4" msb = "8" lsb = "0" mapName = "88" name = "St.Soft EP" />
+            <instrument pc = "4" msb = "16" lsb = "0" mapName = "88" name = "FM+SA EP" />
+            <instrument pc = "4" msb = "24" lsb = "0" mapName = "88" name = "60'sE.Piano" />
+            <instrument pc = "4" msb = "25" lsb = "0" mapName = "88" name = "Hard Rhodes" />
+            <instrument pc = "4" msb = "26" lsb = "0" mapName = "88" name = "MellwRhodes" />
+            <instrument pc = "5" msb = "0" lsb = "0" mapName = "88" name = "E.Piano 2" />
+            <instrument pc = "5" msb = "8" lsb = "0" mapName = "88" name = "Detuned EP2" />
+            <instrument pc = "5" msb = "16" lsb = "0" mapName = "88" name = "St.FM EP" />
+            <instrument pc = "5" msb = "24" lsb = "0" mapName = "88" name = "Hard FM EP" />
+            <instrument pc = "6" msb = "0" lsb = "0" mapName = "88" name = "Harpsichord" />
+            <instrument pc = "6" msb = "8" lsb = "0" mapName = "88" name = "Coupled Hps" />
+            <instrument pc = "6" msb = "16" lsb = "0" mapName = "88" name = "Harpsi.w" />
+            <instrument pc = "6" msb = "24" lsb = "0" mapName = "88" name = "Harpsi.o" />
+            <instrument pc = "7" msb = "0" lsb = "0" mapName = "88" name = "Clav." />
+            <instrument pc = "8" msb = "0" lsb = "0" mapName = "88" name = "Celesta" />
+            <instrument pc = "9" msb = "0" lsb = "0" mapName = "88" name = "Glocknspiel" />
+            <instrument pc = "10" msb = "0" lsb = "0" mapName = "88" name = "Music Box" />
+            <instrument pc = "11" msb = "0" lsb = "0" mapName = "88" name = "Vibraphone" />
+            <instrument pc = "11" msb = "1" lsb = "0" mapName = "88" name = "Hard Vibe" />
+            <instrument pc = "11" msb = "8" lsb = "0" mapName = "88" name = "Vib.w" />
+            <instrument pc = "12" msb = "0" lsb = "0" mapName = "88" name = "Marimba" />
+            <instrument pc = "12" msb = "8" lsb = "0" mapName = "88" name = "Marimba w" />
+            <instrument pc = "12" msb = "16" lsb = "0" mapName = "88" name = "Barafon" />
+            <instrument pc = "12" msb = "17" lsb = "0" mapName = "88" name = "Barafon 2" />
+            <instrument pc = "12" msb = "24" lsb = "0" mapName = "88" name = "Log drum" />
+            <instrument pc = "13" msb = "0" lsb = "0" mapName = "88" name = "Xylophone" />
+            <instrument pc = "14" msb = "0" lsb = "0" mapName = "88" name = "Tubularbell" />
+            <instrument pc = "14" msb = "8" lsb = "0" mapName = "88" name = "Church Bell" />
+            <instrument pc = "14" msb = "9" lsb = "0" mapName = "88" name = "Carillon" />
+            <instrument pc = "15" msb = "0" lsb = "0" mapName = "88" name = "Santur" />
+            <instrument pc = "15" msb = "1" lsb = "0" mapName = "88" name = "Santur 2" />
+            <instrument pc = "15" msb = "8" lsb = "0" mapName = "88" name = "Cimbalom" />
+            <instrument pc = "16" msb = "0" lsb = "0" mapName = "88" name = "Organ 1" />
+            <instrument pc = "16" msb = "1" lsb = "0" mapName = "88" name = "Organ 101" />
+            <instrument pc = "16" msb = "8" lsb = "0" mapName = "88" name = "DetunedOr.1" />
+            <instrument pc = "16" msb = "9" lsb = "0" mapName = "88" name = "Organ 109" />
+            <instrument pc = "16" msb = "16" lsb = "0" mapName = "88" name = "60'sOrgan 1" />
+            <instrument pc = "16" msb = "17" lsb = "0" mapName = "88" name = "60'sOrgan 2" />
+            <instrument pc = "16" msb = "18" lsb = "0" mapName = "88" name = "60'sOrgan 3" />
+            <instrument pc = "16" msb = "24" lsb = "0" mapName = "88" name = "CheeseOrgan" />
+            <instrument pc = "16" msb = "32" lsb = "0" mapName = "88" name = "Organ 4" />
+            <instrument pc = "16" msb = "33" lsb = "0" mapName = "88" name = "Even Bar" />
+            <instrument pc = "16" msb = "40" lsb = "0" mapName = "88" name = "Organ Bass" />
+            <instrument pc = "17" msb = "0" lsb = "0" mapName = "88" name = "Organ 2" />
+            <instrument pc = "17" msb = "1" lsb = "0" mapName = "88" name = "Organ 201" />
+            <instrument pc = "17" msb = "8" lsb = "0" mapName = "88" name = "DetunedOr.2" />
+            <instrument pc = "17" msb = "32" lsb = "0" mapName = "88" name = "Organ 5" />
+            <instrument pc = "18" msb = "0" lsb = "0" mapName = "88" name = "Organ 3" />
+            <instrument pc = "18" msb = "8" lsb = "0" mapName = "88" name = "Rotary Org." />
+            <instrument pc = "18" msb = "16" lsb = "0" mapName = "88" name = "RotaryOrg.S" />
+            <instrument pc = "18" msb = "24" lsb = "0" mapName = "88" name = "RotaryOrg.F" />
+            <instrument pc = "19" msb = "0" lsb = "0" mapName = "88" name = "ChurchOrg.1" />
+            <instrument pc = "19" msb = "8" lsb = "0" mapName = "88" name = "ChurchOrg.2" />
+            <instrument pc = "19" msb = "16" lsb = "0" mapName = "88" name = "ChurchOrg.3" />
+            <instrument pc = "19" msb = "24" lsb = "0" mapName = "88" name = "Organ Flute" />
+            <instrument pc = "19" msb = "32" lsb = "0" mapName = "88" name = "Trem.Flute" />
+            <instrument pc = "20" msb = "0" lsb = "0" mapName = "88" name = "Reed Organ" />
+            <instrument pc = "21" msb = "0" lsb = "0" mapName = "88" name = "AccordionFr" />
+            <instrument pc = "21" msb = "8" lsb = "0" mapName = "88" name = "AccordionIt" />
+            <instrument pc = "22" msb = "0" lsb = "0" mapName = "88" name = "Harmonica" />
+            <instrument pc = "22" msb = "1" lsb = "0" mapName = "88" name = "Harmonica 2" />
+            <instrument pc = "23" msb = "0" lsb = "0" mapName = "88" name = "Bandoneon" />
+            <instrument pc = "24" msb = "0" lsb = "0" mapName = "88" name = "Nylonstr.Gt" />
+            <instrument pc = "24" msb = "8" lsb = "0" mapName = "88" name = "Ukulele" />
+            <instrument pc = "24" msb = "16" lsb = "0" mapName = "88" name = "Nylon Gt.o" />
+            <instrument pc = "24" msb = "24" lsb = "0" mapName = "88" name = "VeloHarmnix" />
+            <instrument pc = "24" msb = "32" lsb = "0" mapName = "88" name = "Nylon Gt.2" />
+            <instrument pc = "24" msb = "40" lsb = "0" mapName = "88" name = "Lequint Gt." />
+            <instrument pc = "25" msb = "0" lsb = "0" mapName = "88" name = "Steelstr.Gt" />
+            <instrument pc = "25" msb = "8" lsb = "0" mapName = "88" name = "12-str.Gt" />
+            <instrument pc = "25" msb = "9" lsb = "0" mapName = "88" name = "Nylon+Steel" />
+            <instrument pc = "25" msb = "16" lsb = "0" mapName = "88" name = "Mandolin" />
+            <instrument pc = "25" msb = "32" lsb = "0" mapName = "88" name = "Steel Gt.2" />
+            <instrument pc = "26" msb = "0" lsb = "0" mapName = "88" name = "Jazz Gt." />
+            <instrument pc = "26" msb = "1" lsb = "0" mapName = "88" name = "Mellow Gt." />
+            <instrument pc = "26" msb = "8" lsb = "0" mapName = "88" name = "Pedal Steel" />
+            <instrument pc = "27" msb = "0" lsb = "0" mapName = "88" name = "Clean Gt." />
+            <instrument pc = "27" msb = "8" lsb = "0" mapName = "88" name = "Chorus Gt." />
+            <instrument pc = "28" msb = "0" lsb = "0" mapName = "88" name = "Muted Gt." />
+            <instrument pc = "28" msb = "1" lsb = "0" mapName = "88" name = "MutedDis.Gt" />
+            <instrument pc = "28" msb = "8" lsb = "0" mapName = "88" name = "Funk Pop" />
+            <instrument pc = "28" msb = "16" lsb = "0" mapName = "88" name = "Funk Gt.2" />
+            <instrument pc = "29" msb = "0" lsb = "0" mapName = "88" name = "OverdriveGt" />
+            <instrument pc = "30" msb = "0" lsb = "0" mapName = "88" name = "DistortionGt" />
+            <instrument pc = "30" msb = "1" lsb = "0" mapName = "88" name = "Dist. Gt2" />
+            <instrument pc = "30" msb = "2" lsb = "0" mapName = "88" name = "DazedGuitar" />
+            <instrument pc = "30" msb = "8" lsb = "0" mapName = "88" name = "FeedbackGt." />
+            <instrument pc = "30" msb = "9" lsb = "0" mapName = "88" name = "FeedbackGt2" />
+            <instrument pc = "30" msb = "16" lsb = "0" mapName = "88" name = "PowerGuitar" />
+            <instrument pc = "30" msb = "17" lsb = "0" mapName = "88" name = "Power Gt.2" />
+            <instrument pc = "30" msb = "18" lsb = "0" mapName = "88" name = "5th Dist." />
+            <instrument pc = "30" msb = "24" lsb = "0" mapName = "88" name = "Rock Rhythm" />
+            <instrument pc = "30" msb = "25" lsb = "0" mapName = "88" name = "RockRhythm2" />
+            <instrument pc = "31" msb = "0" lsb = "0" mapName = "88" name = "Gt.Harmonix" />
+            <instrument pc = "31" msb = "8" lsb = "0" mapName = "88" name = "Gt.Feedback" />
+            <instrument pc = "31" msb = "16" lsb = "0" mapName = "88" name = "Ac.Gt.Harm." />
+            <instrument pc = "32" msb = "0" lsb = "0" mapName = "88" name = "AcousticBs." />
+            <instrument pc = "33" msb = "0" lsb = "0" mapName = "88" name = "FingeredBs." />
+            <instrument pc = "33" msb = "1" lsb = "0" mapName = "88" name = "FingeredBs2" />
+            <instrument pc = "33" msb = "2" lsb = "0" mapName = "88" name = "Jazz Bass" />
+            <instrument pc = "34" msb = "0" lsb = "0" mapName = "88" name = "Picked Bass" />
+            <instrument pc = "34" msb = "8" lsb = "0" mapName = "88" name = "MutePickBs." />
+            <instrument pc = "35" msb = "0" lsb = "0" mapName = "88" name = "FretlessBs." />
+            <instrument pc = "35" msb = "1" lsb = "0" mapName = "88" name = "FretlessBs2" />
+            <instrument pc = "35" msb = "2" lsb = "0" mapName = "88" name = "FretlessBs3" />
+            <instrument pc = "35" msb = "3" lsb = "0" mapName = "88" name = "FretlessBs4" />
+            <instrument pc = "35" msb = "4" lsb = "0" mapName = "88" name = "SynFretless" />
+            <instrument pc = "35" msb = "5" lsb = "0" mapName = "88" name = "Mr.Smooth" />
+            <instrument pc = "36" msb = "0" lsb = "0" mapName = "88" name = "Slap Bass 1" />
+            <instrument pc = "36" msb = "8" lsb = "0" mapName = "88" name = "Reso Slap" />
+            <instrument pc = "37" msb = "0" lsb = "0" mapName = "88" name = "Slap Bass 2" />
+            <instrument pc = "38" msb = "0" lsb = "0" mapName = "88" name = "SynthBass 1" />
+            <instrument pc = "38" msb = "1" lsb = "0" mapName = "88" name = "Syn.Bass101" />
+            <instrument pc = "38" msb = "8" lsb = "0" mapName = "88" name = "Acid Bass" />
+            <instrument pc = "38" msb = "9" lsb = "0" mapName = "88" name = "TB303 Bass" />
+            <instrument pc = "38" msb = "10" lsb = "0" mapName = "88" name = "Tekno Bass" />
+            <instrument pc = "38" msb = "16" lsb = "0" mapName = "88" name = "Reso SHBass" />
+            <instrument pc = "39" msb = "0" lsb = "0" mapName = "88" name = "SynthBass 2" />
+            <instrument pc = "39" msb = "1" lsb = "0" mapName = "88" name = "Syn.Bass201" />
+            <instrument pc = "39" msb = "2" lsb = "0" mapName = "88" name = "ModularBass" />
+            <instrument pc = "39" msb = "3" lsb = "0" mapName = "88" name = "Seq Bass" />
+            <instrument pc = "39" msb = "8" lsb = "0" mapName = "88" name = "Beef FMBass" />
+            <instrument pc = "39" msb = "9" lsb = "0" mapName = "88" name = "X Wire Bass" />
+            <instrument pc = "39" msb = "16" lsb = "0" mapName = "88" name = "Rubber Bass" />
+            <instrument pc = "39" msb = "17" lsb = "0" mapName = "88" name = "SH101Bass 1" />
+            <instrument pc = "39" msb = "18" lsb = "0" mapName = "88" name = "SH101Bass 2" />
+            <instrument pc = "39" msb = "19" lsb = "0" mapName = "88" name = "Smooth Bass" />
+            <instrument pc = "40" msb = "0" lsb = "0" mapName = "88" name = "Violin" />
+            <instrument pc = "40" msb = "8" lsb = "0" mapName = "88" name = "Slow Violin" />
+            <instrument pc = "41" msb = "0" lsb = "0" mapName = "88" name = "Viola" />
+            <instrument pc = "42" msb = "0" lsb = "0" mapName = "88" name = "Cello" />
+            <instrument pc = "43" msb = "0" lsb = "0" mapName = "88" name = "Contrabass" />
+            <instrument pc = "44" msb = "0" lsb = "0" mapName = "88" name = "Tremolo Str" />
+            <instrument pc = "44" msb = "8" lsb = "0" mapName = "88" name = "SlowTremolo" />
+            <instrument pc = "44" msb = "9" lsb = "0" mapName = "88" name = "SuspenseStr" />
+            <instrument pc = "45" msb = "0" lsb = "0" mapName = "88" name = "Pizz. Str." />
+            <instrument pc = "46" msb = "0" lsb = "0" mapName = "88" name = "Harp" />
+            <instrument pc = "47" msb = "0" lsb = "0" mapName = "88" name = "Timpani" />
+            <instrument pc = "48" msb = "0" lsb = "0" mapName = "88" name = "Strings" />
+            <instrument pc = "48" msb = "1" lsb = "0" mapName = "88" name = "Strings 2" />
+            <instrument pc = "48" msb = "8" lsb = "0" mapName = "88" name = "Orchestra" />
+            <instrument pc = "48" msb = "9" lsb = "0" mapName = "88" name = "Orchestra 2" />
+            <instrument pc = "48" msb = "10" lsb = "0" mapName = "88" name = "TremoloOrch" />
+            <instrument pc = "48" msb = "11" lsb = "0" mapName = "88" name = "Choir Str." />
+            <instrument pc = "48" msb = "16" lsb = "0" mapName = "88" name = "St.Strings" />
+            <instrument pc = "48" msb = "24" lsb = "0" mapName = "88" name = "VeloStrings" />
+            <instrument pc = "49" msb = "0" lsb = "0" mapName = "88" name = "SlowStrings" />
+            <instrument pc = "49" msb = "1" lsb = "0" mapName = "88" name = "Slow Str. 2" />
+            <instrument pc = "49" msb = "8" lsb = "0" mapName = "88" name = "Legato Str." />
+            <instrument pc = "49" msb = "9" lsb = "0" mapName = "88" name = "WarmStrings" />
+            <instrument pc = "49" msb = "10" lsb = "0" mapName = "88" name = "St.SlowStr." />
+            <instrument pc = "50" msb = "0" lsb = "0" mapName = "88" name = "SynStrings1" />
+            <instrument pc = "50" msb = "1" lsb = "0" mapName = "88" name = "OB Strings" />
+            <instrument pc = "50" msb = "8" lsb = "0" mapName = "88" name = "SynStrings3" />
+            <instrument pc = "51" msb = "0" lsb = "0" mapName = "88" name = "SynStrings2" />
+            <instrument pc = "52" msb = "0" lsb = "0" mapName = "88" name = "Choir Aahs" />
+            <instrument pc = "52" msb = "8" lsb = "0" mapName = "88" name = "St.Choir" />
+            <instrument pc = "52" msb = "9" lsb = "0" mapName = "88" name = "Mello Choir" />
+            <instrument pc = "52" msb = "32" lsb = "0" mapName = "88" name = "ChoirAahs 2" />
+            <instrument pc = "53" msb = "0" lsb = "0" mapName = "88" name = "Voice Oohs" />
+            <instrument pc = "54" msb = "0" lsb = "0" mapName = "88" name = "SynVox" />
+            <instrument pc = "54" msb = "8" lsb = "0" mapName = "88" name = "Syn.Voice" />
+            <instrument pc = "55" msb = "0" lsb = "0" mapName = "88" name = "Orch. Hit" />
+            <instrument pc = "55" msb = "8" lsb = "0" mapName = "88" name = "Impact Hit" />
+            <instrument pc = "55" msb = "9" lsb = "0" mapName = "88" name = "Philly Hit" />
+            <instrument pc = "55" msb = "10" lsb = "0" mapName = "88" name = "Double Hit" />
+            <instrument pc = "55" msb = "16" lsb = "0" mapName = "88" name = "Lo Fi Rave" />
+            <instrument pc = "56" msb = "0" lsb = "0" mapName = "88" name = "Trumpet" />
+            <instrument pc = "56" msb = "1" lsb = "0" mapName = "88" name = "Trumpet 2" />
+            <instrument pc = "56" msb = "8" lsb = "0" mapName = "88" name = "Flugel Horn" />
+            <instrument pc = "56" msb = "24" lsb = "0" mapName = "88" name = "Bright Tp." />
+            <instrument pc = "56" msb = "25" lsb = "0" mapName = "88" name = "Warm Tp." />
+            <instrument pc = "57" msb = "0" lsb = "0" mapName = "88" name = "Trombone" />
+            <instrument pc = "57" msb = "1" lsb = "0" mapName = "88" name = "Trombone 2" />
+            <instrument pc = "58" msb = "0" lsb = "0" mapName = "88" name = "Tuba" />
+            <instrument pc = "58" msb = "1" lsb = "0" mapName = "88" name = "Tuba 2" />
+            <instrument pc = "59" msb = "0" lsb = "0" mapName = "88" name = "Muted Tp." />
+            <instrument pc = "60" msb = "0" lsb = "0" mapName = "88" name = "FrenchHorns" />
+            <instrument pc = "60" msb = "1" lsb = "0" mapName = "88" name = "Fr.Horn 2" />
+            <instrument pc = "60" msb = "8" lsb = "0" mapName = "88" name = "Fr.HornSolo" />
+            <instrument pc = "60" msb = "16" lsb = "0" mapName = "88" name = "Horn Orch" />
+            <instrument pc = "61" msb = "0" lsb = "0" mapName = "88" name = "Brass 1" />
+            <instrument pc = "61" msb = "8" lsb = "0" mapName = "88" name = "Brass 2" />
+            <instrument pc = "61" msb = "16" lsb = "0" mapName = "88" name = "Brass Fall" />
+            <instrument pc = "62" msb = "0" lsb = "0" mapName = "88" name = "SynthBrass1" />
+            <instrument pc = "62" msb = "1" lsb = "0" mapName = "88" name = "Poly Brass" />
+            <instrument pc = "62" msb = "8" lsb = "0" mapName = "88" name = "Syn.Brass 3" />
+            <instrument pc = "62" msb = "9" lsb = "0" mapName = "88" name = "Quack Brass" />
+            <instrument pc = "62" msb = "16" lsb = "0" mapName = "88" name = "OctaveBrass" />
+            <instrument pc = "63" msb = "0" lsb = "0" mapName = "88" name = "Syn.Brass 2" />
+            <instrument pc = "63" msb = "1" lsb = "0" mapName = "88" name = "Soft Brass" />
+            <instrument pc = "63" msb = "8" lsb = "0" mapName = "88" name = "Syn.Brass 4" />
+            <instrument pc = "63" msb = "16" lsb = "0" mapName = "88" name = "VeloBrass 1" />
+            <instrument pc = "63" msb = "17" lsb = "0" mapName = "88" name = "VeloBrass 2" />
+            <instrument pc = "64" msb = "0" lsb = "0" mapName = "88" name = "Soprano Sax" />
+            <instrument pc = "65" msb = "0" lsb = "0" mapName = "88" name = "Alto Sax" />
+            <instrument pc = "65" msb = "8" lsb = "0" mapName = "88" name = "Hyper Alto" />
+            <instrument pc = "66" msb = "0" lsb = "0" mapName = "88" name = "Tenor Sax" />
+            <instrument pc = "66" msb = "8" lsb = "0" mapName = "88" name = "BreathyTnr." />
+            <instrument pc = "67" msb = "0" lsb = "0" mapName = "88" name = "BaritoneSax" />
+            <instrument pc = "68" msb = "0" lsb = "0" mapName = "88" name = "Oboe" />
+            <instrument pc = "69" msb = "0" lsb = "0" mapName = "88" name = "EnglishHorn" />
+            <instrument pc = "70" msb = "0" lsb = "0" mapName = "88" name = "Bassoon" />
+            <instrument pc = "71" msb = "0" lsb = "0" mapName = "88" name = "Clarinet" />
+            <instrument pc = "71" msb = "8" lsb = "0" mapName = "88" name = "Bs Clarinet" />
+            <instrument pc = "72" msb = "0" lsb = "0" mapName = "88" name = "Piccolo" />
+            <instrument pc = "73" msb = "0" lsb = "0" mapName = "88" name = "Flute" />
+            <instrument pc = "74" msb = "0" lsb = "0" mapName = "88" name = "Recorder" />
+            <instrument pc = "75" msb = "0" lsb = "0" mapName = "88" name = "Pan Flute" />
+            <instrument pc = "75" msb = "8" lsb = "0" mapName = "88" name = "Kawala" />
+            <instrument pc = "76" msb = "0" lsb = "0" mapName = "88" name = "Bottle Blow" />
+            <instrument pc = "77" msb = "0" lsb = "0" mapName = "88" name = "Shakuhachi" />
+            <instrument pc = "78" msb = "0" lsb = "0" mapName = "88" name = "Whistle" />
+            <instrument pc = "79" msb = "0" lsb = "0" mapName = "88" name = "Ocarina" />
+            <instrument pc = "80" msb = "0" lsb = "0" mapName = "88" name = "Square Wave" />
+            <instrument pc = "80" msb = "1" lsb = "0" mapName = "88" name = "Square" />
+            <instrument pc = "80" msb = "2" lsb = "0" mapName = "88" name = "Hollow Mini" />
+            <instrument pc = "80" msb = "3" lsb = "0" mapName = "88" name = "Mellow FM" />
+            <instrument pc = "80" msb = "4" lsb = "0" mapName = "88" name = "CC Solo" />
+            <instrument pc = "80" msb = "5" lsb = "0" mapName = "88" name = "Shmoog" />
+            <instrument pc = "80" msb = "6" lsb = "0" mapName = "88" name = "LM Square" />
+            <instrument pc = "80" msb = "8" lsb = "0" mapName = "88" name = "Sine Wave" />
+            <instrument pc = "81" msb = "0" lsb = "0" mapName = "88" name = "Saw Wave" />
+            <instrument pc = "81" msb = "1" lsb = "0" mapName = "88" name = "Saw" />
+            <instrument pc = "81" msb = "2" lsb = "0" mapName = "88" name = "Pulse Saw" />
+            <instrument pc = "81" msb = "3" lsb = "0" mapName = "88" name = "Feline GR" />
+            <instrument pc = "81" msb = "4" lsb = "0" mapName = "88" name = "Big Lead" />
+            <instrument pc = "81" msb = "5" lsb = "0" mapName = "88" name = "Velo Lead" />
+            <instrument pc = "81" msb = "6" lsb = "0" mapName = "88" name = "GR-300" />
+            <instrument pc = "81" msb = "7" lsb = "0" mapName = "88" name = "LA Saw" />
+            <instrument pc = "81" msb = "8" lsb = "0" mapName = "88" name = "Doctor Solo" />
+            <instrument pc = "81" msb = "16" lsb = "0" mapName = "88" name = "Waspy Synth" />
+            <instrument pc = "82" msb = "0" lsb = "0" mapName = "88" name = "SynCalliope" />
+            <instrument pc = "82" msb = "1" lsb = "0" mapName = "88" name = "Vent Synth" />
+            <instrument pc = "82" msb = "2" lsb = "0" mapName = "88" name = "PurePanLead" />
+            <instrument pc = "83" msb = "0" lsb = "0" mapName = "88" name = "ChifferLead" />
+            <instrument pc = "84" msb = "0" lsb = "0" mapName = "88" name = "Charang" />
+            <instrument pc = "84" msb = "8" lsb = "0" mapName = "88" name = "Dist.Lead" />
+            <instrument pc = "85" msb = "0" lsb = "0" mapName = "88" name = "Solo Vox" />
+            <instrument pc = "86" msb = "0" lsb = "0" mapName = "88" name = "5th Saw" />
+            <instrument pc = "86" msb = "1" lsb = "0" mapName = "88" name = "Big Fives" />
+            <instrument pc = "87" msb = "0" lsb = "0" mapName = "88" name = "Bass &amp; Lead" />
+            <instrument pc = "87" msb = "1" lsb = "0" mapName = "88" name = "Big &amp; Raw" />
+            <instrument pc = "87" msb = "2" lsb = "0" mapName = "88" name = "Fat &amp; Perky" />
+            <instrument pc = "88" msb = "0" lsb = "0" mapName = "88" name = "Fantasia" />
+            <instrument pc = "88" msb = "1" lsb = "0" mapName = "88" name = "Fantasia 2" />
+            <instrument pc = "89" msb = "0" lsb = "0" mapName = "88" name = "Warm Pad" />
+            <instrument pc = "89" msb = "1" lsb = "0" mapName = "88" name = "Thick Pad" />
+            <instrument pc = "89" msb = "2" lsb = "0" mapName = "88" name = "Horn Pad" />
+            <instrument pc = "89" msb = "3" lsb = "0" mapName = "88" name = "RotaryStrng" />
+            <instrument pc = "89" msb = "4" lsb = "0" mapName = "88" name = "Soft Pad" />
+            <instrument pc = "90" msb = "0" lsb = "0" mapName = "88" name = "Polysynth" />
+            <instrument pc = "90" msb = "1" lsb = "0" mapName = "88" name = "80'sPolySyn" />
+            <instrument pc = "91" msb = "0" lsb = "0" mapName = "88" name = "Space Voice" />
+            <instrument pc = "91" msb = "1" lsb = "0" mapName = "88" name = "Heaven II" />
+            <instrument pc = "92" msb = "0" lsb = "0" mapName = "88" name = "Bowed Glass" />
+            <instrument pc = "93" msb = "0" lsb = "0" mapName = "88" name = "Metal Pad" />
+            <instrument pc = "93" msb = "1" lsb = "0" mapName = "88" name = "Tine Pad" />
+            <instrument pc = "93" msb = "2" lsb = "0" mapName = "88" name = "Panner Pad" />
+            <instrument pc = "94" msb = "0" lsb = "0" mapName = "88" name = "Halo Pad" />
+            <instrument pc = "95" msb = "0" lsb = "0" mapName = "88" name = "Sweep Pad" />
+            <instrument pc = "95" msb = "1" lsb = "0" mapName = "88" name = "Polar Pad" />
+            <instrument pc = "95" msb = "8" lsb = "0" mapName = "88" name = "Converge" />
+            <instrument pc = "95" msb = "9" lsb = "0" mapName = "88" name = "Shwimmer" />
+            <instrument pc = "95" msb = "10" lsb = "0" mapName = "88" name = "CelestialPd" />
+            <instrument pc = "96" msb = "0" lsb = "0" mapName = "88" name = "Ice Rain" />
+            <instrument pc = "96" msb = "1" lsb = "0" mapName = "88" name = "Harmo Rain" />
+            <instrument pc = "96" msb = "2" lsb = "0" mapName = "88" name = "AfricanWood" />
+            <instrument pc = "96" msb = "8" lsb = "0" mapName = "88" name = "Clavi Pad" />
+            <instrument pc = "97" msb = "0" lsb = "0" mapName = "88" name = "Soundtrack" />
+            <instrument pc = "97" msb = "1" lsb = "0" mapName = "88" name = "Ancestral" />
+            <instrument pc = "97" msb = "2" lsb = "0" mapName = "88" name = "Prologue" />
+            <instrument pc = "97" msb = "8" lsb = "0" mapName = "88" name = "Rave" />
+            <instrument pc = "98" msb = "0" lsb = "0" mapName = "88" name = "Crystal" />
+            <instrument pc = "98" msb = "1" lsb = "0" mapName = "88" name = "Syn Mallet" />
+            <instrument pc = "98" msb = "2" lsb = "0" mapName = "88" name = "SoftCrystal" />
+            <instrument pc = "98" msb = "3" lsb = "0" mapName = "88" name = "Round Glock" />
+            <instrument pc = "98" msb = "4" lsb = "0" mapName = "88" name = "Loud Glock" />
+            <instrument pc = "98" msb = "5" lsb = "0" mapName = "88" name = "GlocknChime" />
+            <instrument pc = "98" msb = "6" lsb = "0" mapName = "88" name = "Clear Bells" />
+            <instrument pc = "98" msb = "7" lsb = "0" mapName = "88" name = "X'mas Bell" />
+            <instrument pc = "98" msb = "8" lsb = "0" mapName = "88" name = "Vibra Bells" />
+            <instrument pc = "98" msb = "9" lsb = "0" mapName = "88" name = "Digi Bells" />
+            <instrument pc = "98" msb = "16" lsb = "0" mapName = "88" name = "ChoralBells" />
+            <instrument pc = "98" msb = "17" lsb = "0" mapName = "88" name = "Air Bells" />
+            <instrument pc = "98" msb = "18" lsb = "0" mapName = "88" name = "Bell Harp" />
+            <instrument pc = "98" msb = "19" lsb = "0" mapName = "88" name = "Gamelimba" />
+            <instrument pc = "99" msb = "0" lsb = "0" mapName = "88" name = "Atmosphere" />
+            <instrument pc = "99" msb = "1" lsb = "0" mapName = "88" name = "Warm Atmos" />
+            <instrument pc = "99" msb = "2" lsb = "0" mapName = "88" name = "Nylon Harp" />
+            <instrument pc = "99" msb = "3" lsb = "0" mapName = "88" name = "Harpvox" />
+            <instrument pc = "99" msb = "4" lsb = "0" mapName = "88" name = "HollowRels." />
+            <instrument pc = "99" msb = "5" lsb = "0" mapName = "88" name = "NylonRhodes" />
+            <instrument pc = "99" msb = "6" lsb = "0" mapName = "88" name = "Ambient Pad" />
+            <instrument pc = "100" msb = "0" lsb = "0" mapName = "88" name = "Brightness" />
+            <instrument pc = "101" msb = "0" lsb = "0" mapName = "88" name = "Goblin" />
+            <instrument pc = "101" msb = "1" lsb = "0" mapName = "88" name = "Goblinson" />
+            <instrument pc = "101" msb = "2" lsb = "0" mapName = "88" name = "50's Sci-Fi" />
+            <instrument pc = "102" msb = "0" lsb = "0" mapName = "88" name = "Echo Drops" />
+            <instrument pc = "102" msb = "1" lsb = "0" mapName = "88" name = "Echo Bell" />
+            <instrument pc = "102" msb = "2" lsb = "0" mapName = "88" name = "Echo Pan" />
+            <instrument pc = "102" msb = "3" lsb = "0" mapName = "88" name = "Echo Pan 2" />
+            <instrument pc = "102" msb = "4" lsb = "0" mapName = "88" name = "Big Panner" />
+            <instrument pc = "102" msb = "5" lsb = "0" mapName = "88" name = "Reso Panner" />
+            <instrument pc = "102" msb = "6" lsb = "0" mapName = "88" name = "Water Piano" />
+            <instrument pc = "103" msb = "0" lsb = "0" mapName = "88" name = "Star Theme" />
+            <instrument pc = "103" msb = "1" lsb = "0" mapName = "88" name = "StarTheme 2" />
+            <instrument pc = "104" msb = "0" lsb = "0" mapName = "88" name = "Sitar" />
+            <instrument pc = "104" msb = "1" lsb = "0" mapName = "88" name = "Sitar 2" />
+            <instrument pc = "104" msb = "2" lsb = "0" mapName = "88" name = "DetuneSitar" />
+            <instrument pc = "104" msb = "8" lsb = "0" mapName = "88" name = "Tambra" />
+            <instrument pc = "104" msb = "16" lsb = "0" mapName = "88" name = "Tamboura" />
+            <instrument pc = "105" msb = "0" lsb = "0" mapName = "88" name = "Banjo" />
+            <instrument pc = "105" msb = "1" lsb = "0" mapName = "88" name = "Muted Banjo" />
+            <instrument pc = "105" msb = "8" lsb = "0" mapName = "88" name = "Rabab" />
+            <instrument pc = "105" msb = "16" lsb = "0" mapName = "88" name = "Gopichant" />
+            <instrument pc = "105" msb = "24" lsb = "0" mapName = "88" name = "Oud" />
+            <instrument pc = "106" msb = "0" lsb = "0" mapName = "88" name = "Shamisen" />
+            <instrument pc = "106" msb = "1" lsb = "0" mapName = "88" name = "Tsugaru" />
+            <instrument pc = "107" msb = "0" lsb = "0" mapName = "88" name = "Koto" />
+            <instrument pc = "107" msb = "8" lsb = "0" mapName = "88" name = "Taisho Koto" />
+            <instrument pc = "107" msb = "16" lsb = "0" mapName = "88" name = "Kanoon" />
+            <instrument pc = "108" msb = "0" lsb = "0" mapName = "88" name = "Kalimba" />
+            <instrument pc = "109" msb = "0" lsb = "0" mapName = "88" name = "Bagpipe" />
+            <instrument pc = "110" msb = "0" lsb = "0" mapName = "88" name = "Fiddle" />
+            <instrument pc = "111" msb = "0" lsb = "0" mapName = "88" name = "Shanai" />
+            <instrument pc = "111" msb = "1" lsb = "0" mapName = "88" name = "Shanai 2" />
+            <instrument pc = "111" msb = "8" lsb = "0" mapName = "88" name = "Pungi" />
+            <instrument pc = "111" msb = "16" lsb = "0" mapName = "88" name = "Hichiriki" />
+            <instrument pc = "112" msb = "0" lsb = "0" mapName = "88" name = "Tinkle Bell" />
+            <instrument pc = "112" msb = "8" lsb = "0" mapName = "88" name = "Bonang" />
+            <instrument pc = "112" msb = "9" lsb = "0" mapName = "88" name = "Gender" />
+            <instrument pc = "112" msb = "10" lsb = "0" mapName = "88" name = "GamelanGong" />
+            <instrument pc = "112" msb = "11" lsb = "0" mapName = "88" name = "St.Gamelan" />
+            <instrument pc = "112" msb = "16" lsb = "0" mapName = "88" name = "RAMA Cymbal" />
+            <instrument pc = "113" msb = "0" lsb = "0" mapName = "88" name = "Agogo" />
+            <instrument pc = "113" msb = "8" lsb = "0" mapName = "88" name = "Atarigane" />
+            <instrument pc = "114" msb = "0" lsb = "0" mapName = "88" name = "Steel Drums" />
+            <instrument pc = "115" msb = "0" lsb = "0" mapName = "88" name = "Woodblock" />
+            <instrument pc = "115" msb = "8" lsb = "0" mapName = "88" name = "Castanets" />
+            <instrument pc = "116" msb = "0" lsb = "0" mapName = "88" name = "Taiko" />
+            <instrument pc = "116" msb = "8" lsb = "0" mapName = "88" name = "Concert BD" />
+            <instrument pc = "117" msb = "0" lsb = "0" mapName = "88" name = "Melo. Tom 1" />
+            <instrument pc = "117" msb = "1" lsb = "0" mapName = "88" name = "Real Tom" />
+            <instrument pc = "117" msb = "8" lsb = "0" mapName = "88" name = "Melo. Tom 2" />
+            <instrument pc = "117" msb = "9" lsb = "0" mapName = "88" name = "Rock Tom" />
+            <instrument pc = "118" msb = "0" lsb = "0" mapName = "88" name = "Synth Drum" />
+            <instrument pc = "118" msb = "8" lsb = "0" mapName = "88" name = "808 Tom" />
+            <instrument pc = "118" msb = "9" lsb = "0" mapName = "88" name = "Elec Perc" />
+            <instrument pc = "119" msb = "0" lsb = "0" mapName = "88" name = "Reverse Cym" />
+            <instrument pc = "119" msb = "1" lsb = "0" mapName = "88" name = "ReverseCym2" />
+            <instrument pc = "119" msb = "8" lsb = "0" mapName = "88" name = "Rev.Snare 1" />
+            <instrument pc = "119" msb = "9" lsb = "0" mapName = "88" name = "Rev.Snare 2" />
+            <instrument pc = "119" msb = "16" lsb = "0" mapName = "88" name = "Rev.Kick 1" />
+            <instrument pc = "119" msb = "17" lsb = "0" mapName = "88" name = "Rev.ConBD" />
+            <instrument pc = "119" msb = "24" lsb = "0" mapName = "88" name = "Rev.Tom 1" />
+            <instrument pc = "119" msb = "25" lsb = "0" mapName = "88" name = "Rev.Tom 2" />
+            <instrument pc = "120" msb = "0" lsb = "0" mapName = "88" name = "Gt.FretNoiz" />
+            <instrument pc = "120" msb = "1" lsb = "0" mapName = "88" name = "Gt.CutNoise" />
+            <instrument pc = "120" msb = "2" lsb = "0" mapName = "88" name = "String Slap" />
+            <instrument pc = "120" msb = "3" lsb = "0" mapName = "88" name = "Gt.CutNz. 2" />
+            <instrument pc = "120" msb = "4" lsb = "0" mapName = "88" name = "Dist.CutNz." />
+            <instrument pc = "120" msb = "5" lsb = "0" mapName = "88" name = "Bass Slide" />
+            <instrument pc = "120" msb = "6" lsb = "0" mapName = "88" name = "Pick Scrape" />
+            <instrument pc = "121" msb = "0" lsb = "0" mapName = "88" name = "BreathNoise" />
+            <instrument pc = "121" msb = "1" lsb = "0" mapName = "88" name = "Fl.KeyClick" />
+            <instrument pc = "122" msb = "0" lsb = "0" mapName = "88" name = "Seashore" />
+            <instrument pc = "122" msb = "1" lsb = "0" mapName = "88" name = "Rain" />
+            <instrument pc = "122" msb = "2" lsb = "0" mapName = "88" name = "Thunder" />
+            <instrument pc = "122" msb = "3" lsb = "0" mapName = "88" name = "Wind" />
+            <instrument pc = "122" msb = "4" lsb = "0" mapName = "88" name = "Stream" />
+            <instrument pc = "122" msb = "5" lsb = "0" mapName = "88" name = "Bubble" />
+            <instrument pc = "123" msb = "0" lsb = "0" mapName = "88" name = "Bird" />
+            <instrument pc = "123" msb = "1" lsb = "0" mapName = "88" name = "Dog" />
+            <instrument pc = "123" msb = "2" lsb = "0" mapName = "88" name = "HorseGallop" />
+            <instrument pc = "123" msb = "3" lsb = "0" mapName = "88" name = "Bird 2" />
+            <instrument pc = "123" msb = "4" lsb = "0" mapName = "88" name = "Kitty" />
+            <instrument pc = "123" msb = "5" lsb = "0" mapName = "88" name = "Growl" />
+            <instrument pc = "124" msb = "0" lsb = "0" mapName = "88" name = "Telephone 1" />
+            <instrument pc = "124" msb = "1" lsb = "0" mapName = "88" name = "Telephone 2" />
+            <instrument pc = "124" msb = "2" lsb = "0" mapName = "88" name = "Creaking" />
+            <instrument pc = "124" msb = "3" lsb = "0" mapName = "88" name = "Door" />
+            <instrument pc = "124" msb = "4" lsb = "0" mapName = "88" name = "Scratch" />
+            <instrument pc = "124" msb = "5" lsb = "0" mapName = "88" name = "Wind Chimes" />
+            <instrument pc = "124" msb = "7" lsb = "0" mapName = "88" name = "Scratch 2" />
+            <instrument pc = "125" msb = "0" lsb = "0" mapName = "88" name = "Helicopter" />
+            <instrument pc = "125" msb = "1" lsb = "0" mapName = "88" name = "Car-Engine" />
+            <instrument pc = "125" msb = "2" lsb = "0" mapName = "88" name = "Car-Stop" />
+            <instrument pc = "125" msb = "3" lsb = "0" mapName = "88" name = "Car-Pass" />
+            <instrument pc = "125" msb = "4" lsb = "0" mapName = "88" name = "Car-Crash" />
+            <instrument pc = "125" msb = "5" lsb = "0" mapName = "88" name = "Siren" />
+            <instrument pc = "125" msb = "6" lsb = "0" mapName = "88" name = "Train" />
+            <instrument pc = "125" msb = "7" lsb = "0" mapName = "88" name = "Jetplane" />
+            <instrument pc = "125" msb = "8" lsb = "0" mapName = "88" name = "Starship" />
+            <instrument pc = "125" msb = "9" lsb = "0" mapName = "88" name = "Burst Noise" />
+            <instrument pc = "126" msb = "0" lsb = "0" mapName = "88" name = "Applause" />
+            <instrument pc = "126" msb = "1" lsb = "0" mapName = "88" name = "Laughing" />
+            <instrument pc = "126" msb = "2" lsb = "0" mapName = "88" name = "Screaming" />
+            <instrument pc = "126" msb = "3" lsb = "0" mapName = "88" name = "Punch" />
+            <instrument pc = "126" msb = "4" lsb = "0" mapName = "88" name = "Heart Beat" />
+            <instrument pc = "126" msb = "5" lsb = "0" mapName = "88" name = "Footsteps" />
+            <instrument pc = "126" msb = "6" lsb = "0" mapName = "88" name = "Applause 2" />
+            <instrument pc = "127" msb = "0" lsb = "0" mapName = "88" name = "Gun Shot" />
+            <instrument pc = "127" msb = "1" lsb = "0" mapName = "88" name = "Machine Gun" />
+            <instrument pc = "127" msb = "2" lsb = "0" mapName = "88" name = "Lasergun" />
+            <instrument pc = "127" msb = "3" lsb = "0" mapName = "88" name = "Explosion" />
+
+            <instrument pc = "0" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Piano 2" />
+            <instrument pc = "1" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Piano 2" />
+            <instrument pc = "2" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Piano 2" />
+            <instrument pc = "3" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Honky-tonk" />
+            <instrument pc = "4" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Piano 1" />
+            <instrument pc = "5" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Piano 2" />
+            <instrument pc = "6" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Piano 3" />
+            <instrument pc = "7" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "E.Piano 1" />
+            <instrument pc = "8" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Detuned EP 1" />
+            <instrument pc = "9" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "E.Piano 2" />
+            <instrument pc = "10" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Steel Gt." />
+            <instrument pc = "11" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Steel Gt." />
+            <instrument pc = "12" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "12-str.Gt" />
+            <instrument pc = "13" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Funk Gt." />
+            <instrument pc = "14" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Muted Gt." />
+            <instrument pc = "15" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "16" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "17" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "18" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "19" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "20" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "21" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "22" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "23" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Fingered Bs" />
+            <instrument pc = "24" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Fingered Bs" />
+            <instrument pc = "25" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Picked Bass" />
+            <instrument pc = "26" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Picked Bass" />
+            <instrument pc = "27" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Fretless Bs" />
+            <instrument pc = "28" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Acoustic Bs" />
+            <instrument pc = "29" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Choir Aash" />
+            <instrument pc = "30" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Choir Aash" />
+            <instrument pc = "31" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Choir Aash" />
+            <instrument pc = "32" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Choir Aash" />
+            <instrument pc = "33" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "SlowStrings" />
+            <instrument pc = "34" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Strings" />
+            <instrument pc = "35" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "SynStrings3" />
+            <instrument pc = "36" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 1" />
+            <instrument pc = "37" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 1" />
+            <instrument pc = "38" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 1" />
+            <instrument pc = "39" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 2" />
+            <instrument pc = "40" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 1" />
+            <instrument pc = "41" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 1" />
+            <instrument pc = "42" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 2" />
+            <instrument pc = "43" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 2" />
+            <instrument pc = "44" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Organ 2" />
+            <instrument pc = "45" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trumpet" />
+            <instrument pc = "46" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trumpet" />
+            <instrument pc = "47" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trombone" />
+            <instrument pc = "48" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trombone" />
+            <instrument pc = "49" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trombone" />
+            <instrument pc = "50" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trombone" />
+            <instrument pc = "51" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trombone" />
+            <instrument pc = "52" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trombone" />
+            <instrument pc = "53" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Trombone" />
+            <instrument pc = "54" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Alto Sax" />
+            <instrument pc = "55" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Tenor Sax" />
+            <instrument pc = "56" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "BaritoneSax" />
+            <instrument pc = "57" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Alto Sax" />
+            <instrument pc = "58" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Bass 1" />
+            <instrument pc = "59" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Bass 1" />
+            <instrument pc = "60" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Bass 2" />
+            <instrument pc = "61" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Bass 2" />
+            <instrument pc = "62" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Bass 1" />
+            <instrument pc = "63" msb = "126" lsb = "1" mapName = "55MAPCM-64" name = "Orchest.Hit" />
+            <instrument pc = "0" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Acou Piano1" />
+            <instrument pc = "1" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Acou Piano2" />
+            <instrument pc = "2" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Acou Piano3" />
+            <instrument pc = "3" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Piano1" />
+            <instrument pc = "4" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Piano2" />
+            <instrument pc = "5" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Piano3" />
+            <instrument pc = "6" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Piano4" />
+            <instrument pc = "7" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "HonkyTonk" />
+            <instrument pc = "8" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Org 1" />
+            <instrument pc = "9" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Org 2" />
+            <instrument pc = "10" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Org 3" />
+            <instrument pc = "11" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Org 4" />
+            <instrument pc = "12" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Org 1" />
+            <instrument pc = "13" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Org 2" />
+            <instrument pc = "14" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Org 3" />
+            <instrument pc = "15" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Accordion" />
+            <instrument pc = "16" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Harpsi 1" />
+            <instrument pc = "17" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Harpsi 2" />
+            <instrument pc = "18" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Harpsi 3" />
+            <instrument pc = "19" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Clavi 1" />
+            <instrument pc = "20" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Clavi 2" />
+            <instrument pc = "21" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Clavi 3" />
+            <instrument pc = "22" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Celesta 1" />
+            <instrument pc = "23" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Celesta 2" />
+            <instrument pc = "24" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Brass 1" />
+            <instrument pc = "25" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Brass 2" />
+            <instrument pc = "26" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Brass 3" />
+            <instrument pc = "27" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Brass 4" />
+            <instrument pc = "28" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Bass 1" />
+            <instrument pc = "29" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Bass 2" />
+            <instrument pc = "30" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Bass 3" />
+            <instrument pc = "31" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Bass 4" />
+            <instrument pc = "32" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Fantasy" />
+            <instrument pc = "33" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Harmo Pan" />
+            <instrument pc = "34" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Chorale" />
+            <instrument pc = "35" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Glasses" />
+            <instrument pc = "36" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Soundtrack" />
+            <instrument pc = "37" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Atomsphere" />
+            <instrument pc = "38" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Warm Bell" />
+            <instrument pc = "39" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Funny Vox" />
+            <instrument pc = "40" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Echo Bell" />
+            <instrument pc = "41" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Ice Rain" />
+            <instrument pc = "42" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Oboe 2001" />
+            <instrument pc = "43" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Echo Pan" />
+            <instrument pc = "44" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Doctor Solo" />
+            <instrument pc = "45" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "School Daze" />
+            <instrument pc = "46" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Bellsinger" />
+            <instrument pc = "47" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Square Wave" />
+            <instrument pc = "48" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Str Sect 1" />
+            <instrument pc = "49" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Str Sect 2" />
+            <instrument pc = "50" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Str Sect 3" />
+            <instrument pc = "51" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Pizzicato" />
+            <instrument pc = "52" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Violin 1" />
+            <instrument pc = "53" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Violin 2" />
+            <instrument pc = "54" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Cello 1" />
+            <instrument pc = "55" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Cello 2" />
+            <instrument pc = "56" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Contrabass" />
+            <instrument pc = "57" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Harp 1" />
+            <instrument pc = "58" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Harp 2" />
+            <instrument pc = "59" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Guitar 1" />
+            <instrument pc = "60" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Guitar 2" />
+            <instrument pc = "61" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Gtr 1" />
+            <instrument pc = "62" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Gtr 2" />
+            <instrument pc = "63" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Sitar" />
+            <instrument pc = "64" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Acou Bass 1" />
+            <instrument pc = "65" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Acou Bass 2" />
+            <instrument pc = "66" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Bass 1" />
+            <instrument pc = "67" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Bass 2" />
+            <instrument pc = "68" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "69" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "70" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Fretless 1" />
+            <instrument pc = "71" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Fretless 2" />
+            <instrument pc = "72" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Flute 1" />
+            <instrument pc = "73" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Flute 2" />
+            <instrument pc = "74" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Piccolo 1" />
+            <instrument pc = "75" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Piccolo 2" />
+            <instrument pc = "76" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Recorder" />
+            <instrument pc = "77" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Pan Pipes" />
+            <instrument pc = "78" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Sax 1" />
+            <instrument pc = "79" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Sax 2" />
+            <instrument pc = "80" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Sax 3" />
+            <instrument pc = "81" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Sax 4" />
+            <instrument pc = "82" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Clarinet 1" />
+            <instrument pc = "83" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Clarinet 2" />
+            <instrument pc = "84" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Oboe" />
+            <instrument pc = "85" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Engl Horn" />
+            <instrument pc = "86" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Bassoon" />
+            <instrument pc = "87" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Harmonica" />
+            <instrument pc = "88" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Trumpet 1" />
+            <instrument pc = "89" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Trumpet 2" />
+            <instrument pc = "90" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Trombone 1" />
+            <instrument pc = "91" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Trombone 2" />
+            <instrument pc = "92" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Fr Horn 1" />
+            <instrument pc = "93" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Fr Horn 2" />
+            <instrument pc = "94" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Tuba" />
+            <instrument pc = "95" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Brs Sect 1" />
+            <instrument pc = "96" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Brs Sect 2" />
+            <instrument pc = "97" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Vibe 1" />
+            <instrument pc = "98" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Vibe 2" />
+            <instrument pc = "99" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Syn Mallet" />
+            <instrument pc = "100" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Windbell" />
+            <instrument pc = "101" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Glock" />
+            <instrument pc = "102" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Tube Bell" />
+            <instrument pc = "103" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Xylophone" />
+            <instrument pc = "104" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Marimba" />
+            <instrument pc = "105" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Koto" />
+            <instrument pc = "106" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Sho" />
+            <instrument pc = "107" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Shakuhachi" />
+            <instrument pc = "108" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Whistle 1" />
+            <instrument pc = "109" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Whistle 2" />
+            <instrument pc = "110" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Bottleblow" />
+            <instrument pc = "111" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Breathpipe" />
+            <instrument pc = "112" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Timpani" />
+            <instrument pc = "113" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Melodic Tom" />
+            <instrument pc = "114" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Deep Snare" />
+            <instrument pc = "115" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Perc 1" />
+            <instrument pc = "116" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Elec Perc 2" />
+            <instrument pc = "117" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Taiko" />
+            <instrument pc = "118" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Taiko Rim" />
+            <instrument pc = "119" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Cymbal" />
+            <instrument pc = "120" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Castanet" />
+            <instrument pc = "121" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Triangle" />
+            <instrument pc = "122" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Orche Hit" />
+            <instrument pc = "123" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Telephone" />
+            <instrument pc = "124" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Bird Tweet" />
+            <instrument pc = "125" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "OneNote Jam" />
+            <instrument pc = "126" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Water Bell" />
+            <instrument pc = "127" msb = "127" lsb = "1" mapName = "55MAPCM-64" name = "Jungle Tune" />
+
+
+            <instrument pc = "0" msb = "126" lsb = "2" mapName = "55MAPCM-64" name = "Piano 2" />
+            <instrument pc = "1" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Piano 2" />
+            <instrument pc = "2" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Piano 2" />
+            <instrument pc = "3" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Honky-tonk" />
+            <instrument pc = "4" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Piano 1" />
+            <instrument pc = "5" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Piano 2" />
+            <instrument pc = "6" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Piano 3" />
+            <instrument pc = "7" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "E.Piano 1" />
+            <instrument pc = "8" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Detuned EP 1" />
+            <instrument pc = "9" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "E.Piano 2" />
+            <instrument pc = "10" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Steel Gt." />
+            <instrument pc = "11" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Steel Gt." />
+            <instrument pc = "12" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "12-str.Gt" />
+            <instrument pc = "13" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Funk Gt." />
+            <instrument pc = "14" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Muted Gt." />
+            <instrument pc = "15" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "16" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "17" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "18" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "19" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "20" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "21" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "22" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "23" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Fingered Bs" />
+            <instrument pc = "24" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Fingered Bs" />
+            <instrument pc = "25" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Picked Bass" />
+            <instrument pc = "26" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Picked Bass" />
+            <instrument pc = "27" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Fretless Bs" />
+            <instrument pc = "28" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Acoustic Bs" />
+            <instrument pc = "29" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Choir Aash" />
+            <instrument pc = "30" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Choir Aash" />
+            <instrument pc = "31" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Choir Aash" />
+            <instrument pc = "32" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Choir Aash" />
+            <instrument pc = "33" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "SlowStrings" />
+            <instrument pc = "34" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Strings" />
+            <instrument pc = "35" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "SynStrings3" />
+            <instrument pc = "36" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 1" />
+            <instrument pc = "37" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 1" />
+            <instrument pc = "38" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 1" />
+            <instrument pc = "39" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 2" />
+            <instrument pc = "40" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 1" />
+            <instrument pc = "41" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 1" />
+            <instrument pc = "42" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 2" />
+            <instrument pc = "43" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 2" />
+            <instrument pc = "44" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Organ 2" />
+            <instrument pc = "45" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trumpet" />
+            <instrument pc = "46" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trumpet" />
+            <instrument pc = "47" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trombone" />
+            <instrument pc = "48" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trombone" />
+            <instrument pc = "49" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trombone" />
+            <instrument pc = "50" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trombone" />
+            <instrument pc = "51" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trombone" />
+            <instrument pc = "52" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trombone" />
+            <instrument pc = "53" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Trombone" />
+            <instrument pc = "54" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Alto Sax" />
+            <instrument pc = "55" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Tenor Sax" />
+            <instrument pc = "56" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "BaritoneSax" />
+            <instrument pc = "57" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Alto Sax" />
+            <instrument pc = "58" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Bass 1" />
+            <instrument pc = "59" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Bass 1" />
+            <instrument pc = "60" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Bass 2" />
+            <instrument pc = "61" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Bass 2" />
+            <instrument pc = "62" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Bass 1" />
+            <instrument pc = "63" msb = "126" lsb = "2" mapName = "88MAPCM-64" name = "Orchest.Hit" />
+            <instrument pc = "0" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Acou Piano1" />
+            <instrument pc = "1" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Acou Piano2" />
+            <instrument pc = "2" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Acou Piano3" />
+            <instrument pc = "3" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Piano1" />
+            <instrument pc = "4" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Piano2" />
+            <instrument pc = "5" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Piano3" />
+            <instrument pc = "6" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Piano4" />
+            <instrument pc = "7" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "HonkyTonk" />
+            <instrument pc = "8" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Org 1" />
+            <instrument pc = "9" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Org 2" />
+            <instrument pc = "10" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Org 3" />
+            <instrument pc = "11" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Org 4" />
+            <instrument pc = "12" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Org 1" />
+            <instrument pc = "13" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Org 2" />
+            <instrument pc = "14" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Org 3" />
+            <instrument pc = "15" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Accordion" />
+            <instrument pc = "16" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Harpsi 1" />
+            <instrument pc = "17" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Harpsi 2" />
+            <instrument pc = "18" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Harpsi 3" />
+            <instrument pc = "19" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Clavi 1" />
+            <instrument pc = "20" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Clavi 2" />
+            <instrument pc = "21" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Clavi 3" />
+            <instrument pc = "22" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Celesta 1" />
+            <instrument pc = "23" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Celesta 2" />
+            <instrument pc = "24" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Brass 1" />
+            <instrument pc = "25" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Brass 2" />
+            <instrument pc = "26" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Brass 3" />
+            <instrument pc = "27" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Brass 4" />
+            <instrument pc = "28" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Bass 1" />
+            <instrument pc = "29" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Bass 2" />
+            <instrument pc = "30" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Bass 3" />
+            <instrument pc = "31" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Bass 4" />
+            <instrument pc = "32" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Fantasy" />
+            <instrument pc = "33" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Harmo Pan" />
+            <instrument pc = "34" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Chorale" />
+            <instrument pc = "35" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Glasses" />
+            <instrument pc = "36" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Soundtrack" />
+            <instrument pc = "37" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Atomsphere" />
+            <instrument pc = "38" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Warm Bell" />
+            <instrument pc = "39" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Funny Vox" />
+            <instrument pc = "40" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Echo Bell" />
+            <instrument pc = "41" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Ice Rain" />
+            <instrument pc = "42" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Oboe 2001" />
+            <instrument pc = "43" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Echo Pan" />
+            <instrument pc = "44" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Doctor Solo" />
+            <instrument pc = "45" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "School Daze" />
+            <instrument pc = "46" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Bellsinger" />
+            <instrument pc = "47" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Square Wave" />
+            <instrument pc = "48" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Str Sect 1" />
+            <instrument pc = "49" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Str Sect 2" />
+            <instrument pc = "50" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Str Sect 3" />
+            <instrument pc = "51" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Pizzicato" />
+            <instrument pc = "52" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Violin 1" />
+            <instrument pc = "53" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Violin 2" />
+            <instrument pc = "54" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Cello 1" />
+            <instrument pc = "55" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Cello 2" />
+            <instrument pc = "56" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Contrabass" />
+            <instrument pc = "57" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Harp 1" />
+            <instrument pc = "58" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Harp 2" />
+            <instrument pc = "59" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Guitar 1" />
+            <instrument pc = "60" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Guitar 2" />
+            <instrument pc = "61" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Gtr 1" />
+            <instrument pc = "62" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Gtr 2" />
+            <instrument pc = "63" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Sitar" />
+            <instrument pc = "64" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Acou Bass 1" />
+            <instrument pc = "65" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Acou Bass 2" />
+            <instrument pc = "66" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Bass 1" />
+            <instrument pc = "67" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Bass 2" />
+            <instrument pc = "68" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 1" />
+            <instrument pc = "69" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Slap Bass 2" />
+            <instrument pc = "70" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Fretless 1" />
+            <instrument pc = "71" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Fretless 2" />
+            <instrument pc = "72" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Flute 1" />
+            <instrument pc = "73" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Flute 2" />
+            <instrument pc = "74" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Piccolo 1" />
+            <instrument pc = "75" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Piccolo 2" />
+            <instrument pc = "76" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Recorder" />
+            <instrument pc = "77" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Pan Pipes" />
+            <instrument pc = "78" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Sax 1" />
+            <instrument pc = "79" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Sax 2" />
+            <instrument pc = "80" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Sax 3" />
+            <instrument pc = "81" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Sax 4" />
+            <instrument pc = "82" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Clarinet 1" />
+            <instrument pc = "83" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Clarinet 2" />
+            <instrument pc = "84" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Oboe" />
+            <instrument pc = "85" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Engl Horn" />
+            <instrument pc = "86" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Bassoon" />
+            <instrument pc = "87" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Harmonica" />
+            <instrument pc = "88" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Trumpet 1" />
+            <instrument pc = "89" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Trumpet 2" />
+            <instrument pc = "90" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Trombone 1" />
+            <instrument pc = "91" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Trombone 2" />
+            <instrument pc = "92" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Fr Horn 1" />
+            <instrument pc = "93" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Fr Horn 2" />
+            <instrument pc = "94" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Tuba" />
+            <instrument pc = "95" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Brs Sect 1" />
+            <instrument pc = "96" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Brs Sect 2" />
+            <instrument pc = "97" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Vibe 1" />
+            <instrument pc = "98" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Vibe 2" />
+            <instrument pc = "99" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Syn Mallet" />
+            <instrument pc = "100" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Windbell" />
+            <instrument pc = "101" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Glock" />
+            <instrument pc = "102" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Tube Bell" />
+            <instrument pc = "103" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Xylophone" />
+            <instrument pc = "104" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Marimba" />
+            <instrument pc = "105" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Koto" />
+            <instrument pc = "106" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Sho" />
+            <instrument pc = "107" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Shakuhachi" />
+            <instrument pc = "108" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Whistle 1" />
+            <instrument pc = "109" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Whistle 2" />
+            <instrument pc = "110" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Bottleblow" />
+            <instrument pc = "111" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Breathpipe" />
+            <instrument pc = "112" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Timpani" />
+            <instrument pc = "113" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Melodic Tom" />
+            <instrument pc = "114" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Deep Snare" />
+            <instrument pc = "115" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Perc 1" />
+            <instrument pc = "116" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Elec Perc 2" />
+            <instrument pc = "117" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Taiko" />
+            <instrument pc = "118" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Taiko Rim" />
+            <instrument pc = "119" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Cymbal" />
+            <instrument pc = "120" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Castanet" />
+            <instrument pc = "121" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Triangle" />
+            <instrument pc = "122" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Orche Hit" />
+            <instrument pc = "123" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Telephone" />
+            <instrument pc = "124" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Bird Tweet" />
+            <instrument pc = "125" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "OneNote Jam" />
+            <instrument pc = "126" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Water Bell" />
+            <instrument pc = "127" msb = "127" lsb = "2" mapName = "88MAPCM-64" name = "Jungle Tune" />
+        </map>
+
+        <!-- drum -->
+        <map type = "drum" >
+            <instrument pc = "0" msb = "0" lsb = "2" mapName = "88 map" name = "STANDARD 1" />
+            <instrument pc = "1" msb = "0" lsb = "2" mapName = "88 map" name = "STANDARD 2" />
+            <instrument pc = "8" msb = "0" lsb = "2" mapName = "88 map" name = "ROOM" />
+            <instrument pc = "16" msb = "0" lsb = "2" mapName = "88 map" name = "POWER" />
+            <instrument pc = "24" msb = "0" lsb = "2" mapName = "88 map" name = "ELECTRONIC" />
+            <instrument pc = "25" msb = "0" lsb = "2" mapName = "88 map" name = "TR-808/909" />
+            <instrument pc = "26" msb = "0" lsb = "2" mapName = "88 map" name = "DANCE" />
+            <instrument pc = "32" msb = "0" lsb = "2" mapName = "88 map" name = "JAZZ" />
+            <instrument pc = "40" msb = "0" lsb = "2" mapName = "88 map" name = "BRUSH" />
+            <instrument pc = "48" msb = "0" lsb = "2" mapName = "88 map" name = "ORCHESTRA" />
+            <instrument pc = "49" msb = "0" lsb = "2" mapName = "88 map" name = "ETHNIC" />
+            <instrument pc = "50" msb = "0" lsb = "2" mapName = "88 map" name = "KICK &amp; SNARE" />
+            <instrument pc = "56" msb = "0" lsb = "2" mapName = "88 map" name = "SFX" />
+            <instrument pc = "57" msb = "0" lsb = "2" mapName = "88 map" name = "RHYTHM FX" />
+            <instrument pc = "0" msb = "0" lsb = "1" mapName = "55 map" name = "STANDARD" />
+            <instrument pc = "8" msb = "0" lsb = "1" mapName = "55 map" name = "ROOM" />
+            <instrument pc = "16" msb = "0" lsb = "1" mapName = "55 map" name = "POWER" />
+            <instrument pc = "24" msb = "0" lsb = "1" mapName = "55 map" name = "ELECTRONIC" />
+            <instrument pc = "25" msb = "0" lsb = "1" mapName = "55 map" name = "TR-808" />
+            <instrument pc = "32" msb = "0" lsb = "1" mapName = "55 map" name = "JAZZ" />
+            <instrument pc = "40" msb = "0" lsb = "1" mapName = "55 map" name = "BRUSH" />
+            <instrument pc = "48" msb = "0" lsb = "1" mapName = "55 map" name = "ORCHESTRA" />
+            <instrument pc = "56" msb = "0" lsb = "1" mapName = "55 map" name = "SFX" />
+            <instrument pc = "127" msb = "0" lsb = "1" mapName = "55 map" name = "CM-64/32L" />
+            <instrument pc = "0" msb = "0" lsb = "0" mapName = "88" name = "STANDARD 1" />
+            <instrument pc = "1" msb = "0" lsb = "0" mapName = "88" name = "STANDARD 2" />
+            <instrument pc = "8" msb = "0" lsb = "0" mapName = "88" name = "ROOM" />
+            <instrument pc = "16" msb = "0" lsb = "0" mapName = "88" name = "POWER" />
+            <instrument pc = "24" msb = "0" lsb = "0" mapName = "88" name = "ELECTRONIC" />
+            <instrument pc = "25" msb = "0" lsb = "0" mapName = "88" name = "TR-808/909" />
+            <instrument pc = "26" msb = "0" lsb = "0" mapName = "88" name = "DANCE" />
+            <instrument pc = "32" msb = "0" lsb = "0" mapName = "88" name = "JAZZ" />
+            <instrument pc = "40" msb = "0" lsb = "0" mapName = "88" name = "BRUSH" />
+            <instrument pc = "48" msb = "0" lsb = "0" mapName = "88" name = "ORCHESTRA" />
+            <instrument pc = "49" msb = "0" lsb = "0" mapName = "88" name = "ETHNIC" />
+            <instrument pc = "50" msb = "0" lsb = "0" mapName = "88" name = "KICK &amp; SNARE" />
+            <instrument pc = "56" msb = "0" lsb = "0" mapName = "88" name = "SFX" />
+            <instrument pc = "57" msb = "0" lsb = "0" mapName = "88" name = "RHYTHM FX" />
+        </map>
+
+    </instruments>
+
+</deviceinfo>
