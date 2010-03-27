@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Deploy-MacOSX" default="deploy-bin" basedir=".">
+
+    <import file = "deploy.xml" />
+
+    <property name = "archive-name" value = "${deploy.archive-prefix-bin}.tar.gz" />
+    <property name = "jni-dir"  value = "jni/macosx-universal" />
+
+    <target name = "deploy-bin.copy-platform-depends" >
+
+        <echo>
+            ---------------------------------------------------------
+            Copying Executable file ( MIDIPlayer.sh )
+            ---------------------------------------------------------
+        </echo>
+        <copy file = "MIDIPlayer.sh" todir = "${deploy.workdir.bin-root}" />
+
+        <echo>
+            ---------------------------------------------------------
+            Copying JNI Files for Mac OS X
+            ---------------------------------------------------------
+        </echo>
+        <copy todir = "${deploy.workdir.bin-root}">
+            <fileset dir = "${jni-dir}" />
+        </copy>
+
+    </target>
+
+    <target name="deploy-bin.archive">
+        <!-- アーカイブ -->
+        <delete file = "${archive-name}" failonerror="false" />
+        <tar compression="gzip" tarfile = "${archive-name}" >
+            <tarfileset dir = "${deploy.workdir}" excludes = "*.gz, *.zip" />
+        </tar>
+    </target>
+
+</project>
