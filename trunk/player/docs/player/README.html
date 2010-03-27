@@ -8,6 +8,7 @@
 
 
 
+
   
   <meta content="text/html; charset=Shift_JIS" http-equiv="content-type"><title>README</title>
   
@@ -76,6 +77,8 @@ TMIDI Player と MAMPlayer を足して２で割ったソフトがあればなぁと思い作りはじめま
 <br>
 Java ランタイムは下記 URL からインストールできます。<br>
 <a href="http://www.java.com/" target="_blank">http://www.java.com/</a><br>
+<br>
+<span style="font-weight: bold;">※Javaランタイム同梱版 MIDIPlayer の場合、インストールは必要ありません。</span><br>
 <h2><a name="開発時の動作確認環境"></a>開発時の動作確認環境</h2>
 下記環境にて動作確認を行っています。<br>
 ※Mac OS X 環境が手元に無いため、確認には至っていません…<br>
@@ -92,37 +95,23 @@ Java ランタイムは下記 URL からインストールできます。<br>
 </ul>
 
 <h2><a name="起動方法"></a>起動方法</h2>
-<h3>Windows</h3>
-<h4>32bit 版 Windows</h4>
-下記の環境が該当します。<br>
-<ul>
-  <li>32bit Windows&nbsp;</li>
-  <li>64 bit (x64) Windows にて 32bit 版の Java ランタイムをインストールしている場合<br>
-  </li>
-</ul>
-同梱のバッチファイル <span style="font-weight: bold;">MIDIPlayer-win32.bat</span> を実行（エクスプローラ上でダブルクリック）してください。<br>
+<h3>Windows</h3>同梱のバッチファイル <span style="font-weight: bold;">MIDIPlayer.bat</span> を実行（エクスプローラ上でダブルクリック）してください。<br>
 <br>
-<h4>64bit 版 Windows</h4>
-
-下記の環境が該当します。<br>
+<h4>※Java ランタイムを同梱をしていない MIDIPlayer をダウンロードされた方へ</h4>
+Java ランタイムが既にインストールされていれば、通常は特別な設定は必要ありませんが、<br>
+お使いのOSの環境設定によってはバッチファイルを編集する必要があります。<br>
 <ul>
-<li>64 bit (x64) Windows にて 64bit 版の Java ランタイムをインストールしている場合<br>
-  </li>
+  <li>同梱のバッチファイルでは、javaw コマンドを環境変数 PATH に通していることを想定したコマンド呼び出しを行っています。</li>
+  <li>64bit Windows において 32/64bit 版両方の Java ランタイムをインストール済みの場合、ダウンロードしたファイルに対応した<br>
+Java 実行環境を実行するために適宜 バッチファイルを編集してください。具体的には…</li>
+  <ul>
+    <li>64bit版の MIDIPlayer をダウンロードした場合であれば 64bit 版の java コマンドを実行するようにしてください</li>
+    <li>32bit版の MIDIPlayer をダウンロードした場合であれば 32bit 版の java コマンドを実行するようにしてください<br>
+    </li>
+  </ul>
 </ul>
-
-同梱のバッチファイル <span style="font-weight: bold;">MIDIPlayer-win64.bat</span> を実行（エクスプローラ上でダブルクリック）してください。<br>
-<br>
 <h3>Mac OS X / Linux</h3>
-同梱のシェルスクリプト <span style="font-weight: bold;">MIDIPlayer-macosx.sh</span> を実行してください。<br>
-<br>
-<h3>Linux</h3>
-お使いの環境に合わせ、下記のどちらかのシェルスクリプトを実行してください。<br>
-<ul>
-  <li>MIDIPlayer-linux-amd64.sh</li>
-  <li>MIDIPlayer-linux-i586.sh<br>
-  </li>
-</ul>
-<br>
+同梱のシェルスクリプト <span style="font-weight: bold;">MIDIPlayer.sh</span> を実行してください。<br>java コマンドを環境変数 PATH に通していることを想定したコマンド呼び出しを行っています。<br><br>
 
 
 <h2><a name="初回起動時の設定"></a>初回起動時の設定</h2>
@@ -245,8 +234,20 @@ MIDI データ再生時に画面に表示を行う種類を選択します。<br>
 
 <h2><a name="履歴"></a>履歴</h2>
 <ul>
+  
+  <li>2010/03/28 - version 0.2.1<br>
+    <ul>
+      <li>デフォルトレンダラープラグインで、ピッチベンド情報が正しく表示されていなかったバグを修正</li>
+      <li>配布アーカイブをプラットフォーム・アーキテクチャ別に分けるようにした</li>
+      <ul>
+        <li>→ 起動用バッチファイルを分けるのをやめた</li>
+      </ul>
+    </ul>
+    <br>
+  </li>
   <li>2010/03/21 - version 0.2.0<br>
-</li>
+  </li>
+
   <ul>
     <li>プレーヤー本体側の不具合、GS系の<a href="http://sourceforge.jp/ticket/browse.php?group_id=4965&amp;tid=21079" target="_blank">ドラムパート設定の不具合</a>を修正。</li>
     <li>OpenGL ライブラリの同梱</li>
